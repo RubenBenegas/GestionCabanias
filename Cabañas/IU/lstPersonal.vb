@@ -1,0 +1,54 @@
+﻿Public Class lstPersonal
+    Dim Personal As New Personal
+   
+    Private Sub lstPersonal_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Personal.PersonalTraerTab(dgvPersonal)
+    End Sub
+
+    Private Sub Editar()
+        frmPersonal.Modificar = True
+        If dgvPersonal.Rows.Count <> 0 Then
+            frmPersonal.IdPersonal = dgvPersonal.Item("id", dgvPersonal.CurrentRow.Index).Value
+            frmPersonal.ShowDialog()
+            'Else
+            '    MsgBox("No hay elementos para modificar.", MsgBoxStyle.Information, "Mensaje")
+        End If
+
+    End Sub
+
+    Private Sub btnModificar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnModificar.Click
+        Editar()
+    End Sub
+
+    Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
+        frmPersonal.Modificar = False
+        frmPersonal.IdPersonal = 0
+        frmPersonal.ShowDialog()
+    End Sub
+
+    Private Sub btnBorrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBorrar.Click
+        If dgvPersonal.Rows.Count <> 0 Then
+            Personal.Id = dgvPersonal.Item("id", dgvPersonal.CurrentRow.Index).Value
+            Dim mensaje As DialogResult = MsgBox("Està seguro que quiere borrar ...", MsgBoxStyle.OkCancel, "Advertencia")
+            If mensaje = Windows.Forms.DialogResult.OK Then
+                If Personal.PersonalBorrar(Personal.Id) Then
+                    MessageBox.Show("El cliente se ha borrado correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Personal.PersonalTraerTab(dgvPersonal)
+                Else
+                    MessageBox.Show("El cliente NO se ha borrado correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                End If
+            End If
+            'Else
+            '    MsgBox("No hay elementos para eliminar.", MsgBoxStyle.Information, "Mensaje")
+        End If
+    End Sub
+
+    Private Sub btnCerrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCerrar.Click
+        Close()
+    End Sub
+
+    Private Sub dgvPersonal_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvPersonal.CellDoubleClick
+        Editar()
+
+    End Sub
+End Class

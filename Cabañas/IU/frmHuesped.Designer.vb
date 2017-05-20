@@ -36,6 +36,10 @@ Partial Class frmHuesped
         Me.lblId = New System.Windows.Forms.Label
         Me.btnAceptar = New System.Windows.Forms.Button
         Me.btnCancelar = New System.Windows.Forms.Button
+        Me.txtDni = New System.Windows.Forms.TextBox
+        Me.lblDni = New System.Windows.Forms.Label
+        Me.txtEmail = New System.Windows.Forms.TextBox
+        Me.lblEmail = New System.Windows.Forms.Label
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -49,7 +53,7 @@ Partial Class frmHuesped
         Me.txtNombre.Location = New System.Drawing.Point(126, 32)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(171, 20)
-        Me.txtNombre.TabIndex = 1
+        Me.txtNombre.TabIndex = 0
         Me.txtNombre.Tag = "*"
         '
         'lblTelefono
@@ -57,7 +61,7 @@ Partial Class frmHuesped
         Me.lblTelefono.AutoSize = True
         Me.lblTelefono.BackColor = System.Drawing.Color.Transparent
         Me.lblTelefono.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTelefono.Location = New System.Drawing.Point(12, 113)
+        Me.lblTelefono.Location = New System.Drawing.Point(12, 139)
         Me.lblTelefono.Name = "lblTelefono"
         Me.lblTelefono.Size = New System.Drawing.Size(61, 13)
         Me.lblTelefono.TabIndex = 2
@@ -68,7 +72,7 @@ Partial Class frmHuesped
         Me.lblDireccion.AutoSize = True
         Me.lblDireccion.BackColor = System.Drawing.Color.Transparent
         Me.lblDireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDireccion.Location = New System.Drawing.Point(13, 87)
+        Me.lblDireccion.Location = New System.Drawing.Point(13, 113)
         Me.lblDireccion.Name = "lblDireccion"
         Me.lblDireccion.Size = New System.Drawing.Size(65, 13)
         Me.lblDireccion.TabIndex = 3
@@ -87,7 +91,7 @@ Partial Class frmHuesped
         '
         'txtDireccion
         '
-        Me.txtDireccion.Location = New System.Drawing.Point(126, 84)
+        Me.txtDireccion.Location = New System.Drawing.Point(126, 110)
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(129, 20)
         Me.txtDireccion.TabIndex = 3
@@ -98,7 +102,7 @@ Partial Class frmHuesped
         Me.lblLocalidad.AutoSize = True
         Me.lblLocalidad.BackColor = System.Drawing.Color.Transparent
         Me.lblLocalidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLocalidad.Location = New System.Drawing.Point(12, 61)
+        Me.lblLocalidad.Location = New System.Drawing.Point(12, 87)
         Me.lblLocalidad.Name = "lblLocalidad"
         Me.lblLocalidad.Size = New System.Drawing.Size(66, 13)
         Me.lblLocalidad.TabIndex = 8
@@ -114,7 +118,7 @@ Partial Class frmHuesped
         '
         'txtLocalidad
         '
-        Me.txtLocalidad.Location = New System.Drawing.Point(126, 58)
+        Me.txtLocalidad.Location = New System.Drawing.Point(126, 84)
         Me.txtLocalidad.Name = "txtLocalidad"
         Me.txtLocalidad.Size = New System.Drawing.Size(170, 20)
         Me.txtLocalidad.TabIndex = 2
@@ -122,7 +126,7 @@ Partial Class frmHuesped
         '
         'txtTelefono
         '
-        Me.txtTelefono.Location = New System.Drawing.Point(126, 110)
+        Me.txtTelefono.Location = New System.Drawing.Point(126, 136)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(129, 20)
         Me.txtTelefono.TabIndex = 4
@@ -141,28 +145,70 @@ Partial Class frmHuesped
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(126, 147)
+        Me.btnAceptar.Location = New System.Drawing.Point(126, 193)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
-        Me.btnAceptar.TabIndex = 5
+        Me.btnAceptar.TabIndex = 6
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = True
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(221, 147)
+        Me.btnCancelar.Location = New System.Drawing.Point(221, 193)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
-        Me.btnCancelar.TabIndex = 6
+        Me.btnCancelar.TabIndex = 7
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
+        '
+        'txtDni
+        '
+        Me.txtDni.Location = New System.Drawing.Point(126, 58)
+        Me.txtDni.Name = "txtDni"
+        Me.txtDni.Size = New System.Drawing.Size(129, 20)
+        Me.txtDni.TabIndex = 1
+        Me.txtDni.Tag = "*"
+        '
+        'lblDni
+        '
+        Me.lblDni.AutoSize = True
+        Me.lblDni.BackColor = System.Drawing.Color.Transparent
+        Me.lblDni.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDni.Location = New System.Drawing.Point(12, 61)
+        Me.lblDni.Name = "lblDni"
+        Me.lblDni.Size = New System.Drawing.Size(30, 13)
+        Me.lblDni.TabIndex = 9
+        Me.lblDni.Text = "Dni:"
+        '
+        'txtEmail
+        '
+        Me.txtEmail.Location = New System.Drawing.Point(126, 162)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(129, 20)
+        Me.txtEmail.TabIndex = 5
+        Me.txtEmail.Tag = "*"
+        '
+        'lblEmail
+        '
+        Me.lblEmail.AutoSize = True
+        Me.lblEmail.BackColor = System.Drawing.Color.Transparent
+        Me.lblEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEmail.Location = New System.Drawing.Point(12, 165)
+        Me.lblEmail.Name = "lblEmail"
+        Me.lblEmail.Size = New System.Drawing.Size(41, 13)
+        Me.lblEmail.TabIndex = 11
+        Me.lblEmail.Text = "Email:"
         '
         'frmHuesped
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(304, 177)
+        Me.ClientSize = New System.Drawing.Size(304, 223)
+        Me.Controls.Add(Me.txtEmail)
+        Me.Controls.Add(Me.lblEmail)
+        Me.Controls.Add(Me.txtDni)
+        Me.Controls.Add(Me.lblDni)
         Me.Controls.Add(Me.lblId)
         Me.Controls.Add(Me.txtTelefono)
         Me.Controls.Add(Me.btnCancelar)
@@ -199,4 +245,8 @@ Partial Class frmHuesped
     Friend WithEvents lblTelefono As System.Windows.Forms.Label
     Friend WithEvents lblNombre As System.Windows.Forms.Label
     Friend WithEvents lblDireccion As System.Windows.Forms.Label
+    Friend WithEvents txtEmail As System.Windows.Forms.TextBox
+    Friend WithEvents lblEmail As System.Windows.Forms.Label
+    Friend WithEvents txtDni As System.Windows.Forms.TextBox
+    Friend WithEvents lblDni As System.Windows.Forms.Label
 End Class

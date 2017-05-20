@@ -25,6 +25,18 @@ Public Class Huespedes
         End Set
     End Property
 
+
+    Private dni_ As Integer
+    Public Property dni() As Integer
+        Get
+            Return dni_
+        End Get
+        Set(ByVal value As Integer)
+            dni_ = value
+        End Set
+    End Property
+
+
     Private localidad_ As String
     Public Property localidad() As String
         Get
@@ -55,6 +67,18 @@ Public Class Huespedes
         End Set
     End Property
 
+
+    Private email_ As String
+    Public Property email() As String
+        Get
+            Return email_
+        End Get
+        Set(ByVal value As String)
+            email_ = value
+        End Set
+    End Property
+
+
     Public Sub TraerTabHuespedes(ByVal tabla As DataGridView)
         abrirConexion()
 
@@ -68,10 +92,11 @@ Public Class Huespedes
 
         tabla.Columns("Id").Width = 50
         tabla.Columns("Nombre").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        tabla.Columns("Dni").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         tabla.Columns("Localidad").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         tabla.Columns("Direccion").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         tabla.Columns("Telefono").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-
+        tabla.Columns("Email").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
         cerrarConexion()
 
@@ -86,9 +111,11 @@ Public Class Huespedes
             Dim objComando As New SqlCommand("HuespedInsertar", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
             objComando.Parameters.AddWithValue("@Nombre", huesped.nombre)
+            objComando.Parameters.AddWithValue("@Dni", huesped.dni)
             objComando.Parameters.AddWithValue("@Localidad", huesped.localidad)
             objComando.Parameters.AddWithValue("@Direccion", huesped.direccion)
             objComando.Parameters.AddWithValue("@Telefono", huesped.telefono)
+            objComando.Parameters.AddWithValue("@Email", huesped.email)
             If objComando.ExecuteNonQuery() Then
                 Return True
             Else
@@ -140,9 +167,11 @@ Public Class Huespedes
                 objDataAdapter.Fill(objDataTable)
                 huesped.id = objDataTable.Rows(0).Item("Id")
                 huesped.nombre = objDataTable.Rows(0).Item("Nombre")
+                huesped.dni = objDataTable.Rows(0).Item("Dni")
                 huesped.localidad = objDataTable.Rows(0).Item("Localidad")
                 huesped.direccion = objDataTable.Rows(0).Item("Direccion")
                 huesped.telefono = objDataTable.Rows(0).Item("Telefono")
+                huesped.email = objDataTable.Rows(0).Item("Email")
                 Return huesped
             End If
         Catch ex As Exception
@@ -159,9 +188,11 @@ Public Class Huespedes
             Dim objComando As New SqlCommand("HuespedModificar", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
             objComando.Parameters.AddWithValue("@Nombre", huesped.nombre)
+            objComando.Parameters.AddWithValue("@Dni", huesped.dni)
             objComando.Parameters.AddWithValue("@Localidad", huesped.localidad)
             objComando.Parameters.AddWithValue("@Direccion", huesped.direccion)
             objComando.Parameters.AddWithValue("@Telefono", huesped.telefono)
+            objComando.Parameters.AddWithValue("@Email", huesped.email)
             objComando.Parameters.AddWithValue("@Id", huesped.id)
             If objComando.ExecuteNonQuery() Then
                 Return True

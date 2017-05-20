@@ -32,18 +32,22 @@
 
             txtId.Text = huesped.id
             txtNombre.Text = huesped.nombre
+            txtDni.Text = huesped.dni
             txtLocalidad.Text = huesped.localidad
             txtDireccion.Text = huesped.direccion
             txtTelefono.Text = huesped.telefono
+            txtEmail.Text = huesped.email
 
         Else
             Me.Text = "Agregar Huesped"
 
             txtId.Text = Nothing
             txtNombre.Text = Nothing
+            txtDni.Text = Nothing
             txtLocalidad.Text = Nothing
             txtDireccion.Text = Nothing
             txtTelefono.Text = Nothing
+            txtEmail.Text = Nothing
         End If
 
     End Sub
@@ -54,9 +58,11 @@
         If fun.validarCampos(Me, ErrorProvider1) = True Then
 
             huesped.nombre = txtNombre.Text
+            huesped.dni = txtDni.Text
             huesped.localidad = txtLocalidad.Text
             huesped.direccion = txtDireccion.Text
             huesped.telefono = txtTelefono.Text
+            huesped.email = txtEmail.Text
 
             If modificar = True Then
                 If huesped.ModificarHuesped(huesped) = True Then

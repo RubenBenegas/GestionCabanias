@@ -103,23 +103,23 @@
     <Compile Include="IU\frmProveedor.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IU\frmInsumos.Designer.vb">
-      <DependentUpon>frmInsumos.vb</DependentUpon>
+    <Compile Include="IU\frmGastos.Designer.vb">
+      <DependentUpon>frmGastos.vb</DependentUpon>
     </Compile>
-    <Compile Include="IU\frmInsumos.vb">
+    <Compile Include="IU\frmGastos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Entidades\Insumos.vb" />
+    <Compile Include="Entidades\Gastos.vb" />
     <Compile Include="IU\frmTipoCabania.Designer.vb">
       <DependentUpon>frmTipoCabania.vb</DependentUpon>
     </Compile>
     <Compile Include="IU\frmTipoCabania.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IU\lstInsumos.Designer.vb">
-      <DependentUpon>lstInsumos.vb</DependentUpon>
+    <Compile Include="IU\lstGastos.Designer.vb">
+      <DependentUpon>lstGastos.vb</DependentUpon>
     </Compile>
-    <Compile Include="IU\lstInsumos.vb">
+    <Compile Include="IU\lstGastos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="IU\lstProveedor.Designer.vb">
@@ -198,8 +198,8 @@
     <EmbeddedResource Include="IU\frmProveedor.resx">
       <DependentUpon>frmProveedor.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IU\frmInsumos.resx">
-      <DependentUpon>frmInsumos.vb</DependentUpon>
+    <EmbeddedResource Include="IU\frmGastos.resx">
+      <DependentUpon>frmGastos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IU\frmHuesped.resx">
       <DependentUpon>frmHuesped.vb</DependentUpon>
@@ -219,8 +219,8 @@
     <EmbeddedResource Include="IU\lstPersonal.resx">
       <DependentUpon>lstPersonal.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IU\lstInsumos.resx">
-      <DependentUpon>lstInsumos.vb</DependentUpon>
+    <EmbeddedResource Include="IU\lstGastos.resx">
+      <DependentUpon>lstGastos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IU\lstProveedor.resx">
       <DependentUpon>lstProveedor.vb</DependentUpon>

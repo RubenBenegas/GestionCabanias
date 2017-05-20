@@ -16,7 +16,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub InsumosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InsumosToolStripMenuItem.Click
-        lstInsumos.ShowDialog()
+        lstGastos.ShowDialog()
     End Sub
 
     Private Sub ProveedoresToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProveedoresToolStripMenuItem.Click

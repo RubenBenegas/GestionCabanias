@@ -30,8 +30,8 @@ Partial Class frmPrincipal
         Me.PersonalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.InsumosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.TipoCabaniaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -92,7 +92,7 @@ Partial Class frmPrincipal
         Me.InsumosToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.InsumosToolStripMenuItem.Name = "InsumosToolStripMenuItem"
         Me.InsumosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.InsumosToolStripMenuItem.Text = "Insumos"
+        Me.InsumosToolStripMenuItem.Text = "Gastos"
         '
         'ProveedoresToolStripMenuItem
         '
@@ -103,6 +103,12 @@ Partial Class frmPrincipal
         Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
         '
+        'TipoCabaniaToolStripMenuItem
+        '
+        Me.TipoCabaniaToolStripMenuItem.Name = "TipoCabaniaToolStripMenuItem"
+        Me.TipoCabaniaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TipoCabaniaToolStripMenuItem.Text = "TipoCabania"
+        '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
@@ -110,12 +116,6 @@ Partial Class frmPrincipal
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
         Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(43, 19)
         Me.SalirToolStripMenuItem.Text = "Salir"
-        '
-        'TipoCabaniaToolStripMenuItem
-        '
-        Me.TipoCabaniaToolStripMenuItem.Name = "TipoCabaniaToolStripMenuItem"
-        Me.TipoCabaniaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.TipoCabaniaToolStripMenuItem.Text = "TipoCabania"
         '
         'frmPrincipal
         '

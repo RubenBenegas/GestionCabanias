@@ -105,6 +105,7 @@ Partial Class frmPrincipal
         '
         'TipoCabaniaToolStripMenuItem
         '
+        Me.TipoCabaniaToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.TipoCabaniaToolStripMenuItem.Name = "TipoCabaniaToolStripMenuItem"
         Me.TipoCabaniaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.TipoCabaniaToolStripMenuItem.Text = "TipoCabania"

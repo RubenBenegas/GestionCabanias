@@ -38,12 +38,16 @@ Partial Class frmGastos
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.cmbCategoria = New System.Windows.Forms.ComboBox
         Me.lblCategoria = New System.Windows.Forms.Label
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker
+        Me.lblFecha = New System.Windows.Forms.Label
+        Me.Label6 = New System.Windows.Forms.Label
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(230, 165)
+        Me.btnCancelar.Location = New System.Drawing.Point(230, 218)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
         Me.btnCancelar.TabIndex = 5
@@ -52,7 +56,7 @@ Partial Class frmGastos
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(140, 165)
+        Me.btnAceptar.Location = New System.Drawing.Point(140, 218)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
         Me.btnAceptar.TabIndex = 4
@@ -64,7 +68,7 @@ Partial Class frmGastos
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(12, 116)
+        Me.Label4.Location = New System.Drawing.Point(12, 169)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(61, 13)
         Me.Label4.TabIndex = 17
@@ -75,7 +79,7 @@ Partial Class frmGastos
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(12, 89)
+        Me.Label3.Location = New System.Drawing.Point(12, 142)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(94, 13)
         Me.Label3.TabIndex = 16
@@ -105,7 +109,7 @@ Partial Class frmGastos
         '
         'txtCantidad
         '
-        Me.txtCantidad.Location = New System.Drawing.Point(140, 113)
+        Me.txtCantidad.Location = New System.Drawing.Point(140, 166)
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(68, 20)
         Me.txtCantidad.TabIndex = 2
@@ -113,7 +117,7 @@ Partial Class frmGastos
         '
         'txtMUnitario
         '
-        Me.txtMUnitario.Location = New System.Drawing.Point(140, 86)
+        Me.txtMUnitario.Location = New System.Drawing.Point(140, 139)
         Me.txtMUnitario.Name = "txtMUnitario"
         Me.txtMUnitario.Size = New System.Drawing.Size(68, 20)
         Me.txtMUnitario.TabIndex = 1
@@ -142,7 +146,7 @@ Partial Class frmGastos
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(12, 142)
+        Me.Label5.Location = New System.Drawing.Point(12, 195)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(40, 13)
         Me.Label5.TabIndex = 21
@@ -151,7 +155,7 @@ Partial Class frmGastos
         'TxtTotal
         '
         Me.TxtTotal.Enabled = False
-        Me.TxtTotal.Location = New System.Drawing.Point(140, 139)
+        Me.TxtTotal.Location = New System.Drawing.Point(140, 192)
         Me.TxtTotal.Name = "TxtTotal"
         Me.TxtTotal.Size = New System.Drawing.Size(100, 20)
         Me.TxtTotal.TabIndex = 3
@@ -163,7 +167,7 @@ Partial Class frmGastos
         'cmbCategoria
         '
         Me.cmbCategoria.FormattingEnabled = True
-        Me.cmbCategoria.Location = New System.Drawing.Point(140, 59)
+        Me.cmbCategoria.Location = New System.Drawing.Point(140, 85)
         Me.cmbCategoria.Name = "cmbCategoria"
         Me.cmbCategoria.Size = New System.Drawing.Size(121, 21)
         Me.cmbCategoria.TabIndex = 22
@@ -173,18 +177,60 @@ Partial Class frmGastos
         Me.lblCategoria.AutoSize = True
         Me.lblCategoria.BackColor = System.Drawing.Color.Transparent
         Me.lblCategoria.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCategoria.Location = New System.Drawing.Point(12, 62)
+        Me.lblCategoria.Location = New System.Drawing.Point(12, 88)
         Me.lblCategoria.Name = "lblCategoria"
         Me.lblCategoria.Size = New System.Drawing.Size(65, 13)
         Me.lblCategoria.TabIndex = 23
         Me.lblCategoria.Text = "Categoria:"
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(140, 59)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(100, 20)
+        Me.DateTimePicker1.TabIndex = 24
+        '
+        'lblFecha
+        '
+        Me.lblFecha.AutoSize = True
+        Me.lblFecha.BackColor = System.Drawing.Color.Transparent
+        Me.lblFecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFecha.Location = New System.Drawing.Point(12, 65)
+        Me.lblFecha.Name = "lblFecha"
+        Me.lblFecha.Size = New System.Drawing.Size(46, 13)
+        Me.lblFecha.TabIndex = 25
+        Me.lblFecha.Text = "Fecha:"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(12, 115)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(69, 13)
+        Me.Label6.TabIndex = 27
+        Me.Label6.Text = "Proveedor:"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(140, 112)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 26
         '
         'frmGastos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(325, 196)
+        Me.ClientSize = New System.Drawing.Size(325, 271)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.lblFecha)
+        Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.lblCategoria)
         Me.Controls.Add(Me.cmbCategoria)
         Me.Controls.Add(Me.Label5)
@@ -204,7 +250,7 @@ Partial Class frmGastos
         Me.MinimizeBox = False
         Me.Name = "frmGastos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Insumos"
+        Me.Text = "Gastos"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -225,4 +271,8 @@ Partial Class frmGastos
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
     Friend WithEvents lblCategoria As System.Windows.Forms.Label
     Friend WithEvents cmbCategoria As System.Windows.Forms.ComboBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents lblFecha As System.Windows.Forms.Label
+    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
 End Class

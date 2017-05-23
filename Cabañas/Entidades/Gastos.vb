@@ -8,6 +8,9 @@ Public Class Gastos
     Private MUnitario_ As Decimal
     Private Cantidad_ As Integer
     Private Total_ As Decimal
+    Private idProveedor_ As Integer
+    Private fecha_ As Date
+
     Public Property id() As Integer
         Get
             Return id_
@@ -63,6 +66,22 @@ Public Class Gastos
             Total_ = value
         End Set
     End Property
+    Public Property idProveedor() As Integer
+        Get
+            Return idProveedor_
+        End Get
+        Set(ByVal value As Integer)
+            idProveedor_ = value
+        End Set
+    End Property
+    Public Property fecha() As Date
+        Get
+            Return fecha_
+        End Get
+        Set(ByVal value As Date)
+            fecha_ = value
+        End Set
+    End Property
 
     Public Sub verTodos(ByVal tabla As DataGridView)
         abrirConexion()
@@ -75,12 +94,15 @@ Public Class Gastos
 
         tabla.Columns("Id").Width = 50
         tabla.Columns("Descripcion").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        tabla.Columns("fecha").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         tabla.Columns("Categoria").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        tabla.Columns("Proveedor").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         tabla.Columns("MontoUnitario").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         tabla.Columns("Cantidad").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         tabla.Columns("Total").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-
+        
         cerrarConexion()
+
     End Sub
     Public Function RecuperarGasto(ByVal idGasto As Integer) As Gastos
         Try
@@ -96,10 +118,13 @@ Public Class Gastos
                 objDataAdapter.Fill(objDataTable)
                 gastos.id = objDataTable.Rows(0).Item("id")
                 gastos.descripcion = objDataTable.Rows(0).Item("descripcion")
+                gastos.fecha = objDataTable.Rows(0).Item("fecha")
                 gastos.idCategoria = objDataTable.Rows(0).Item("Categoria")
+                gastos.idProveedor = objDataTable.Rows(0).Item("Proveedor")
                 gastos.MUnitario = objDataTable.Rows(0).Item("MontoUnitario")
                 gastos.Cantidad = objDataTable.Rows(0).Item("Cantidad")
                 gastos.Total = objDataTable.Rows(0).Item("Total")
+
                 Return gastos
 
             End If
@@ -116,7 +141,9 @@ Public Class Gastos
             Dim objComando As New SqlCommand("GastosModificar", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
             objComando.Parameters.AddWithValue("@Descripcion", gastos.descripcion)
+            objComando.Parameters.AddWithValue("@fecha", gastos.fecha)
             objComando.Parameters.AddWithValue("@IdCategoria", gastos.idCategoria)
+            objComando.Parameters.AddWithValue8"@Proveedor",gastos.idProveedor)
             objComando.Parameters.AddWithValue("@MUnitario", gastos.MUnitario)
             objComando.Parameters.AddWithValue("@Cantidad", gastos.Cantidad)
             objComando.Parameters.AddWithValue("@Total", gastos.Total)
@@ -139,7 +166,9 @@ Public Class Gastos
             Dim objComando As New SqlCommand("GastosInsertar", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
             objComando.Parameters.AddWithValue("@Descripcion", gasto.descripcion)
+            objComando.Parameters.AddWithValue("@fecha", gasto.fecha)
             objComando.Parameters.AddWithValue("@IdCategoria", gasto.idCategoria)
+            objComando.Parameters.AddWithValue("@Proveedor", gasto.idProveedor)
             objComando.Parameters.AddWithValue("@MUnitario", gasto.MUnitario)
             objComando.Parameters.AddWithValue("@Cantidad", gasto.Cantidad)
             objComando.Parameters.AddWithValue("@Total", gasto.Total)

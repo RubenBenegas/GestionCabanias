@@ -23,11 +23,15 @@
     Private Sub FrmGastos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         Gasto.CargarComboCategoria(cmbCategoria)
+        Gasto.CargarComboProveedor(cmbProveedor)
 
         If modificar = True Then
+
             Gasto = Gasto.RecuperarGasto(IdGasto)
+
             txtId.Text = Gasto.id
             txtDescripcion.Text = Gasto.descripcion
+            DateTimePicker1.Value = Gasto.fecha
             cmbCategoria.SelectedValue = Gasto.idCategoria
             txtMUnitario.Text = Gasto.MUnitario
             txtCantidad.Text = Gasto.Cantidad
@@ -49,7 +53,9 @@
 
         If fun.validarCampos(Me, ErrorProvider1) = True Then
             Gasto.descripcion = txtDescripcion.Text
+            Gasto.fecha = DateTimePicker1.Value
             Gasto.idCategoria = cmbCategoria.SelectedValue
+            Gasto.idProveedor = cmbProveedor.SelectedValue
             Gasto.MUnitario = txtMUnitario.Text
             Gasto.Cantidad = txtCantidad.Text
             Gasto.Total = CDec(txtMUnitario.Text) * CDec(txtCantidad.Text)

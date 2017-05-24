@@ -41,13 +41,13 @@ Partial Class frmGastos
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker
         Me.lblFecha = New System.Windows.Forms.Label
         Me.Label6 = New System.Windows.Forms.Label
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox
+        Me.cmbProveedor = New System.Windows.Forms.ComboBox
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(230, 218)
+        Me.btnCancelar.Location = New System.Drawing.Point(230, 227)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
         Me.btnCancelar.TabIndex = 5
@@ -56,7 +56,7 @@ Partial Class frmGastos
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(140, 218)
+        Me.btnAceptar.Location = New System.Drawing.Point(140, 227)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
         Me.btnAceptar.TabIndex = 4
@@ -213,22 +213,22 @@ Partial Class frmGastos
         Me.Label6.TabIndex = 27
         Me.Label6.Text = "Proveedor:"
         '
-        'ComboBox1
+        'cmbProveedor
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(140, 112)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 26
+        Me.cmbProveedor.FormattingEnabled = True
+        Me.cmbProveedor.Location = New System.Drawing.Point(140, 112)
+        Me.cmbProveedor.Name = "cmbProveedor"
+        Me.cmbProveedor.Size = New System.Drawing.Size(121, 21)
+        Me.cmbProveedor.TabIndex = 26
         '
         'frmGastos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(325, 271)
+        Me.ClientSize = New System.Drawing.Size(328, 262)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cmbProveedor)
         Me.Controls.Add(Me.lblFecha)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.lblCategoria)
@@ -272,7 +272,7 @@ Partial Class frmGastos
     Friend WithEvents lblCategoria As System.Windows.Forms.Label
     Friend WithEvents cmbCategoria As System.Windows.Forms.ComboBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents cmbProveedor As System.Windows.Forms.ComboBox
     Friend WithEvents lblFecha As System.Windows.Forms.Label
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
 End Class

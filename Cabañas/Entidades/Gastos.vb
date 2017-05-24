@@ -118,7 +118,7 @@ Public Class Gastos
                 objDataAdapter.Fill(objDataTable)
                 gastos.id = objDataTable.Rows(0).Item("id")
                 gastos.descripcion = objDataTable.Rows(0).Item("descripcion")
-                gastos.fecha = objDataTable.Rows(0).Item("fecha")
+                gastos.fecha = objDataTable.Rows(0).Item("Fecha")
                 gastos.idCategoria = objDataTable.Rows(0).Item("Categoria")
                 gastos.idProveedor = objDataTable.Rows(0).Item("Proveedor")
                 gastos.MUnitario = objDataTable.Rows(0).Item("MontoUnitario")
@@ -141,9 +141,9 @@ Public Class Gastos
             Dim objComando As New SqlCommand("GastosModificar", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
             objComando.Parameters.AddWithValue("@Descripcion", gastos.descripcion)
-            objComando.Parameters.AddWithValue("@fecha", gastos.fecha)
+            objComando.Parameters.AddWithValue("@Fecha", gastos.fecha)
             objComando.Parameters.AddWithValue("@IdCategoria", gastos.idCategoria)
-            objComando.Parameters.AddWithValue8"@Proveedor",gastos.idProveedor)
+            objComando.Parameters.AddWithValue("@IdProveedor", gastos.idProveedor)
             objComando.Parameters.AddWithValue("@MUnitario", gastos.MUnitario)
             objComando.Parameters.AddWithValue("@Cantidad", gastos.Cantidad)
             objComando.Parameters.AddWithValue("@Total", gastos.Total)
@@ -168,6 +168,7 @@ Public Class Gastos
             objComando.Parameters.AddWithValue("@Descripcion", gasto.descripcion)
             objComando.Parameters.AddWithValue("@fecha", gasto.fecha)
             objComando.Parameters.AddWithValue("@IdCategoria", gasto.idCategoria)
+            objComando.Parameters.AddWithValue("@IdProveedor", gasto.idProveedor)
             objComando.Parameters.AddWithValue("@Proveedor", gasto.idProveedor)
             objComando.Parameters.AddWithValue("@MUnitario", gasto.MUnitario)
             objComando.Parameters.AddWithValue("@Cantidad", gasto.Cantidad)
@@ -213,6 +214,27 @@ Public Class Gastos
             With ComboActual
                 .DataSource = objDataTable
                 .DisplayMember = "Categoria"
+                .ValueMember = "id"
+            End With
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            cerrarConexion()
+        End Try
+
+    End Function
+
+    Public Function CargarComboProveedor(ByVal ComboActual As ComboBox)
+        Try
+            abrirConexion()
+            Dim objComando As New SqlCommand("GastosCargarComboProveedor", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            Dim objDataAdapter As New SqlDataAdapter(objComando)
+            Dim objDataTable As New Data.DataTable
+            objDataAdapter.Fill(objDataTable)
+            With ComboActual
+                .DataSource = objDataTable
+                .DisplayMember = "Proveedor"
                 .ValueMember = "id"
             End With
         Catch ex As Exception

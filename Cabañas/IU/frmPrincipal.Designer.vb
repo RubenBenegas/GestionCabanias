@@ -32,6 +32,7 @@ Partial Class frmPrincipal
         Me.ProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.TipoCabaniaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.ReservasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -48,7 +49,7 @@ Partial Class frmPrincipal
         '
         'FileMenu
         '
-        Me.FileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CabañasToolStripMenuItem, Me.HuespedesToolStripMenuItem, Me.PersonalToolStripMenuItem, Me.InsumosToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.TipoCabaniaToolStripMenuItem})
+        Me.FileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CabañasToolStripMenuItem, Me.HuespedesToolStripMenuItem, Me.PersonalToolStripMenuItem, Me.InsumosToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.TipoCabaniaToolStripMenuItem, Me.ReservasToolStripMenuItem})
         Me.FileMenu.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.FileMenu.ForeColor = System.Drawing.Color.Black
         Me.FileMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -118,6 +119,12 @@ Partial Class frmPrincipal
         Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(43, 19)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
+        'ReservasToolStripMenuItem
+        '
+        Me.ReservasToolStripMenuItem.Name = "ReservasToolStripMenuItem"
+        Me.ReservasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ReservasToolStripMenuItem.Text = "Reservas"
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -148,5 +155,6 @@ Partial Class frmPrincipal
     Friend WithEvents SalirToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CabañasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TipoCabaniaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ReservasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

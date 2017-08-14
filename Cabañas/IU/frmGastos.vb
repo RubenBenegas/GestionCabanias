@@ -31,7 +31,7 @@
 
             txtId.Text = Gasto.id
             txtDescripcion.Text = Gasto.descripcion
-            DateTimePicker1.Value = Gasto.fecha
+            txtFecha.Text = Gasto.fecha
             cmbCategoria.SelectedValue = Gasto.idCategoria
             txtMUnitario.Text = Gasto.MUnitario
             txtCantidad.Text = Gasto.Cantidad
@@ -53,7 +53,7 @@
 
         If fun.validarCampos(Me, ErrorProvider1) = True Then
             Gasto.descripcion = txtDescripcion.Text
-            Gasto.fecha = DateTimePicker1.Value
+            Gasto.fecha = txtFecha.Text
             Gasto.idCategoria = cmbCategoria.SelectedValue
             Gasto.idProveedor = cmbProveedor.SelectedValue
             Gasto.MUnitario = txtMUnitario.Text

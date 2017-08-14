@@ -90,6 +90,19 @@
   <ItemGroup>
     <Compile Include="Entidades\Cabanias.vb" />
     <Compile Include="Entidades\Conexiones.vb" />
+    <Compile Include="Entidades\Reservas.vb" />
+    <Compile Include="IU\frmReservas.Designer.vb">
+      <DependentUpon>frmReservas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IU\frmReservas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IU\lstReservas.Designer.vb">
+      <DependentUpon>lstReservas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IU\lstReservas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Entidades\TipoCabania.vb" />
     <Compile Include="IU\frmCabania.Designer.vb">
       <DependentUpon>frmCabania.vb</DependentUpon>
@@ -192,6 +205,12 @@
     <Compile Include="Entidades\Personal.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="IU\frmReservas.resx">
+      <DependentUpon>frmReservas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IU\lstReservas.resx">
+      <DependentUpon>lstReservas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IU\frmCabania.resx">
       <DependentUpon>frmCabania.vb</DependentUpon>
     </EmbeddedResource>

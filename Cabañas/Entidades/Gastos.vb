@@ -166,10 +166,9 @@ Public Class Gastos
             Dim objComando As New SqlCommand("GastosInsertar", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
             objComando.Parameters.AddWithValue("@Descripcion", gasto.descripcion)
-            objComando.Parameters.AddWithValue("@fecha", gasto.fecha)
+            objComando.Parameters.AddWithValue("@Fecha", gasto.fecha)
             objComando.Parameters.AddWithValue("@IdCategoria", gasto.idCategoria)
             objComando.Parameters.AddWithValue("@IdProveedor", gasto.idProveedor)
-            objComando.Parameters.AddWithValue("@Proveedor", gasto.idProveedor)
             objComando.Parameters.AddWithValue("@MUnitario", gasto.MUnitario)
             objComando.Parameters.AddWithValue("@Cantidad", gasto.Cantidad)
             objComando.Parameters.AddWithValue("@Total", gasto.Total)

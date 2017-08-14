@@ -38,10 +38,10 @@ Partial Class frmGastos
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.cmbCategoria = New System.Windows.Forms.ComboBox
         Me.lblCategoria = New System.Windows.Forms.Label
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker
         Me.lblFecha = New System.Windows.Forms.Label
         Me.Label6 = New System.Windows.Forms.Label
         Me.cmbProveedor = New System.Windows.Forms.ComboBox
+        Me.txtFecha = New System.Windows.Forms.TextBox
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -183,14 +183,6 @@ Partial Class frmGastos
         Me.lblCategoria.TabIndex = 23
         Me.lblCategoria.Text = "Categoria:"
         '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(140, 59)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(100, 20)
-        Me.DateTimePicker1.TabIndex = 24
-        '
         'lblFecha
         '
         Me.lblFecha.AutoSize = True
@@ -221,16 +213,23 @@ Partial Class frmGastos
         Me.cmbProveedor.Size = New System.Drawing.Size(121, 21)
         Me.cmbProveedor.TabIndex = 26
         '
+        'txtFecha
+        '
+        Me.txtFecha.Location = New System.Drawing.Point(140, 59)
+        Me.txtFecha.Name = "txtFecha"
+        Me.txtFecha.Size = New System.Drawing.Size(100, 20)
+        Me.txtFecha.TabIndex = 28
+        '
         'frmGastos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(328, 262)
+        Me.ClientSize = New System.Drawing.Size(327, 262)
+        Me.Controls.Add(Me.txtFecha)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.cmbProveedor)
         Me.Controls.Add(Me.lblFecha)
-        Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.lblCategoria)
         Me.Controls.Add(Me.cmbCategoria)
         Me.Controls.Add(Me.Label5)
@@ -274,5 +273,5 @@ Partial Class frmGastos
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents cmbProveedor As System.Windows.Forms.ComboBox
     Friend WithEvents lblFecha As System.Windows.Forms.Label
-    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents txtFecha As System.Windows.Forms.TextBox
 End Class

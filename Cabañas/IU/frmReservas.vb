@@ -1,0 +1,105 @@
+﻿Public Class frmReservas
+    Private modificar_ As Boolean
+    Public Property modificar() As Boolean
+        Get
+            Return modificar_
+        End Get
+        Set(ByVal value As Boolean)
+            modificar_ = value
+
+        End Set
+    End Property
+
+
+    Private idReserva_ As Integer
+    Public Property idReserva() As Integer
+        Get
+            Return idReserva_
+        End Get
+        Set(ByVal value As Integer)
+            idReserva_ = value
+        End Set
+    End Property
+
+
+    Dim reserva As New Reservas
+
+
+    Private Sub frmReservas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+        If modificar = True Then
+
+            reserva = reserva.RecuperarReserva(idReserva)
+
+            txtId.Text = reserva.Id
+            txtIdHuesped.Text = reserva.IdHuesped
+            txtFechaIngreso.Text = reserva.fIngreso
+            txtFechaSalida.Text = reserva.fSalida
+            txtIdCabania.Text = reserva.IdCabania
+            txtNumeroPasajeros.Text = reserva.NroPasajeros
+            txtSenia.Text = reserva.Senia
+            chkSinSenia.Checked = reserva.SinSenia
+            txtCheckIn.Text = reserva.Checkin
+            txtCheckOut.Text = reserva.Checkout
+            Me.Text = "Modificar Proveedor"
+
+        Else
+            txtId.Text = Nothing
+            txtIdHuesped.Text = Nothing
+            txtFechaIngreso.Text = Nothing
+            txtFechaSalida.Text = Nothing
+            txtIdCabania.Text = Nothing
+            txtNumeroPasajeros.Text = Nothing
+            txtSenia.Text = Nothing
+            chkSinSenia.Checked = Nothing
+            txtCheckIn.Text = Nothing
+            txtCheckOut.Text = Nothing
+            Me.Text = "Agregar Proveedor"
+
+        End If
+
+    End Sub
+
+    Dim fun As New Validaciones
+    Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
+
+        If fun.validarCampos(Me, ErrorProvider1) = True Then
+
+            reserva.IdHuesped = txtIdHuesped.Text
+            reserva.fIngreso = txtFechaIngreso.Text
+            reserva.fSalida = txtFechaSalida.Text
+            reserva.IdCabania = txtIdCabania.Text
+            reserva.NroPasajeros = txtNumeroPasajeros.Text
+            reserva.Senia = txtSenia.Text
+            reserva.SinSenia = chkSinSenia.Checked
+            reserva.Checkin = txtCheckIn.Text
+            reserva.Checkout = txtCheckOut.Text
+            If modificar = True Then
+                If reserva.ModificarReserva(reserva) = True Then
+                    MsgBox("La reserva ha sido correctamente modificado.")
+                    reserva.TraerTabReservas(lstReservas.dgvReservas)
+                Else
+                    MsgBox("Error al modificar la reserva." + Chr(13) + "Intentelo de nuevo.")
+                End If
+            Else
+                If reserva.InsertarReserva(reserva) = True Then
+                    MsgBox("La reserva ha sido correctamente insertada.")
+                    reserva.TraerTabReservas(lstReservas.dgvReservas)
+                Else
+                    MsgBox("Error al insertar la reserva." + Chr(13) + "Intentelo de nuevo.")
+                End If
+            End If
+            Close()
+
+        Else
+
+            MsgBox("Completar los campos obligatorios.", MsgBoxStyle.Information, "Importante")
+        End If
+
+    End Sub
+
+    Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
+        Close()
+    End Sub
+
+End Class

@@ -24,6 +24,7 @@ Partial Class lstcabania
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(lstcabania))
         Me.dgvCabanias = New System.Windows.Forms.DataGridView
         Me.BtnAlta = New System.Windows.Forms.Button
         Me.BtnModifica = New System.Windows.Forms.Button
@@ -131,6 +132,7 @@ Partial Class lstcabania
         Me.Controls.Add(Me.BtnModifica)
         Me.Controls.Add(Me.BtnAlta)
         Me.Controls.Add(Me.dgvCabanias)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(500, 300)
         Me.Name = "lstcabania"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

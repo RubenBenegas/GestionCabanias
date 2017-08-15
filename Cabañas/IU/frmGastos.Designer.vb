@@ -41,7 +41,7 @@ Partial Class frmGastos
         Me.lblFecha = New System.Windows.Forms.Label
         Me.Label6 = New System.Windows.Forms.Label
         Me.cmbProveedor = New System.Windows.Forms.ComboBox
-        Me.txtFecha = New System.Windows.Forms.TextBox
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -213,12 +213,13 @@ Partial Class frmGastos
         Me.cmbProveedor.Size = New System.Drawing.Size(121, 21)
         Me.cmbProveedor.TabIndex = 26
         '
-        'txtFecha
+        'DateTimePicker1
         '
-        Me.txtFecha.Location = New System.Drawing.Point(140, 59)
-        Me.txtFecha.Name = "txtFecha"
-        Me.txtFecha.Size = New System.Drawing.Size(100, 20)
-        Me.txtFecha.TabIndex = 28
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(140, 59)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(100, 20)
+        Me.DateTimePicker1.TabIndex = 28
         '
         'frmGastos
         '
@@ -226,7 +227,7 @@ Partial Class frmGastos
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(327, 262)
-        Me.Controls.Add(Me.txtFecha)
+        Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.cmbProveedor)
         Me.Controls.Add(Me.lblFecha)
@@ -273,5 +274,5 @@ Partial Class frmGastos
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents cmbProveedor As System.Windows.Forms.ComboBox
     Friend WithEvents lblFecha As System.Windows.Forms.Label
-    Friend WithEvents txtFecha As System.Windows.Forms.TextBox
+    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
 End Class

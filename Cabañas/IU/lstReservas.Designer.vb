@@ -23,6 +23,7 @@ Partial Class lstReservas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(lstReservas))
         Me.Cerrar = New System.Windows.Forms.Button
         Me.Eliminar = New System.Windows.Forms.Button
         Me.Modificar = New System.Windows.Forms.Button
@@ -121,7 +122,9 @@ Partial Class lstReservas
         Me.Controls.Add(Me.Modificar)
         Me.Controls.Add(Me.Aceptar)
         Me.Controls.Add(Me.dgvReservas)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "lstReservas"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "lstReservas"
         CType(Me.dgvReservas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

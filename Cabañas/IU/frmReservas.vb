@@ -27,33 +27,30 @@
 
     Private Sub frmReservas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
+        reserva.CargarComboCabania(cmbIdCabania)
         If modificar = True Then
 
             reserva = reserva.RecuperarReserva(idReserva)
 
             txtId.Text = reserva.Id
+            txtNombreHuesped.Text = lstReservas.dgvReservas.Item("Huesped", lstReservas.dgvReservas.CurrentRow.Index).Value
             txtIdHuesped.Text = reserva.IdHuesped
-            txtFechaIngreso.Text = reserva.fIngreso
-            txtFechaSalida.Text = reserva.fSalida
-            txtIdCabania.Text = reserva.IdCabania
+            DateTimePicker1.Value = reserva.fIngreso
+            DateTimePicker2.Value = reserva.fSalida
+            cmbIdCabania.SelectedValue = reserva.IdCabania
             txtNumeroPasajeros.Text = reserva.NroPasajeros
             txtSenia.Text = reserva.Senia
             chkSinSenia.Checked = reserva.SinSenia
-            txtCheckIn.Text = reserva.Checkin
-            txtCheckOut.Text = reserva.Checkout
+            DateTimePicker3.Value = reserva.Checkin
+            DateTimePicker4.Value = reserva.Checkout
             Me.Text = "Modificar Proveedor"
 
         Else
             txtId.Text = Nothing
             txtIdHuesped.Text = Nothing
-            txtFechaIngreso.Text = Nothing
-            txtFechaSalida.Text = Nothing
-            txtIdCabania.Text = Nothing
             txtNumeroPasajeros.Text = Nothing
             txtSenia.Text = Nothing
             chkSinSenia.Checked = Nothing
-            txtCheckIn.Text = Nothing
-            txtCheckOut.Text = Nothing
             Me.Text = "Agregar Proveedor"
 
         End If
@@ -66,14 +63,14 @@
         If fun.validarCampos(Me, ErrorProvider1) = True Then
 
             reserva.IdHuesped = txtIdHuesped.Text
-            reserva.fIngreso = txtFechaIngreso.Text
-            reserva.fSalida = txtFechaSalida.Text
-            reserva.IdCabania = txtIdCabania.Text
+            reserva.fIngreso = DateTimePicker1.Value
+            reserva.fSalida = DateTimePicker2.Value
+            reserva.IdCabania = cmbIdCabania.SelectedValue
             reserva.NroPasajeros = txtNumeroPasajeros.Text
             reserva.Senia = txtSenia.Text
             reserva.SinSenia = chkSinSenia.Checked
-            reserva.Checkin = txtCheckIn.Text
-            reserva.Checkout = txtCheckOut.Text
+            reserva.Checkin = DateTimePicker3.Value
+            reserva.Checkout = DateTimePicker4.Value
             If modificar = True Then
                 If reserva.ModificarReserva(reserva) = True Then
                     MsgBox("La reserva ha sido correctamente modificado.")
@@ -102,4 +99,7 @@
         Close()
     End Sub
 
+    Private Sub btnBuscarHuesped_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscarHuesped.Click
+        lstConsHuesped.ShowDialog()
+    End Sub
 End Class

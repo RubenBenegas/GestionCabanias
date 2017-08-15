@@ -23,6 +23,7 @@ Partial Class LstProveedor
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LstProveedor))
         Me.dgvProveedores = New System.Windows.Forms.DataGridView
         Me.Aceptar = New System.Windows.Forms.Button
         Me.Modificar = New System.Windows.Forms.Button
@@ -122,6 +123,7 @@ Partial Class LstProveedor
         Me.Controls.Add(Me.Modificar)
         Me.Controls.Add(Me.Aceptar)
         Me.Controls.Add(Me.dgvProveedores)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(500, 300)
         Me.Name = "LstProveedor"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

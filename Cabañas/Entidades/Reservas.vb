@@ -118,12 +118,7 @@ Public Class Reservas
         tabla.DataSource = objDataTable
 
         tabla.Columns("Id").Width = 50
-        'tabla.Columns("Nombre").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        'tabla.Columns("Dni").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        'tabla.Columns("Localidad").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        'tabla.Columns("Direccion").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        'tabla.Columns("Telefono").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        'tabla.Columns("Email").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        tabla.Columns("Huesped").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
         cerrarConexion()
 
@@ -241,7 +236,26 @@ Public Class Reservas
         Finally
             cerrarConexion()
         End Try
-
     End Function
 
+    Public Function CargarComboCabania(ByVal ComboActual As ComboBox)
+        Try
+            abrirConexion()
+            Dim objComando As New SqlCommand("ReservasCargarComboCabania", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            Dim objDataAdapter As New SqlDataAdapter(objComando)
+            Dim objDataTable As New Data.DataTable
+            objDataAdapter.Fill(objDataTable)
+            With ComboActual
+                .DataSource = objDataTable
+                .DisplayMember = "TipoCabania"
+                .ValueMember = "id"
+            End With
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            cerrarConexion()
+        End Try
+
+    End Function
 End Class

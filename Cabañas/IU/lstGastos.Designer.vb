@@ -23,6 +23,7 @@ Partial Class lstGastos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(lstGastos))
         Me.dgvGastos = New System.Windows.Forms.DataGridView
         Me.btnBorrar = New System.Windows.Forms.Button
         Me.btnModificar = New System.Windows.Forms.Button
@@ -122,6 +123,7 @@ Partial Class lstGastos
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.dgvGastos)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(500, 300)
         Me.Name = "lstGastos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

@@ -23,6 +23,7 @@ Partial Class lstHuesped
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(lstHuesped))
         Me.dgvHuesped = New System.Windows.Forms.DataGridView
         Me.btnAgregar = New System.Windows.Forms.Button
         Me.btnModificar = New System.Windows.Forms.Button
@@ -124,6 +125,7 @@ Partial Class lstHuesped
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.dgvHuesped)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(500, 300)
         Me.Name = "lstHuesped"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

@@ -33,19 +33,20 @@ Partial Class frmReservas
         Me.lblCheckIn = New System.Windows.Forms.Label
         Me.lblCheckOut = New System.Windows.Forms.Label
         Me.txtId = New System.Windows.Forms.TextBox
-        Me.txtFechaIngreso = New System.Windows.Forms.TextBox
-        Me.txtFechaSalida = New System.Windows.Forms.TextBox
         Me.txtNumeroPasajeros = New System.Windows.Forms.TextBox
         Me.txtSenia = New System.Windows.Forms.TextBox
-        Me.txtCheckIn = New System.Windows.Forms.TextBox
         Me.chkSinSenia = New System.Windows.Forms.CheckBox
-        Me.txtCheckOut = New System.Windows.Forms.TextBox
         Me.btnAceptar = New System.Windows.Forms.Button
         Me.btnCancelar = New System.Windows.Forms.Button
         Me.txtIdHuesped = New System.Windows.Forms.TextBox
         Me.btnBuscarHuesped = New System.Windows.Forms.Button
-        Me.txtIdCabania = New System.Windows.Forms.TextBox
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker
+        Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker
+        Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker
+        Me.cmbIdCabania = New System.Windows.Forms.ComboBox
+        Me.txtNombreHuesped = New System.Windows.Forms.TextBox
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -138,40 +139,19 @@ Partial Class frmReservas
         Me.txtId.Size = New System.Drawing.Size(100, 20)
         Me.txtId.TabIndex = 10
         '
-        'txtFechaIngreso
-        '
-        Me.txtFechaIngreso.Location = New System.Drawing.Point(108, 74)
-        Me.txtFechaIngreso.Name = "txtFechaIngreso"
-        Me.txtFechaIngreso.Size = New System.Drawing.Size(100, 20)
-        Me.txtFechaIngreso.TabIndex = 12
-        '
-        'txtFechaSalida
-        '
-        Me.txtFechaSalida.Location = New System.Drawing.Point(108, 107)
-        Me.txtFechaSalida.Name = "txtFechaSalida"
-        Me.txtFechaSalida.Size = New System.Drawing.Size(100, 20)
-        Me.txtFechaSalida.TabIndex = 13
-        '
         'txtNumeroPasajeros
         '
         Me.txtNumeroPasajeros.Location = New System.Drawing.Point(381, 6)
         Me.txtNumeroPasajeros.Name = "txtNumeroPasajeros"
         Me.txtNumeroPasajeros.Size = New System.Drawing.Size(100, 20)
-        Me.txtNumeroPasajeros.TabIndex = 15
+        Me.txtNumeroPasajeros.TabIndex = 4
         '
         'txtSenia
         '
         Me.txtSenia.Location = New System.Drawing.Point(381, 39)
         Me.txtSenia.Name = "txtSenia"
         Me.txtSenia.Size = New System.Drawing.Size(100, 20)
-        Me.txtSenia.TabIndex = 16
-        '
-        'txtCheckIn
-        '
-        Me.txtCheckIn.Location = New System.Drawing.Point(381, 102)
-        Me.txtCheckIn.Name = "txtCheckIn"
-        Me.txtCheckIn.Size = New System.Drawing.Size(100, 20)
-        Me.txtCheckIn.TabIndex = 17
+        Me.txtSenia.TabIndex = 5
         '
         'chkSinSenia
         '
@@ -179,23 +159,16 @@ Partial Class frmReservas
         Me.chkSinSenia.Location = New System.Drawing.Point(381, 72)
         Me.chkSinSenia.Name = "chkSinSenia"
         Me.chkSinSenia.Size = New System.Drawing.Size(69, 17)
-        Me.chkSinSenia.TabIndex = 18
+        Me.chkSinSenia.TabIndex = 6
         Me.chkSinSenia.Text = "Sin Seña"
         Me.chkSinSenia.UseVisualStyleBackColor = True
-        '
-        'txtCheckOut
-        '
-        Me.txtCheckOut.Location = New System.Drawing.Point(381, 135)
-        Me.txtCheckOut.Name = "txtCheckOut"
-        Me.txtCheckOut.Size = New System.Drawing.Size(100, 20)
-        Me.txtCheckOut.TabIndex = 19
         '
         'btnAceptar
         '
         Me.btnAceptar.Location = New System.Drawing.Point(230, 179)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
-        Me.btnAceptar.TabIndex = 20
+        Me.btnAceptar.TabIndex = 9
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = True
         '
@@ -204,16 +177,18 @@ Partial Class frmReservas
         Me.btnCancelar.Location = New System.Drawing.Point(336, 179)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
-        Me.btnCancelar.TabIndex = 21
+        Me.btnCancelar.TabIndex = 10
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
         '
         'txtIdHuesped
         '
+        Me.txtIdHuesped.Enabled = False
         Me.txtIdHuesped.Location = New System.Drawing.Point(108, 40)
         Me.txtIdHuesped.Name = "txtIdHuesped"
         Me.txtIdHuesped.Size = New System.Drawing.Size(100, 20)
         Me.txtIdHuesped.TabIndex = 24
+        Me.txtIdHuesped.Visible = False
         '
         'btnBuscarHuesped
         '
@@ -224,34 +199,77 @@ Partial Class frmReservas
         Me.btnBuscarHuesped.Text = "..."
         Me.btnBuscarHuesped.UseVisualStyleBackColor = True
         '
-        'txtIdCabania
-        '
-        Me.txtIdCabania.Location = New System.Drawing.Point(108, 140)
-        Me.txtIdCabania.Name = "txtIdCabania"
-        Me.txtIdCabania.Size = New System.Drawing.Size(100, 20)
-        Me.txtIdCabania.TabIndex = 26
-        '
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(108, 77)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(100, 20)
+        Me.DateTimePicker1.TabIndex = 1
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker2.Location = New System.Drawing.Point(108, 110)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(100, 20)
+        Me.DateTimePicker2.TabIndex = 2
+        '
+        'DateTimePicker3
+        '
+        Me.DateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker3.Location = New System.Drawing.Point(381, 99)
+        Me.DateTimePicker3.Name = "DateTimePicker3"
+        Me.DateTimePicker3.Size = New System.Drawing.Size(100, 20)
+        Me.DateTimePicker3.TabIndex = 7
+        '
+        'DateTimePicker4
+        '
+        Me.DateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker4.Location = New System.Drawing.Point(381, 132)
+        Me.DateTimePicker4.Name = "DateTimePicker4"
+        Me.DateTimePicker4.Size = New System.Drawing.Size(100, 20)
+        Me.DateTimePicker4.TabIndex = 8
+        '
+        'cmbIdCabania
+        '
+        Me.cmbIdCabania.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbIdCabania.FormattingEnabled = True
+        Me.cmbIdCabania.Location = New System.Drawing.Point(108, 140)
+        Me.cmbIdCabania.Name = "cmbIdCabania"
+        Me.cmbIdCabania.Size = New System.Drawing.Size(100, 21)
+        Me.cmbIdCabania.TabIndex = 3
+        '
+        'txtNombreHuesped
+        '
+        Me.txtNombreHuesped.Enabled = False
+        Me.txtNombreHuesped.Location = New System.Drawing.Point(108, 40)
+        Me.txtNombreHuesped.Name = "txtNombreHuesped"
+        Me.txtNombreHuesped.Size = New System.Drawing.Size(100, 20)
+        Me.txtNombreHuesped.TabIndex = 0
         '
         'frmReservas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(504, 214)
-        Me.Controls.Add(Me.txtIdCabania)
+        Me.Controls.Add(Me.txtNombreHuesped)
+        Me.Controls.Add(Me.cmbIdCabania)
+        Me.Controls.Add(Me.DateTimePicker4)
+        Me.Controls.Add(Me.DateTimePicker3)
+        Me.Controls.Add(Me.DateTimePicker2)
+        Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.btnBuscarHuesped)
         Me.Controls.Add(Me.txtIdHuesped)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAceptar)
-        Me.Controls.Add(Me.txtCheckOut)
         Me.Controls.Add(Me.chkSinSenia)
-        Me.Controls.Add(Me.txtCheckIn)
         Me.Controls.Add(Me.txtSenia)
         Me.Controls.Add(Me.txtNumeroPasajeros)
-        Me.Controls.Add(Me.txtFechaSalida)
-        Me.Controls.Add(Me.txtFechaIngreso)
         Me.Controls.Add(Me.txtId)
         Me.Controls.Add(Me.lblCheckOut)
         Me.Controls.Add(Me.lblCheckIn)
@@ -262,7 +280,11 @@ Partial Class frmReservas
         Me.Controls.Add(Me.lblFechaIngreso)
         Me.Controls.Add(Me.lblIdHuesped)
         Me.Controls.Add(Me.lblId)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmReservas"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmReservas"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -279,17 +301,18 @@ Partial Class frmReservas
     Friend WithEvents lblCheckIn As System.Windows.Forms.Label
     Friend WithEvents lblCheckOut As System.Windows.Forms.Label
     Friend WithEvents txtId As System.Windows.Forms.TextBox
-    Friend WithEvents txtFechaIngreso As System.Windows.Forms.TextBox
-    Friend WithEvents txtFechaSalida As System.Windows.Forms.TextBox
     Friend WithEvents txtNumeroPasajeros As System.Windows.Forms.TextBox
     Friend WithEvents txtSenia As System.Windows.Forms.TextBox
-    Friend WithEvents txtCheckIn As System.Windows.Forms.TextBox
     Friend WithEvents chkSinSenia As System.Windows.Forms.CheckBox
-    Friend WithEvents txtCheckOut As System.Windows.Forms.TextBox
     Friend WithEvents btnAceptar As System.Windows.Forms.Button
     Friend WithEvents btnCancelar As System.Windows.Forms.Button
     Friend WithEvents txtIdHuesped As System.Windows.Forms.TextBox
     Friend WithEvents btnBuscarHuesped As System.Windows.Forms.Button
-    Friend WithEvents txtIdCabania As System.Windows.Forms.TextBox
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
+    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents DateTimePicker3 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents DateTimePicker4 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents cmbIdCabania As System.Windows.Forms.ComboBox
+    Friend WithEvents txtNombreHuesped As System.Windows.Forms.TextBox
 End Class

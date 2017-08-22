@@ -4,7 +4,7 @@
         reservas.TraerTabReservas(dgvReservas)
     End Sub
 
-    Private Sub Aceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Aceptar.Click
+    Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
         frmReservas.modificar = False
         frmReservas.idReserva = 0
         frmReservas.ShowDialog()

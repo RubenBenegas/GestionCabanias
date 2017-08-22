@@ -50,6 +50,10 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub ReservasToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ReservasToolStripMenuItem.Click
+        grafReservas.ShowDialog()
+    End Sub
+
+    Private Sub PruebaABMReservasToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PruebaABMReservasToolStripMenuItem.Click
         lstReservas.ShowDialog()
     End Sub
 End Class

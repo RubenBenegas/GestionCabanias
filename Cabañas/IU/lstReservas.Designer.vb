@@ -27,7 +27,7 @@ Partial Class lstReservas
         Me.Cerrar = New System.Windows.Forms.Button
         Me.Eliminar = New System.Windows.Forms.Button
         Me.Modificar = New System.Windows.Forms.Button
-        Me.Aceptar = New System.Windows.Forms.Button
+        Me.btnAgregar = New System.Windows.Forms.Button
         Me.dgvReservas = New System.Windows.Forms.DataGridView
         CType(Me.dgvReservas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -71,18 +71,18 @@ Partial Class lstReservas
         Me.Modificar.Text = "Modificar"
         Me.Modificar.UseVisualStyleBackColor = False
         '
-        'Aceptar
+        'btnAgregar
         '
-        Me.Aceptar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Aceptar.BackColor = System.Drawing.Color.Purple
-        Me.Aceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Aceptar.ForeColor = System.Drawing.Color.White
-        Me.Aceptar.Location = New System.Drawing.Point(12, 428)
-        Me.Aceptar.Name = "Aceptar"
-        Me.Aceptar.Size = New System.Drawing.Size(90, 30)
-        Me.Aceptar.TabIndex = 6
-        Me.Aceptar.Text = "Agregar"
-        Me.Aceptar.UseVisualStyleBackColor = False
+        Me.btnAgregar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnAgregar.BackColor = System.Drawing.Color.Purple
+        Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAgregar.ForeColor = System.Drawing.Color.White
+        Me.btnAgregar.Location = New System.Drawing.Point(12, 428)
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(90, 30)
+        Me.btnAgregar.TabIndex = 6
+        Me.btnAgregar.Text = "Agregar"
+        Me.btnAgregar.UseVisualStyleBackColor = False
         '
         'dgvReservas
         '
@@ -120,7 +120,7 @@ Partial Class lstReservas
         Me.Controls.Add(Me.Cerrar)
         Me.Controls.Add(Me.Eliminar)
         Me.Controls.Add(Me.Modificar)
-        Me.Controls.Add(Me.Aceptar)
+        Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.dgvReservas)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "lstReservas"
@@ -133,6 +133,6 @@ Partial Class lstReservas
     Friend WithEvents Cerrar As System.Windows.Forms.Button
     Friend WithEvents Eliminar As System.Windows.Forms.Button
     Friend WithEvents Modificar As System.Windows.Forms.Button
-    Friend WithEvents Aceptar As System.Windows.Forms.Button
+    Friend WithEvents btnAgregar As System.Windows.Forms.Button
     Friend WithEvents dgvReservas As System.Windows.Forms.DataGridView
 End Class

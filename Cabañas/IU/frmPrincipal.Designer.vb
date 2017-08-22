@@ -34,13 +34,15 @@ Partial Class frmPrincipal
         Me.TipoCabaniaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ReservasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
+        Me.PruebaABMReservasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip
         '
         Me.MenuStrip.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.SalirToolStripMenuItem})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.SalirToolStripMenuItem, Me.ToolStripMenuItem1, Me.PruebaABMReservasToolStripMenuItem})
         Me.MenuStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.Name = "MenuStrip"
@@ -126,6 +128,17 @@ Partial Class frmPrincipal
         Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(43, 19)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(12, 4)
+        '
+        'PruebaABMReservasToolStripMenuItem
+        '
+        Me.PruebaABMReservasToolStripMenuItem.Name = "PruebaABMReservasToolStripMenuItem"
+        Me.PruebaABMReservasToolStripMenuItem.Size = New System.Drawing.Size(130, 19)
+        Me.PruebaABMReservasToolStripMenuItem.Text = "Prueba ABMReservas"
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -158,5 +171,7 @@ Partial Class frmPrincipal
     Friend WithEvents CabañasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TipoCabaniaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ReservasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PruebaABMReservasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

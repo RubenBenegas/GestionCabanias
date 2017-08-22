@@ -107,7 +107,7 @@ Partial Class frmReservas
         'lblSenia
         '
         Me.lblSenia.AutoSize = True
-        Me.lblSenia.Location = New System.Drawing.Point(270, 42)
+        Me.lblSenia.Location = New System.Drawing.Point(272, 40)
         Me.lblSenia.Name = "lblSenia"
         Me.lblSenia.Size = New System.Drawing.Size(35, 13)
         Me.lblSenia.TabIndex = 6
@@ -148,7 +148,7 @@ Partial Class frmReservas
         '
         'txtSenia
         '
-        Me.txtSenia.Location = New System.Drawing.Point(381, 39)
+        Me.txtSenia.Location = New System.Drawing.Point(381, 68)
         Me.txtSenia.Name = "txtSenia"
         Me.txtSenia.Size = New System.Drawing.Size(100, 20)
         Me.txtSenia.TabIndex = 5
@@ -156,7 +156,7 @@ Partial Class frmReservas
         'chkSinSenia
         '
         Me.chkSinSenia.AutoSize = True
-        Me.chkSinSenia.Location = New System.Drawing.Point(381, 72)
+        Me.chkSinSenia.Location = New System.Drawing.Point(381, 39)
         Me.chkSinSenia.Name = "chkSinSenia"
         Me.chkSinSenia.Size = New System.Drawing.Size(69, 17)
         Me.chkSinSenia.TabIndex = 6

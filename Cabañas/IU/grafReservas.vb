@@ -1,6 +1,11 @@
 ﻿Public Class grafReservas
 
     Private Sub Alquileres_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+        Dim cab As New Cabanias
+
+        MessageBox.Show(cab.CantidadCabania())
+
         Dim arReservas() As Integer = {10, 2, 5, 3, 4, 5, 7, 8, 5, 1}
         Dim arHabitaciones() As Integer = {1, 1, 2, 2, 3, 4, 5, 5, 5, 2}
         Dim posX As Integer = 0
@@ -10,7 +15,7 @@
 
         Dim flpHabitacion As FlowLayoutPanel
         Dim arflpHabitaciones(10)
-        For i = 0 To 9
+        For i = 1 To cab.CantidadCabania()
             flpHabitacion = New FlowLayoutPanel
             flpHabitacion.BackColor = Color.DarkBlue
             flpHabitacion.Width = 591

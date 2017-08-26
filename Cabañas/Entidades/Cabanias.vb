@@ -206,5 +206,20 @@ Public Class Cabanias
         End Try
     End Sub
 
+    Public Function CantidadCabania() As Integer
+        abrirConexion()
+
+        Dim cantidad As New Integer
+        Dim objComando As New SqlCommand("CabaniasCantidad", objConexion)
+        objComando.CommandType = CommandType.StoredProcedure
+        Dim objDataTable As New Data.DataTable
+        Dim objDataAdapter As New SqlDataAdapter(objComando)
+        objDataAdapter.Fill(objDataTable)
+        cantidad = objDataTable.Rows(0).Item("cantidad")
+        Return cantidad
+
+        cerrarConexion()
+
+    End Function
 End Class
 

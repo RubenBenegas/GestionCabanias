@@ -258,4 +258,36 @@ Public Class Reservas
         End Try
 
     End Function
+
+    Public Sub CantidadReservas(ByVal tabla As DataGridView)
+        abrirConexion()
+
+        Dim objComando As New SqlCommand("ReservasTraerTab", objConexion)
+        objComando.CommandType = CommandType.StoredProcedure
+
+        Dim objDataTable As New Data.DataTable
+        Dim objDataAdapter As New SqlDataAdapter(objComando)
+        objDataAdapter.Fill(objDataTable)
+        tabla.DataSource = objDataTable
+
+        tabla.Columns("Id").Width = 50
+        tabla.Columns("Huesped").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+
+        cerrarConexion()
+    End Sub
+
+    Public Function DataTableReservas() As Data.DataTable
+
+        abrirConexion()
+
+        Dim objComando As New SqlCommand("ReservasDataTable", objConexion)
+        objComando.CommandType = CommandType.StoredProcedure
+        Dim objDataTable As New Data.DataTable
+        Dim objDataAdapter As New SqlDataAdapter(objComando)
+        objDataAdapter.Fill(objDataTable)
+        Return objDataTable
+
+        cerrarConexion()
+
+    End Function
 End Class

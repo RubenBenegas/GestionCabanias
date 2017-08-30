@@ -91,6 +91,9 @@
     <Compile Include="Entidades\BotonReservas.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Entidades\FlpCabanias.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Entidades\Servicios.vb" />
     <Compile Include="IU\frmServicios.Designer.vb">
       <DependentUpon>frmServicios.vb</DependentUpon>

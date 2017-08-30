@@ -30,7 +30,7 @@
 
             Me.Text = "Modificar Servicio"
 
-            servicio = servicio.RecuperarServicio(idServicio)
+            servicio = servicio.ServicioRecuperar(idServicio)
 
             txtIdServicio.Text = servicio.Id
             txtDescripcion.Text = servicio.Descripcion
@@ -61,16 +61,16 @@
             servicio.Monto = txtMonto.Text
 
             If modificar = True Then
-                If servicio.ModificarServicio(servicio) = True Then
+                If servicio.ServicioModificar(servicio) = True Then
                     MsgBox("El servicio ha sido modificado.")
-                    servicio.TraerTabServicio(lstServicios.dgvServicios)
+                    servicio.ServicioTraerTab(lstServicios.dgvServicios)
                 Else
                     MsgBox("Error al modificar el servicio." + Chr(13) + "Intentelo de nuevo.")
                 End If
             Else
-                If servicio.InsertarServicio(servicio) = True Then
+                If servicio.ServicioInsertar(servicio) = True Then
                     MsgBox("El servicio ha sido correctamente insertado.")
-                    servicio.TraerTabServicio(lstServicios.dgvServicios)
+                    servicio.ServicioTraerTab(lstServicios.dgvServicios)
                 Else
                     MsgBox("Error al insertar el servicio." + Chr(13) + "Intentelo de nuevo.")
                 End If

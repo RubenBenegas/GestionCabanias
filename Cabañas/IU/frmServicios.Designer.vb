@@ -22,6 +22,7 @@ Partial Class frmServicios
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container
         Me.txtIdServicio = New System.Windows.Forms.TextBox
         Me.txtDescripcion = New System.Windows.Forms.TextBox
         Me.Label1 = New System.Windows.Forms.Label
@@ -30,6 +31,8 @@ Partial Class frmServicios
         Me.btnAceptar = New System.Windows.Forms.Button
         Me.btnCancelar = New System.Windows.Forms.Button
         Me.txtMonto = New System.Windows.Forms.TextBox
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtIdServicio
@@ -98,6 +101,10 @@ Partial Class frmServicios
         Me.txtMonto.Size = New System.Drawing.Size(100, 20)
         Me.txtMonto.TabIndex = 8
         '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
+        '
         'frmServicios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -113,6 +120,7 @@ Partial Class frmServicios
         Me.Controls.Add(Me.txtIdServicio)
         Me.Name = "frmServicios"
         Me.Text = "frmServicios"
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -125,4 +133,5 @@ Partial Class frmServicios
     Friend WithEvents btnAceptar As System.Windows.Forms.Button
     Friend WithEvents btnCancelar As System.Windows.Forms.Button
     Friend WithEvents txtMonto As System.Windows.Forms.TextBox
+    Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
 End Class

@@ -91,6 +91,13 @@
     <Compile Include="Entidades\BotonReservas.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Entidades\Servicios.vb" />
+    <Compile Include="IU\frmServicios.Designer.vb">
+      <DependentUpon>frmServicios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IU\frmServicios.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="IU\grafReservas.Designer.vb">
       <DependentUpon>grafReservas.vb</DependentUpon>
     </Compile>
@@ -169,6 +176,12 @@
     <Compile Include="IU\lstTipoCabania.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="IU\lstServicios.Designer.vb">
+      <DependentUpon>lstServicios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IU\lstServicios.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Utiles\Validaciones.vb" />
     <Compile Include="IU\frmHuesped.Designer.vb">
       <DependentUpon>frmHuesped.vb</DependentUpon>
@@ -220,6 +233,9 @@
     <Compile Include="Entidades\Personal.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="IU\frmServicios.resx">
+      <DependentUpon>frmServicios.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IU\grafReservas.resx">
       <DependentUpon>grafReservas.vb</DependentUpon>
     </EmbeddedResource>
@@ -270,6 +286,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IU\lstTipoCabania.resx">
       <DependentUpon>lstTipoCabania.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IU\lstServicios.resx">
+      <DependentUpon>lstServicios.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

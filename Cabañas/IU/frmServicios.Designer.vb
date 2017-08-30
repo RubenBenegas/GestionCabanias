@@ -37,6 +37,7 @@ Partial Class frmServicios
         '
         'txtIdServicio
         '
+        Me.txtIdServicio.Enabled = False
         Me.txtIdServicio.Location = New System.Drawing.Point(119, 31)
         Me.txtIdServicio.Name = "txtIdServicio"
         Me.txtIdServicio.Size = New System.Drawing.Size(100, 20)
@@ -118,6 +119,7 @@ Partial Class frmServicios
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtDescripcion)
         Me.Controls.Add(Me.txtIdServicio)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Name = "frmServicios"
         Me.Text = "frmServicios"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()

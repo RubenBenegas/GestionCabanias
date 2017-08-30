@@ -36,6 +36,7 @@ Partial Class frmPrincipal
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
         Me.PruebaABMReservasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.ServiciosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -52,7 +53,7 @@ Partial Class frmPrincipal
         '
         'FileMenu
         '
-        Me.FileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CabañasToolStripMenuItem, Me.HuespedesToolStripMenuItem, Me.PersonalToolStripMenuItem, Me.InsumosToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.TipoCabaniaToolStripMenuItem, Me.ReservasToolStripMenuItem})
+        Me.FileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CabañasToolStripMenuItem, Me.HuespedesToolStripMenuItem, Me.PersonalToolStripMenuItem, Me.InsumosToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.TipoCabaniaToolStripMenuItem, Me.ReservasToolStripMenuItem, Me.ServiciosToolStripMenuItem})
         Me.FileMenu.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.FileMenu.ForeColor = System.Drawing.Color.Black
         Me.FileMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -77,7 +78,7 @@ Partial Class frmPrincipal
         Me.HuespedesToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.HuespedesToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.HuespedesToolStripMenuItem.Name = "HuespedesToolStripMenuItem"
-        Me.HuespedesToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
+        Me.HuespedesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.HuespedesToolStripMenuItem.Text = "Huespedes"
         '
         'PersonalToolStripMenuItem
@@ -86,7 +87,7 @@ Partial Class frmPrincipal
         Me.PersonalToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.PersonalToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.PersonalToolStripMenuItem.Name = "PersonalToolStripMenuItem"
-        Me.PersonalToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
+        Me.PersonalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.PersonalToolStripMenuItem.Text = "Personal"
         '
         'InsumosToolStripMenuItem
@@ -95,7 +96,7 @@ Partial Class frmPrincipal
         Me.InsumosToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.InsumosToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.InsumosToolStripMenuItem.Name = "InsumosToolStripMenuItem"
-        Me.InsumosToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
+        Me.InsumosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.InsumosToolStripMenuItem.Text = "Gastos"
         '
         'ProveedoresToolStripMenuItem
@@ -104,20 +105,20 @@ Partial Class frmPrincipal
         Me.ProveedoresToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.ProveedoresToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
-        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
+        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
         '
         'TipoCabaniaToolStripMenuItem
         '
         Me.TipoCabaniaToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.TipoCabaniaToolStripMenuItem.Name = "TipoCabaniaToolStripMenuItem"
-        Me.TipoCabaniaToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
+        Me.TipoCabaniaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.TipoCabaniaToolStripMenuItem.Text = "TipoCabania"
         '
         'ReservasToolStripMenuItem
         '
         Me.ReservasToolStripMenuItem.Name = "ReservasToolStripMenuItem"
-        Me.ReservasToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
+        Me.ReservasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ReservasToolStripMenuItem.Text = "Reservas"
         '
         'SalirToolStripMenuItem
@@ -138,6 +139,12 @@ Partial Class frmPrincipal
         Me.PruebaABMReservasToolStripMenuItem.Name = "PruebaABMReservasToolStripMenuItem"
         Me.PruebaABMReservasToolStripMenuItem.Size = New System.Drawing.Size(130, 19)
         Me.PruebaABMReservasToolStripMenuItem.Text = "Prueba ABMReservas"
+        '
+        'ServiciosToolStripMenuItem
+        '
+        Me.ServiciosToolStripMenuItem.Name = "ServiciosToolStripMenuItem"
+        Me.ServiciosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ServiciosToolStripMenuItem.Text = "Servicios"
         '
         'frmPrincipal
         '
@@ -173,5 +180,6 @@ Partial Class frmPrincipal
     Friend WithEvents ReservasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PruebaABMReservasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ServiciosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

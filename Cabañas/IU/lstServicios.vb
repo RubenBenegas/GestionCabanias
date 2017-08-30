@@ -47,8 +47,8 @@
     Private Sub Editar()
         frmCabania.modificar = True
         If dgvServicios.Rows.Count <> 0 Then
-            frmCabania.idCabania = dgvServicios.Item("Id", dgvServicios.CurrentRow.Index).Value
-            frmCabania.ShowDialog()
+            frmServicios.idServicio = dgvServicios.Item("Id", dgvServicios.CurrentRow.Index).Value
+            frmServicios.ShowDialog()
 
               End If
 

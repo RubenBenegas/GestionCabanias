@@ -38,7 +38,7 @@ Public Class Servicios
     Public Sub ServicioTraerTab(ByVal tabla As DataGridView)
         abrirConexion()
 
-        Dim objComando As New SqlCommand("ServicioTraerTab", objConexion)
+        Dim objComando As New SqlCommand("ServiciosTraerTab", objConexion)
         objComando.CommandType = CommandType.StoredProcedure
 
         Dim objDataTable As New Data.DataTable
@@ -59,9 +59,8 @@ Public Class Servicios
         Try
             abrirConexion()
 
-            Dim objComando As New SqlCommand("ServicioInsertar", objConexion)
+            Dim objComando As New SqlCommand("ServiciosInsertar", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
-            objComando.Parameters.AddWithValue("@Id", servicio.Id)
             objComando.Parameters.AddWithValue("@Descripcion", servicio.Descripcion)
             objComando.Parameters.AddWithValue("@Monto", servicio.Monto)
 
@@ -82,7 +81,7 @@ Public Class Servicios
         Try
             abrirConexion()
 
-            Dim objComando As New SqlCommand("ServicioModificar", objConexion)
+            Dim objComando As New SqlCommand("ServiciosModificar", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
             objComando.Parameters.AddWithValue("@Id", servicio.Id)
             objComando.Parameters.AddWithValue("@Descripcion", servicio.Descripcion)
@@ -106,9 +105,9 @@ Public Class Servicios
         Try
             abrirConexion()
 
-            Dim objComando As New SqlCommand("ServicioBorrar", objConexion)
+            Dim objComando As New SqlCommand("ServiciosBorrar", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
-            objComando.Parameters.AddWithValue("@Id", Id)
+            objComando.Parameters.AddWithValue("IdServicios", Id)
             If objComando.ExecuteNonQuery() Then
                 Return True
             Else
@@ -130,9 +129,9 @@ Public Class Servicios
             abrirConexion()
             Dim servicio As New Servicios
 
-            Dim objComando As New SqlCommand("ServicioRecuperar", objConexion)
+            Dim objComando As New SqlCommand("ServiciosRecuperar", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
-            objComando.Parameters.AddWithValue("@Id", id)
+            objComando.Parameters.AddWithValue("@IdServicios", id)
             Dim objDataAdapter As New SqlDataAdapter(objComando)
             Dim objDataTable As New Data.DataTable
             objDataAdapter.Fill(objDataTable)

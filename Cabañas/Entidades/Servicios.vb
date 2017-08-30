@@ -123,15 +123,14 @@ Public Class Servicios
 
     End Function
 
-    Public Function ServicioRecuperar(ByVal id As Integer) As Servicios
+    Public Function ServicioRecuperar(ByVal idServicio As Integer) As Servicios
 
         Try
             abrirConexion()
             Dim servicio As New Servicios
-
             Dim objComando As New SqlCommand("ServiciosRecuperar", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
-            objComando.Parameters.AddWithValue("@IdServicios", id)
+            objComando.Parameters.AddWithValue("@IdServicios", idServicio)
             Dim objDataAdapter As New SqlDataAdapter(objComando)
             Dim objDataTable As New Data.DataTable
             objDataAdapter.Fill(objDataTable)
@@ -140,9 +139,7 @@ Public Class Servicios
                 servicio.Id = objDataTable.Rows(0).Item("Id")
                 servicio.Descripcion = objDataTable.Rows(0).Item("Descripcion")
                 servicio.Monto = objDataTable.Rows(0).Item("Monto")
-
                 Return servicio
-
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -150,6 +147,7 @@ Public Class Servicios
             cerrarConexion()
         End Try
     End Function
+
 
 
 End Class

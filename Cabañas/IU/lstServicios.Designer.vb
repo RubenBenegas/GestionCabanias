@@ -42,13 +42,16 @@ Partial Class lstServicios
         Me.dgvServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvServicios.Location = New System.Drawing.Point(12, 12)
         Me.dgvServicios.Name = "dgvServicios"
-        Me.dgvServicios.Size = New System.Drawing.Size(970, 410)
+        Me.dgvServicios.ReadOnly = True
+        Me.dgvServicios.RowHeadersVisible = False
+        Me.dgvServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvServicios.Size = New System.Drawing.Size(960, 408)
         Me.dgvServicios.TabIndex = 0
         '
         'btnAgregar
         '
         Me.btnAgregar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnAgregar.Location = New System.Drawing.Point(29, 428)
+        Me.btnAgregar.Location = New System.Drawing.Point(29, 426)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(90, 30)
         Me.btnAgregar.TabIndex = 1
@@ -58,7 +61,7 @@ Partial Class lstServicios
         'btnModificar
         '
         Me.btnModificar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnModificar.Location = New System.Drawing.Point(139, 428)
+        Me.btnModificar.Location = New System.Drawing.Point(139, 426)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(90, 30)
         Me.btnModificar.TabIndex = 2
@@ -68,7 +71,7 @@ Partial Class lstServicios
         'btnEliminar
         '
         Me.btnEliminar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnEliminar.Location = New System.Drawing.Point(253, 428)
+        Me.btnEliminar.Location = New System.Drawing.Point(253, 426)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(90, 30)
         Me.btnEliminar.TabIndex = 3
@@ -78,7 +81,7 @@ Partial Class lstServicios
         'btnCerrar
         '
         Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCerrar.Location = New System.Drawing.Point(824, 428)
+        Me.btnCerrar.Location = New System.Drawing.Point(824, 426)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(90, 30)
         Me.btnCerrar.TabIndex = 4
@@ -89,7 +92,7 @@ Partial Class lstServicios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(984, 463)
+        Me.ClientSize = New System.Drawing.Size(984, 461)
         Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnModificar)

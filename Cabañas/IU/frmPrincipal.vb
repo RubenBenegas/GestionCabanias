@@ -60,4 +60,8 @@ Public Class frmPrincipal
     Private Sub ServiciosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ServiciosToolStripMenuItem.Click
         lstServicios.ShowDialog()
     End Sub
+
+    Private Sub ToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripMenuItem2.Click
+        lstAdicional.ShowDialog()
+    End Sub
 End Class

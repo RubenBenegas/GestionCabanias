@@ -33,10 +33,11 @@ Partial Class frmPrincipal
         Me.ProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.TipoCabaniaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ReservasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.ServiciosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
         Me.PruebaABMReservasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ServiciosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -53,7 +54,7 @@ Partial Class frmPrincipal
         '
         'FileMenu
         '
-        Me.FileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CabañasToolStripMenuItem, Me.HuespedesToolStripMenuItem, Me.PersonalToolStripMenuItem, Me.InsumosToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.TipoCabaniaToolStripMenuItem, Me.ReservasToolStripMenuItem, Me.ServiciosToolStripMenuItem})
+        Me.FileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CabañasToolStripMenuItem, Me.HuespedesToolStripMenuItem, Me.PersonalToolStripMenuItem, Me.InsumosToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.TipoCabaniaToolStripMenuItem, Me.ReservasToolStripMenuItem, Me.ServiciosToolStripMenuItem, Me.ToolStripMenuItem2})
         Me.FileMenu.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.FileMenu.ForeColor = System.Drawing.Color.Black
         Me.FileMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -121,6 +122,18 @@ Partial Class frmPrincipal
         Me.ReservasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ReservasToolStripMenuItem.Text = "Reservas"
         '
+        'ServiciosToolStripMenuItem
+        '
+        Me.ServiciosToolStripMenuItem.Name = "ServiciosToolStripMenuItem"
+        Me.ServiciosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ServiciosToolStripMenuItem.Text = "Servicios"
+        '
+        'ToolStripMenuItem2
+        '
+        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
+        Me.ToolStripMenuItem2.Text = "Adicionales"
+        '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
@@ -139,12 +152,6 @@ Partial Class frmPrincipal
         Me.PruebaABMReservasToolStripMenuItem.Name = "PruebaABMReservasToolStripMenuItem"
         Me.PruebaABMReservasToolStripMenuItem.Size = New System.Drawing.Size(130, 19)
         Me.PruebaABMReservasToolStripMenuItem.Text = "Prueba ABMReservas"
-        '
-        'ServiciosToolStripMenuItem
-        '
-        Me.ServiciosToolStripMenuItem.Name = "ServiciosToolStripMenuItem"
-        Me.ServiciosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.ServiciosToolStripMenuItem.Text = "Servicios"
         '
         'frmPrincipal
         '
@@ -181,5 +188,6 @@ Partial Class frmPrincipal
     Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PruebaABMReservasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ServiciosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
 
 End Class

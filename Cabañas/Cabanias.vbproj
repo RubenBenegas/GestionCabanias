@@ -88,6 +88,7 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidades\Adicionales.vb" />
     <Compile Include="Entidades\BotonReservas.vb">
       <SubType>Component</SubType>
     </Compile>
@@ -95,6 +96,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Entidades\Servicios.vb" />
+    <Compile Include="IU\frmAdicionales.Designer.vb">
+      <DependentUpon>frmAdicionales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IU\frmAdicionales.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="IU\frmServicios.Designer.vb">
       <DependentUpon>frmServicios.vb</DependentUpon>
     </Compile>
@@ -110,6 +117,12 @@
     <Compile Include="Entidades\Cabanias.vb" />
     <Compile Include="Entidades\Conexiones.vb" />
     <Compile Include="Entidades\Reservas.vb" />
+    <Compile Include="IU\lstAdicionales.Designer.vb">
+      <DependentUpon>lstAdicionales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IU\lstAdicionales.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="IU\lstConsHuesped.Designer.vb">
       <DependentUpon>lstConsHuesped.vb</DependentUpon>
     </Compile>
@@ -236,11 +249,17 @@
     <Compile Include="Entidades\Personal.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="IU\frmAdicionales.resx">
+      <DependentUpon>frmAdicionales.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IU\frmServicios.resx">
       <DependentUpon>frmServicios.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IU\grafReservas.resx">
       <DependentUpon>grafReservas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IU\lstAdicionales.resx">
+      <DependentUpon>lstAdicionales.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IU\lstConsHuesped.resx">
       <DependentUpon>lstConsHuesped.vb</DependentUpon>

@@ -13,7 +13,13 @@
     End Property
 
     Private Sub Reservas_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Me.Click
-        MessageBox.Show("Esta es la reserva: " + Str(id))
+
+        'MessageBox.Show("Esta es la reserva: " + Str(id))
+
+        frmReservas.modificar = True
+        frmReservas.idReserva = id
+        frmReservas.ShowDialog()
+
     End Sub
 
     

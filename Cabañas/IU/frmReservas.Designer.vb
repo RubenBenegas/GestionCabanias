@@ -188,7 +188,6 @@ Partial Class frmReservas
         Me.txtIdHuesped.Name = "txtIdHuesped"
         Me.txtIdHuesped.Size = New System.Drawing.Size(100, 20)
         Me.txtIdHuesped.TabIndex = 24
-        Me.txtIdHuesped.Visible = False
         '
         'btnBuscarHuesped
         '

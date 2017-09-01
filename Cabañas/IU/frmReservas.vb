@@ -20,6 +20,7 @@
     End Property
 
     Dim reserva As New Reservas
+    Dim btnReserva As New BotonReservas
 
     Private Sub frmReservas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
@@ -29,8 +30,9 @@
             reserva = reserva.RecuperarReserva(idReserva)
 
             txtId.Text = reserva.Id
-            txtNombreHuesped.Text = lstReservas.dgvReservas.Item("Huesped", lstReservas.dgvReservas.CurrentRow.Index).Value
-            txtIdHuesped.Text = reserva.IdHuesped
+            txtNombreHuesped.Text = reserva.NombreHuesped
+            'txtNombreHuesped.Text = lstReservas.dgvReservas.Item("Huesped", lstReservas.dgvReservas.CurrentRow.Index).Value
+            txtIdHuesped.Text = CStr(reserva.IdHuesped)
             DateTimePicker1.Value = reserva.fIngreso
             DateTimePicker2.Value = reserva.fSalida
             cmbIdCabania.SelectedValue = reserva.IdCabania
@@ -43,7 +45,7 @@
         Else
             txtId.Text = Nothing
             txtIdHuesped.Text = Nothing
-            txtNombreHuesped.Text = Nothing
+            'txtNombreHuesped.Text = Nothing
             DateTimePicker1.Value = Today
             DateTimePicker2.Value = Today
             txtNumeroPasajeros.Text = Nothing

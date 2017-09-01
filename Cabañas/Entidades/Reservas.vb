@@ -24,6 +24,18 @@ Public Class Reservas
         End Set
     End Property
 
+
+    Private NombreHuesped_ As String
+    Public Property NombreHuesped() As String
+        Get
+            Return NombreHuesped_
+        End Get
+        Set(ByVal value As String)
+            NombreHuesped_ = value
+        End Set
+    End Property
+
+
     Private fIngreso_ As Date
     Public Property fIngreso() As Date
         Get
@@ -192,6 +204,7 @@ Public Class Reservas
                 objDataAdapter.Fill(objDataTable)
                 reserva.Id = objDataTable.Rows(0).Item("Id")
                 reserva.IdHuesped = objDataTable.Rows(0).Item("IdHuesped")
+                reserva.NombreHuesped = objDataTable.Rows(0).Item("Nombre")
                 reserva.fIngreso = objDataTable.Rows(0).Item("fIngreso")
                 reserva.fSalida = objDataTable.Rows(0).Item("fSalida")
                 reserva.IdCabania = objDataTable.Rows(0).Item("IdCabania")

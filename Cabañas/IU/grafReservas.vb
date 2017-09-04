@@ -37,7 +37,7 @@
             btnReserva.Width = row.Item("dias") * 10
 
             'REVISAAAAAARRRRR ESTOOOOOOO  
-            'flpContenedor.Controls(row.Item("IdCabania")).Controls.Add(btnReserva)
+            flpContenedor.Controls(arHabitaciones(i)).Controls.Add(btnReserva)
             flpContenedor.Controls.Add(btnReserva)
 
 

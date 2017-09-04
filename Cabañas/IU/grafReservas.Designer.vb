@@ -22,6 +22,7 @@ Partial Class grafReservas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(grafReservas))
         Me.flpContenedor = New System.Windows.Forms.FlowLayoutPanel
         Me.FlowLayoutPanel4 = New System.Windows.Forms.FlowLayoutPanel
         Me.btnAgregar = New System.Windows.Forms.Button
@@ -62,8 +63,9 @@ Partial Class grafReservas
         Me.ClientSize = New System.Drawing.Size(619, 531)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.flpContenedor)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "grafReservas"
-        Me.Text = "Alquileres"
+        Me.Text = "grafReservas"
         Me.flpContenedor.ResumeLayout(False)
         Me.ResumeLayout(False)
 

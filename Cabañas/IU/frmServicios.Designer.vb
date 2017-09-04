@@ -38,22 +38,22 @@ Partial Class frmServicios
         'txtIdServicio
         '
         Me.txtIdServicio.Enabled = False
-        Me.txtIdServicio.Location = New System.Drawing.Point(119, 31)
+        Me.txtIdServicio.Location = New System.Drawing.Point(116, 6)
         Me.txtIdServicio.Name = "txtIdServicio"
         Me.txtIdServicio.Size = New System.Drawing.Size(100, 20)
         Me.txtIdServicio.TabIndex = 0
         '
         'txtDescripcion
         '
-        Me.txtDescripcion.Location = New System.Drawing.Point(119, 77)
+        Me.txtDescripcion.Location = New System.Drawing.Point(116, 39)
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(100, 20)
+        Me.txtDescripcion.Size = New System.Drawing.Size(157, 20)
         Me.txtDescripcion.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(47, 31)
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(16, 13)
         Me.Label1.TabIndex = 2
@@ -62,7 +62,7 @@ Partial Class frmServicios
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(47, 84)
+        Me.Label2.Location = New System.Drawing.Point(12, 42)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(63, 13)
         Me.Label2.TabIndex = 3
@@ -71,7 +71,7 @@ Partial Class frmServicios
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(47, 136)
+        Me.Label3.Location = New System.Drawing.Point(12, 75)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(37, 13)
         Me.Label3.TabIndex = 4
@@ -79,7 +79,7 @@ Partial Class frmServicios
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(78, 211)
+        Me.btnAceptar.Location = New System.Drawing.Point(116, 105)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
         Me.btnAceptar.TabIndex = 5
@@ -88,7 +88,7 @@ Partial Class frmServicios
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(173, 211)
+        Me.btnCancelar.Location = New System.Drawing.Point(197, 105)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
         Me.btnCancelar.TabIndex = 7
@@ -97,7 +97,7 @@ Partial Class frmServicios
         '
         'txtMonto
         '
-        Me.txtMonto.Location = New System.Drawing.Point(117, 135)
+        Me.txtMonto.Location = New System.Drawing.Point(116, 72)
         Me.txtMonto.Name = "txtMonto"
         Me.txtMonto.Size = New System.Drawing.Size(100, 20)
         Me.txtMonto.TabIndex = 8
@@ -110,7 +110,7 @@ Partial Class frmServicios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(296, 261)
+        Me.ClientSize = New System.Drawing.Size(296, 137)
         Me.Controls.Add(Me.txtMonto)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAceptar)
@@ -120,7 +120,10 @@ Partial Class frmServicios
         Me.Controls.Add(Me.txtDescripcion)
         Me.Controls.Add(Me.txtIdServicio)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmServicios"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmServicios"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

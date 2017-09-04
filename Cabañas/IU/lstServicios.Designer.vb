@@ -22,6 +22,7 @@ Partial Class lstServicios
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(lstServicios))
         Me.dgvServicios = New System.Windows.Forms.DataGridView
         Me.btnAgregar = New System.Windows.Forms.Button
         Me.btnModificar = New System.Windows.Forms.Button
@@ -51,7 +52,7 @@ Partial Class lstServicios
         'btnAgregar
         '
         Me.btnAgregar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnAgregar.Location = New System.Drawing.Point(29, 426)
+        Me.btnAgregar.Location = New System.Drawing.Point(12, 426)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(90, 30)
         Me.btnAgregar.TabIndex = 1
@@ -61,7 +62,7 @@ Partial Class lstServicios
         'btnModificar
         '
         Me.btnModificar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnModificar.Location = New System.Drawing.Point(139, 426)
+        Me.btnModificar.Location = New System.Drawing.Point(108, 426)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(90, 30)
         Me.btnModificar.TabIndex = 2
@@ -71,7 +72,7 @@ Partial Class lstServicios
         'btnEliminar
         '
         Me.btnEliminar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnEliminar.Location = New System.Drawing.Point(253, 426)
+        Me.btnEliminar.Location = New System.Drawing.Point(204, 426)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(90, 30)
         Me.btnEliminar.TabIndex = 3
@@ -81,9 +82,9 @@ Partial Class lstServicios
         'btnCerrar
         '
         Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCerrar.Location = New System.Drawing.Point(824, 426)
+        Me.btnCerrar.Location = New System.Drawing.Point(822, 426)
         Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(90, 30)
+        Me.btnCerrar.Size = New System.Drawing.Size(150, 30)
         Me.btnCerrar.TabIndex = 4
         Me.btnCerrar.Text = "Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = True
@@ -98,6 +99,7 @@ Partial Class lstServicios
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.dgvServicios)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "lstServicios"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "lstServicios"

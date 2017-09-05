@@ -3,12 +3,15 @@
     Private Sub Alquileres_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         Dim cab As New Cabanias
+        Dim dtc As New Data.DataTable
+        dtc = cab.DataTableCabanias
+
         Dim res As New Reservas
         Dim dt As New Data.DataTable
         dt = res.DataTableReservas
 
-        Dim arReservas() As Integer = {10, 2, 5, 3, 4, 5, 7, 8, 5, 1}
-        Dim arHabitaciones() As Integer = {1, 1, 2, 2, 3, 4, 5, 5, 5, 2}
+        'Dim arReservas() As Integer = {10, 2, 5, 3, 4, 5, 7, 8, 5, 1}
+        'Dim arHabitaciones() As Integer = {1, 1, 2, 2, 3, 4, 5, 5, 5, 2}
         Dim posX As Integer = 0
         Dim posY As Integer = 0
         Dim tamanio As Integer = 30
@@ -16,19 +19,19 @@
 
         Dim flpHabitacion As FlpCabanias
         Dim arflpHabitaciones(10)
-        Dim j As Integer = 5
-        For i = 1 To cab.CantidadCabania()
+        'Dim j As Integer = 5
+
+
+        For Each row As DataRow In dtc.Rows
             flpHabitacion = New FlpCabanias
             flpHabitacion.BackColor = Color.DarkBlue
             flpHabitacion.Width = 591
             flpHabitacion.Height = 32
             flpHabitacion.FlowDirection = FlowDirection.LeftToRight
-            flpHabitacion.id = j
-            j += 1
-            'arflpHabitaciones(i) = flpHabitacion
-            'flpContenedor.Controls.Add(arflpHabitaciones(i))
+            flpHabitacion.id = row.Item("id")
             flpContenedor.Controls.Add(flpHabitacion)
         Next
+
 
         For Each row As DataRow In dt.Rows
             btnReserva = New BotonReservas
@@ -37,9 +40,6 @@
             btnReserva.BackColor = Color.SkyBlue
             btnReserva.id = row.Item("id")
             btnReserva.Width = row.Item("dias") * 10
-            'REVISAAAAAARRRRR ESTOOOOOOO  
-            'flpContenedor.Controls(arHabitaciones(i)).Controls.Add(btnReserva)
-            'For Each habitacion As FlpCabanias In flpContenedor.Controls
 
             For i As Integer = 1 To flpContenedor.Controls.Count - 1
                 Dim idHabitacion As Integer = DirectCast(flpContenedor.Controls.Item(i), FlpCabanias).id
@@ -47,8 +47,6 @@
                     flpContenedor.Controls.Item(i).Controls.Add(btnReserva)
                 End If
             Next
-
-            'flpContenedor.Controls.Add(btnReserva)
             btnReserva.Show()
             posY += 20
         Next
@@ -65,6 +63,7 @@
         '    btnReserva.Show()
         '    posY += 20
         'Next
+
     End Sub
 
     Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click

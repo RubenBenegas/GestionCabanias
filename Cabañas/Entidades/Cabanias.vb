@@ -221,5 +221,20 @@ Public Class Cabanias
         cerrarConexion()
 
     End Function
+
+    Public Function DataTableCabanias() As Data.DataTable
+
+        abrirConexion()
+
+        Dim objComando As New SqlCommand("CabaniasDataTable", objConexion)
+        objComando.CommandType = CommandType.StoredProcedure
+        Dim objDataTable As New Data.DataTable
+        Dim objDataAdapter As New SqlDataAdapter(objComando)
+        objDataAdapter.Fill(objDataTable)
+        Return objDataTable
+
+        cerrarConexion()
+
+    End Function
 End Class
 

@@ -1,5 +1,11 @@
 ﻿Public Class grafReservas
 
+    Private Sub grafReservas_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+        For i As Integer = flpContenedor.Controls.Count - 1 To 0 Step -1
+            flpContenedor.Controls.Item(i).Dispose()
+        Next
+    End Sub
+
     Private Sub Alquileres_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         Dim cab As New Cabanias
@@ -41,7 +47,7 @@
             btnReserva.id = row.Item("id")
             btnReserva.Width = row.Item("dias") * 10
 
-            For i As Integer = 1 To flpContenedor.Controls.Count - 1
+            For i As Integer = 0 To flpContenedor.Controls.Count - 1
                 Dim idHabitacion As Integer = DirectCast(flpContenedor.Controls.Item(i), FlpCabanias).id
                 If row.Item("idCabania") = idHabitacion Then
                     flpContenedor.Controls.Item(i).Controls.Add(btnReserva)

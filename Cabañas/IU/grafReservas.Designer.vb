@@ -24,28 +24,18 @@ Partial Class grafReservas
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(grafReservas))
         Me.flpContenedor = New System.Windows.Forms.FlowLayoutPanel
-        Me.FlowLayoutPanel4 = New System.Windows.Forms.FlowLayoutPanel
         Me.btnAgregar = New System.Windows.Forms.Button
-        Me.flpContenedor.SuspendLayout()
         Me.SuspendLayout()
         '
         'flpContenedor
         '
         Me.flpContenedor.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.flpContenedor.AutoScroll = True
-        Me.flpContenedor.Controls.Add(Me.FlowLayoutPanel4)
         Me.flpContenedor.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.flpContenedor.Location = New System.Drawing.Point(12, 12)
         Me.flpContenedor.Name = "flpContenedor"
         Me.flpContenedor.Size = New System.Drawing.Size(595, 458)
         Me.flpContenedor.TabIndex = 1
-        '
-        'FlowLayoutPanel4
-        '
-        Me.FlowLayoutPanel4.Location = New System.Drawing.Point(3, 3)
-        Me.FlowLayoutPanel4.Name = "FlowLayoutPanel4"
-        Me.FlowLayoutPanel4.Size = New System.Drawing.Size(591, 42)
-        Me.FlowLayoutPanel4.TabIndex = 2
         '
         'btnAgregar
         '
@@ -66,11 +56,9 @@ Partial Class grafReservas
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "grafReservas"
         Me.Text = "grafReservas"
-        Me.flpContenedor.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents flpContenedor As System.Windows.Forms.FlowLayoutPanel
-    Friend WithEvents FlowLayoutPanel4 As System.Windows.Forms.FlowLayoutPanel
     Friend WithEvents btnAgregar As System.Windows.Forms.Button
 End Class

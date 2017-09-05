@@ -16,17 +16,19 @@
 
         Dim flpHabitacion As FlpCabanias
         Dim arflpHabitaciones(10)
+        Dim j As Integer = 5
         For i = 1 To cab.CantidadCabania()
             flpHabitacion = New FlpCabanias
             flpHabitacion.BackColor = Color.DarkBlue
             flpHabitacion.Width = 591
             flpHabitacion.Height = 32
             flpHabitacion.FlowDirection = FlowDirection.LeftToRight
-            arflpHabitaciones(i) = flpHabitacion
-            flpContenedor.Controls.Add(arflpHabitaciones(i))
+            flpHabitacion.id = j
+            j += 1
+            'arflpHabitaciones(i) = flpHabitacion
+            'flpContenedor.Controls.Add(arflpHabitaciones(i))
+            flpContenedor.Controls.Add(flpHabitacion)
         Next
-
-   
 
         For Each row As DataRow In dt.Rows
             btnReserva = New BotonReservas
@@ -35,13 +37,18 @@
             btnReserva.BackColor = Color.SkyBlue
             btnReserva.id = row.Item("id")
             btnReserva.Width = row.Item("dias") * 10
-
             'REVISAAAAAARRRRR ESTOOOOOOO  
-            flpContenedor.Controls(arHabitaciones(i)).Controls.Add(btnReserva)
-            flpContenedor.Controls.Add(btnReserva)
+            'flpContenedor.Controls(arHabitaciones(i)).Controls.Add(btnReserva)
+            'For Each habitacion As FlpCabanias In flpContenedor.Controls
 
+            For i As Integer = 1 To flpContenedor.Controls.Count - 1
+                Dim idHabitacion As Integer = DirectCast(flpContenedor.Controls.Item(i), FlpCabanias).id
+                If row.Item("idCabania") = idHabitacion Then
+                    flpContenedor.Controls.Item(i).Controls.Add(btnReserva)
+                End If
+            Next
 
-
+            'flpContenedor.Controls.Add(btnReserva)
             btnReserva.Show()
             posY += 20
         Next

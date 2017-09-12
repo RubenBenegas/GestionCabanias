@@ -12,6 +12,12 @@
         End Set
     End Property
 
+    Public Sub New()
+        Me.FlatStyle = Windows.Forms.FlatStyle.Flat
+        Me.Margin = New Padding(0, 0, 0, 0)
+        Me.Height = 32
+    End Sub
+
     Private Sub Reservas_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Me.Click
 
         'MessageBox.Show("Esta es la reserva: " + Str(id))

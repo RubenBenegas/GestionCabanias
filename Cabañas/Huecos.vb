@@ -3,7 +3,8 @@
 
     Public Sub New(ByVal cantDias As Integer)
         Me.FlatStyle = Windows.Forms.FlatStyle.Flat
-        Me.BackColor = Color.BlueViolet
+        Me.BackColor = Color.LightGray
+        Me.ForeColor = Color.Transparent
         Me.Margin = New Padding(0, 0, 0, 0)
         Me.Height = 32
         Me.Width = cantDias * 10

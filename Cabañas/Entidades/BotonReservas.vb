@@ -12,6 +12,26 @@
         End Set
     End Property
 
+    Private fIngreso_ As Date
+    Public Property fIngreso() As Date
+        Get
+            Return fIngreso_
+        End Get
+        Set(ByVal value As Date)
+            fIngreso_ = value
+        End Set
+    End Property
+
+    Private fSalida_ As Date
+    Public Property fSalida() As Date
+        Get
+            Return fSalida_
+        End Get
+        Set(ByVal value As Date)
+            fSalida_ = value
+        End Set
+    End Property
+
     Public Sub New()
         Me.FlatStyle = Windows.Forms.FlatStyle.Flat
         Me.Margin = New Padding(0, 0, 0, 0)

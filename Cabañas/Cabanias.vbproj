@@ -96,6 +96,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Entidades\Servicios.vb" />
+    <Compile Include="Huecos.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="IU\frmAdicionales.Designer.vb">
       <DependentUpon>frmAdicionales.vb</DependentUpon>
     </Compile>

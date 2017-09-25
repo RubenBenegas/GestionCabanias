@@ -41,7 +41,7 @@
             chkSinSenia.Checked = reserva.SinSenia
             DateTimePicker3.Value = reserva.Checkin
             DateTimePicker4.Value = reserva.Checkout
-            Me.Text = "Modificar Proveedor"
+            Me.Text = "Modificar Reserva"
         Else
             txtId.Text = Nothing
             txtIdHuesped.Text = Nothing
@@ -53,7 +53,7 @@
             chkSinSenia.Checked = Nothing
             DateTimePicker3.Value = Today
             DateTimePicker4.Value = Today
-            Me.Text = "Agregar Proveedor"
+            Me.Text = "Agregar Reserva"
         End If
     End Sub
 

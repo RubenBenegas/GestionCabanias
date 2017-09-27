@@ -111,4 +111,16 @@
         lstReservasAdicionales.idReserva = txtId.Text
         lstReservasAdicionales.ShowDialog()
     End Sub
+
+    Private Sub btnBorrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBorrar.Click
+
+        Dim idAdicional As Integer = dgvServiciosAdicionales.Item("id", dgvServiciosAdicionales.CurrentRow.Index).Value
+        reserva.ReservaAdicionalBorrar(idAdicional)
+        reserva.ReservasCargarAdicionales(txtId.Text, dgvServiciosAdicionales)
+
+
+
+        'Titulo.TituloActorBorrar(txtId.Text, dgvActores.Item("id", dgvActores.CurrentRow.Index).Value)
+        'Titulo.TituloCargarActores(txtId.Text, dgvActores)
+    End Sub
 End Class

@@ -30,15 +30,27 @@ Partial Class lstReservasAdicionales
         '
         'dgvAdicionales
         '
+        Me.dgvAdicionales.AllowUserToAddRows = False
+        Me.dgvAdicionales.AllowUserToDeleteRows = False
+        Me.dgvAdicionales.AllowUserToResizeColumns = False
+        Me.dgvAdicionales.AllowUserToResizeRows = False
+        Me.dgvAdicionales.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvAdicionales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvAdicionales.Location = New System.Drawing.Point(12, 12)
+        Me.dgvAdicionales.MultiSelect = False
         Me.dgvAdicionales.Name = "dgvAdicionales"
-        Me.dgvAdicionales.Size = New System.Drawing.Size(427, 413)
+        Me.dgvAdicionales.ReadOnly = True
+        Me.dgvAdicionales.RowHeadersVisible = False
+        Me.dgvAdicionales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvAdicionales.Size = New System.Drawing.Size(331, 413)
         Me.dgvAdicionales.TabIndex = 0
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(141, 432)
+        Me.btnAceptar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnAceptar.Location = New System.Drawing.Point(176, 430)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
         Me.btnAceptar.TabIndex = 1
@@ -47,7 +59,8 @@ Partial Class lstReservasAdicionales
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(248, 431)
+        Me.btnCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCancelar.Location = New System.Drawing.Point(267, 430)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
         Me.btnCancelar.TabIndex = 2
@@ -58,12 +71,13 @@ Partial Class lstReservasAdicionales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(451, 473)
+        Me.ClientSize = New System.Drawing.Size(356, 464)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.dgvAdicionales)
         Me.Name = "lstReservasAdicionales"
-        Me.Text = "frmReservasAdicionales"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "lstReservasAdicionales"
         CType(Me.dgvAdicionales, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

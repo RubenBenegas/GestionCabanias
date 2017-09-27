@@ -258,9 +258,17 @@ Partial Class frmReservas
         '
         'dgvServiciosAdicionales
         '
+        Me.dgvServiciosAdicionales.AllowUserToAddRows = False
+        Me.dgvServiciosAdicionales.AllowUserToDeleteRows = False
+        Me.dgvServiciosAdicionales.AllowUserToResizeColumns = False
+        Me.dgvServiciosAdicionales.AllowUserToResizeRows = False
         Me.dgvServiciosAdicionales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvServiciosAdicionales.Location = New System.Drawing.Point(12, 200)
+        Me.dgvServiciosAdicionales.MultiSelect = False
         Me.dgvServiciosAdicionales.Name = "dgvServiciosAdicionales"
+        Me.dgvServiciosAdicionales.ReadOnly = True
+        Me.dgvServiciosAdicionales.RowHeadersVisible = False
+        Me.dgvServiciosAdicionales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvServiciosAdicionales.Size = New System.Drawing.Size(401, 206)
         Me.dgvServiciosAdicionales.TabIndex = 26
         '

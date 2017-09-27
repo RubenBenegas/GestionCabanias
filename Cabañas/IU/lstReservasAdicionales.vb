@@ -27,7 +27,6 @@
         adicionales.Id = dgvAdicionales.Item("id", dgvAdicionales.CurrentRow.Index).Value
         reserva.ReservaAdicionalInsertar(idReserva, adicionales.Id)
         reserva.ReservasCargarAdicionales(idReserva, frmReservas.dgvServiciosAdicionales)
-        'reserva.TituloActorInsertar(idTitulo, actor.id)
-        'titulo.TituloCargarActores(idTitulo, frmTitulo.dgvActores)
+        Close()
     End Sub
 End Class

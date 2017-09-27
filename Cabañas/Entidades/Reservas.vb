@@ -336,8 +336,30 @@ Public Class Reservas
         Dim objDataAdapter As New SqlDataAdapter(objComando)
         objDataAdapter.Fill(objDataTable)
         tabla.DataSource = objDataTable
-        tabla.Columns("id").Visible = False
+        'tabla.Columns("id").Visible = False
         tabla.Columns("Adicionales").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         cerrarConexion()
     End Sub
+
+    Public Function ReservaAdicionalBorrar(ByVal idAdicional As Integer)
+        Try
+            abrirConexion()
+
+            Dim objComando As New SqlCommand("ReservaAdicionalBorrar", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            'objComando.Parameters.AddWithValue("@idReserva", idReserva)
+            objComando.Parameters.AddWithValue("@idAdicional", idAdicional)
+            If objComando.ExecuteNonQuery() Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            cerrarConexion()
+        End Try
+    End Function
+
 End Class

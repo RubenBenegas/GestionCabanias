@@ -48,9 +48,9 @@
             txtEmail.Text = Nothing
         End If
 
-        If txtId.Text <> "" Then
-            huesped.HuespedTraerHistorial(txtId.Text, dgvHistorial)
-        End If
+
+        huesped.HuespedTraerHistorial(idHuesped, dgvHistorial)
+
 
     End Sub
 

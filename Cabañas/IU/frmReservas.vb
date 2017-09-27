@@ -79,15 +79,17 @@
             reserva.Checkout = DateTimePicker4.Value
             If modificar = True Then
                 If reserva.ModificarReserva(reserva) = True Then
-                    MsgBox("La reserva ha sido correctamente modificado.")
-                    reserva.TraerTabReservas(lstReservas.dgvReservas)
+                    MsgBox("La reserva ha sido correctamente modificada.")
+                    'reserva.TraerTabReservas(lstReservas.dgvReservas)
+                    grafReservas.ActualizarGrafico()
                 Else
                     MsgBox("Error al modificar la reserva." + Chr(13) + "Intentelo de nuevo.")
                 End If
             Else
                 If reserva.InsertarReserva(reserva) = True Then
                     MsgBox("La reserva ha sido correctamente insertada.")
-                    reserva.TraerTabReservas(lstReservas.dgvReservas)
+                    'reserva.TraerTabReservas(lstReservas.dgvReservas)
+                    grafReservas.ActualizarGrafico()
                 Else
                     MsgBox("Error al insertar la reserva." + Chr(13) + "Intentelo de nuevo.")
                 End If
@@ -107,9 +109,11 @@
     End Sub
 
     Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
-        '
-        lstReservasAdicionales.idReserva = txtId.Text
-        lstReservasAdicionales.ShowDialog()
+        If txtId.Text <> "" Then
+            lstReservasAdicionales.idReserva = txtId.Text
+            lstReservasAdicionales.ShowDialog()
+        End If
+
     End Sub
 
     Private Sub btnBorrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBorrar.Click

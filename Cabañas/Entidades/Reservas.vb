@@ -337,6 +337,7 @@ Public Class Reservas
         objDataAdapter.Fill(objDataTable)
         tabla.DataSource = objDataTable
         'tabla.Columns("id").Visible = False
+        tabla.Columns("id").Width = 30
         tabla.Columns("Adicionales").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         cerrarConexion()
     End Sub

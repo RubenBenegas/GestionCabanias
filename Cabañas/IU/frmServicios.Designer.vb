@@ -49,6 +49,7 @@ Partial Class frmServicios
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(157, 20)
         Me.txtDescripcion.TabIndex = 1
+        Me.txtDescripcion.Tag = "*"
         '
         'Label1
         '

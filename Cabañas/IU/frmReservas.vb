@@ -24,6 +24,8 @@
 
     Private Sub frmReservas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
+        reserva.ReservasCargarAdicionales(idReserva, dgvServiciosAdicionales)
+
         reserva.CargarComboCabania(cmbIdCabania)
         If modificar = True Then
 
@@ -41,7 +43,7 @@
             chkSinSenia.Checked = reserva.SinSenia
             DateTimePicker3.Value = reserva.Checkin
             DateTimePicker4.Value = reserva.Checkout
-            Me.Text = "Modificar Reserva"
+            Me.Text = "Modificar Proveedor"
         Else
             txtId.Text = Nothing
             txtIdHuesped.Text = Nothing
@@ -53,7 +55,7 @@
             chkSinSenia.Checked = Nothing
             DateTimePicker3.Value = Today
             DateTimePicker4.Value = Today
-            Me.Text = "Agregar Reserva"
+            Me.Text = "Agregar Proveedor"
         End If
     End Sub
 
@@ -102,5 +104,11 @@
 
     Private Sub btnBuscarHuesped_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscarHuesped.Click
         lstConsHuesped.ShowDialog()
+    End Sub
+
+    Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
+        '
+        lstReservasAdicionales.idReserva = txtId.Text
+        lstReservasAdicionales.ShowDialog()
     End Sub
 End Class

@@ -1,7 +1,5 @@
 ﻿Public Class lstConsHuesped
 
-
-
     Dim huesped As New Huespedes
     Private Sub lstConsHuesped_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         huesped.BuscarHuespedes(dgvConsHuesped)

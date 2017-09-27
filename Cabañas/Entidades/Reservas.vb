@@ -303,4 +303,41 @@ Public Class Reservas
         cerrarConexion()
 
     End Function
+
+    Public Function ReservaAdicionalInsertar(ByVal idReserva As Integer, ByVal idAdicional As Integer)
+        Try
+            abrirConexion()
+
+            Dim objComando As New SqlCommand("ReservaAdicionalInsertar", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            objComando.Parameters.AddWithValue("@idReserva", idReserva)
+            objComando.Parameters.AddWithValue("@idAdicional", idAdicional)
+            If objComando.ExecuteNonQuery() Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            cerrarConexion()
+        End Try
+    End Function
+
+    Public Sub ReservasCargarAdicionales(ByVal idReserva As Integer, ByVal tabla As DataGridView)
+        abrirConexion()
+
+        Dim objComando As New SqlCommand("ReservasCargarAdicionales", objConexion)
+        objComando.CommandType = CommandType.StoredProcedure
+        objComando.Parameters.AddWithValue("@idReserva", idReserva)
+
+        Dim objDataTable As New Data.DataTable
+        Dim objDataAdapter As New SqlDataAdapter(objComando)
+        objDataAdapter.Fill(objDataTable)
+        tabla.DataSource = objDataTable
+        tabla.Columns("id").Visible = False
+        tabla.Columns("Adicionales").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        cerrarConexion()
+    End Sub
 End Class

@@ -47,7 +47,12 @@ Partial Class frmReservas
         Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker
         Me.cmbIdCabania = New System.Windows.Forms.ComboBox
         Me.txtNombreHuesped = New System.Windows.Forms.TextBox
+        Me.dgvServiciosAdicionales = New System.Windows.Forms.DataGridView
+        Me.btnAgregar = New System.Windows.Forms.Button
+        Me.btnBorrar = New System.Windows.Forms.Button
+        Me.lblServiciosAdicionales = New System.Windows.Forms.Label
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvServiciosAdicionales, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblId
@@ -165,7 +170,7 @@ Partial Class frmReservas
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(230, 179)
+        Me.btnAceptar.Location = New System.Drawing.Point(214, 412)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
         Me.btnAceptar.TabIndex = 9
@@ -174,7 +179,7 @@ Partial Class frmReservas
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(336, 179)
+        Me.btnCancelar.Location = New System.Drawing.Point(320, 412)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
         Me.btnCancelar.TabIndex = 10
@@ -251,11 +256,50 @@ Partial Class frmReservas
         Me.txtNombreHuesped.Size = New System.Drawing.Size(100, 20)
         Me.txtNombreHuesped.TabIndex = 0
         '
+        'dgvServiciosAdicionales
+        '
+        Me.dgvServiciosAdicionales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvServiciosAdicionales.Location = New System.Drawing.Point(12, 200)
+        Me.dgvServiciosAdicionales.Name = "dgvServiciosAdicionales"
+        Me.dgvServiciosAdicionales.Size = New System.Drawing.Size(401, 206)
+        Me.dgvServiciosAdicionales.TabIndex = 26
+        '
+        'btnAgregar
+        '
+        Me.btnAgregar.Location = New System.Drawing.Point(422, 200)
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
+        Me.btnAgregar.TabIndex = 27
+        Me.btnAgregar.Text = "Agregar"
+        Me.btnAgregar.UseVisualStyleBackColor = True
+        '
+        'btnBorrar
+        '
+        Me.btnBorrar.Location = New System.Drawing.Point(422, 236)
+        Me.btnBorrar.Name = "btnBorrar"
+        Me.btnBorrar.Size = New System.Drawing.Size(75, 23)
+        Me.btnBorrar.TabIndex = 28
+        Me.btnBorrar.Text = "Borrar"
+        Me.btnBorrar.UseVisualStyleBackColor = True
+        '
+        'lblServiciosAdicionales
+        '
+        Me.lblServiciosAdicionales.AutoSize = True
+        Me.lblServiciosAdicionales.Location = New System.Drawing.Point(12, 176)
+        Me.lblServiciosAdicionales.Name = "lblServiciosAdicionales"
+        Me.lblServiciosAdicionales.Size = New System.Drawing.Size(110, 13)
+        Me.lblServiciosAdicionales.TabIndex = 29
+        Me.lblServiciosAdicionales.Text = "Servicios Adicionales:"
+        '
         'frmReservas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(504, 214)
+        Me.ClientSize = New System.Drawing.Size(504, 447)
+        Me.Controls.Add(Me.lblServiciosAdicionales)
+        Me.Controls.Add(Me.btnBorrar)
+        Me.Controls.Add(Me.btnAgregar)
+        Me.Controls.Add(Me.dgvServiciosAdicionales)
         Me.Controls.Add(Me.txtNombreHuesped)
         Me.Controls.Add(Me.cmbIdCabania)
         Me.Controls.Add(Me.DateTimePicker4)
@@ -286,6 +330,7 @@ Partial Class frmReservas
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmReservas"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvServiciosAdicionales, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -314,4 +359,8 @@ Partial Class frmReservas
     Friend WithEvents DateTimePicker4 As System.Windows.Forms.DateTimePicker
     Friend WithEvents cmbIdCabania As System.Windows.Forms.ComboBox
     Friend WithEvents txtNombreHuesped As System.Windows.Forms.TextBox
+    Friend WithEvents lblServiciosAdicionales As System.Windows.Forms.Label
+    Friend WithEvents btnBorrar As System.Windows.Forms.Button
+    Friend WithEvents btnAgregar As System.Windows.Forms.Button
+    Friend WithEvents dgvServiciosAdicionales As System.Windows.Forms.DataGridView
 End Class

@@ -77,7 +77,7 @@ Partial Class lstConsHuesped
         Me.Controls.Add(Me.dgvConsHuesped)
         Me.Name = "lstConsHuesped"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmBuscarHuesped"
+        Me.Text = "lstBuscarHuesped"
         CType(Me.dgvConsHuesped, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

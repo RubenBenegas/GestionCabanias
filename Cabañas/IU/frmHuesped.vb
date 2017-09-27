@@ -24,7 +24,6 @@
     Private Sub frmHuesped_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         ErrorProvider1.Clear()
-
         If modificar = True Then
             Me.Text = "Modificar Huesped"
 
@@ -38,6 +37,7 @@
             txtTelefono.Text = huesped.telefono
             txtEmail.Text = huesped.email
 
+            huesped.HuespedTraerHistorial(txtId.Text, dgvHistorial)
         Else
             Me.Text = "Agregar Huesped"
 
@@ -86,6 +86,31 @@
 
     End Sub
 
+    Private Sub dgvHistorial_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvHistorial.CellDoubleClick
+
+        frmReservas.modificar = True
+        If dgvHistorial.Rows.Count <> 0 Then
+            frmReservas.idReserva = dgvHistorial.Item("id", dgvHistorial.CurrentRow.Index).Value
+            frmReservas.DateTimePicker1.Enabled = False
+            frmReservas.DateTimePicker2.Enabled = False
+            frmReservas.DateTimePicker3.Enabled = False
+            frmReservas.DateTimePicker4.Enabled = False
+            frmReservas.btnAceptar.Visible = False
+            frmReservas.btnCancelar.Visible = False
+            frmReservas.btnAgregar.Visible = False
+            frmReservas.btnBorrar.Visible = False
+            frmReservas.cmbIdCabania.Enabled = False
+            frmReservas.txtNumeroPasajeros.Enabled = False
+            frmReservas.txtSenia.Enabled = False
+            frmReservas.chkSinSenia.Enabled = False
+
+            frmReservas.btnSalir.Visible = True
+
+            frmReservas.ShowDialog()
+            'Else          
+            '    MsgBox("No hay elementos para modificar.", MsgBoxStyle.Information, "Mensaje")
+        End If
+    End Sub
 
     Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
 
@@ -141,4 +166,5 @@
 
     End Sub
 
+    
 End Class

@@ -43,11 +43,11 @@
             chkSinSenia.Checked = reserva.SinSenia
             DateTimePicker3.Value = reserva.Checkin
             DateTimePicker4.Value = reserva.Checkout
-            Me.Text = "Modificar Proveedor"
+            Me.Text = "Modificar reserva"
         Else
             txtId.Text = Nothing
             txtIdHuesped.Text = Nothing
-            'txtNombreHuesped.Text = Nothing
+            txtNombreHuesped.Text = Nothing
             DateTimePicker1.Value = Today
             DateTimePicker2.Value = Today
             txtNumeroPasajeros.Text = Nothing
@@ -55,7 +55,7 @@
             chkSinSenia.Checked = Nothing
             DateTimePicker3.Value = Today
             DateTimePicker4.Value = Today
-            Me.Text = "Agregar Proveedor"
+            Me.Text = "Agregar reserva"
         End If
     End Sub
 
@@ -117,10 +117,26 @@
         Dim idAdicional As Integer = dgvServiciosAdicionales.Item("id", dgvServiciosAdicionales.CurrentRow.Index).Value
         reserva.ReservaAdicionalBorrar(idAdicional)
         reserva.ReservasCargarAdicionales(txtId.Text, dgvServiciosAdicionales)
+    End Sub
 
+    'ESTE BOTON SOLAMENTE SE UTILIZA CUANDO ACCEDEMOS DESDE EL HISTORIAL DE HUESPEDES
+    Private Sub btnSalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSalir.Click
 
+        Close()
 
-        'Titulo.TituloActorBorrar(txtId.Text, dgvActores.Item("id", dgvActores.CurrentRow.Index).Value)
-        'Titulo.TituloCargarActores(txtId.Text, dgvActores)
+        DateTimePicker1.Enabled = True
+        DateTimePicker2.Enabled = True
+        DateTimePicker3.Enabled = True
+        DateTimePicker4.Enabled = True
+        btnAceptar.Visible = True
+        btnCancelar.Visible = True
+        btnAgregar.Visible = True
+        btnBorrar.Visible = True
+        cmbIdCabania.Enabled = True
+        txtNumeroPasajeros.Enabled = True
+        txtSenia.Enabled = True
+        chkSinSenia.Enabled = True
+
+        btnSalir.Visible = False
     End Sub
 End Class

@@ -51,6 +51,7 @@ Partial Class frmReservas
         Me.btnAgregar = New System.Windows.Forms.Button
         Me.btnBorrar = New System.Windows.Forms.Button
         Me.lblServiciosAdicionales = New System.Windows.Forms.Label
+        Me.btnSalir = New System.Windows.Forms.Button
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvServiciosAdicionales, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -299,11 +300,22 @@ Partial Class frmReservas
         Me.lblServiciosAdicionales.TabIndex = 29
         Me.lblServiciosAdicionales.Text = "Servicios Adicionales:"
         '
+        'btnSalir
+        '
+        Me.btnSalir.Location = New System.Drawing.Point(417, 412)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(75, 23)
+        Me.btnSalir.TabIndex = 30
+        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.UseVisualStyleBackColor = True
+        Me.btnSalir.Visible = False
+        '
         'frmReservas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(504, 447)
+        Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.lblServiciosAdicionales)
         Me.Controls.Add(Me.btnBorrar)
         Me.Controls.Add(Me.btnAgregar)
@@ -371,4 +383,5 @@ Partial Class frmReservas
     Friend WithEvents btnBorrar As System.Windows.Forms.Button
     Friend WithEvents btnAgregar As System.Windows.Forms.Button
     Friend WithEvents dgvServiciosAdicionales As System.Windows.Forms.DataGridView
+    Friend WithEvents btnSalir As System.Windows.Forms.Button
 End Class

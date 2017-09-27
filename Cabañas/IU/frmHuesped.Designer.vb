@@ -40,7 +40,10 @@ Partial Class frmHuesped
         Me.lblDni = New System.Windows.Forms.Label
         Me.txtEmail = New System.Windows.Forms.TextBox
         Me.lblEmail = New System.Windows.Forms.Label
+        Me.dgvHistorial = New System.Windows.Forms.DataGridView
+        Me.lblHistorial = New System.Windows.Forms.Label
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvHistorial, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ErrorProvider1
@@ -145,7 +148,7 @@ Partial Class frmHuesped
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(126, 193)
+        Me.btnAceptar.Location = New System.Drawing.Point(189, 420)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
         Me.btnAceptar.TabIndex = 6
@@ -154,7 +157,7 @@ Partial Class frmHuesped
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(221, 193)
+        Me.btnCancelar.Location = New System.Drawing.Point(284, 420)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
         Me.btnCancelar.TabIndex = 7
@@ -199,12 +202,41 @@ Partial Class frmHuesped
         Me.lblEmail.TabIndex = 11
         Me.lblEmail.Text = "Email:"
         '
+        'dgvHistorial
+        '
+        Me.dgvHistorial.AllowUserToAddRows = False
+        Me.dgvHistorial.AllowUserToDeleteRows = False
+        Me.dgvHistorial.AllowUserToResizeColumns = False
+        Me.dgvHistorial.AllowUserToResizeRows = False
+        Me.dgvHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvHistorial.Location = New System.Drawing.Point(16, 215)
+        Me.dgvHistorial.MultiSelect = False
+        Me.dgvHistorial.Name = "dgvHistorial"
+        Me.dgvHistorial.ReadOnly = True
+        Me.dgvHistorial.RowHeadersVisible = False
+        Me.dgvHistorial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvHistorial.Size = New System.Drawing.Size(343, 199)
+        Me.dgvHistorial.TabIndex = 12
+        '
+        'lblHistorial
+        '
+        Me.lblHistorial.AutoSize = True
+        Me.lblHistorial.BackColor = System.Drawing.Color.Transparent
+        Me.lblHistorial.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHistorial.Location = New System.Drawing.Point(13, 192)
+        Me.lblHistorial.Name = "lblHistorial"
+        Me.lblHistorial.Size = New System.Drawing.Size(130, 13)
+        Me.lblHistorial.TabIndex = 13
+        Me.lblHistorial.Text = "Historial del huesped:"
+        '
         'frmHuesped
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(304, 223)
+        Me.ClientSize = New System.Drawing.Size(373, 451)
+        Me.Controls.Add(Me.lblHistorial)
+        Me.Controls.Add(Me.dgvHistorial)
         Me.Controls.Add(Me.txtEmail)
         Me.Controls.Add(Me.lblEmail)
         Me.Controls.Add(Me.txtDni)
@@ -228,6 +260,7 @@ Partial Class frmHuesped
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmHuesped"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvHistorial, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -249,4 +282,6 @@ Partial Class frmHuesped
     Friend WithEvents lblEmail As System.Windows.Forms.Label
     Friend WithEvents txtDni As System.Windows.Forms.TextBox
     Friend WithEvents lblDni As System.Windows.Forms.Label
+    Friend WithEvents lblHistorial As System.Windows.Forms.Label
+    Friend WithEvents dgvHistorial As System.Windows.Forms.DataGridView
 End Class

@@ -36,8 +36,6 @@
             txtDireccion.Text = huesped.direccion
             txtTelefono.Text = huesped.telefono
             txtEmail.Text = huesped.email
-
-            huesped.HuespedTraerHistorial(txtId.Text, dgvHistorial)
         Else
             Me.Text = "Agregar Huesped"
 
@@ -48,6 +46,10 @@
             txtDireccion.Text = Nothing
             txtTelefono.Text = Nothing
             txtEmail.Text = Nothing
+        End If
+
+        If txtId.Text <> "" Then
+            huesped.HuespedTraerHistorial(txtId.Text, dgvHistorial)
         End If
 
     End Sub

@@ -52,6 +52,15 @@ Partial Class frmReservas
         Me.btnBorrar = New System.Windows.Forms.Button
         Me.lblServiciosAdicionales = New System.Windows.Forms.Label
         Me.btnSalir = New System.Windows.Forms.Button
+        Me.txtCostoEstadia = New System.Windows.Forms.TextBox
+        Me.txtCostoAdicionales = New System.Windows.Forms.TextBox
+        Me.txtCostoTotal = New System.Windows.Forms.TextBox
+        Me.txtFaltaDePagar = New System.Windows.Forms.TextBox
+        Me.lblCostoEstadia = New System.Windows.Forms.Label
+        Me.lblCostoAdicionales = New System.Windows.Forms.Label
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.lblFaltaPAgar = New System.Windows.Forms.Label
+        Me.chkCancelada = New System.Windows.Forms.CheckBox
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvServiciosAdicionales, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -171,7 +180,7 @@ Partial Class frmReservas
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(214, 412)
+        Me.btnAceptar.Location = New System.Drawing.Point(214, 583)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
         Me.btnAceptar.TabIndex = 9
@@ -180,7 +189,7 @@ Partial Class frmReservas
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(320, 412)
+        Me.btnCancelar.Location = New System.Drawing.Point(320, 583)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
         Me.btnCancelar.TabIndex = 10
@@ -264,7 +273,7 @@ Partial Class frmReservas
         Me.dgvServiciosAdicionales.AllowUserToResizeColumns = False
         Me.dgvServiciosAdicionales.AllowUserToResizeRows = False
         Me.dgvServiciosAdicionales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvServiciosAdicionales.Location = New System.Drawing.Point(12, 200)
+        Me.dgvServiciosAdicionales.Location = New System.Drawing.Point(12, 226)
         Me.dgvServiciosAdicionales.MultiSelect = False
         Me.dgvServiciosAdicionales.Name = "dgvServiciosAdicionales"
         Me.dgvServiciosAdicionales.ReadOnly = True
@@ -275,7 +284,7 @@ Partial Class frmReservas
         '
         'btnAgregar
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(422, 200)
+        Me.btnAgregar.Location = New System.Drawing.Point(422, 226)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
         Me.btnAgregar.TabIndex = 27
@@ -284,7 +293,7 @@ Partial Class frmReservas
         '
         'btnBorrar
         '
-        Me.btnBorrar.Location = New System.Drawing.Point(422, 236)
+        Me.btnBorrar.Location = New System.Drawing.Point(422, 262)
         Me.btnBorrar.Name = "btnBorrar"
         Me.btnBorrar.Size = New System.Drawing.Size(75, 23)
         Me.btnBorrar.TabIndex = 28
@@ -294,7 +303,7 @@ Partial Class frmReservas
         'lblServiciosAdicionales
         '
         Me.lblServiciosAdicionales.AutoSize = True
-        Me.lblServiciosAdicionales.Location = New System.Drawing.Point(12, 176)
+        Me.lblServiciosAdicionales.Location = New System.Drawing.Point(12, 202)
         Me.lblServiciosAdicionales.Name = "lblServiciosAdicionales"
         Me.lblServiciosAdicionales.Size = New System.Drawing.Size(110, 13)
         Me.lblServiciosAdicionales.TabIndex = 29
@@ -302,7 +311,7 @@ Partial Class frmReservas
         '
         'btnSalir
         '
-        Me.btnSalir.Location = New System.Drawing.Point(417, 412)
+        Me.btnSalir.Location = New System.Drawing.Point(417, 583)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(75, 23)
         Me.btnSalir.TabIndex = 30
@@ -310,11 +319,106 @@ Partial Class frmReservas
         Me.btnSalir.UseVisualStyleBackColor = True
         Me.btnSalir.Visible = False
         '
+        'txtCostoEstadia
+        '
+        Me.txtCostoEstadia.Enabled = False
+        Me.txtCostoEstadia.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCostoEstadia.Location = New System.Drawing.Point(15, 467)
+        Me.txtCostoEstadia.Multiline = True
+        Me.txtCostoEstadia.Name = "txtCostoEstadia"
+        Me.txtCostoEstadia.Size = New System.Drawing.Size(200, 30)
+        Me.txtCostoEstadia.TabIndex = 31
+        '
+        'txtCostoAdicionales
+        '
+        Me.txtCostoAdicionales.Enabled = False
+        Me.txtCostoAdicionales.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCostoAdicionales.Location = New System.Drawing.Point(15, 531)
+        Me.txtCostoAdicionales.Multiline = True
+        Me.txtCostoAdicionales.Name = "txtCostoAdicionales"
+        Me.txtCostoAdicionales.Size = New System.Drawing.Size(200, 30)
+        Me.txtCostoAdicionales.TabIndex = 32
+        '
+        'txtCostoTotal
+        '
+        Me.txtCostoTotal.Enabled = False
+        Me.txtCostoTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCostoTotal.Location = New System.Drawing.Point(231, 467)
+        Me.txtCostoTotal.Multiline = True
+        Me.txtCostoTotal.Name = "txtCostoTotal"
+        Me.txtCostoTotal.Size = New System.Drawing.Size(200, 30)
+        Me.txtCostoTotal.TabIndex = 33
+        '
+        'txtFaltaDePagar
+        '
+        Me.txtFaltaDePagar.Enabled = False
+        Me.txtFaltaDePagar.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFaltaDePagar.Location = New System.Drawing.Point(231, 531)
+        Me.txtFaltaDePagar.Multiline = True
+        Me.txtFaltaDePagar.Name = "txtFaltaDePagar"
+        Me.txtFaltaDePagar.Size = New System.Drawing.Size(200, 30)
+        Me.txtFaltaDePagar.TabIndex = 34
+        '
+        'lblCostoEstadia
+        '
+        Me.lblCostoEstadia.AutoSize = True
+        Me.lblCostoEstadia.Location = New System.Drawing.Point(12, 449)
+        Me.lblCostoEstadia.Name = "lblCostoEstadia"
+        Me.lblCostoEstadia.Size = New System.Drawing.Size(89, 13)
+        Me.lblCostoEstadia.TabIndex = 35
+        Me.lblCostoEstadia.Text = "Costo de estadia:"
+        '
+        'lblCostoAdicionales
+        '
+        Me.lblCostoAdicionales.AutoSize = True
+        Me.lblCostoAdicionales.Location = New System.Drawing.Point(12, 513)
+        Me.lblCostoAdicionales.Name = "lblCostoAdicionales"
+        Me.lblCostoAdicionales.Size = New System.Drawing.Size(108, 13)
+        Me.lblCostoAdicionales.TabIndex = 36
+        Me.lblCostoAdicionales.Text = "Costo de adicionales:"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(228, 449)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(64, 13)
+        Me.Label1.TabIndex = 37
+        Me.Label1.Text = "Costo Total:"
+        '
+        'lblFaltaPAgar
+        '
+        Me.lblFaltaPAgar.AutoSize = True
+        Me.lblFaltaPAgar.Location = New System.Drawing.Point(228, 513)
+        Me.lblFaltaPAgar.Name = "lblFaltaPAgar"
+        Me.lblFaltaPAgar.Size = New System.Drawing.Size(78, 13)
+        Me.lblFaltaPAgar.TabIndex = 38
+        Me.lblFaltaPAgar.Text = "Falta de pagar:"
+        '
+        'chkCancelada
+        '
+        Me.chkCancelada.AutoSize = True
+        Me.chkCancelada.Location = New System.Drawing.Point(381, 171)
+        Me.chkCancelada.Name = "chkCancelada"
+        Me.chkCancelada.Size = New System.Drawing.Size(106, 17)
+        Me.chkCancelada.TabIndex = 39
+        Me.chkCancelada.Text = "Cancelar reserva"
+        Me.chkCancelada.UseVisualStyleBackColor = True
+        '
         'frmReservas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(504, 447)
+        Me.ClientSize = New System.Drawing.Size(502, 614)
+        Me.Controls.Add(Me.chkCancelada)
+        Me.Controls.Add(Me.lblFaltaPAgar)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblCostoAdicionales)
+        Me.Controls.Add(Me.lblCostoEstadia)
+        Me.Controls.Add(Me.txtFaltaDePagar)
+        Me.Controls.Add(Me.txtCostoTotal)
+        Me.Controls.Add(Me.txtCostoAdicionales)
+        Me.Controls.Add(Me.txtCostoEstadia)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.lblServiciosAdicionales)
         Me.Controls.Add(Me.btnBorrar)
@@ -384,4 +488,13 @@ Partial Class frmReservas
     Friend WithEvents btnAgregar As System.Windows.Forms.Button
     Friend WithEvents dgvServiciosAdicionales As System.Windows.Forms.DataGridView
     Friend WithEvents btnSalir As System.Windows.Forms.Button
+    Friend WithEvents txtFaltaDePagar As System.Windows.Forms.TextBox
+    Friend WithEvents txtCostoTotal As System.Windows.Forms.TextBox
+    Friend WithEvents txtCostoAdicionales As System.Windows.Forms.TextBox
+    Friend WithEvents txtCostoEstadia As System.Windows.Forms.TextBox
+    Friend WithEvents lblCostoEstadia As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents lblCostoAdicionales As System.Windows.Forms.Label
+    Friend WithEvents lblFaltaPAgar As System.Windows.Forms.Label
+    Friend WithEvents chkCancelada As System.Windows.Forms.CheckBox
 End Class

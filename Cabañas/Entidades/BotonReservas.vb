@@ -32,6 +32,18 @@
         End Set
     End Property
 
+
+    Private Cancelada_ As Boolean
+    Public Property Cancelada() As Boolean
+        Get
+            Return Cancelada_
+        End Get
+        Set(ByVal value As Boolean)
+            Cancelada_ = value
+        End Set
+    End Property
+
+
     Public Sub New()
         Me.FlatStyle = Windows.Forms.FlatStyle.Flat
         Me.Margin = New Padding(0, 0, 0, 0)

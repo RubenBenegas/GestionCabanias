@@ -118,6 +118,20 @@ Public Class Reservas
         End Set
     End Property
 
+
+
+    Private Cancelada_ As Boolean
+    Public Property Cancelada() As Boolean
+        Get
+            Return Cancelada_
+        End Get
+        Set(ByVal value As Boolean)
+            Cancelada_ = value
+        End Set
+    End Property
+
+
+
     Public Sub TraerTabReservas(ByVal tabla As DataGridView)
         abrirConexion()
 
@@ -153,6 +167,8 @@ Public Class Reservas
             objComando.Parameters.AddWithValue("@SinSenia", reserva.SinSenia)
             objComando.Parameters.AddWithValue("@Checkin", reserva.Checkin)
             objComando.Parameters.AddWithValue("@Checkout", reserva.Checkout)
+            objComando.Parameters.AddWithValue("@Cancelada", reserva.Cancelada)
+
             If objComando.ExecuteNonQuery() Then
                 Return True
             Else
@@ -213,6 +229,7 @@ Public Class Reservas
                 reserva.SinSenia = objDataTable.Rows(0).Item("SinSenia")
                 reserva.Checkin = objDataTable.Rows(0).Item("Checkin")
                 reserva.Checkout = objDataTable.Rows(0).Item("Checkout")
+                reserva.Cancelada = objDataTable.Rows(0).Item("Cancelada")
                 Return reserva
             End If
         Catch ex As Exception
@@ -237,6 +254,7 @@ Public Class Reservas
             objComando.Parameters.AddWithValue("@SinSenia", reserva.SinSenia)
             objComando.Parameters.AddWithValue("@Checkin", reserva.Checkin)
             objComando.Parameters.AddWithValue("@Checkout", reserva.Checkout)
+            objComando.Parameters.AddWithValue("@Cancelada", reserva.Cancelada)
             objComando.Parameters.AddWithValue("@Id", reserva.Id)
             If objComando.ExecuteNonQuery() Then
                 Return True
@@ -273,36 +291,45 @@ Public Class Reservas
     End Function
 
     Public Sub CantidadReservas(ByVal tabla As DataGridView)
-        abrirConexion()
+        Try
+            abrirConexion()
 
-        Dim objComando As New SqlCommand("ReservasTraerTab", objConexion)
-        objComando.CommandType = CommandType.StoredProcedure
+            Dim objComando As New SqlCommand("ReservasTraerTab", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
 
-        Dim objDataTable As New Data.DataTable
-        Dim objDataAdapter As New SqlDataAdapter(objComando)
-        objDataAdapter.Fill(objDataTable)
-        tabla.DataSource = objDataTable
+            Dim objDataTable As New Data.DataTable
+            Dim objDataAdapter As New SqlDataAdapter(objComando)
+            objDataAdapter.Fill(objDataTable)
+            tabla.DataSource = objDataTable
 
-        tabla.Columns("Id").Width = 50
-        tabla.Columns("Huesped").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            tabla.Columns("Id").Width = 50
+            tabla.Columns("Huesped").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
-        cerrarConexion()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            cerrarConexion()
+        End Try
     End Sub
 
     Public Function DataTableReservas() As Data.DataTable
+        Try
+            abrirConexion()
 
-        abrirConexion()
+            Dim objComando As New SqlCommand("ReservasDataTable", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            Dim objDataTable As New Data.DataTable
+            Dim objDataAdapter As New SqlDataAdapter(objComando)
+            objDataAdapter.Fill(objDataTable)
+            Return objDataTable
 
-        Dim objComando As New SqlCommand("ReservasDataTable", objConexion)
-        objComando.CommandType = CommandType.StoredProcedure
-        Dim objDataTable As New Data.DataTable
-        Dim objDataAdapter As New SqlDataAdapter(objComando)
-        objDataAdapter.Fill(objDataTable)
-        Return objDataTable
-
-        cerrarConexion()
-
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            cerrarConexion()
+        End Try
     End Function
+
 
     Public Function ReservaAdicionalInsertar(ByVal idReserva As Integer, ByVal idAdicional As Integer)
         Try
@@ -326,21 +353,28 @@ Public Class Reservas
     End Function
 
     Public Sub ReservasCargarAdicionales(ByVal idReserva As Integer, ByVal tabla As DataGridView)
-        abrirConexion()
+        Try
+            abrirConexion()
 
-        Dim objComando As New SqlCommand("ReservasCargarAdicionales", objConexion)
-        objComando.CommandType = CommandType.StoredProcedure
-        objComando.Parameters.AddWithValue("@idReserva", idReserva)
+            Dim objComando As New SqlCommand("ReservasCargarAdicionales", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            objComando.Parameters.AddWithValue("@idReserva", idReserva)
 
-        Dim objDataTable As New Data.DataTable
-        Dim objDataAdapter As New SqlDataAdapter(objComando)
-        objDataAdapter.Fill(objDataTable)
-        tabla.DataSource = objDataTable
-        'tabla.Columns("id").Visible = False
-        tabla.Columns("id").Width = 30
-        tabla.Columns("Adicionales").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        cerrarConexion()
+            Dim objDataTable As New Data.DataTable
+            Dim objDataAdapter As New SqlDataAdapter(objComando)
+            objDataAdapter.Fill(objDataTable)
+            tabla.DataSource = objDataTable
+            'tabla.Columns("id").Visible = False
+            tabla.Columns("id").Width = 30
+            tabla.Columns("Adicionales").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            cerrarConexion()
+        End Try
     End Sub
+
 
     Public Function ReservaAdicionalBorrar(ByVal idAdicional As Integer)
         Try
@@ -358,6 +392,52 @@ Public Class Reservas
         Catch ex As Exception
             MsgBox(ex.Message)
             Return False
+        Finally
+            cerrarConexion()
+        End Try
+    End Function
+
+
+
+
+
+    Public Function ReservaCostoEstadia(ByVal idReserva) As Decimal
+        Try
+            abrirConexion()
+            Dim CostoEstadia As Decimal
+            Dim objComando As New SqlCommand("ReservaCostoEstadia", objConexion)
+            objComando.Parameters.AddWithValue("@IdReserva", idReserva)
+            objComando.CommandType = CommandType.StoredProcedure
+            Dim objDataTable As New Data.DataTable
+            Dim objDataAdapter As New SqlDataAdapter(objComando)
+            objDataAdapter.Fill(objDataTable)
+            CostoEstadia = objDataTable.Rows(0).Item("CostoEstadia")
+            Return CostoEstadia
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            cerrarConexion()
+        End Try
+    End Function
+
+    Public Function ReservaCostoAdicionales(ByVal idReserva) As Decimal
+
+        Try
+            abrirConexion()
+            Dim CostoAdicionales As Decimal
+            Dim objComando As New SqlCommand("ReservaCostoAdicionales", objConexion)
+            objComando.Parameters.AddWithValue("@IdReserva", idReserva)
+            objComando.CommandType = CommandType.StoredProcedure
+            Dim objDataTable As New Data.DataTable
+            Dim objDataAdapter As New SqlDataAdapter(objComando)
+            objDataAdapter.Fill(objDataTable)
+
+            CostoAdicionales = objDataTable.Rows(0).Item("CostoAdicionales")
+            Return CostoAdicionales
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
         Finally
             cerrarConexion()
         End Try

@@ -117,6 +117,13 @@
             res2 = res.RecuperarReserva(btnReserva.id)
             btnReserva.fIngreso = res2.fIngreso
             btnReserva.fSalida = res2.fSalida
+            btnReserva.Cancelada = res2.Cancelada
+
+
+            If btnReserva.Cancelada = True Then
+                btnReserva.BackColor = Color.Red
+            End If
+
 
             For i As Integer = 0 To flpContenedor.Controls.Count - 1
                 Dim idHabitacion As Integer = DirectCast(flpContenedor.Controls.Item(i), FlpCabanias).id

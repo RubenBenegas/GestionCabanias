@@ -43,6 +43,20 @@
             chkSinSenia.Checked = reserva.SinSenia
             DateTimePicker3.Value = reserva.Checkin
             DateTimePicker4.Value = reserva.Checkout
+            chkCancelada.Checked = reserva.Cancelada
+
+            txtCostoEstadia.Text = reserva.ReservaCostoEstadia(idReserva)
+            If dgvServiciosAdicionales.Rows.Count <> 0 Then
+                txtCostoAdicionales.Text = reserva.ReservaCostoAdicionales(idReserva)
+            Else
+                txtCostoAdicionales.Text = 0
+            End If
+
+            txtCostoTotal.Text = CInt(txtCostoEstadia.Text) + CInt(txtCostoAdicionales.Text)
+            txtFaltaDePagar.Text = CInt(txtCostoTotal.Text) - CInt(txtSenia.Text)
+
+            chkCancelada.Visible = True
+
             Me.Text = "Modificar reserva"
         Else
             txtId.Text = Nothing
@@ -55,6 +69,12 @@
             chkSinSenia.Checked = Nothing
             DateTimePicker3.Value = Today
             DateTimePicker4.Value = Today
+
+            txtCostoEstadia.Text = Nothing
+            txtCostoAdicionales.Text = Nothing
+            reserva.Cancelada = False
+
+            chkCancelada.Visible = False
             Me.Text = "Agregar reserva"
         End If
     End Sub
@@ -77,11 +97,13 @@
             End If
             reserva.Checkin = DateTimePicker3.Value
             reserva.Checkout = DateTimePicker4.Value
+            reserva.Cancelada = chkCancelada.Checked
+
             If modificar = True Then
                 If reserva.ModificarReserva(reserva) = True Then
                     MsgBox("La reserva ha sido correctamente modificada.")
                     'reserva.TraerTabReservas(lstReservas.dgvReservas)
-                    grafReservas.ActualizarGrafico()
+                    'grafReservas.ActualizarGrafico()
                 Else
                     MsgBox("Error al modificar la reserva." + Chr(13) + "Intentelo de nuevo.")
                 End If
@@ -89,7 +111,7 @@
                 If reserva.InsertarReserva(reserva) = True Then
                     MsgBox("La reserva ha sido correctamente insertada.")
                     'reserva.TraerTabReservas(lstReservas.dgvReservas)
-                    grafReservas.ActualizarGrafico()
+                    'grafReservas.ActualizarGrafico()
                 Else
                     MsgBox("Error al insertar la reserva." + Chr(13) + "Intentelo de nuevo.")
                 End If
@@ -143,4 +165,7 @@
 
         btnSalir.Visible = False
     End Sub
+
+
+
 End Class

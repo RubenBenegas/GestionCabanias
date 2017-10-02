@@ -45,17 +45,73 @@
             DateTimePicker4.Value = reserva.Checkout
             chkCancelada.Checked = reserva.Cancelada
 
-            txtCostoEstadia.Text = reserva.ReservaCostoEstadia(idReserva)
-            If dgvServiciosAdicionales.Rows.Count <> 0 Then
-                txtCostoAdicionales.Text = reserva.ReservaCostoAdicionales(idReserva)
-            Else
-                txtCostoAdicionales.Text = 0
-            End If
-
-            txtCostoTotal.Text = CInt(txtCostoEstadia.Text) + CInt(txtCostoAdicionales.Text)
-            txtFaltaDePagar.Text = CInt(txtCostoTotal.Text) - CInt(txtSenia.Text)
+            
 
             chkCancelada.Visible = True
+
+            If reserva.Cancelada = True Then
+                lblCostoEstadia.Visible = False
+                txtCostoEstadia.Visible = False
+                txtCostoEstadia.Text = 0
+                lblCostoAdicionales.Visible = False
+                txtCostoAdicionales.Visible = False
+                txtCostoAdicionales.Text = 0
+                lblCostoTotal.Visible = False
+                txtCostoTotal.Visible = False
+                txtCostoTotal.Text = 0
+                lblFaltaPAgar.Visible = False
+                txtFaltaDePagar.Visible = False
+                txtFaltaDePagar.Text = 0
+                lblReservaCancelada.Visible = True
+
+
+
+                If DateDiff(DateInterval.Day, Today, reserva.fIngreso) > 14 Then
+                    'MessageBox.Show(DateDiff(DateInterval.Day, Today, reserva.fIngreso))
+                    lblReembolso.Visible = True
+                    lblReembolso.ForeColor = Color.Green
+                    lblReembolso.Text = "Reembolso de: "
+                    txtReembolso.Visible = True
+                    txtReembolso.Text = CStr(reserva.Senia / 2)
+                Else
+                    'MessageBox.Show(DateDiff(DateInterval.Day, Today, reserva.fIngreso))
+                    lblReembolso.Visible = True
+                    lblReembolso.ForeColor = Color.Red
+                    lblReembolso.Text = "Sin reembolso"
+                    txtReembolso.Text = 0
+                    txtReembolso.Visible = False
+                End If
+            Else
+                lblCostoEstadia.Visible = True
+                txtCostoEstadia.Visible = True
+                lblCostoAdicionales.Visible = True
+                txtCostoAdicionales.Visible = True
+                lblCostoTotal.Visible = True
+                txtCostoTotal.Visible = True
+                lblFaltaPAgar.Visible = True
+                txtFaltaDePagar.Visible = True
+
+                lblReservaCancelada.Visible = False
+                lblReembolso.Visible = False
+                txtReembolso.Text = 0
+                txtReembolso.Visible = False
+
+
+                txtCostoEstadia.Text = reserva.ReservaCostoEstadia(idReserva)
+                If dgvServiciosAdicionales.Rows.Count <> 0 Then
+                    txtCostoAdicionales.Text = reserva.ReservaCostoAdicionales(idReserva)
+                Else
+                    txtCostoAdicionales.Text = 0
+                End If
+
+                txtCostoTotal.Text = CInt(txtCostoEstadia.Text) + CInt(txtCostoAdicionales.Text)
+                txtFaltaDePagar.Text = CInt(txtCostoTotal.Text) - CInt(txtSenia.Text)
+
+
+
+            End If
+
+
 
             Me.Text = "Modificar reserva"
         Else
@@ -70,8 +126,30 @@
             DateTimePicker3.Value = Today
             DateTimePicker4.Value = Today
 
+            lblCostoEstadia.Visible = True
+            txtCostoEstadia.Visible = True
             txtCostoEstadia.Text = Nothing
+
+            lblCostoAdicionales.Visible = True
+            txtCostoAdicionales.Visible = True
             txtCostoAdicionales.Text = Nothing
+
+            lblCostoTotal.Visible = True
+            txtCostoTotal.Visible = True
+            txtCostoTotal.Text = Nothing
+
+            lblFaltaPAgar.Visible = True
+            txtFaltaDePagar.Visible = True
+            txtFaltaDePagar.Text = Nothing
+
+            lblReembolso.Visible = False
+            txtReembolso.Text = Nothing
+
+            txtReembolso.Text = Nothing
+            txtReembolso.Visible = False
+
+            lblReservaCancelada.Visible = False
+
             reserva.Cancelada = False
 
             chkCancelada.Visible = False
@@ -99,8 +177,22 @@
             reserva.Checkout = DateTimePicker4.Value
             reserva.Cancelada = chkCancelada.Checked
 
+            
             If modificar = True Then
                 If reserva.ModificarReserva(reserva) = True Then
+                    If reserva.Cancelada = True Then
+                        If DateDiff(DateInterval.Day, Today, reserva.fIngreso) > 14 Then
+                            'MessageBox.Show(DateDiff(DateInterval.Day, Today, reserva.fIngreso))
+                            lblReembolso.ForeColor = Color.Green
+                            lblReembolso.Text = "Reembolso de: " + CStr((reserva.Senia / 2))
+                        Else
+                            'MessageBox.Show(DateDiff(DateInterval.Day, Today, reserva.fIngreso))
+                            lblReembolso.ForeColor = Color.Red
+                            lblReembolso.Text = "Sin reembolso"
+                        End If
+
+                    End If
+
                     MsgBox("La reserva ha sido correctamente modificada.")
                     'reserva.TraerTabReservas(lstReservas.dgvReservas)
                     'grafReservas.ActualizarGrafico()

@@ -58,9 +58,12 @@ Partial Class frmReservas
         Me.txtFaltaDePagar = New System.Windows.Forms.TextBox
         Me.lblCostoEstadia = New System.Windows.Forms.Label
         Me.lblCostoAdicionales = New System.Windows.Forms.Label
-        Me.Label1 = New System.Windows.Forms.Label
+        Me.lblCostoTotal = New System.Windows.Forms.Label
         Me.lblFaltaPAgar = New System.Windows.Forms.Label
         Me.chkCancelada = New System.Windows.Forms.CheckBox
+        Me.lblReembolso = New System.Windows.Forms.Label
+        Me.txtReembolso = New System.Windows.Forms.TextBox
+        Me.lblReservaCancelada = New System.Windows.Forms.Label
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvServiciosAdicionales, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -377,14 +380,14 @@ Partial Class frmReservas
         Me.lblCostoAdicionales.TabIndex = 36
         Me.lblCostoAdicionales.Text = "Costo de adicionales:"
         '
-        'Label1
+        'lblCostoTotal
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(228, 449)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(64, 13)
-        Me.Label1.TabIndex = 37
-        Me.Label1.Text = "Costo Total:"
+        Me.lblCostoTotal.AutoSize = True
+        Me.lblCostoTotal.Location = New System.Drawing.Point(228, 449)
+        Me.lblCostoTotal.Name = "lblCostoTotal"
+        Me.lblCostoTotal.Size = New System.Drawing.Size(64, 13)
+        Me.lblCostoTotal.TabIndex = 37
+        Me.lblCostoTotal.Text = "Costo Total:"
         '
         'lblFaltaPAgar
         '
@@ -405,14 +408,48 @@ Partial Class frmReservas
         Me.chkCancelada.Text = "Cancelar reserva"
         Me.chkCancelada.UseVisualStyleBackColor = True
         '
+        'lblReembolso
+        '
+        Me.lblReembolso.AutoSize = True
+        Me.lblReembolso.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblReembolso.ForeColor = System.Drawing.Color.Red
+        Me.lblReembolso.Location = New System.Drawing.Point(13, 519)
+        Me.lblReembolso.Name = "lblReembolso"
+        Me.lblReembolso.Size = New System.Drawing.Size(0, 25)
+        Me.lblReembolso.TabIndex = 40
+        '
+        'txtReembolso
+        '
+        Me.txtReembolso.Enabled = False
+        Me.txtReembolso.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtReembolso.Location = New System.Drawing.Point(166, 513)
+        Me.txtReembolso.Multiline = True
+        Me.txtReembolso.Name = "txtReembolso"
+        Me.txtReembolso.Size = New System.Drawing.Size(162, 30)
+        Me.txtReembolso.TabIndex = 41
+        '
+        'lblReservaCancelada
+        '
+        Me.lblReservaCancelada.AutoSize = True
+        Me.lblReservaCancelada.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblReservaCancelada.ForeColor = System.Drawing.Color.Red
+        Me.lblReservaCancelada.Location = New System.Drawing.Point(12, 467)
+        Me.lblReservaCancelada.Name = "lblReservaCancelada"
+        Me.lblReservaCancelada.Size = New System.Drawing.Size(261, 31)
+        Me.lblReservaCancelada.TabIndex = 42
+        Me.lblReservaCancelada.Text = "Reserva Cancelada!"
+        '
         'frmReservas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(502, 614)
+        Me.Controls.Add(Me.lblReservaCancelada)
+        Me.Controls.Add(Me.txtReembolso)
+        Me.Controls.Add(Me.lblReembolso)
         Me.Controls.Add(Me.chkCancelada)
         Me.Controls.Add(Me.lblFaltaPAgar)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblCostoTotal)
         Me.Controls.Add(Me.lblCostoAdicionales)
         Me.Controls.Add(Me.lblCostoEstadia)
         Me.Controls.Add(Me.txtFaltaDePagar)
@@ -493,8 +530,11 @@ Partial Class frmReservas
     Friend WithEvents txtCostoAdicionales As System.Windows.Forms.TextBox
     Friend WithEvents txtCostoEstadia As System.Windows.Forms.TextBox
     Friend WithEvents lblCostoEstadia As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents lblCostoTotal As System.Windows.Forms.Label
     Friend WithEvents lblCostoAdicionales As System.Windows.Forms.Label
     Friend WithEvents lblFaltaPAgar As System.Windows.Forms.Label
     Friend WithEvents chkCancelada As System.Windows.Forms.CheckBox
+    Friend WithEvents lblReembolso As System.Windows.Forms.Label
+    Friend WithEvents txtReembolso As System.Windows.Forms.TextBox
+    Friend WithEvents lblReservaCancelada As System.Windows.Forms.Label
 End Class

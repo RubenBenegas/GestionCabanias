@@ -45,9 +45,10 @@
             DateTimePicker4.Value = reserva.Checkout
             chkCancelada.Checked = reserva.Cancelada
 
-            
-
             chkCancelada.Visible = True
+
+            btnAgregar.Enabled = True
+            btnBorrar.Enabled = True
 
             If reserva.Cancelada = True Then
                 lblCostoEstadia.Visible = False
@@ -63,7 +64,8 @@
                 txtFaltaDePagar.Visible = False
                 txtFaltaDePagar.Text = 0
                 lblReservaCancelada.Visible = True
-
+                btnAgregar.Enabled = False
+                btnBorrar.Enabled = False
 
 
                 If DateDiff(DateInterval.Day, Today, reserva.fIngreso) > 14 Then
@@ -153,6 +155,9 @@
             reserva.Cancelada = False
 
             chkCancelada.Visible = False
+
+            btnAgregar.Enabled = True
+            btnBorrar.Enabled = True
             Me.Text = "Agregar reserva"
         End If
     End Sub

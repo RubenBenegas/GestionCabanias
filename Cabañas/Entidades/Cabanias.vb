@@ -236,5 +236,72 @@ Public Class Cabanias
         cerrarConexion()
 
     End Function
+    Public Sub BuscarServicio(ByVal tabla As DataGridView)
+        abrirConexion()
+
+        Dim objComando As New SqlCommand("ServicioBuscar", objConexion)
+        objComando.CommandType = CommandType.StoredProcedure
+
+        Dim objDataTable As New Data.DataTable
+        Dim objDataAdapter As New SqlDataAdapter(objComando)
+        objDataAdapter.Fill(objDataTable)
+        tabla.DataSource = objDataTable
+
+        tabla.Columns("Id").Width = 50
+
+        cerrarConexion()
+
+    End Sub
+    Public Sub CabaniaServCargar(ByVal idCabania As Integer, ByVal tabla As DataGridView)
+        abrirConexion()
+
+        Dim objComando As New SqlCommand("CabaniaServCargar", objConexion)
+        objComando.CommandType = CommandType.StoredProcedure
+        objComando.Parameters.AddWithValue("@idCabania", idCabania)
+
+        Dim objDataTable As New Data.DataTable
+        Dim objDataAdapter As New SqlDataAdapter(objComando)
+        objDataAdapter.Fill(objDataTable)
+        tabla.DataSource = objDataTable
+        'tabla.Columns("id").Visible = False
+        tabla.Columns("CabaniaServ").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        cerrarConexion()
+    End Sub
+    Public Function CabaniaServBorrar(ByVal idAdicional As Integer)
+        Try
+            abrirConexion()
+
+            Dim objComando As New SqlCommand("CabaniaServBorrar", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            objComando.Parameters.AddWithValue("@idCabania", idCabania)
+            If objComando.ExecuteNonQuery() Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            cerrarConexion()
+        End Try
+    End Function
+
+    Public Sub CabaniaServCarga(ByVal idCabania As Integer, ByVal tabla As DataGridView)
+        abrirConexion()
+
+        Dim objComando As New SqlCommand("CabaniaServCarga", objConexion)
+        objComando.CommandType = CommandType.StoredProcedure
+        objComando.Parameters.AddWithValue("@idCabania", idCabania)
+
+        Dim objDataTable As New Data.DataTable
+        Dim objDataAdapter As New SqlDataAdapter(objComando)
+        objDataAdapter.Fill(objDataTable)
+        tabla.DataSource = objDataTable
+
+        tabla.Columns("Descripcion").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        cerrarConexion()
+    End Sub
+
 End Class
 

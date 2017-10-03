@@ -34,7 +34,12 @@ Partial Class frmCabania
         Me.txtMonto = New System.Windows.Forms.TextBox
         Me.lblDescripcion = New System.Windows.Forms.Label
         Me.txtDescripcion = New System.Windows.Forms.TextBox
+        Me.dgvCabaniaServicios = New System.Windows.Forms.DataGridView
+        Me.Agregarbtn = New System.Windows.Forms.Button
+        Me.Eliminarbtn = New System.Windows.Forms.Button
+        Me.Servicios = New System.Windows.Forms.Label
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvCabaniaServicios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtIdCabania
@@ -69,7 +74,7 @@ Partial Class frmCabania
         '
         'ButtAceptar
         '
-        Me.ButtAceptar.Location = New System.Drawing.Point(95, 195)
+        Me.ButtAceptar.Location = New System.Drawing.Point(111, 428)
         Me.ButtAceptar.Name = "ButtAceptar"
         Me.ButtAceptar.Size = New System.Drawing.Size(75, 23)
         Me.ButtAceptar.TabIndex = 3
@@ -78,7 +83,7 @@ Partial Class frmCabania
         '
         'ButtCancelar
         '
-        Me.ButtCancelar.Location = New System.Drawing.Point(189, 195)
+        Me.ButtCancelar.Location = New System.Drawing.Point(223, 428)
         Me.ButtCancelar.Name = "ButtCancelar"
         Me.ButtCancelar.Size = New System.Drawing.Size(75, 23)
         Me.ButtCancelar.TabIndex = 4
@@ -136,12 +141,51 @@ Partial Class frmCabania
         Me.txtDescripcion.Size = New System.Drawing.Size(167, 91)
         Me.txtDescripcion.TabIndex = 12
         '
+        'dgvCabaniaServicios
+        '
+        Me.dgvCabaniaServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvCabaniaServicios.Location = New System.Drawing.Point(15, 231)
+        Me.dgvCabaniaServicios.Name = "dgvCabaniaServicios"
+        Me.dgvCabaniaServicios.Size = New System.Drawing.Size(340, 180)
+        Me.dgvCabaniaServicios.TabIndex = 13
+        '
+        'Agregarbtn
+        '
+        Me.Agregarbtn.Location = New System.Drawing.Point(377, 245)
+        Me.Agregarbtn.Name = "Agregarbtn"
+        Me.Agregarbtn.Size = New System.Drawing.Size(75, 23)
+        Me.Agregarbtn.TabIndex = 14
+        Me.Agregarbtn.Text = "Agregar"
+        Me.Agregarbtn.UseVisualStyleBackColor = True
+        '
+        'Eliminarbtn
+        '
+        Me.Eliminarbtn.Location = New System.Drawing.Point(377, 297)
+        Me.Eliminarbtn.Name = "Eliminarbtn"
+        Me.Eliminarbtn.Size = New System.Drawing.Size(75, 23)
+        Me.Eliminarbtn.TabIndex = 15
+        Me.Eliminarbtn.Text = "Eliminar"
+        Me.Eliminarbtn.UseVisualStyleBackColor = True
+        '
+        'Servicios
+        '
+        Me.Servicios.AutoSize = True
+        Me.Servicios.Location = New System.Drawing.Point(21, 202)
+        Me.Servicios.Name = "Servicios"
+        Me.Servicios.Size = New System.Drawing.Size(50, 13)
+        Me.Servicios.TabIndex = 16
+        Me.Servicios.Text = "Servicios"
+        '
         'frmCabania
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(310, 243)
+        Me.ClientSize = New System.Drawing.Size(481, 463)
+        Me.Controls.Add(Me.Servicios)
+        Me.Controls.Add(Me.Eliminarbtn)
+        Me.Controls.Add(Me.Agregarbtn)
+        Me.Controls.Add(Me.dgvCabaniaServicios)
         Me.Controls.Add(Me.txtDescripcion)
         Me.Controls.Add(Me.lblDescripcion)
         Me.Controls.Add(Me.txtMonto)
@@ -159,6 +203,7 @@ Partial Class frmCabania
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CabaniaForm"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvCabaniaServicios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -174,4 +219,8 @@ Partial Class frmCabania
     Friend WithEvents txtMonto As System.Windows.Forms.TextBox
     Friend WithEvents txtDescripcion As System.Windows.Forms.TextBox
     Friend WithEvents lblDescripcion As System.Windows.Forms.Label
+    Friend WithEvents Servicios As System.Windows.Forms.Label
+    Friend WithEvents Eliminarbtn As System.Windows.Forms.Button
+    Friend WithEvents Agregarbtn As System.Windows.Forms.Button
+    Friend WithEvents dgvCabaniaServicios As System.Windows.Forms.DataGridView
 End Class

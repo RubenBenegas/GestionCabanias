@@ -28,6 +28,7 @@
 
 
         cabania.CargarComboCabaniaTipo(cmbTipoCabania)
+        cabania.CabaniaServCarga(idCabania, dgvCabaniaServicios)
 
 
         If modificar = True Then
@@ -110,4 +111,20 @@
     Private Sub cmbTipoCabania_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbTipoCabania.SelectedIndexChanged
         ' txtMonto.Text = 
     End Sub
+
+    Private Sub Agregarbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Agregarbtn.Click
+
+        lstCabaniaServicios.idCabaniaServ = txtIdCabania.Text
+        lstCabaniaServicios.ShowDialog()
+
+    End Sub
+
+    Private Sub Eliminarbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Eliminarbtn.Click
+
+        Dim idCabaniaServ As Integer = dgvCabaniaServicios.Item("id", dgvCabaniaServicios.CurrentRow.Index).Value
+        cabania.CabaniaServBorrar(idCabaniaServ)
+        cabania.CabaniaServCargar(idCabania, dgvCabaniaServicios)
+
+    End Sub
 End Class
+

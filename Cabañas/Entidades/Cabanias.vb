@@ -252,21 +252,26 @@ Public Class Cabanias
         cerrarConexion()
 
     End Sub
-    Public Sub CabaniaServCargar(ByVal idCabania As Integer, ByVal tabla As DataGridView)
-        abrirConexion()
+    Public Function CabaniaServCargar(ByVal idCabania As Integer, ByVal idServicio As Integer)
+        Try
+            abrirConexion()
 
-        Dim objComando As New SqlCommand("CabaniaServCargar", objConexion)
-        objComando.CommandType = CommandType.StoredProcedure
-        objComando.Parameters.AddWithValue("@idCabania", idCabania)
-
-        Dim objDataTable As New Data.DataTable
-        Dim objDataAdapter As New SqlDataAdapter(objComando)
-        objDataAdapter.Fill(objDataTable)
-        tabla.DataSource = objDataTable
-        'tabla.Columns("id").Visible = False
-        tabla.Columns("CabaniaServ").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        cerrarConexion()
-    End Sub
+            Dim objComando As New SqlCommand("CabaniaServCargar", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            objComando.Parameters.AddWithValue("@idCabania", idCabania)
+            objComando.Parameters.AddWithValue("@idServicio", idServicio)
+            If objComando.ExecuteNonQuery() Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            cerrarConexion()
+        End Try
+    End Function
     Public Function CabaniaServBorrar(ByVal idAdicional As Integer)
         Try
             abrirConexion()
@@ -302,6 +307,32 @@ Public Class Cabanias
         tabla.Columns("Descripcion").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         cerrarConexion()
     End Sub
+
+    Public Function CabaniaCostoServicio(ByVal idCabania) As Decimal
+        Try
+            abrirConexion()
+            Dim CostoServ As Decimal
+            Dim objcomando As New SqlCommand("CabaniaCostoServicio", objConexion)
+            objcomando.Parameters.AddWithValue("@IdCabania", idCabania)
+            objcomando.CommandType = CommandType.StoredProcedure
+            Dim objDataTable As New Data.DataTable
+            Dim objDataAdapter As New SqlDataAdapter(objcomando)
+            objDataAdapter.Fill(objDataTable)
+
+            CostoServ = objDataTable.Rows(0).Item("CostoServ")
+            Return CostoServ
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+
+        Finally
+
+            cerrarConexion()
+
+        End Try
+
+    End Function
 
 End Class
 

@@ -114,7 +114,7 @@
 
     Private Sub Agregarbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Agregarbtn.Click
 
-        lstCabaniaServicios.idCabaniaServ = txtIdCabania.Text
+        lstCabaniaServicios.idCabania = txtIdCabania.Text
         lstCabaniaServicios.ShowDialog()
 
     End Sub
@@ -123,7 +123,7 @@
 
         Dim idCabaniaServ As Integer = dgvCabaniaServicios.Item("id", dgvCabaniaServicios.CurrentRow.Index).Value
         cabania.CabaniaServBorrar(idCabaniaServ)
-        cabania.CabaniaServCargar(idCabania, dgvCabaniaServicios)
+        cabania.CabaniaServCarga(idCabania, dgvCabaniaServicios)
 
     End Sub
 End Class

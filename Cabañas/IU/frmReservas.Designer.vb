@@ -35,7 +35,7 @@ Partial Class frmReservas
         Me.txtId = New System.Windows.Forms.TextBox
         Me.txtNumeroPasajeros = New System.Windows.Forms.TextBox
         Me.txtSenia = New System.Windows.Forms.TextBox
-        Me.chkSinSenia = New System.Windows.Forms.CheckBox
+        Me.chkConSenia = New System.Windows.Forms.CheckBox
         Me.btnAceptar = New System.Windows.Forms.Button
         Me.btnCancelar = New System.Windows.Forms.Button
         Me.txtIdHuesped = New System.Windows.Forms.TextBox
@@ -171,15 +171,15 @@ Partial Class frmReservas
         Me.txtSenia.Size = New System.Drawing.Size(100, 20)
         Me.txtSenia.TabIndex = 5
         '
-        'chkSinSenia
+        'chkConSenia
         '
-        Me.chkSinSenia.AutoSize = True
-        Me.chkSinSenia.Location = New System.Drawing.Point(381, 39)
-        Me.chkSinSenia.Name = "chkSinSenia"
-        Me.chkSinSenia.Size = New System.Drawing.Size(69, 17)
-        Me.chkSinSenia.TabIndex = 6
-        Me.chkSinSenia.Text = "Sin Seña"
-        Me.chkSinSenia.UseVisualStyleBackColor = True
+        Me.chkConSenia.AutoSize = True
+        Me.chkConSenia.Location = New System.Drawing.Point(381, 39)
+        Me.chkConSenia.Name = "chkConSenia"
+        Me.chkConSenia.Size = New System.Drawing.Size(73, 17)
+        Me.chkConSenia.TabIndex = 6
+        Me.chkConSenia.Text = "Con Seña"
+        Me.chkConSenia.UseVisualStyleBackColor = True
         '
         'btnAceptar
         '
@@ -471,7 +471,7 @@ Partial Class frmReservas
         Me.Controls.Add(Me.txtIdHuesped)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAceptar)
-        Me.Controls.Add(Me.chkSinSenia)
+        Me.Controls.Add(Me.chkConSenia)
         Me.Controls.Add(Me.txtSenia)
         Me.Controls.Add(Me.txtNumeroPasajeros)
         Me.Controls.Add(Me.txtId)
@@ -508,7 +508,7 @@ Partial Class frmReservas
     Friend WithEvents txtId As System.Windows.Forms.TextBox
     Friend WithEvents txtNumeroPasajeros As System.Windows.Forms.TextBox
     Friend WithEvents txtSenia As System.Windows.Forms.TextBox
-    Friend WithEvents chkSinSenia As System.Windows.Forms.CheckBox
+    Friend WithEvents chkConSenia As System.Windows.Forms.CheckBox
     Friend WithEvents btnAceptar As System.Windows.Forms.Button
     Friend WithEvents btnCancelar As System.Windows.Forms.Button
     Friend WithEvents txtIdHuesped As System.Windows.Forms.TextBox

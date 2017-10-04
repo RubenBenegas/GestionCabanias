@@ -104,7 +104,7 @@
             frmReservas.cmbIdCabania.Enabled = False
             frmReservas.txtNumeroPasajeros.Enabled = False
             frmReservas.txtSenia.Enabled = False
-            frmReservas.chkSinSenia.Enabled = False
+            frmReservas.chkConSenia.Enabled = False
 
             frmReservas.btnSalir.Visible = True
 

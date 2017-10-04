@@ -88,13 +88,13 @@ Public Class Reservas
         End Set
     End Property
 
-    Private SinSenia_ As Boolean
-    Public Property SinSenia() As Boolean
+    Private ConSenia_ As Boolean
+    Public Property ConSenia() As Boolean
         Get
-            Return SinSenia_
+            Return ConSenia_
         End Get
         Set(ByVal value As Boolean)
-            SinSenia_ = value
+            ConSenia_ = value
         End Set
     End Property
 
@@ -164,7 +164,7 @@ Public Class Reservas
             objComando.Parameters.AddWithValue("@IdCabania", reserva.IdCabania)
             objComando.Parameters.AddWithValue("@NroPasajeros", reserva.NroPasajeros)
             objComando.Parameters.AddWithValue("@Senia", reserva.Senia)
-            objComando.Parameters.AddWithValue("@SinSenia", reserva.SinSenia)
+            objComando.Parameters.AddWithValue("@ConSenia", reserva.ConSenia)
             objComando.Parameters.AddWithValue("@Checkin", reserva.Checkin)
             objComando.Parameters.AddWithValue("@Checkout", reserva.Checkout)
             objComando.Parameters.AddWithValue("@Cancelada", reserva.Cancelada)
@@ -226,7 +226,7 @@ Public Class Reservas
                 reserva.IdCabania = objDataTable.Rows(0).Item("IdCabania")
                 reserva.NroPasajeros = objDataTable.Rows(0).Item("NroPasajeros")
                 reserva.Senia = objDataTable.Rows(0).Item("Senia")
-                reserva.SinSenia = objDataTable.Rows(0).Item("SinSenia")
+                reserva.ConSenia = objDataTable.Rows(0).Item("ConSenia")
                 reserva.Checkin = objDataTable.Rows(0).Item("Checkin")
                 reserva.Checkout = objDataTable.Rows(0).Item("Checkout")
                 reserva.Cancelada = objDataTable.Rows(0).Item("Cancelada")
@@ -251,7 +251,7 @@ Public Class Reservas
             objComando.Parameters.AddWithValue("@IdCabania", reserva.IdCabania)
             objComando.Parameters.AddWithValue("@NroPasajeros", reserva.NroPasajeros)
             objComando.Parameters.AddWithValue("@Senia", reserva.Senia)
-            objComando.Parameters.AddWithValue("@SinSenia", reserva.SinSenia)
+            objComando.Parameters.AddWithValue("@ConSenia", reserva.ConSenia)
             objComando.Parameters.AddWithValue("@Checkin", reserva.Checkin)
             objComando.Parameters.AddWithValue("@Checkout", reserva.Checkout)
             objComando.Parameters.AddWithValue("@Cancelada", reserva.Cancelada)
@@ -435,6 +435,32 @@ Public Class Reservas
 
             CostoAdicionales = objDataTable.Rows(0).Item("CostoAdicionales")
             Return CostoAdicionales
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            cerrarConexion()
+        End Try
+    End Function
+
+
+
+
+
+    Public Function ReservaTraerMontoDeCabania(ByVal idCabania) As Decimal
+
+        Try
+            abrirConexion()
+            Dim MontoDeCabania As Decimal
+            Dim objComando As New SqlCommand("ReservaTraerMontoDeCabania", objConexion)
+            objComando.Parameters.AddWithValue("@idCabania", idCabania)
+            objComando.CommandType = CommandType.StoredProcedure
+            Dim objDataTable As New Data.DataTable
+            Dim objDataAdapter As New SqlDataAdapter(objComando)
+            objDataAdapter.Fill(objDataTable)
+
+            MontoDeCabania = objDataTable.Rows(0).Item("Monto")
+            Return MontoDeCabania
 
         Catch ex As Exception
             MsgBox(ex.Message)

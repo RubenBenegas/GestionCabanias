@@ -163,6 +163,7 @@ Partial Class frmReservas
         Me.txtNumeroPasajeros.Name = "txtNumeroPasajeros"
         Me.txtNumeroPasajeros.Size = New System.Drawing.Size(100, 20)
         Me.txtNumeroPasajeros.TabIndex = 4
+        Me.txtNumeroPasajeros.Tag = "*"
         '
         'txtSenia
         '
@@ -170,6 +171,7 @@ Partial Class frmReservas
         Me.txtSenia.Name = "txtSenia"
         Me.txtSenia.Size = New System.Drawing.Size(100, 20)
         Me.txtSenia.TabIndex = 5
+        Me.txtSenia.Tag = "*"
         '
         'chkConSenia
         '
@@ -227,6 +229,7 @@ Partial Class frmReservas
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(100, 20)
         Me.DateTimePicker1.TabIndex = 1
+        Me.DateTimePicker1.Tag = "*"
         '
         'DateTimePicker2
         '
@@ -235,6 +238,7 @@ Partial Class frmReservas
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(100, 20)
         Me.DateTimePicker2.TabIndex = 2
+        Me.DateTimePicker2.Tag = "*"
         '
         'DateTimePicker3
         '
@@ -268,6 +272,7 @@ Partial Class frmReservas
         Me.txtNombreHuesped.Name = "txtNombreHuesped"
         Me.txtNombreHuesped.Size = New System.Drawing.Size(100, 20)
         Me.txtNombreHuesped.TabIndex = 0
+        Me.txtNombreHuesped.Tag = "*"
         '
         'dgvServiciosAdicionales
         '

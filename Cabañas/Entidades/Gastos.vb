@@ -244,4 +244,22 @@ Public Class Gastos
 
     End Function
 
+    Public Function GastosCalcularTotal() As Decimal
+        Try
+            abrirConexion()
+            Dim Total As Decimal
+            Dim objComando As New SqlCommand("GastosCalcularTotal", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            Dim objDataTable As New Data.DataTable
+            Dim objDataAdapter As New SqlDataAdapter(objComando)
+            objDataAdapter.Fill(objDataTable)
+            Total = objDataTable.Rows(0).Item("Total")
+            Return Total
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            cerrarConexion()
+
+        End Try
+    End Function
 End Class

@@ -259,7 +259,7 @@ Public Class Cabanias
             Dim objComando As New SqlCommand("CabaniaServCargar", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
             objComando.Parameters.AddWithValue("@idCabania", idCabania)
-            objComando.Parameters.AddWithValue("@idServicio", idServicio)
+            objComando.Parameters.AddWithValue("@idServicios", idServicio)
             If objComando.ExecuteNonQuery() Then
                 Return True
             Else

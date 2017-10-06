@@ -30,7 +30,7 @@ Public Class Conexiones
 
 
         Try
-            strConexion = "server=LocalHost\SQLEXPRESS; database=Cabanias; trusted_connection=true"
+            strConexion = "server=LocalHost\SQLEXPRESS; database=Cabania; trusted_connection=true"
 
             objConexion = New SqlConnection(strConexion)
 

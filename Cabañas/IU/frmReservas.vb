@@ -24,6 +24,8 @@
 
     Private Sub frmReservas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
+        ErrorProvider1.Clear()
+
         reserva.ReservasCargarAdicionales(idReserva, dgvServiciosAdicionales)
 
         reserva.CargarComboCabania(cmbIdCabania)

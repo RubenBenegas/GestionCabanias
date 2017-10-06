@@ -26,7 +26,7 @@
 
     Private Sub CabaniaForm_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
-
+        ErrorProvider1.Clear()
         cabania.CargarComboCabaniaTipo(cmbTipoCabania)
         cabania.CabaniaServCarga(idCabania, dgvCabaniaServicios)
 
@@ -81,12 +81,9 @@
                 End If
             End If
             Close()
-
         Else
-
             MsgBox("Completar los campos obligatorios.", MsgBoxStyle.Information, "Importante")
         End If
-
     End Sub
 
 

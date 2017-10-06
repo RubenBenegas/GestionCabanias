@@ -31,7 +31,7 @@
 
     Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
 
-
+        ErrorProvider1.Clear()
 
         If fun.validarCampos(Me, ErrorProvider1) = True Then
 

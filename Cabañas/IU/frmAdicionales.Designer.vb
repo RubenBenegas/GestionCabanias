@@ -42,6 +42,7 @@ Partial Class frmAdicionales
         Me.txtAdicional.Name = "txtAdicional"
         Me.txtAdicional.Size = New System.Drawing.Size(197, 20)
         Me.txtAdicional.TabIndex = 10
+        Me.txtAdicional.Tag = "*"
         '
         'lblTipoCabania
         '
@@ -58,6 +59,7 @@ Partial Class frmAdicionales
         Me.txtMonto.Name = "txtMonto"
         Me.txtMonto.Size = New System.Drawing.Size(100, 20)
         Me.txtMonto.TabIndex = 12
+        Me.txtMonto.Tag = "*"
         '
         'txtId
         '

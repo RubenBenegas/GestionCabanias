@@ -28,6 +28,8 @@
 
     Private Sub FrmProveedor_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
+        ErrorProvider1.Clear()
+
         If modificar = True Then
 
             Proveedor = Proveedor.RecuperarProveedor(idProveedor)

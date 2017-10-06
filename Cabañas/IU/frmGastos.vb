@@ -22,6 +22,8 @@
 
     Private Sub FrmGastos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
+        ErrorProvider1.Clear()
+
         Gasto.CargarComboCategoria(cmbCategoria)
         Gasto.CargarComboProveedor(cmbProveedor)
 

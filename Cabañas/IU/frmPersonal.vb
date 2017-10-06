@@ -23,6 +23,8 @@
     Dim Personal As New Personal
     Private Sub frmPersonal_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
+        ErrorProvider1.Clear()
+
         Personal.CargarComboPersonal(cmbDepartamento)
         If Modificar = True Then
 
@@ -80,8 +82,8 @@
                     MsgBox("Error al insertar personal." + Chr(13) + "Intentelo de nuevo.")
                 End If
             End If
-            Close()
 
+            Close()
         Else
 
             MsgBox("Completar los campos obligatorios.", MsgBoxStyle.Information, "Importante")

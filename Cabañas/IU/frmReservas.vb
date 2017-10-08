@@ -34,6 +34,7 @@
             reserva = reserva.RecuperarReserva(idReserva)
 
             txtId.Text = reserva.Id
+            dtpFechaReserva.Value = reserva.fReserva
             txtNombreHuesped.Text = reserva.NombreHuesped
             'txtNombreHuesped.Text = lstReservas.dgvReservas.Item("Huesped", lstReservas.dgvReservas.CurrentRow.Index).Value
             txtIdHuesped.Text = CStr(reserva.IdHuesped)
@@ -43,8 +44,12 @@
             txtNumeroPasajeros.Text = reserva.NroPasajeros
             txtSenia.Text = reserva.Senia
             chkConSenia.Checked = reserva.ConSenia
+            dtpFechaPagoSenia.Value = reserva.fPagoSenia
             dtpCheckin.Value = reserva.Checkin
             dtpCheckout.Value = reserva.Checkout
+            txtCostoEstadia.Text = reserva.CostoEstadia
+            txtCostoAdicionales.Text = reserva.CostoAdicionales
+            txtCostoTotal.Text = reserva.CostoTotal
             chkCancelada.Checked = reserva.Cancelada
 
             chkCancelada.Visible = True
@@ -187,6 +192,7 @@
 
         If fun.validarCampos(Me, ErrorProvider1) = True Then
 
+            reserva.fReserva = dtpFechaReserva.Value
             reserva.IdHuesped = txtIdHuesped.Text
             reserva.fIngreso = dtpFechaIngreso.Value
             reserva.fSalida = dtpFechaSalida.Value
@@ -199,9 +205,12 @@
                 reserva.Senia = 0
             End If
 
-
+            reserva.fPagoSenia = dtpFechaPagoSenia.Value
             reserva.Checkin = dtpCheckin.Value
             reserva.Checkout = dtpCheckout.Value
+            reserva.CostoEstadia = txtCostoEstadia.Text
+            reserva.CostoAdicionales = txtCostoAdicionales.Text
+            reserva.CostoTotal = txtCostoTotal.Text
             reserva.Cancelada = chkCancelada.Checked
 
 
@@ -282,6 +291,7 @@
         txtSenia.Enabled = True
         chkConSenia.Enabled = True
 
+        btnConsultarCostos.Visible = True
         btnSalir.Visible = False
     End Sub
 

@@ -106,6 +106,7 @@
             frmReservas.txtSenia.Enabled = False
             frmReservas.chkConSenia.Enabled = False
 
+            frmReservas.btnConsultarCostos.Visible = False
             frmReservas.btnSalir.Visible = True
 
             frmReservas.ShowDialog()

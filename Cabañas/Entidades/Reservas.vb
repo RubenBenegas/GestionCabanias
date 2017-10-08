@@ -14,6 +14,18 @@ Public Class Reservas
         End Set
     End Property
 
+
+    Private fReserva_ As Date
+    Public Property fReserva() As Date
+        Get
+            Return fReserva_
+        End Get
+        Set(ByVal value As Date)
+            fReserva_ = value
+        End Set
+    End Property
+
+
     Private IdHuesped_ As Integer
     Public Property IdHuesped() As Integer
         Get
@@ -34,7 +46,6 @@ Public Class Reservas
             NombreHuesped_ = value
         End Set
     End Property
-
 
     Private fIngreso_ As Date
     Public Property fIngreso() As Date
@@ -78,16 +89,6 @@ Public Class Reservas
     End Property
 
 
-    Private Senia_ As Decimal
-    Public Property Senia() As Decimal
-        Get
-            Return Senia_
-        End Get
-        Set(ByVal value As Decimal)
-            Senia_ = value
-        End Set
-    End Property
-
     Private ConSenia_ As Boolean
     Public Property ConSenia() As Boolean
         Get
@@ -97,6 +98,18 @@ Public Class Reservas
             ConSenia_ = value
         End Set
     End Property
+
+
+    Private fPagoSenia_ As Date
+    Public Property fPagoSenia() As Date
+        Get
+            Return fPagoSenia_
+        End Get
+        Set(ByVal value As Date)
+            fPagoSenia_ = value
+        End Set
+    End Property
+
 
     Private CheckIn_ As Date
     Public Property Checkin() As Date
@@ -119,6 +132,47 @@ Public Class Reservas
     End Property
 
 
+    Private CostoEstadia_ As Decimal
+    Public Property CostoEstadia() As Decimal
+        Get
+            Return CostoEstadia_
+        End Get
+        Set(ByVal value As Decimal)
+            CostoEstadia_ = value
+        End Set
+    End Property
+
+
+    Private CostoAdicionales_ As Decimal
+    Public Property CostoAdicionales() As Decimal
+        Get
+            Return CostoAdicionales_
+        End Get
+        Set(ByVal value As Decimal)
+            CostoAdicionales_ = value
+        End Set
+    End Property
+
+    Private Senia_ As Decimal
+    Public Property Senia() As Decimal
+        Get
+            Return Senia_
+        End Get
+        Set(ByVal value As Decimal)
+            Senia_ = value
+        End Set
+    End Property
+
+
+    Private CostoTotal_ As Decimal
+    Public Property CostoTotal() As Decimal
+        Get
+            Return CostoTotal_
+        End Get
+        Set(ByVal value As Decimal)
+            CostoTotal_ = value
+        End Set
+    End Property
 
     Private Cancelada_ As Boolean
     Public Property Cancelada() As Boolean
@@ -158,6 +212,7 @@ Public Class Reservas
 
             Dim objComando As New SqlCommand("ReservasInsertar", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
+            objComando.Parameters.AddWithValue("@fReserva", reserva.fReserva)
             objComando.Parameters.AddWithValue("@IdHuesped", reserva.IdHuesped)
             objComando.Parameters.AddWithValue("@fIngreso", reserva.fIngreso)
             objComando.Parameters.AddWithValue("@fSalida", reserva.fSalida)
@@ -165,8 +220,12 @@ Public Class Reservas
             objComando.Parameters.AddWithValue("@NroPasajeros", reserva.NroPasajeros)
             objComando.Parameters.AddWithValue("@Senia", reserva.Senia)
             objComando.Parameters.AddWithValue("@ConSenia", reserva.ConSenia)
+            objComando.Parameters.AddWithValue("@fPagoSenia", reserva.fPagoSenia)
             objComando.Parameters.AddWithValue("@Checkin", reserva.Checkin)
             objComando.Parameters.AddWithValue("@Checkout", reserva.Checkout)
+            objComando.Parameters.AddWithValue("@CostoEstadia", reserva.CostoEstadia)
+            objComando.Parameters.AddWithValue("@CostoAdicionales", reserva.CostoAdicionales)
+            objComando.Parameters.AddWithValue("@CostoTotal", reserva.CostoTotal)
             objComando.Parameters.AddWithValue("@Cancelada", reserva.Cancelada)
 
             If objComando.ExecuteNonQuery() Then
@@ -219,6 +278,7 @@ Public Class Reservas
             If objDataTable.Rows.Count > 0 Then
                 objDataAdapter.Fill(objDataTable)
                 reserva.Id = objDataTable.Rows(0).Item("Id")
+                reserva.fReserva = objDataTable.Rows(0).Item("fReserva")
                 reserva.IdHuesped = objDataTable.Rows(0).Item("IdHuesped")
                 reserva.NombreHuesped = objDataTable.Rows(0).Item("Nombre")
                 reserva.fIngreso = objDataTable.Rows(0).Item("fIngreso")
@@ -227,8 +287,12 @@ Public Class Reservas
                 reserva.NroPasajeros = objDataTable.Rows(0).Item("NroPasajeros")
                 reserva.Senia = objDataTable.Rows(0).Item("Senia")
                 reserva.ConSenia = objDataTable.Rows(0).Item("ConSenia")
+                reserva.fPagoSenia = objDataTable.Rows(0).Item("fPagoSenia")
                 reserva.Checkin = objDataTable.Rows(0).Item("Checkin")
                 reserva.Checkout = objDataTable.Rows(0).Item("Checkout")
+                reserva.CostoEstadia = objDataTable.Rows(0).Item("CostoEstadia")
+                reserva.CostoAdicionales = objDataTable.Rows(0).Item("CostoAdicionales")
+                reserva.CostoTotal = objDataTable.Rows(0).Item("CostoTotal")
                 reserva.Cancelada = objDataTable.Rows(0).Item("Cancelada")
                 Return reserva
             End If
@@ -245,6 +309,7 @@ Public Class Reservas
             abrirConexion()
             Dim objComando As New SqlCommand("ReservasModificar", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
+            objComando.Parameters.AddWithValue("@fReserva", reserva.fReserva)
             objComando.Parameters.AddWithValue("@IdHuesped", reserva.IdHuesped)
             objComando.Parameters.AddWithValue("@fIngreso", reserva.fIngreso)
             objComando.Parameters.AddWithValue("@fSalida", reserva.fSalida)
@@ -252,8 +317,12 @@ Public Class Reservas
             objComando.Parameters.AddWithValue("@NroPasajeros", reserva.NroPasajeros)
             objComando.Parameters.AddWithValue("@Senia", reserva.Senia)
             objComando.Parameters.AddWithValue("@ConSenia", reserva.ConSenia)
+            objComando.Parameters.AddWithValue("@fPagoSenia", reserva.fPagoSenia)
             objComando.Parameters.AddWithValue("@Checkin", reserva.Checkin)
             objComando.Parameters.AddWithValue("@Checkout", reserva.Checkout)
+            objComando.Parameters.AddWithValue("@CostoEstadia", reserva.CostoEstadia)
+            objComando.Parameters.AddWithValue("@CostoAdicionales", reserva.CostoAdicionales)
+            objComando.Parameters.AddWithValue("@CostoTotal", reserva.CostoTotal)
             objComando.Parameters.AddWithValue("@Cancelada", reserva.Cancelada)
             objComando.Parameters.AddWithValue("@Id", reserva.Id)
             If objComando.ExecuteNonQuery() Then

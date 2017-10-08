@@ -65,11 +65,11 @@ Partial Class frmReservas
         Me.btnConsultarCostos = New System.Windows.Forms.Button
         Me.dtpFechaReserva = New System.Windows.Forms.DateTimePicker
         Me.lblFechaReserva = New System.Windows.Forms.Label
-        Me.txtFaltaDePagar = New System.Windows.Forms.TextBox
-        Me.lblFaltaPAgar = New System.Windows.Forms.Label
         Me.lblImporteSenia = New System.Windows.Forms.Label
         Me.dtpFechaPagoSenia = New System.Windows.Forms.DateTimePicker
         Me.lblFechaSenia = New System.Windows.Forms.Label
+        Me.txtFaltaDePagar = New System.Windows.Forms.TextBox
+        Me.lblFaltaPAgar = New System.Windows.Forms.Label
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvServiciosAdicionales, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -410,7 +410,7 @@ Partial Class frmReservas
         Me.lblReembolso.AutoSize = True
         Me.lblReembolso.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblReembolso.ForeColor = System.Drawing.Color.Red
-        Me.lblReembolso.Location = New System.Drawing.Point(29, 695)
+        Me.lblReembolso.Location = New System.Drawing.Point(47, 532)
         Me.lblReembolso.Name = "lblReembolso"
         Me.lblReembolso.Size = New System.Drawing.Size(0, 25)
         Me.lblReembolso.TabIndex = 40
@@ -419,7 +419,7 @@ Partial Class frmReservas
         '
         Me.txtReembolso.Enabled = False
         Me.txtReembolso.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtReembolso.Location = New System.Drawing.Point(182, 689)
+        Me.txtReembolso.Location = New System.Drawing.Point(200, 526)
         Me.txtReembolso.Multiline = True
         Me.txtReembolso.Name = "txtReembolso"
         Me.txtReembolso.Size = New System.Drawing.Size(162, 30)
@@ -430,7 +430,7 @@ Partial Class frmReservas
         Me.lblReservaCancelada.AutoSize = True
         Me.lblReservaCancelada.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblReservaCancelada.ForeColor = System.Drawing.Color.Red
-        Me.lblReservaCancelada.Location = New System.Drawing.Point(28, 643)
+        Me.lblReservaCancelada.Location = New System.Drawing.Point(46, 480)
         Me.lblReservaCancelada.Name = "lblReservaCancelada"
         Me.lblReservaCancelada.Size = New System.Drawing.Size(261, 31)
         Me.lblReservaCancelada.TabIndex = 42
@@ -463,6 +463,33 @@ Partial Class frmReservas
         Me.lblFechaReserva.TabIndex = 45
         Me.lblFechaReserva.Text = "Fecha de reserva:"
         '
+        'lblImporteSenia
+        '
+        Me.lblImporteSenia.AutoSize = True
+        Me.lblImporteSenia.Location = New System.Drawing.Point(12, 510)
+        Me.lblImporteSenia.Name = "lblImporteSenia"
+        Me.lblImporteSenia.Size = New System.Drawing.Size(86, 13)
+        Me.lblImporteSenia.TabIndex = 46
+        Me.lblImporteSenia.Text = "Importe de seña:"
+        '
+        'dtpFechaPagoSenia
+        '
+        Me.dtpFechaPagoSenia.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpFechaPagoSenia.Location = New System.Drawing.Point(131, 527)
+        Me.dtpFechaPagoSenia.Name = "dtpFechaPagoSenia"
+        Me.dtpFechaPagoSenia.Size = New System.Drawing.Size(100, 20)
+        Me.dtpFechaPagoSenia.TabIndex = 47
+        Me.dtpFechaPagoSenia.Tag = "*"
+        '
+        'lblFechaSenia
+        '
+        Me.lblFechaSenia.AutoSize = True
+        Me.lblFechaSenia.Location = New System.Drawing.Point(131, 510)
+        Me.lblFechaSenia.Name = "lblFechaSenia"
+        Me.lblFechaSenia.Size = New System.Drawing.Size(90, 13)
+        Me.lblFechaSenia.TabIndex = 48
+        Me.lblFechaSenia.Text = "Fecha pago seña"
+        '
         'txtFaltaDePagar
         '
         Me.txtFaltaDePagar.Enabled = False
@@ -482,39 +509,11 @@ Partial Class frmReservas
         Me.lblFaltaPAgar.TabIndex = 38
         Me.lblFaltaPAgar.Text = "Falta de pagar:"
         '
-        'lblImporteSenia
-        '
-        Me.lblImporteSenia.AutoSize = True
-        Me.lblImporteSenia.Location = New System.Drawing.Point(12, 511)
-        Me.lblImporteSenia.Name = "lblImporteSenia"
-        Me.lblImporteSenia.Size = New System.Drawing.Size(89, 13)
-        Me.lblImporteSenia.TabIndex = 46
-        Me.lblImporteSenia.Text = "Importe de seña::"
-        '
-        'dtpFechaPagoSenia
-        '
-        Me.dtpFechaPagoSenia.Enabled = False
-        Me.dtpFechaPagoSenia.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaPagoSenia.Location = New System.Drawing.Point(131, 527)
-        Me.dtpFechaPagoSenia.Name = "dtpFechaPagoSenia"
-        Me.dtpFechaPagoSenia.Size = New System.Drawing.Size(100, 20)
-        Me.dtpFechaPagoSenia.TabIndex = 47
-        Me.dtpFechaPagoSenia.Tag = "*"
-        '
-        'lblFechaSenia
-        '
-        Me.lblFechaSenia.AutoSize = True
-        Me.lblFechaSenia.Location = New System.Drawing.Point(131, 511)
-        Me.lblFechaSenia.Name = "lblFechaSenia"
-        Me.lblFechaSenia.Size = New System.Drawing.Size(90, 13)
-        Me.lblFechaSenia.TabIndex = 48
-        Me.lblFechaSenia.Text = "Fecha pago seña"
-        '
         'frmReservas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(503, 751)
+        Me.ClientSize = New System.Drawing.Size(503, 616)
         Me.Controls.Add(Me.dtpFechaPagoSenia)
         Me.Controls.Add(Me.lblFechaSenia)
         Me.Controls.Add(Me.lblImporteSenia)
@@ -615,9 +614,9 @@ Partial Class frmReservas
     Friend WithEvents btnConsultarCostos As System.Windows.Forms.Button
     Friend WithEvents dtpFechaReserva As System.Windows.Forms.DateTimePicker
     Friend WithEvents lblFechaReserva As System.Windows.Forms.Label
-    Friend WithEvents lblFaltaPAgar As System.Windows.Forms.Label
-    Friend WithEvents txtFaltaDePagar As System.Windows.Forms.TextBox
     Friend WithEvents lblImporteSenia As System.Windows.Forms.Label
     Friend WithEvents dtpFechaPagoSenia As System.Windows.Forms.DateTimePicker
     Friend WithEvents lblFechaSenia As System.Windows.Forms.Label
+    Friend WithEvents lblFaltaPAgar As System.Windows.Forms.Label
+    Friend WithEvents txtFaltaDePagar As System.Windows.Forms.TextBox
 End Class

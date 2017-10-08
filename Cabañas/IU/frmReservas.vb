@@ -316,5 +316,7 @@
         txtCostoTotal.Text = CDec(txtCostoEstadia.Text) + CDec(txtCostoAdicionales.Text)
 
         dtpFechaPagoSenia.Value = dtpFechaReserva.Value.Date.AddDays(3)
+
+        'TextBox1.Text = dtpFechaReserva.Value.Date.AddDays(3)
     End Sub
 End Class

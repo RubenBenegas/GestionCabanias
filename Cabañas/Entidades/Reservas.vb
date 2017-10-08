@@ -432,8 +432,8 @@ Public Class Reservas
             Dim objDataTable As New Data.DataTable
             Dim objDataAdapter As New SqlDataAdapter(objComando)
             objDataAdapter.Fill(objDataTable)
-
             CostoAdicionales = objDataTable.Rows(0).Item("CostoAdicionales")
+
             Return CostoAdicionales
 
         Catch ex As Exception

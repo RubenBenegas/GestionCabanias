@@ -37,20 +37,27 @@
             txtNombreHuesped.Text = reserva.NombreHuesped
             'txtNombreHuesped.Text = lstReservas.dgvReservas.Item("Huesped", lstReservas.dgvReservas.CurrentRow.Index).Value
             txtIdHuesped.Text = CStr(reserva.IdHuesped)
-            DateTimePicker1.Value = reserva.fIngreso
-            DateTimePicker2.Value = reserva.fSalida
+            dtpFechaIngreso.Value = reserva.fIngreso
+            dtpFechaSalida.Value = reserva.fSalida
             cmbIdCabania.SelectedValue = reserva.IdCabania
             txtNumeroPasajeros.Text = reserva.NroPasajeros
             txtSenia.Text = reserva.Senia
             chkConSenia.Checked = reserva.ConSenia
-            DateTimePicker3.Value = reserva.Checkin
-            DateTimePicker4.Value = reserva.Checkout
+            dtpCheckin.Value = reserva.Checkin
+            dtpCheckout.Value = reserva.Checkout
             chkCancelada.Checked = reserva.Cancelada
 
             chkCancelada.Visible = True
 
             btnAgregar.Enabled = True
             btnBorrar.Enabled = True
+
+            btnConsultarCostos.Visible = True
+
+            lblFechaSenia.Visible = True
+            dtpFechaPagoSenia.Visible = True
+            lblImporteSenia.Visible = True
+            txtSenia.Visible = True
 
             If reserva.Cancelada = True Then
                 lblCostoEstadia.Visible = False
@@ -68,6 +75,11 @@
                 lblReservaCancelada.Visible = True
                 btnAgregar.Enabled = False
                 btnBorrar.Enabled = False
+                btnConsultarCostos.Visible = False
+                lblFechaSenia.Visible = False
+                dtpFechaPagoSenia.Visible = False
+                lblImporteSenia.Visible = False
+                txtSenia.Visible = False
 
 
                 If DateDiff(DateInterval.Day, Today, reserva.fIngreso) > 14 Then
@@ -100,7 +112,13 @@
                 txtReembolso.Text = 0
                 txtReembolso.Visible = False
 
+                btnConsultarCostos.Visible = True
 
+
+                lblFechaSenia.Visible = True
+                dtpFechaPagoSenia.Visible = True
+                lblImporteSenia.Visible = True
+                txtSenia.Visible = True
                 'txtCostoEstadia.Text = reserva.ReservaCostoEstadia(idReserva)
                 'If dgvServiciosAdicionales.Rows.Count <> 0 Then
                 '    txtCostoAdicionales.Text = reserva.ReservaCostoAdicionales(idReserva)
@@ -122,13 +140,13 @@
             txtId.Text = Nothing
             txtIdHuesped.Text = Nothing
             txtNombreHuesped.Text = Nothing
-            DateTimePicker1.Value = Today
-            DateTimePicker2.Value = Today
+            dtpFechaIngreso.Value = Today
+            dtpFechaSalida.Value = Today
             txtNumeroPasajeros.Text = Nothing
             txtSenia.Text = Nothing
             chkConSenia.Checked = Nothing
-            DateTimePicker3.Value = Today
-            DateTimePicker4.Value = Today
+            dtpCheckin.Value = Today
+            dtpCheckout.Value = Today
 
             lblCostoEstadia.Visible = True
             txtCostoEstadia.Visible = True
@@ -170,8 +188,8 @@
         If fun.validarCampos(Me, ErrorProvider1) = True Then
 
             reserva.IdHuesped = txtIdHuesped.Text
-            reserva.fIngreso = DateTimePicker1.Value
-            reserva.fSalida = DateTimePicker2.Value
+            reserva.fIngreso = dtpFechaIngreso.Value
+            reserva.fSalida = dtpFechaSalida.Value
             reserva.IdCabania = cmbIdCabania.SelectedValue
             reserva.NroPasajeros = txtNumeroPasajeros.Text
             reserva.ConSenia = chkConSenia.Checked
@@ -182,8 +200,8 @@
             End If
 
 
-            reserva.Checkin = DateTimePicker3.Value
-            reserva.Checkout = DateTimePicker4.Value
+            reserva.Checkin = dtpCheckin.Value
+            reserva.Checkout = dtpCheckout.Value
             reserva.Cancelada = chkCancelada.Checked
 
 
@@ -251,10 +269,10 @@
 
         Close()
 
-        DateTimePicker1.Enabled = True
-        DateTimePicker2.Enabled = True
-        DateTimePicker3.Enabled = True
-        DateTimePicker4.Enabled = True
+        dtpFechaIngreso.Enabled = True
+        dtpFechaSalida.Enabled = True
+        dtpCheckin.Enabled = True
+        dtpCheckout.Enabled = True
         btnAceptar.Visible = True
         btnCancelar.Visible = True
         btnAgregar.Visible = True
@@ -267,60 +285,26 @@
         btnSalir.Visible = False
     End Sub
 
+    Private Sub btnConsultarCostos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnConsultarCostos.Click
+        Dim montoCabania As Decimal
+        montoCabania = reserva.ReservaTraerMontoDeCabania(cmbIdCabania.SelectedValue)
+        txtCostoEstadia.Text = DateDiff(DateInterval.Day, dtpFechaIngreso.Value, dtpFechaSalida.Value) * montoCabania
 
 
-    Private Sub cmbIdCabania_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmbIdCabania.LostFocus
-        CalcularMonto()
+        If dgvServiciosAdicionales.Rows.Count = 0 Then
+            txtCostoAdicionales.Text = 0
+        Else
+            txtCostoAdicionales.Text = reserva.ReservaCostoAdicionales(idReserva)
+        End If
 
-    End Sub
-
-
-    Private Sub DateTimePicker1_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles DateTimePicker1.LostFocus
-        CalcularMonto()
-
-    End Sub
-
-
-    Private Sub DateTimePicker2_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles DateTimePicker2.LostFocus
-        CalcularMonto()
-
-    End Sub
-
-
-
-    Public Sub CalcularMonto()
-
-        Dim monto As Decimal
-        monto = reserva.ReservaTraerMontoDeCabania(cmbIdCabania.SelectedValue)
-
-        Dim dias As Integer
-        dias = DateDiff(DateInterval.Day, DateTimePicker1.Value, DateTimePicker2.Value)
-
-
-        txtCostoEstadia.Text = DateDiff(DateInterval.Day, DateTimePicker1.Value, DateTimePicker2.Value) * monto
-    End Sub
-
-    'Private Sub chkConSenia_CheckedChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles chkConSenia.CheckedChanged
-
-    '    If chkConSenia.Checked = True Then
-    '        Dim monto As Decimal
-    '        monto = CDec(txtCostoEstadia.Text) / 2
-    '        txtSenia.Text = monto
-    '    Else
-    '        txtSenia.Text = 0
-    '    End If
-
-
-    'End Sub
-
-
-    Private Sub chkConSenia_CheckStateChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles chkConSenia.CheckStateChanged
         If chkConSenia.Checked = True Then
-            Dim monto As Decimal
-            monto = CDec(txtCostoEstadia.Text) / 2
-            txtSenia.Text = monto
+            txtSenia.Text = CInt(txtCostoEstadia.Text) / 2
         Else
             txtSenia.Text = 0
         End If
+
+        txtCostoTotal.Text = CDec(txtCostoEstadia.Text) + CDec(txtCostoAdicionales.Text)
+
+        dtpFechaPagoSenia.Value = dtpFechaReserva.Value.Date.AddDays(3)
     End Sub
 End Class

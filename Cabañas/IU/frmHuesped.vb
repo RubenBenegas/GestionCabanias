@@ -93,10 +93,10 @@
         frmReservas.modificar = True
         If dgvHistorial.Rows.Count <> 0 Then
             frmReservas.idReserva = dgvHistorial.Item("id", dgvHistorial.CurrentRow.Index).Value
-            frmReservas.DateTimePicker1.Enabled = False
-            frmReservas.DateTimePicker2.Enabled = False
-            frmReservas.DateTimePicker3.Enabled = False
-            frmReservas.DateTimePicker4.Enabled = False
+            frmReservas.dtpFechaIngreso.Enabled = False
+            frmReservas.dtpFechaSalida.Enabled = False
+            frmReservas.dtpCheckin.Enabled = False
+            frmReservas.dtpCheckout.Enabled = False
             frmReservas.btnAceptar.Visible = False
             frmReservas.btnCancelar.Visible = False
             frmReservas.btnAgregar.Visible = False

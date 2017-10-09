@@ -58,7 +58,6 @@ Partial Class frmReservas
         Me.lblCostoEstadia = New System.Windows.Forms.Label
         Me.lblCostoAdicionales = New System.Windows.Forms.Label
         Me.lblCostoTotal = New System.Windows.Forms.Label
-        Me.chkCancelada = New System.Windows.Forms.CheckBox
         Me.lblReembolso = New System.Windows.Forms.Label
         Me.txtReembolso = New System.Windows.Forms.TextBox
         Me.lblReservaCancelada = New System.Windows.Forms.Label
@@ -70,6 +69,8 @@ Partial Class frmReservas
         Me.lblFechaSenia = New System.Windows.Forms.Label
         Me.txtFaltaDePagar = New System.Windows.Forms.TextBox
         Me.lblFaltaPAgar = New System.Windows.Forms.Label
+        Me.Button1 = New System.Windows.Forms.Button
+        Me.chkCancelada = New System.Windows.Forms.CheckBox
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvServiciosAdicionales, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -174,12 +175,14 @@ Partial Class frmReservas
         'txtSenia
         '
         Me.txtSenia.Enabled = False
+        Me.txtSenia.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSenia.Location = New System.Drawing.Point(15, 527)
         Me.txtSenia.Multiline = True
         Me.txtSenia.Name = "txtSenia"
         Me.txtSenia.Size = New System.Drawing.Size(100, 25)
         Me.txtSenia.TabIndex = 5
         Me.txtSenia.Tag = "*"
+        Me.txtSenia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'chkConSenia
         '
@@ -395,16 +398,6 @@ Partial Class frmReservas
         Me.lblCostoTotal.TabIndex = 37
         Me.lblCostoTotal.Text = "Costo Total:"
         '
-        'chkCancelada
-        '
-        Me.chkCancelada.AutoSize = True
-        Me.chkCancelada.Location = New System.Drawing.Point(381, 171)
-        Me.chkCancelada.Name = "chkCancelada"
-        Me.chkCancelada.Size = New System.Drawing.Size(106, 17)
-        Me.chkCancelada.TabIndex = 39
-        Me.chkCancelada.Text = "Cancelar reserva"
-        Me.chkCancelada.UseVisualStyleBackColor = True
-        '
         'lblReembolso
         '
         Me.lblReembolso.AutoSize = True
@@ -509,11 +502,31 @@ Partial Class frmReservas
         Me.lblFaltaPAgar.TabIndex = 38
         Me.lblFaltaPAgar.Text = "Falta de pagar:"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(248, 171)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(114, 23)
+        Me.Button1.TabIndex = 49
+        Me.Button1.Text = "Estado de Reserva"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'chkCancelada
+        '
+        Me.chkCancelada.AutoSize = True
+        Me.chkCancelada.Location = New System.Drawing.Point(381, 171)
+        Me.chkCancelada.Name = "chkCancelada"
+        Me.chkCancelada.Size = New System.Drawing.Size(106, 17)
+        Me.chkCancelada.TabIndex = 39
+        Me.chkCancelada.Text = "Cancelar reserva"
+        Me.chkCancelada.UseVisualStyleBackColor = True
+        '
         'frmReservas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(503, 616)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.dtpFechaPagoSenia)
         Me.Controls.Add(Me.lblFechaSenia)
         Me.Controls.Add(Me.lblImporteSenia)
@@ -607,7 +620,6 @@ Partial Class frmReservas
     Friend WithEvents lblCostoEstadia As System.Windows.Forms.Label
     Friend WithEvents lblCostoTotal As System.Windows.Forms.Label
     Friend WithEvents lblCostoAdicionales As System.Windows.Forms.Label
-    Friend WithEvents chkCancelada As System.Windows.Forms.CheckBox
     Friend WithEvents lblReembolso As System.Windows.Forms.Label
     Friend WithEvents txtReembolso As System.Windows.Forms.TextBox
     Friend WithEvents lblReservaCancelada As System.Windows.Forms.Label
@@ -619,4 +631,6 @@ Partial Class frmReservas
     Friend WithEvents lblFechaSenia As System.Windows.Forms.Label
     Friend WithEvents lblFaltaPAgar As System.Windows.Forms.Label
     Friend WithEvents txtFaltaDePagar As System.Windows.Forms.TextBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents chkCancelada As System.Windows.Forms.CheckBox
 End Class

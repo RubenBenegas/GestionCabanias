@@ -319,4 +319,9 @@
 
         'TextBox1.Text = dtpFechaReserva.Value.Date.AddDays(3)
     End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+
+        frmEstadosReserva.ShowDialog()
+    End Sub
 End Class

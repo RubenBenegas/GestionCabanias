@@ -110,7 +110,7 @@ Partial Class lstPersonal
         Me.dgvPersonal.RowHeadersVisible = False
         Me.dgvPersonal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvPersonal.Size = New System.Drawing.Size(960, 410)
-        Me.dgvPersonal.TabIndex = 4
+        Me.dgvPersonal.TabIndex = 0
         '
         'lstPersonal
         '

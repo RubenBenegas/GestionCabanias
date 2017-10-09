@@ -99,7 +99,7 @@ Partial Class FrmProveedor
         Me.Aceptar.Location = New System.Drawing.Point(71, 140)
         Me.Aceptar.Name = "Aceptar"
         Me.Aceptar.Size = New System.Drawing.Size(75, 23)
-        Me.Aceptar.TabIndex = 4
+        Me.Aceptar.TabIndex = 5
         Me.Aceptar.Text = "Aceptar"
         Me.Aceptar.UseVisualStyleBackColor = True
         '
@@ -117,7 +117,7 @@ Partial Class FrmProveedor
         Me.txtTipo.Location = New System.Drawing.Point(93, 32)
         Me.txtTipo.Name = "txtTipo"
         Me.txtTipo.Size = New System.Drawing.Size(114, 20)
-        Me.txtTipo.TabIndex = 0
+        Me.txtTipo.TabIndex = 1
         Me.txtTipo.Tag = "*"
         '
         'txtNombre
@@ -125,7 +125,7 @@ Partial Class FrmProveedor
         Me.txtNombre.Location = New System.Drawing.Point(93, 58)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(145, 20)
-        Me.txtNombre.TabIndex = 1
+        Me.txtNombre.TabIndex = 2
         Me.txtNombre.Tag = "*"
         '
         'txtTelefono
@@ -133,7 +133,7 @@ Partial Class FrmProveedor
         Me.txtTelefono.Location = New System.Drawing.Point(93, 84)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(103, 20)
-        Me.txtTelefono.TabIndex = 2
+        Me.txtTelefono.TabIndex = 3
         Me.txtTelefono.Tag = "*"
         '
         'txtDireccion
@@ -141,7 +141,7 @@ Partial Class FrmProveedor
         Me.txtDireccion.Location = New System.Drawing.Point(93, 110)
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(145, 20)
-        Me.txtDireccion.TabIndex = 3
+        Me.txtDireccion.TabIndex = 4
         Me.txtDireccion.Tag = "*"
         '
         'Cancelar
@@ -149,7 +149,7 @@ Partial Class FrmProveedor
         Me.Cancelar.Location = New System.Drawing.Point(163, 140)
         Me.Cancelar.Name = "Cancelar"
         Me.Cancelar.Size = New System.Drawing.Size(75, 23)
-        Me.Cancelar.TabIndex = 5
+        Me.Cancelar.TabIndex = 6
         Me.Cancelar.Text = "Cancelar"
         Me.Cancelar.UseVisualStyleBackColor = True
         '

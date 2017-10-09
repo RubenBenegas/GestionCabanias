@@ -175,7 +175,7 @@ Partial Class frmPersonal
         Me.cmbDepartamento.Location = New System.Drawing.Point(132, 110)
         Me.cmbDepartamento.Name = "cmbDepartamento"
         Me.cmbDepartamento.Size = New System.Drawing.Size(121, 21)
-        Me.cmbDepartamento.TabIndex = 15
+        Me.cmbDepartamento.TabIndex = 4
         '
         'frmPersonal
         '

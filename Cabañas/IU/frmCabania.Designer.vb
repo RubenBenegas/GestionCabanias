@@ -77,7 +77,7 @@ Partial Class frmCabania
         Me.ButtAceptar.Location = New System.Drawing.Point(111, 428)
         Me.ButtAceptar.Name = "ButtAceptar"
         Me.ButtAceptar.Size = New System.Drawing.Size(75, 23)
-        Me.ButtAceptar.TabIndex = 3
+        Me.ButtAceptar.TabIndex = 6
         Me.ButtAceptar.Text = "Aceptar"
         Me.ButtAceptar.UseVisualStyleBackColor = True
         '
@@ -86,7 +86,7 @@ Partial Class frmCabania
         Me.ButtCancelar.Location = New System.Drawing.Point(223, 428)
         Me.ButtCancelar.Name = "ButtCancelar"
         Me.ButtCancelar.Size = New System.Drawing.Size(75, 23)
-        Me.ButtCancelar.TabIndex = 4
+        Me.ButtCancelar.TabIndex = 7
         Me.ButtCancelar.Text = "Cancelar"
         Me.ButtCancelar.UseVisualStyleBackColor = True
         '
@@ -101,7 +101,7 @@ Partial Class frmCabania
         Me.cmbTipoCabania.Location = New System.Drawing.Point(131, 31)
         Me.cmbTipoCabania.Name = "cmbTipoCabania"
         Me.cmbTipoCabania.Size = New System.Drawing.Size(121, 21)
-        Me.cmbTipoCabania.TabIndex = 8
+        Me.cmbTipoCabania.TabIndex = 1
         '
         'lblMonto
         '
@@ -120,7 +120,7 @@ Partial Class frmCabania
         Me.txtMonto.Location = New System.Drawing.Point(131, 59)
         Me.txtMonto.Name = "txtMonto"
         Me.txtMonto.Size = New System.Drawing.Size(100, 20)
-        Me.txtMonto.TabIndex = 10
+        Me.txtMonto.TabIndex = 2
         '
         'lblDescripcion
         '
@@ -139,7 +139,7 @@ Partial Class frmCabania
         Me.txtDescripcion.Multiline = True
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(167, 91)
-        Me.txtDescripcion.TabIndex = 12
+        Me.txtDescripcion.TabIndex = 3
         '
         'dgvCabaniaServicios
         '
@@ -154,7 +154,7 @@ Partial Class frmCabania
         Me.Agregarbtn.Location = New System.Drawing.Point(377, 245)
         Me.Agregarbtn.Name = "Agregarbtn"
         Me.Agregarbtn.Size = New System.Drawing.Size(75, 23)
-        Me.Agregarbtn.TabIndex = 14
+        Me.Agregarbtn.TabIndex = 4
         Me.Agregarbtn.Text = "Agregar"
         Me.Agregarbtn.UseVisualStyleBackColor = True
         '
@@ -163,7 +163,7 @@ Partial Class frmCabania
         Me.Eliminarbtn.Location = New System.Drawing.Point(377, 297)
         Me.Eliminarbtn.Name = "Eliminarbtn"
         Me.Eliminarbtn.Size = New System.Drawing.Size(75, 23)
-        Me.Eliminarbtn.TabIndex = 15
+        Me.Eliminarbtn.TabIndex = 5
         Me.Eliminarbtn.Text = "Eliminar"
         Me.Eliminarbtn.UseVisualStyleBackColor = True
         '

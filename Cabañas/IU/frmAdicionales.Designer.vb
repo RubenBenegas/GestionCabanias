@@ -41,7 +41,7 @@ Partial Class frmAdicionales
         Me.txtAdicional.Location = New System.Drawing.Point(160, 39)
         Me.txtAdicional.Name = "txtAdicional"
         Me.txtAdicional.Size = New System.Drawing.Size(197, 20)
-        Me.txtAdicional.TabIndex = 10
+        Me.txtAdicional.TabIndex = 1
         Me.txtAdicional.Tag = "*"
         '
         'lblTipoCabania
@@ -58,7 +58,7 @@ Partial Class frmAdicionales
         Me.txtMonto.Location = New System.Drawing.Point(160, 72)
         Me.txtMonto.Name = "txtMonto"
         Me.txtMonto.Size = New System.Drawing.Size(100, 20)
-        Me.txtMonto.TabIndex = 12
+        Me.txtMonto.TabIndex = 2
         Me.txtMonto.Tag = "*"
         '
         'txtId
@@ -67,7 +67,7 @@ Partial Class frmAdicionales
         Me.txtId.Location = New System.Drawing.Point(160, 6)
         Me.txtId.Name = "txtId"
         Me.txtId.Size = New System.Drawing.Size(100, 20)
-        Me.txtId.TabIndex = 9
+        Me.txtId.TabIndex = 0
         '
         'Label3
         '
@@ -92,7 +92,7 @@ Partial Class frmAdicionales
         Me.BtnCancelar.Location = New System.Drawing.Point(276, 105)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnCancelar.TabIndex = 15
+        Me.BtnCancelar.TabIndex = 4
         Me.BtnCancelar.Text = "Cancelar"
         Me.BtnCancelar.UseVisualStyleBackColor = True
         '
@@ -101,7 +101,7 @@ Partial Class frmAdicionales
         Me.btnAceptar.Location = New System.Drawing.Point(195, 105)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
-        Me.btnAceptar.TabIndex = 13
+        Me.btnAceptar.TabIndex = 3
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = True
         '

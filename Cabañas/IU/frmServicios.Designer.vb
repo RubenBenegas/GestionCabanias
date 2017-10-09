@@ -83,7 +83,7 @@ Partial Class frmServicios
         Me.btnAceptar.Location = New System.Drawing.Point(116, 105)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
-        Me.btnAceptar.TabIndex = 5
+        Me.btnAceptar.TabIndex = 3
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = True
         '
@@ -92,7 +92,7 @@ Partial Class frmServicios
         Me.btnCancelar.Location = New System.Drawing.Point(197, 105)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
-        Me.btnCancelar.TabIndex = 7
+        Me.btnCancelar.TabIndex = 4
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
         '
@@ -101,7 +101,7 @@ Partial Class frmServicios
         Me.txtMonto.Location = New System.Drawing.Point(116, 72)
         Me.txtMonto.Name = "txtMonto"
         Me.txtMonto.Size = New System.Drawing.Size(100, 20)
-        Me.txtMonto.TabIndex = 8
+        Me.txtMonto.TabIndex = 2
         '
         'ErrorProvider1
         '

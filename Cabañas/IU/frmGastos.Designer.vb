@@ -50,7 +50,7 @@ Partial Class frmGastos
         Me.btnCancelar.Location = New System.Drawing.Point(230, 227)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
-        Me.btnCancelar.TabIndex = 5
+        Me.btnCancelar.TabIndex = 9
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
         '
@@ -59,7 +59,7 @@ Partial Class frmGastos
         Me.btnAceptar.Location = New System.Drawing.Point(140, 227)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
-        Me.btnAceptar.TabIndex = 4
+        Me.btnAceptar.TabIndex = 8
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = True
         '
@@ -112,7 +112,7 @@ Partial Class frmGastos
         Me.txtCantidad.Location = New System.Drawing.Point(140, 166)
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(68, 20)
-        Me.txtCantidad.TabIndex = 2
+        Me.txtCantidad.TabIndex = 6
         Me.txtCantidad.Tag = "*"
         '
         'txtMUnitario
@@ -120,7 +120,7 @@ Partial Class frmGastos
         Me.txtMUnitario.Location = New System.Drawing.Point(140, 139)
         Me.txtMUnitario.Name = "txtMUnitario"
         Me.txtMUnitario.Size = New System.Drawing.Size(68, 20)
-        Me.txtMUnitario.TabIndex = 1
+        Me.txtMUnitario.TabIndex = 5
         Me.txtMUnitario.Tag = "*"
         '
         'txtDescripcion
@@ -129,7 +129,7 @@ Partial Class frmGastos
         Me.txtDescripcion.Location = New System.Drawing.Point(140, 32)
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(158, 20)
-        Me.txtDescripcion.TabIndex = 0
+        Me.txtDescripcion.TabIndex = 1
         Me.txtDescripcion.Tag = "*"
         '
         'txtId
@@ -139,7 +139,7 @@ Partial Class frmGastos
         Me.txtId.Name = "txtId"
         Me.txtId.ReadOnly = True
         Me.txtId.Size = New System.Drawing.Size(57, 20)
-        Me.txtId.TabIndex = 10
+        Me.txtId.TabIndex = 0
         '
         'Label5
         '
@@ -158,7 +158,7 @@ Partial Class frmGastos
         Me.TxtTotal.Location = New System.Drawing.Point(140, 192)
         Me.TxtTotal.Name = "TxtTotal"
         Me.TxtTotal.Size = New System.Drawing.Size(100, 20)
-        Me.TxtTotal.TabIndex = 3
+        Me.TxtTotal.TabIndex = 7
         '
         'ErrorProvider1
         '
@@ -170,7 +170,7 @@ Partial Class frmGastos
         Me.cmbCategoria.Location = New System.Drawing.Point(140, 85)
         Me.cmbCategoria.Name = "cmbCategoria"
         Me.cmbCategoria.Size = New System.Drawing.Size(121, 21)
-        Me.cmbCategoria.TabIndex = 22
+        Me.cmbCategoria.TabIndex = 3
         '
         'lblCategoria
         '
@@ -211,7 +211,7 @@ Partial Class frmGastos
         Me.cmbProveedor.Location = New System.Drawing.Point(140, 112)
         Me.cmbProveedor.Name = "cmbProveedor"
         Me.cmbProveedor.Size = New System.Drawing.Size(121, 21)
-        Me.cmbProveedor.TabIndex = 26
+        Me.cmbProveedor.TabIndex = 4
         '
         'DateTimePicker1
         '
@@ -219,7 +219,7 @@ Partial Class frmGastos
         Me.DateTimePicker1.Location = New System.Drawing.Point(140, 59)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(100, 20)
-        Me.DateTimePicker1.TabIndex = 28
+        Me.DateTimePicker1.TabIndex = 2
         '
         'frmGastos
         '

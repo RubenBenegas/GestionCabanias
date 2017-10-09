@@ -70,7 +70,7 @@ Partial Class lstHuesped
         Me.btnAgregar.Location = New System.Drawing.Point(12, 428)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(90, 30)
-        Me.btnAgregar.TabIndex = 0
+        Me.btnAgregar.TabIndex = 1
         Me.btnAgregar.Text = "Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = False
         '
@@ -83,7 +83,7 @@ Partial Class lstHuesped
         Me.btnModificar.Location = New System.Drawing.Point(108, 428)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(90, 30)
-        Me.btnModificar.TabIndex = 1
+        Me.btnModificar.TabIndex = 2
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.UseVisualStyleBackColor = False
         '
@@ -96,7 +96,7 @@ Partial Class lstHuesped
         Me.btnEliminar.Location = New System.Drawing.Point(204, 428)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(90, 30)
-        Me.btnEliminar.TabIndex = 2
+        Me.btnEliminar.TabIndex = 3
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = False
         '
@@ -109,7 +109,7 @@ Partial Class lstHuesped
         Me.btnCerrar.Location = New System.Drawing.Point(822, 428)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(150, 30)
-        Me.btnCerrar.TabIndex = 3
+        Me.btnCerrar.TabIndex = 4
         Me.btnCerrar.Text = "Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = False
         '

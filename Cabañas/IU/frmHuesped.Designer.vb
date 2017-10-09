@@ -56,7 +56,7 @@ Partial Class frmHuesped
         Me.txtNombre.Location = New System.Drawing.Point(126, 32)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(171, 20)
-        Me.txtNombre.TabIndex = 0
+        Me.txtNombre.TabIndex = 1
         Me.txtNombre.Tag = "*"
         '
         'lblTelefono
@@ -97,7 +97,7 @@ Partial Class frmHuesped
         Me.txtDireccion.Location = New System.Drawing.Point(126, 110)
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(129, 20)
-        Me.txtDireccion.TabIndex = 3
+        Me.txtDireccion.TabIndex = 4
         Me.txtDireccion.Tag = ""
         '
         'lblLocalidad
@@ -124,7 +124,7 @@ Partial Class frmHuesped
         Me.txtLocalidad.Location = New System.Drawing.Point(126, 84)
         Me.txtLocalidad.Name = "txtLocalidad"
         Me.txtLocalidad.Size = New System.Drawing.Size(170, 20)
-        Me.txtLocalidad.TabIndex = 2
+        Me.txtLocalidad.TabIndex = 3
         Me.txtLocalidad.Tag = "*"
         '
         'txtTelefono
@@ -132,7 +132,7 @@ Partial Class frmHuesped
         Me.txtTelefono.Location = New System.Drawing.Point(126, 136)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(129, 20)
-        Me.txtTelefono.TabIndex = 4
+        Me.txtTelefono.TabIndex = 5
         Me.txtTelefono.Tag = "*"
         '
         'lblId
@@ -151,7 +151,7 @@ Partial Class frmHuesped
         Me.btnAceptar.Location = New System.Drawing.Point(189, 420)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
-        Me.btnAceptar.TabIndex = 6
+        Me.btnAceptar.TabIndex = 7
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = True
         '
@@ -160,7 +160,7 @@ Partial Class frmHuesped
         Me.btnCancelar.Location = New System.Drawing.Point(284, 420)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
-        Me.btnCancelar.TabIndex = 7
+        Me.btnCancelar.TabIndex = 8
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
         '
@@ -169,7 +169,7 @@ Partial Class frmHuesped
         Me.txtDni.Location = New System.Drawing.Point(126, 58)
         Me.txtDni.Name = "txtDni"
         Me.txtDni.Size = New System.Drawing.Size(129, 20)
-        Me.txtDni.TabIndex = 1
+        Me.txtDni.TabIndex = 2
         Me.txtDni.Tag = "*"
         '
         'lblDni
@@ -188,7 +188,7 @@ Partial Class frmHuesped
         Me.txtEmail.Location = New System.Drawing.Point(126, 162)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(129, 20)
-        Me.txtEmail.TabIndex = 5
+        Me.txtEmail.TabIndex = 6
         Me.txtEmail.Tag = "*"
         '
         'lblEmail

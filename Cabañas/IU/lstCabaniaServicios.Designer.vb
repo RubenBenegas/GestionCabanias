@@ -30,24 +30,27 @@ Partial Class lstCabaniaServicios
         '
         'Aceptarbtn
         '
+        Me.Aceptarbtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Aceptarbtn.Location = New System.Drawing.Point(163, 327)
         Me.Aceptarbtn.Name = "Aceptarbtn"
         Me.Aceptarbtn.Size = New System.Drawing.Size(75, 23)
         Me.Aceptarbtn.TabIndex = 1
         Me.Aceptarbtn.Text = "Aceptar"
-        Me.Aceptarbtn.UseVisualStyleBackColor = True
+        Me.Aceptarbtn.UseVisualStyleBackColor = False
         '
         'Cancelarbtn
         '
+        Me.Cancelarbtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Cancelarbtn.Location = New System.Drawing.Point(254, 327)
         Me.Cancelarbtn.Name = "Cancelarbtn"
         Me.Cancelarbtn.Size = New System.Drawing.Size(75, 23)
         Me.Cancelarbtn.TabIndex = 2
         Me.Cancelarbtn.Text = "Cancelar"
-        Me.Cancelarbtn.UseVisualStyleBackColor = True
+        Me.Cancelarbtn.UseVisualStyleBackColor = False
         '
         'dgvCabaniaServicios
         '
+        Me.dgvCabaniaServicios.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.dgvCabaniaServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvCabaniaServicios.Location = New System.Drawing.Point(12, 12)
         Me.dgvCabaniaServicios.Name = "dgvCabaniaServicios"

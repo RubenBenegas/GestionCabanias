@@ -52,6 +52,7 @@ Partial Class lstEstadosReservas
         '
         'btnCerrar
         '
+        Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnCerrar.Location = New System.Drawing.Point(577, 308)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(75, 23)
@@ -61,6 +62,7 @@ Partial Class lstEstadosReservas
         '
         'rbEnEspera
         '
+        Me.rbEnEspera.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.rbEnEspera.AutoSize = True
         Me.rbEnEspera.Location = New System.Drawing.Point(12, 311)
         Me.rbEnEspera.Name = "rbEnEspera"
@@ -72,6 +74,7 @@ Partial Class lstEstadosReservas
         '
         'rbSeñada
         '
+        Me.rbSeñada.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.rbSeñada.AutoSize = True
         Me.rbSeñada.Location = New System.Drawing.Point(156, 311)
         Me.rbSeñada.Name = "rbSeñada"
@@ -83,6 +86,7 @@ Partial Class lstEstadosReservas
         '
         'rbCancelada
         '
+        Me.rbCancelada.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.rbCancelada.AutoSize = True
         Me.rbCancelada.Location = New System.Drawing.Point(306, 311)
         Me.rbCancelada.Name = "rbCancelada"

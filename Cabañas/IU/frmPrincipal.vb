@@ -64,4 +64,10 @@ Public Class frmPrincipal
     Private Sub ToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripMenuItem2.Click
         lstAdicional.ShowDialog()
     End Sub
+
+    Private Sub EstadoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EstadoToolStripMenuItem.Click
+        lstEstadosReservas.ShowDialog()
+
+
+    End Sub
 End Class

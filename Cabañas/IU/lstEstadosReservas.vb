@@ -11,3 +11,5 @@
     Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
 
     End Sub
+
+End Class

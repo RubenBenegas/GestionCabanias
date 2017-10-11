@@ -528,7 +528,7 @@ Public Class Reservas
             Dim objDataAdapter As New SqlDataAdapter(objComando)
             objDataAdapter.Fill(objDataTable)
 
-            MontoDeCabania = objDataTable.Rows(0).Item("Monto")
+            MontoDeCabania = objDataTable.Rows(0).Item("CostoTotal")
             Return MontoDeCabania
 
         Catch ex As Exception

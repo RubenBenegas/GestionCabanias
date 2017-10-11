@@ -41,6 +41,9 @@
             cmbTipoCabania.SelectedValue = cabania.idTipo
             txtMonto.Text = cabania.monto
             txtDescripcion.Text = cabania.descripcion
+            txtCostoServicios.Text = cabania.CostoServicios
+            txtCostoTotal.Text = cabania.CostoTotal
+
 
 
         Else
@@ -50,7 +53,8 @@
             txtIdCabania.Text = Nothing
             txtMonto.Text = Nothing
             txtDescripcion.Text = Nothing
-
+            txtCostoServicios.Text = Nothing
+            txtCostoTotal.Text = Nothing
         End If
 
     End Sub
@@ -63,6 +67,8 @@
 
             cabania.idTipo = cmbTipoCabania.SelectedValue
             cabania.descripcion = txtDescripcion.Text
+            cabania.CostoServicios = txtCostoServicios.Text
+            cabania.CostoTotal = txtCostoTotal.Text
 
 
             If modificar = True Then
@@ -122,6 +128,17 @@
         cabania.CabaniaServBorrar(idCabaniaServ)
         cabania.CabaniaServCarga(idCabania, dgvCabaniaServicios)
 
+    End Sub
+
+    Private Sub btnConsultarCostos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnConsultarCostos.Click
+
+        If dgvCabaniaServicios.Rows.Count = 0 Then
+            txtCostoServicios.Text = 0
+        Else
+            txtCostoServicios.Text = cabania.CabaniaCostoServicio(idCabania)
+        End If
+
+        txtCostoTotal.Text = CDec(txtMonto.Text) + CDec(txtCostoServicios.Text)
     End Sub
 End Class
 

@@ -319,6 +319,7 @@
     Private Sub btnConsultarCostos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnConsultarCostos.Click
         Dim montoCabania As Decimal
         montoCabania = reserva.ReservaTraerMontoDeCabania(cmbIdCabania.SelectedValue)
+        'MessageBox.Show(montoCabania)
         Dim dias As Integer
         dias = DateDiff(DateInterval.Day, dtpFechaIngreso.Value, dtpFechaSalida.Value)
         txtCostoEstadia.Text = dias * montoCabania

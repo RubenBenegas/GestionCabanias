@@ -48,6 +48,30 @@ Public Class Cabanias
         End Set
     End Property
 
+
+    Private CostoServicios_ As Decimal
+    Public Property CostoServicios() As Decimal
+        Get
+            Return CostoServicios_
+        End Get
+        Set(ByVal value As Decimal)
+            CostoServicios_ = value
+        End Set
+    End Property
+
+
+    Private CostoTotal_ As Decimal
+    Public Property CostoTotal() As Decimal
+        Get
+            Return CostoTotal_
+        End Get
+        Set(ByVal value As Decimal)
+            CostoTotal_ = value
+        End Set
+    End Property
+
+
+
     Public Sub TraerTabCabania(ByVal tabla As DataGridView)
         abrirConexion()
 
@@ -76,6 +100,8 @@ Public Class Cabanias
             objComando.CommandType = CommandType.StoredProcedure
             objComando.Parameters.AddWithValue("@IdTipo", cabania.idTipo)
             objComando.Parameters.AddWithValue("@Descripcion", cabania.descripcion)
+            objComando.Parameters.AddWithValue("@CostoServicios", cabania.CostoServicios)
+            objComando.Parameters.AddWithValue("@CostoTotal", cabania.CostoTotal)
             If objComando.ExecuteNonQuery() Then
                 Return True
             Else
@@ -97,6 +123,8 @@ Public Class Cabanias
             objComando.CommandType = CommandType.StoredProcedure
             objComando.Parameters.AddWithValue("@IdTipo", Cabania.idTipo)
             objComando.Parameters.AddWithValue("@Descripcion", Cabania.descripcion)
+            objComando.Parameters.AddWithValue("@CostoServicios", Cabania.CostoServicios)
+            objComando.Parameters.AddWithValue("@CostoTotal", Cabania.CostoTotal)
             objComando.Parameters.AddWithValue("@IdCabania", Cabania.idCabania)
             If objComando.ExecuteNonQuery() Then
                 Return True
@@ -153,6 +181,8 @@ Public Class Cabanias
                 cabania.idTipo = objDataTable.Rows(0).Item("idTipo")
                 cabania.monto = objDataTable.Rows(0).Item("Monto")
                 cabania.descripcion = objDataTable.Rows(0).Item("Descripcion")
+                cabania.CostoServicios = objDataTable.Rows(0).Item("CostoServicios")
+                cabania.CostoTotal = objDataTable.Rows(0).Item("CostoTotal")
                 Return cabania
 
             End If
@@ -304,6 +334,7 @@ Public Class Cabanias
         objDataAdapter.Fill(objDataTable)
         tabla.DataSource = objDataTable
 
+        tabla.Columns("Id").Width = 30
         tabla.Columns("Descripcion").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         cerrarConexion()
     End Sub

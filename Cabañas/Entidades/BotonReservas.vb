@@ -33,15 +33,17 @@
     End Property
 
 
-    Private Cancelada_ As Boolean
-    Public Property Cancelada() As Boolean
+
+    Private idEstado_ As Integer
+    Public Property idEstado() As Integer
         Get
-            Return Cancelada_
+            Return idEstado_
         End Get
-        Set(ByVal value As Boolean)
-            Cancelada_ = value
+        Set(ByVal value As Integer)
+            idEstado_ = value
         End Set
     End Property
+
 
 
     Public Sub New()

@@ -153,7 +153,6 @@
                 'txtFaltaDePagar.Text = CInt(txtCostoTotal.Text) - CInt(txtSenia.Text)
 
 
-
             End If
 
 
@@ -161,6 +160,7 @@
             Me.Text = "Modificar reserva"
         Else
             txtId.Text = Nothing
+            dtpFechaReserva.Value = Today
             txtIdHuesped.Text = Nothing
             txtNombreHuesped.Text = Nothing
             dtpFechaIngreso.Value = Today

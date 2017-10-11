@@ -117,10 +117,18 @@
             res2 = res.RecuperarReserva(btnReserva.id)
             btnReserva.fIngreso = res2.fIngreso
             btnReserva.fSalida = res2.fSalida
-            'btnReserva.Cancelada = res2.Cancelada
+            btnReserva.idEstado = res2.IdEstado
 
-
-            If btnReserva.Cancelada = True Then
+            If btnReserva.idEstado = 1 Then
+                btnReserva.BackColor = Color.Orange
+            End If
+            If btnReserva.idEstado = 2 Then
+                btnReserva.BackColor = Color.Yellow
+            End If
+            If btnReserva.idEstado = 3 Then
+                btnReserva.BackColor = Color.Green
+            End If
+            If btnReserva.idEstado = 4 Then
                 btnReserva.BackColor = Color.Red
             End If
 

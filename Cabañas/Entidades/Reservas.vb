@@ -174,15 +174,18 @@ Public Class Reservas
         End Set
     End Property
 
-    Private Cancelada_ As Boolean
-    Public Property Cancelada() As Boolean
+
+    Private IdEstado_ As Integer
+    Public Property IdEstado() As Integer
         Get
-            Return Cancelada_
+            Return IdEstado_
         End Get
-        Set(ByVal value As Boolean)
-            Cancelada_ = value
+        Set(ByVal value As Integer)
+            IdEstado_ = value
         End Set
     End Property
+
+
 
 
 
@@ -226,7 +229,7 @@ Public Class Reservas
             objComando.Parameters.AddWithValue("@CostoEstadia", reserva.CostoEstadia)
             objComando.Parameters.AddWithValue("@CostoAdicionales", reserva.CostoAdicionales)
             objComando.Parameters.AddWithValue("@CostoTotal", reserva.CostoTotal)
-            objComando.Parameters.AddWithValue("@Cancelada", reserva.Cancelada)
+            objComando.Parameters.AddWithValue("@IdEstadoReserva", reserva.IdEstado)
 
             If objComando.ExecuteNonQuery() Then
                 Return True
@@ -293,7 +296,7 @@ Public Class Reservas
                 reserva.CostoEstadia = objDataTable.Rows(0).Item("CostoEstadia")
                 reserva.CostoAdicionales = objDataTable.Rows(0).Item("CostoAdicionales")
                 reserva.CostoTotal = objDataTable.Rows(0).Item("CostoTotal")
-                reserva.Cancelada = objDataTable.Rows(0).Item("Cancelada")
+                reserva.IdEstado = objDataTable.Rows(0).Item("IdEstado")
                 Return reserva
             End If
         Catch ex As Exception
@@ -323,7 +326,7 @@ Public Class Reservas
             objComando.Parameters.AddWithValue("@CostoEstadia", reserva.CostoEstadia)
             objComando.Parameters.AddWithValue("@CostoAdicionales", reserva.CostoAdicionales)
             objComando.Parameters.AddWithValue("@CostoTotal", reserva.CostoTotal)
-            objComando.Parameters.AddWithValue("@Cancelada", reserva.Cancelada)
+            objComando.Parameters.AddWithValue("@IdEstadoReserva", reserva.IdEstado)
             objComando.Parameters.AddWithValue("@Id", reserva.Id)
             If objComando.ExecuteNonQuery() Then
                 Return True
@@ -511,9 +514,6 @@ Public Class Reservas
             cerrarConexion()
         End Try
     End Function
-
-
-
 
 
     Public Function ReservaTraerMontoDeCabania(ByVal idCabania) As Decimal

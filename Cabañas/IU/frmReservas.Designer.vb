@@ -70,7 +70,6 @@ Partial Class frmReservas
         Me.txtFaltaDePagar = New System.Windows.Forms.TextBox
         Me.lblFaltaPAgar = New System.Windows.Forms.Label
         Me.Button1 = New System.Windows.Forms.Button
-        Me.chkCancelada = New System.Windows.Forms.CheckBox
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvServiciosAdicionales, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -417,6 +416,7 @@ Partial Class frmReservas
         Me.txtReembolso.Name = "txtReembolso"
         Me.txtReembolso.Size = New System.Drawing.Size(162, 30)
         Me.txtReembolso.TabIndex = 41
+        Me.txtReembolso.Visible = False
         '
         'lblReservaCancelada
         '
@@ -428,6 +428,7 @@ Partial Class frmReservas
         Me.lblReservaCancelada.Size = New System.Drawing.Size(261, 31)
         Me.lblReservaCancelada.TabIndex = 42
         Me.lblReservaCancelada.Text = "Reserva Cancelada!"
+        Me.lblReservaCancelada.Visible = False
         '
         'btnConsultarCostos
         '
@@ -504,22 +505,12 @@ Partial Class frmReservas
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(248, 171)
+        Me.Button1.Location = New System.Drawing.Point(372, 167)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(114, 23)
         Me.Button1.TabIndex = 49
         Me.Button1.Text = "Estado de Reserva"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'chkCancelada
-        '
-        Me.chkCancelada.AutoSize = True
-        Me.chkCancelada.Location = New System.Drawing.Point(381, 171)
-        Me.chkCancelada.Name = "chkCancelada"
-        Me.chkCancelada.Size = New System.Drawing.Size(106, 17)
-        Me.chkCancelada.TabIndex = 39
-        Me.chkCancelada.Text = "Cancelar reserva"
-        Me.chkCancelada.UseVisualStyleBackColor = True
         '
         'frmReservas
         '
@@ -536,7 +527,6 @@ Partial Class frmReservas
         Me.Controls.Add(Me.lblReservaCancelada)
         Me.Controls.Add(Me.txtReembolso)
         Me.Controls.Add(Me.lblReembolso)
-        Me.Controls.Add(Me.chkCancelada)
         Me.Controls.Add(Me.lblFaltaPAgar)
         Me.Controls.Add(Me.lblCostoTotal)
         Me.Controls.Add(Me.lblCostoAdicionales)
@@ -632,5 +622,4 @@ Partial Class frmReservas
     Friend WithEvents lblFaltaPAgar As System.Windows.Forms.Label
     Friend WithEvents txtFaltaDePagar As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents chkCancelada As System.Windows.Forms.CheckBox
 End Class

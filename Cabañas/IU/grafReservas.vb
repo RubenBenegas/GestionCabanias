@@ -117,7 +117,7 @@
             res2 = res.RecuperarReserva(btnReserva.id)
             btnReserva.fIngreso = res2.fIngreso
             btnReserva.fSalida = res2.fSalida
-            btnReserva.Cancelada = res2.Cancelada
+            'btnReserva.Cancelada = res2.Cancelada
 
 
             If btnReserva.Cancelada = True Then

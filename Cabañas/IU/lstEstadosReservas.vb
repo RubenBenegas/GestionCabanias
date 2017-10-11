@@ -11,16 +11,3 @@
     Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
 
     End Sub
-
-    Private Sub rbEnEspera_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rbEnEspera.CheckedChanged
-
-    End Sub
-
-    Private Sub rbSeñada_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rbSeñada.CheckedChanged
-
-    End Sub
-
-    Private Sub rbCancelada_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rbCancelada.CheckedChanged
-
-    End Sub
-End Class

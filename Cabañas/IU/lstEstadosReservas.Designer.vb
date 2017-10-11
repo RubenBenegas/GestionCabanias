@@ -48,13 +48,13 @@ Partial Class lstEstadosReservas
         Me.dgvEstadoReservas.ReadOnly = True
         Me.dgvEstadoReservas.RowHeadersVisible = False
         Me.dgvEstadoReservas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvEstadoReservas.Size = New System.Drawing.Size(640, 280)
+        Me.dgvEstadoReservas.Size = New System.Drawing.Size(1032, 280)
         Me.dgvEstadoReservas.TabIndex = 0
         '
         'btnCerrar
         '
         Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCerrar.Location = New System.Drawing.Point(577, 308)
+        Me.btnCerrar.Location = New System.Drawing.Point(969, 308)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(75, 23)
         Me.btnCerrar.TabIndex = 1
@@ -99,6 +99,7 @@ Partial Class lstEstadosReservas
         '
         'btnBuscar
         '
+        Me.btnBuscar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnBuscar.Location = New System.Drawing.Point(12, 308)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
@@ -111,7 +112,7 @@ Partial Class lstEstadosReservas
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(664, 343)
+        Me.ClientSize = New System.Drawing.Size(1056, 343)
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.rbCancelada)
         Me.Controls.Add(Me.rbSeñada)

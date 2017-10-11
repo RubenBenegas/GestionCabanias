@@ -27,6 +27,7 @@ Partial Class lstEstadosReservas
         Me.rbEnEspera = New System.Windows.Forms.RadioButton
         Me.rbSeñada = New System.Windows.Forms.RadioButton
         Me.rbCancelada = New System.Windows.Forms.RadioButton
+        Me.btnBuscar = New System.Windows.Forms.Button
         CType(Me.dgvEstadoReservas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -64,7 +65,7 @@ Partial Class lstEstadosReservas
         '
         Me.rbEnEspera.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.rbEnEspera.AutoSize = True
-        Me.rbEnEspera.Location = New System.Drawing.Point(12, 311)
+        Me.rbEnEspera.Location = New System.Drawing.Point(93, 314)
         Me.rbEnEspera.Name = "rbEnEspera"
         Me.rbEnEspera.Size = New System.Drawing.Size(73, 17)
         Me.rbEnEspera.TabIndex = 2
@@ -76,7 +77,7 @@ Partial Class lstEstadosReservas
         '
         Me.rbSeñada.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.rbSeñada.AutoSize = True
-        Me.rbSeñada.Location = New System.Drawing.Point(156, 311)
+        Me.rbSeñada.Location = New System.Drawing.Point(172, 314)
         Me.rbSeñada.Name = "rbSeñada"
         Me.rbSeñada.Size = New System.Drawing.Size(62, 17)
         Me.rbSeñada.TabIndex = 3
@@ -88,7 +89,7 @@ Partial Class lstEstadosReservas
         '
         Me.rbCancelada.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.rbCancelada.AutoSize = True
-        Me.rbCancelada.Location = New System.Drawing.Point(306, 311)
+        Me.rbCancelada.Location = New System.Drawing.Point(240, 314)
         Me.rbCancelada.Name = "rbCancelada"
         Me.rbCancelada.Size = New System.Drawing.Size(76, 17)
         Me.rbCancelada.TabIndex = 4
@@ -96,12 +97,22 @@ Partial Class lstEstadosReservas
         Me.rbCancelada.Text = "Cancelada"
         Me.rbCancelada.UseVisualStyleBackColor = True
         '
+        'btnBuscar
+        '
+        Me.btnBuscar.Location = New System.Drawing.Point(12, 308)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
+        Me.btnBuscar.TabIndex = 5
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.UseVisualStyleBackColor = True
+        '
         'lstEstadosReservas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(664, 343)
+        Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.rbCancelada)
         Me.Controls.Add(Me.rbSeñada)
         Me.Controls.Add(Me.rbEnEspera)
@@ -120,4 +131,5 @@ Partial Class lstEstadosReservas
     Friend WithEvents rbEnEspera As System.Windows.Forms.RadioButton
     Friend WithEvents rbSeñada As System.Windows.Forms.RadioButton
     Friend WithEvents rbCancelada As System.Windows.Forms.RadioButton
+    Friend WithEvents btnBuscar As System.Windows.Forms.Button
 End Class

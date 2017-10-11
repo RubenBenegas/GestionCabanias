@@ -25,9 +25,10 @@ Partial Class lstEstadosReservas
         Me.dgvEstadoReservas = New System.Windows.Forms.DataGridView
         Me.btnCerrar = New System.Windows.Forms.Button
         Me.rbEnEspera = New System.Windows.Forms.RadioButton
-        Me.rbSeñada = New System.Windows.Forms.RadioButton
+        Me.rbSeniada = New System.Windows.Forms.RadioButton
         Me.rbCancelada = New System.Windows.Forms.RadioButton
         Me.btnBuscar = New System.Windows.Forms.Button
+        Me.rdEnCurso = New System.Windows.Forms.RadioButton
         CType(Me.dgvEstadoReservas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -73,23 +74,23 @@ Partial Class lstEstadosReservas
         Me.rbEnEspera.Text = "En espera"
         Me.rbEnEspera.UseVisualStyleBackColor = True
         '
-        'rbSeñada
+        'rbSeniada
         '
-        Me.rbSeñada.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.rbSeñada.AutoSize = True
-        Me.rbSeñada.Location = New System.Drawing.Point(172, 314)
-        Me.rbSeñada.Name = "rbSeñada"
-        Me.rbSeñada.Size = New System.Drawing.Size(62, 17)
-        Me.rbSeñada.TabIndex = 3
-        Me.rbSeñada.TabStop = True
-        Me.rbSeñada.Text = "Señada"
-        Me.rbSeñada.UseVisualStyleBackColor = True
+        Me.rbSeniada.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.rbSeniada.AutoSize = True
+        Me.rbSeniada.Location = New System.Drawing.Point(172, 314)
+        Me.rbSeniada.Name = "rbSeniada"
+        Me.rbSeniada.Size = New System.Drawing.Size(62, 17)
+        Me.rbSeniada.TabIndex = 3
+        Me.rbSeniada.TabStop = True
+        Me.rbSeniada.Text = "Señada"
+        Me.rbSeniada.UseVisualStyleBackColor = True
         '
         'rbCancelada
         '
         Me.rbCancelada.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.rbCancelada.AutoSize = True
-        Me.rbCancelada.Location = New System.Drawing.Point(240, 314)
+        Me.rbCancelada.Location = New System.Drawing.Point(313, 314)
         Me.rbCancelada.Name = "rbCancelada"
         Me.rbCancelada.Size = New System.Drawing.Size(76, 17)
         Me.rbCancelada.TabIndex = 4
@@ -107,15 +108,28 @@ Partial Class lstEstadosReservas
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = True
         '
+        'rdEnCurso
+        '
+        Me.rdEnCurso.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.rdEnCurso.AutoSize = True
+        Me.rdEnCurso.Location = New System.Drawing.Point(240, 314)
+        Me.rdEnCurso.Name = "rdEnCurso"
+        Me.rdEnCurso.Size = New System.Drawing.Size(67, 17)
+        Me.rdEnCurso.TabIndex = 6
+        Me.rdEnCurso.TabStop = True
+        Me.rdEnCurso.Text = "En curso"
+        Me.rdEnCurso.UseVisualStyleBackColor = True
+        '
         'lstEstadosReservas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(1056, 343)
+        Me.Controls.Add(Me.rdEnCurso)
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.rbCancelada)
-        Me.Controls.Add(Me.rbSeñada)
+        Me.Controls.Add(Me.rbSeniada)
         Me.Controls.Add(Me.rbEnEspera)
         Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.dgvEstadoReservas)
@@ -130,7 +144,8 @@ Partial Class lstEstadosReservas
     Friend WithEvents dgvEstadoReservas As System.Windows.Forms.DataGridView
     Friend WithEvents btnCerrar As System.Windows.Forms.Button
     Friend WithEvents rbEnEspera As System.Windows.Forms.RadioButton
-    Friend WithEvents rbSeñada As System.Windows.Forms.RadioButton
+    Friend WithEvents rbSeniada As System.Windows.Forms.RadioButton
     Friend WithEvents rbCancelada As System.Windows.Forms.RadioButton
     Friend WithEvents btnBuscar As System.Windows.Forms.Button
+    Friend WithEvents rdEnCurso As System.Windows.Forms.RadioButton
 End Class

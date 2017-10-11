@@ -48,9 +48,7 @@
             txtEmail.Text = Nothing
         End If
 
-
         huesped.HuespedTraerHistorial(idHuesped, dgvHistorial)
-
 
     End Sub
 

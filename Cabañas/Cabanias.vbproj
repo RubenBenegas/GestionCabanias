@@ -92,6 +92,7 @@
     <Compile Include="Entidades\BotonReservas.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Entidades\Cancelaciones.vb" />
     <Compile Include="Entidades\FlpCabanias.vb">
       <SubType>Component</SubType>
     </Compile>

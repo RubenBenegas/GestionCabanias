@@ -114,7 +114,7 @@ Partial Class frmEstadosReserva
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(330, 213)
+        Me.ClientSize = New System.Drawing.Size(331, 213)
         Me.Controls.Add(Me.rdEnCurso)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.Cancelar)

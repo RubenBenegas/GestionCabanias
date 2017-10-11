@@ -35,10 +35,10 @@ Partial Class frmPrincipal
         Me.ReservasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ServiciosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem
+        Me.EstadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
         Me.PruebaABMReservasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.EstadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -71,7 +71,7 @@ Partial Class frmPrincipal
         Me.CabañasToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.CabañasToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.CabañasToolStripMenuItem.Name = "CabañasToolStripMenuItem"
-        Me.CabañasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CabañasToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.CabañasToolStripMenuItem.Text = "Cabañas"
         '
         'HuespedesToolStripMenuItem
@@ -135,6 +135,12 @@ Partial Class frmPrincipal
         Me.ToolStripMenuItem2.Size = New System.Drawing.Size(165, 22)
         Me.ToolStripMenuItem2.Text = "Adicionales"
         '
+        'EstadoToolStripMenuItem
+        '
+        Me.EstadoToolStripMenuItem.Name = "EstadoToolStripMenuItem"
+        Me.EstadoToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.EstadoToolStripMenuItem.Text = "EstadosReservas"
+        '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
@@ -153,12 +159,6 @@ Partial Class frmPrincipal
         Me.PruebaABMReservasToolStripMenuItem.Name = "PruebaABMReservasToolStripMenuItem"
         Me.PruebaABMReservasToolStripMenuItem.Size = New System.Drawing.Size(130, 19)
         Me.PruebaABMReservasToolStripMenuItem.Text = "Prueba ABMReservas"
-        '
-        'EstadoToolStripMenuItem
-        '
-        Me.EstadoToolStripMenuItem.Name = "EstadoToolStripMenuItem"
-        Me.EstadoToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
-        Me.EstadoToolStripMenuItem.Text = "EstadosReservas"
         '
         'frmPrincipal
         '

@@ -56,18 +56,20 @@ Partial Class frmTipoCabania
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(16, 13)
+        Me.Label1.Size = New System.Drawing.Size(18, 13)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Id"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(12, 61)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(37, 13)
+        Me.Label3.Size = New System.Drawing.Size(42, 13)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Monto"
         '
@@ -103,9 +105,10 @@ Partial Class frmTipoCabania
         'lblTipoCabania
         '
         Me.lblTipoCabania.AutoSize = True
+        Me.lblTipoCabania.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTipoCabania.Location = New System.Drawing.Point(12, 35)
         Me.lblTipoCabania.Name = "lblTipoCabania"
-        Me.lblTipoCabania.Size = New System.Drawing.Size(70, 13)
+        Me.lblTipoCabania.Size = New System.Drawing.Size(82, 13)
         Me.lblTipoCabania.TabIndex = 8
         Me.lblTipoCabania.Text = "Tipo cabaña:"
         '
@@ -113,6 +116,7 @@ Partial Class frmTipoCabania
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(263, 116)
         Me.Controls.Add(Me.txtTipoCabania)
         Me.Controls.Add(Me.lblTipoCabania)

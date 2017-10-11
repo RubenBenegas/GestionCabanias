@@ -56,6 +56,7 @@ Partial Class lstEstadosReservas
         '
         'btnCerrar
         '
+        Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnCerrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCerrar.ForeColor = System.Drawing.Color.White
@@ -70,9 +71,10 @@ Partial Class lstEstadosReservas
         '
         Me.rbEnEspera.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.rbEnEspera.AutoSize = True
+        Me.rbEnEspera.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rbEnEspera.Location = New System.Drawing.Point(12, 314)
         Me.rbEnEspera.Name = "rbEnEspera"
-        Me.rbEnEspera.Size = New System.Drawing.Size(73, 17)
+        Me.rbEnEspera.Size = New System.Drawing.Size(82, 17)
         Me.rbEnEspera.TabIndex = 2
         Me.rbEnEspera.TabStop = True
         Me.rbEnEspera.Text = "En espera"
@@ -82,9 +84,10 @@ Partial Class lstEstadosReservas
         '
         Me.rbSeniada.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.rbSeniada.AutoSize = True
+        Me.rbSeniada.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rbSeniada.Location = New System.Drawing.Point(91, 314)
         Me.rbSeniada.Name = "rbSeniada"
-        Me.rbSeniada.Size = New System.Drawing.Size(62, 17)
+        Me.rbSeniada.Size = New System.Drawing.Size(68, 17)
         Me.rbSeniada.TabIndex = 3
         Me.rbSeniada.TabStop = True
         Me.rbSeniada.Text = "Señada"
@@ -94,9 +97,10 @@ Partial Class lstEstadosReservas
         '
         Me.rbCancelada.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.rbCancelada.AutoSize = True
-        Me.rbCancelada.Location = New System.Drawing.Point(232, 314)
+        Me.rbCancelada.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbCancelada.Location = New System.Drawing.Point(240, 314)
         Me.rbCancelada.Name = "rbCancelada"
-        Me.rbCancelada.Size = New System.Drawing.Size(76, 17)
+        Me.rbCancelada.Size = New System.Drawing.Size(85, 17)
         Me.rbCancelada.TabIndex = 4
         Me.rbCancelada.TabStop = True
         Me.rbCancelada.Text = "Cancelada"
@@ -108,7 +112,7 @@ Partial Class lstEstadosReservas
         Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.ForeColor = System.Drawing.Color.White
-        Me.btnBuscar.Location = New System.Drawing.Point(331, 307)
+        Me.btnBuscar.Location = New System.Drawing.Point(345, 307)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(75, 30)
         Me.btnBuscar.TabIndex = 5
@@ -119,9 +123,10 @@ Partial Class lstEstadosReservas
         '
         Me.rdEnCurso.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.rdEnCurso.AutoSize = True
+        Me.rdEnCurso.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rdEnCurso.Location = New System.Drawing.Point(159, 314)
         Me.rdEnCurso.Name = "rdEnCurso"
-        Me.rdEnCurso.Size = New System.Drawing.Size(67, 17)
+        Me.rdEnCurso.Size = New System.Drawing.Size(75, 17)
         Me.rdEnCurso.TabIndex = 6
         Me.rdEnCurso.TabStop = True
         Me.rdEnCurso.Text = "En curso"
@@ -133,7 +138,7 @@ Partial Class lstEstadosReservas
         Me.btnTodos.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnTodos.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTodos.ForeColor = System.Drawing.Color.White
-        Me.btnTodos.Location = New System.Drawing.Point(412, 307)
+        Me.btnTodos.Location = New System.Drawing.Point(426, 307)
         Me.btnTodos.Name = "btnTodos"
         Me.btnTodos.Size = New System.Drawing.Size(47, 30)
         Me.btnTodos.TabIndex = 8

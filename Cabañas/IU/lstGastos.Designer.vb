@@ -131,7 +131,7 @@ Partial Class lstGastos
         'cmbCategoria
         '
         Me.cmbCategoria.FormattingEnabled = True
-        Me.cmbCategoria.Location = New System.Drawing.Point(419, 428)
+        Me.cmbCategoria.Location = New System.Drawing.Point(419, 434)
         Me.cmbCategoria.Name = "cmbCategoria"
         Me.cmbCategoria.Size = New System.Drawing.Size(139, 21)
         Me.cmbCategoria.TabIndex = 6

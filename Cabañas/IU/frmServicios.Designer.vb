@@ -102,6 +102,7 @@ Partial Class frmServicios
         Me.txtMonto.Name = "txtMonto"
         Me.txtMonto.Size = New System.Drawing.Size(100, 20)
         Me.txtMonto.TabIndex = 2
+        Me.txtMonto.Tag = "*"
         '
         'ErrorProvider1
         '

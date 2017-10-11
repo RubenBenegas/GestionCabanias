@@ -85,6 +85,7 @@ Partial Class frmTipoCabania
         Me.txtMonto.Name = "txtMonto"
         Me.txtMonto.Size = New System.Drawing.Size(100, 20)
         Me.txtMonto.TabIndex = 2
+        Me.txtMonto.Tag = "*"
         '
         'ErrorProvider1
         '
@@ -97,6 +98,7 @@ Partial Class frmTipoCabania
         Me.txtTipoCabania.Name = "txtTipoCabania"
         Me.txtTipoCabania.Size = New System.Drawing.Size(100, 20)
         Me.txtTipoCabania.TabIndex = 1
+        Me.txtTipoCabania.Tag = "*"
         '
         'lblTipoCabania
         '
@@ -111,7 +113,7 @@ Partial Class frmTipoCabania
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(240, 116)
+        Me.ClientSize = New System.Drawing.Size(263, 116)
         Me.Controls.Add(Me.txtTipoCabania)
         Me.Controls.Add(Me.lblTipoCabania)
         Me.Controls.Add(Me.txtMonto)

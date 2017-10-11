@@ -117,6 +117,12 @@
     <Compile Include="IU\frmAdicionales.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="IU\lstEstadosReservas.Designer.vb">
+      <DependentUpon>lstEstadosReservas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IU\lstEstadosReservas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="IU\lstReservasAdicionales.Designer.vb">
       <DependentUpon>lstReservasAdicionales.vb</DependentUpon>
     </Compile>
@@ -278,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IU\frmAdicionales.resx">
       <DependentUpon>frmAdicionales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IU\lstEstadosReservas.resx">
+      <DependentUpon>lstEstadosReservas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IU\lstReservasAdicionales.resx">
       <DependentUpon>lstReservasAdicionales.vb</DependentUpon>

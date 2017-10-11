@@ -23,6 +23,7 @@ Partial Class LstProveedor
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LstProveedor))
         Me.dgvProveedores = New System.Windows.Forms.DataGridView
         Me.Aceptar = New System.Windows.Forms.Button
@@ -43,9 +44,9 @@ Partial Class LstProveedor
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvProveedores.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(153, Byte), Integer))
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Purple
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
@@ -56,6 +57,9 @@ Partial Class LstProveedor
         Me.dgvProveedores.Name = "dgvProveedores"
         Me.dgvProveedores.ReadOnly = True
         Me.dgvProveedores.RowHeadersVisible = False
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.dgvProveedores.RowsDefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvProveedores.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText
         Me.dgvProveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvProveedores.Size = New System.Drawing.Size(960, 410)
         Me.dgvProveedores.TabIndex = 0

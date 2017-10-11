@@ -119,24 +119,28 @@ Partial Class frmPrincipal
         '
         'ReservasToolStripMenuItem
         '
+        Me.ReservasToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ReservasToolStripMenuItem.Name = "ReservasToolStripMenuItem"
         Me.ReservasToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.ReservasToolStripMenuItem.Text = "Reservas"
         '
         'ServiciosToolStripMenuItem
         '
+        Me.ServiciosToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ServiciosToolStripMenuItem.Name = "ServiciosToolStripMenuItem"
         Me.ServiciosToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.ServiciosToolStripMenuItem.Text = "Servicios"
         '
         'ToolStripMenuItem2
         '
+        Me.ToolStripMenuItem2.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
         Me.ToolStripMenuItem2.Size = New System.Drawing.Size(165, 22)
         Me.ToolStripMenuItem2.Text = "Adicionales"
         '
         'EstadoToolStripMenuItem
         '
+        Me.EstadoToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.EstadoToolStripMenuItem.Name = "EstadoToolStripMenuItem"
         Me.EstadoToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.EstadoToolStripMenuItem.Text = "EstadosReservas"

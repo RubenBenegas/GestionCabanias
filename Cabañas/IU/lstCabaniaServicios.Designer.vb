@@ -30,20 +30,22 @@ Partial Class lstCabaniaServicios
         '
         'Aceptarbtn
         '
+        Me.Aceptarbtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Aceptarbtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Aceptarbtn.Location = New System.Drawing.Point(163, 327)
+        Me.Aceptarbtn.Location = New System.Drawing.Point(148, 320)
         Me.Aceptarbtn.Name = "Aceptarbtn"
-        Me.Aceptarbtn.Size = New System.Drawing.Size(75, 23)
+        Me.Aceptarbtn.Size = New System.Drawing.Size(90, 30)
         Me.Aceptarbtn.TabIndex = 1
         Me.Aceptarbtn.Text = "Aceptar"
         Me.Aceptarbtn.UseVisualStyleBackColor = False
         '
         'Cancelarbtn
         '
+        Me.Cancelarbtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Cancelarbtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Cancelarbtn.Location = New System.Drawing.Point(254, 327)
+        Me.Cancelarbtn.Location = New System.Drawing.Point(244, 320)
         Me.Cancelarbtn.Name = "Cancelarbtn"
-        Me.Cancelarbtn.Size = New System.Drawing.Size(75, 23)
+        Me.Cancelarbtn.Size = New System.Drawing.Size(90, 30)
         Me.Cancelarbtn.TabIndex = 2
         Me.Cancelarbtn.Text = "Cancelar"
         Me.Cancelarbtn.UseVisualStyleBackColor = False

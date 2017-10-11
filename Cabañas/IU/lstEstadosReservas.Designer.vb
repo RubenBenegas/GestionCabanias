@@ -29,6 +29,7 @@ Partial Class lstEstadosReservas
         Me.rbCancelada = New System.Windows.Forms.RadioButton
         Me.btnBuscar = New System.Windows.Forms.Button
         Me.rdEnCurso = New System.Windows.Forms.RadioButton
+        Me.btnTodos = New System.Windows.Forms.Button
         CType(Me.dgvEstadoReservas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -66,7 +67,7 @@ Partial Class lstEstadosReservas
         '
         Me.rbEnEspera.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.rbEnEspera.AutoSize = True
-        Me.rbEnEspera.Location = New System.Drawing.Point(93, 314)
+        Me.rbEnEspera.Location = New System.Drawing.Point(12, 314)
         Me.rbEnEspera.Name = "rbEnEspera"
         Me.rbEnEspera.Size = New System.Drawing.Size(73, 17)
         Me.rbEnEspera.TabIndex = 2
@@ -78,7 +79,7 @@ Partial Class lstEstadosReservas
         '
         Me.rbSeniada.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.rbSeniada.AutoSize = True
-        Me.rbSeniada.Location = New System.Drawing.Point(172, 314)
+        Me.rbSeniada.Location = New System.Drawing.Point(91, 314)
         Me.rbSeniada.Name = "rbSeniada"
         Me.rbSeniada.Size = New System.Drawing.Size(62, 17)
         Me.rbSeniada.TabIndex = 3
@@ -90,7 +91,7 @@ Partial Class lstEstadosReservas
         '
         Me.rbCancelada.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.rbCancelada.AutoSize = True
-        Me.rbCancelada.Location = New System.Drawing.Point(313, 314)
+        Me.rbCancelada.Location = New System.Drawing.Point(232, 314)
         Me.rbCancelada.Name = "rbCancelada"
         Me.rbCancelada.Size = New System.Drawing.Size(76, 17)
         Me.rbCancelada.TabIndex = 4
@@ -101,18 +102,21 @@ Partial Class lstEstadosReservas
         'btnBuscar
         '
         Me.btnBuscar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnBuscar.Location = New System.Drawing.Point(12, 308)
+        Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscar.ForeColor = System.Drawing.Color.White
+        Me.btnBuscar.Location = New System.Drawing.Point(331, 307)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
+        Me.btnBuscar.Size = New System.Drawing.Size(75, 30)
         Me.btnBuscar.TabIndex = 5
         Me.btnBuscar.Text = "Buscar"
-        Me.btnBuscar.UseVisualStyleBackColor = True
+        Me.btnBuscar.UseVisualStyleBackColor = False
         '
         'rdEnCurso
         '
         Me.rdEnCurso.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.rdEnCurso.AutoSize = True
-        Me.rdEnCurso.Location = New System.Drawing.Point(240, 314)
+        Me.rdEnCurso.Location = New System.Drawing.Point(159, 314)
         Me.rdEnCurso.Name = "rdEnCurso"
         Me.rdEnCurso.Size = New System.Drawing.Size(67, 17)
         Me.rdEnCurso.TabIndex = 6
@@ -120,12 +124,26 @@ Partial Class lstEstadosReservas
         Me.rdEnCurso.Text = "En curso"
         Me.rdEnCurso.UseVisualStyleBackColor = True
         '
+        'btnTodos
+        '
+        Me.btnTodos.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnTodos.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnTodos.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTodos.ForeColor = System.Drawing.Color.White
+        Me.btnTodos.Location = New System.Drawing.Point(412, 307)
+        Me.btnTodos.Name = "btnTodos"
+        Me.btnTodos.Size = New System.Drawing.Size(47, 30)
+        Me.btnTodos.TabIndex = 8
+        Me.btnTodos.Text = "X"
+        Me.btnTodos.UseVisualStyleBackColor = False
+        '
         'lstEstadosReservas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(1056, 343)
+        Me.Controls.Add(Me.btnTodos)
         Me.Controls.Add(Me.rdEnCurso)
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.rbCancelada)
@@ -148,4 +166,5 @@ Partial Class lstEstadosReservas
     Friend WithEvents rbCancelada As System.Windows.Forms.RadioButton
     Friend WithEvents btnBuscar As System.Windows.Forms.Button
     Friend WithEvents rdEnCurso As System.Windows.Forms.RadioButton
+    Friend WithEvents btnTodos As System.Windows.Forms.Button
 End Class

@@ -29,6 +29,9 @@ Partial Class lstGastos
         Me.btnModificar = New System.Windows.Forms.Button
         Me.btnAgregar = New System.Windows.Forms.Button
         Me.btnCerrar = New System.Windows.Forms.Button
+        Me.btnBuscar = New System.Windows.Forms.Button
+        Me.cmbCategoria = New System.Windows.Forms.ComboBox
+        Me.btnTodos = New System.Windows.Forms.Button
         CType(Me.dgvGastos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -112,12 +115,49 @@ Partial Class lstGastos
         Me.btnCerrar.Text = "Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = False
         '
+        'btnBuscar
+        '
+        Me.btnBuscar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscar.ForeColor = System.Drawing.Color.White
+        Me.btnBuscar.Location = New System.Drawing.Point(590, 428)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(90, 30)
+        Me.btnBuscar.TabIndex = 5
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.UseVisualStyleBackColor = False
+        '
+        'cmbCategoria
+        '
+        Me.cmbCategoria.FormattingEnabled = True
+        Me.cmbCategoria.Location = New System.Drawing.Point(419, 428)
+        Me.cmbCategoria.Name = "cmbCategoria"
+        Me.cmbCategoria.Size = New System.Drawing.Size(139, 21)
+        Me.cmbCategoria.TabIndex = 6
+        '
+        'btnTodos
+        '
+        Me.btnTodos.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnTodos.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnTodos.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTodos.ForeColor = System.Drawing.Color.White
+        Me.btnTodos.Location = New System.Drawing.Point(686, 428)
+        Me.btnTodos.Name = "btnTodos"
+        Me.btnTodos.Size = New System.Drawing.Size(47, 30)
+        Me.btnTodos.TabIndex = 7
+        Me.btnTodos.Text = "X"
+        Me.btnTodos.UseVisualStyleBackColor = False
+        '
         'lstGastos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(984, 461)
+        Me.Controls.Add(Me.btnTodos)
+        Me.Controls.Add(Me.cmbCategoria)
+        Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.btnBorrar)
         Me.Controls.Add(Me.btnModificar)
@@ -137,4 +177,7 @@ Partial Class lstGastos
     Friend WithEvents btnModificar As System.Windows.Forms.Button
     Friend WithEvents btnAgregar As System.Windows.Forms.Button
     Friend WithEvents btnCerrar As System.Windows.Forms.Button
+    Friend WithEvents btnBuscar As System.Windows.Forms.Button
+    Friend WithEvents cmbCategoria As System.Windows.Forms.ComboBox
+    Friend WithEvents btnTodos As System.Windows.Forms.Button
 End Class

@@ -1,9 +1,26 @@
 ﻿Public Class lstGastos
+
+
+    Private idCategoria_ As Integer
+    Public Property idCategoria() As Integer
+        Get
+            Return idCategoria_
+        End Get
+        Set(ByVal value As Integer)
+            idCategoria_ = value
+        End Set
+    End Property
+
+
+
+
+
     Dim Gastos As New Gastos
 
 
     Private Sub lstGastos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Gastos.verTodos(dgvGastos)
+        Gastos.CargarComboCategoria(cmbCategoria)
 
         Dim monto As New Decimal
         monto = Gastos.GastosCalcularTotal()
@@ -61,5 +78,13 @@
     Private Sub btnCerrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCerrar.Click
         Close()
 
+    End Sub
+
+    Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
+        Gastos.GastosFiltrarPorCategoria(cmbCategoria.SelectedValue, dgvGastos)
+    End Sub
+
+    Private Sub btnTodos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTodos.Click
+        Gastos.verTodos(dgvGastos)
     End Sub
 End Class

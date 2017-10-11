@@ -121,4 +121,8 @@
 
         End If
     End Sub
+
+    Private Sub btnCalcular_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCalcular.Click
+        TxtTotal.Text = CInt(txtMUnitario.Text) * CInt(txtCantidad.Text)
+    End Sub
 End Class

@@ -42,6 +42,7 @@ Partial Class frmGastos
         Me.Label6 = New System.Windows.Forms.Label
         Me.cmbProveedor = New System.Windows.Forms.ComboBox
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker
+        Me.btnCalcular = New System.Windows.Forms.Button
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -221,12 +222,22 @@ Partial Class frmGastos
         Me.DateTimePicker1.Size = New System.Drawing.Size(100, 20)
         Me.DateTimePicker1.TabIndex = 2
         '
+        'btnCalcular
+        '
+        Me.btnCalcular.Location = New System.Drawing.Point(261, 192)
+        Me.btnCalcular.Name = "btnCalcular"
+        Me.btnCalcular.Size = New System.Drawing.Size(75, 23)
+        Me.btnCalcular.TabIndex = 28
+        Me.btnCalcular.Text = "Calcular"
+        Me.btnCalcular.UseVisualStyleBackColor = True
+        '
         'frmGastos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(327, 262)
+        Me.ClientSize = New System.Drawing.Size(365, 262)
+        Me.Controls.Add(Me.btnCalcular)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.cmbProveedor)
@@ -275,4 +286,5 @@ Partial Class frmGastos
     Friend WithEvents cmbProveedor As System.Windows.Forms.ComboBox
     Friend WithEvents lblFecha As System.Windows.Forms.Label
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents btnCalcular As System.Windows.Forms.Button
 End Class

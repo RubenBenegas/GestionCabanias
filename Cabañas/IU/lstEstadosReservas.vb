@@ -59,4 +59,8 @@
         End If
 
     End Sub
+
+    Private Sub btnTodos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTodos.Click
+        reservas.TraerTabReservas(dgvEstadoReservas)
+    End Sub
 End Class

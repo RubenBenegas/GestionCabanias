@@ -262,4 +262,25 @@ Public Class Gastos
 
         End Try
     End Function
+
+
+
+
+    Public Sub GastosFiltrarPorCategoria(ByVal idCategoria As Integer, ByVal tabla As DataGridView)
+        abrirConexion()
+
+        Dim objComando As New SqlCommand("GastosFiltrarPorCategoria", objConexion)
+        objComando.CommandType = CommandType.StoredProcedure
+        objComando.Parameters.AddWithValue("@idCategoria", idCategoria)
+        Dim objDataTable As New Data.DataTable
+        Dim objDataAdapter As New SqlDataAdapter(objComando)
+        objDataAdapter.Fill(objDataTable)
+        tabla.DataSource = objDataTable
+
+        tabla.Columns("Id").Width = 50
+        tabla.Columns("Descripcion").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+
+        cerrarConexion()
+
+    End Sub
 End Class

@@ -108,6 +108,14 @@
                 btnDetalleCancelacion.Visible = True
 
 
+
+
+
+
+
+
+
+                'ACA CALCULAMOS EL REEMBOLSO Y HAY QUE LLEVARLO PARA EL LADO DE CANCELACIONES
                 If DateDiff(DateInterval.Day, Today, reserva.fIngreso) > 14 Then
                     'MessageBox.Show(DateDiff(DateInterval.Day, Today, reserva.fIngreso))
                     lblReembolso.Visible = True
@@ -123,6 +131,15 @@
                     txtReembolso.Text = 0
                     txtReembolso.Visible = False
                 End If
+
+
+
+
+
+
+
+
+
             Else
                 lblCostoEstadia.Visible = True
                 txtCostoEstadia.Visible = True

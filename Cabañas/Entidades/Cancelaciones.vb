@@ -37,6 +37,17 @@ Public Class Cancelaciones
         End Set
     End Property
 
+
+    Private Reembolso_ As Decimal
+    Public Property Reembolso() As Decimal
+        Get
+            Return Reembolso_
+        End Get
+        Set(ByVal value As Decimal)
+            Reembolso_ = value
+        End Set
+    End Property
+
     Private IdReserva_ As Integer
     Public Property IdReserva() As Integer
         Get
@@ -56,6 +67,7 @@ Public Class Cancelaciones
             objComando.CommandType = CommandType.StoredProcedure
             objComando.Parameters.AddWithValue("@fCancelacion", cancelacion.fCancelacion)
             objComando.Parameters.AddWithValue("@Descripcion", cancelacion.Descripcion)
+            objComando.Parameters.AddWithValue("@Reembolso", cancelacion.Reembolso)
             objComando.Parameters.AddWithValue("@IdReserva", cancelacion.IdReserva)
             If objComando.ExecuteNonQuery() Then
                 Return True
@@ -78,6 +90,7 @@ Public Class Cancelaciones
             objComando.CommandType = CommandType.StoredProcedure
             objComando.Parameters.AddWithValue("@fCancelacion", cancelacion.fCancelacion)
             objComando.Parameters.AddWithValue("@Descripcion", cancelacion.Descripcion)
+            objComando.Parameters.AddWithValue("@Reembolso", cancelacion.Reembolso)
             objComando.Parameters.AddWithValue("@IdReserva", cancelacion.IdReserva)
             objComando.Parameters.AddWithValue("@Id", cancelacion.Id)
             If objComando.ExecuteNonQuery() Then
@@ -111,6 +124,7 @@ Public Class Cancelaciones
                 cancelacion.Id = objDataTable.Rows(0).Item("Id")
                 cancelacion.fCancelacion = objDataTable.Rows(0).Item("fCancelacion")
                 cancelacion.Descripcion = objDataTable.Rows(0).Item("Descripcion")
+                cancelacion.Reembolso = objDataTable.Rows(0).Item("Reembolso")
                 cancelacion.IdReserva = objDataTable.Rows(0).Item("IdReserva")
 
                 Return cancelacion

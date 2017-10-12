@@ -31,11 +31,13 @@ Partial Class frmCancelaciones
         Me.txtDescripcion = New System.Windows.Forms.TextBox
         Me.dtpFechaCancelacion = New System.Windows.Forms.DateTimePicker
         Me.btnAceptarModificar = New System.Windows.Forms.Button
+        Me.lblReembolso = New System.Windows.Forms.Label
+        Me.TextBox1 = New System.Windows.Forms.TextBox
         Me.SuspendLayout()
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(96, 190)
+        Me.btnAceptar.Location = New System.Drawing.Point(101, 229)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
         Me.btnAceptar.TabIndex = 0
@@ -44,7 +46,7 @@ Partial Class frmCancelaciones
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(195, 190)
+        Me.btnCancelar.Location = New System.Drawing.Point(200, 229)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
         Me.btnCancelar.TabIndex = 1
@@ -104,18 +106,36 @@ Partial Class frmCancelaciones
         '
         'btnAceptarModificar
         '
-        Me.btnAceptarModificar.Location = New System.Drawing.Point(149, 190)
+        Me.btnAceptarModificar.Location = New System.Drawing.Point(154, 229)
         Me.btnAceptarModificar.Name = "btnAceptarModificar"
         Me.btnAceptarModificar.Size = New System.Drawing.Size(75, 23)
         Me.btnAceptarModificar.TabIndex = 8
         Me.btnAceptarModificar.Text = "Aceptar"
         Me.btnAceptarModificar.UseVisualStyleBackColor = True
         '
+        'lblReembolso
+        '
+        Me.lblReembolso.AutoSize = True
+        Me.lblReembolso.Location = New System.Drawing.Point(12, 185)
+        Me.lblReembolso.Name = "lblReembolso"
+        Me.lblReembolso.Size = New System.Drawing.Size(63, 13)
+        Me.lblReembolso.TabIndex = 9
+        Me.lblReembolso.Text = "Reembolso:"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(139, 182)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.TabIndex = 10
+        '
         'frmCancelaciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(344, 229)
+        Me.ClientSize = New System.Drawing.Size(344, 264)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.lblReembolso)
         Me.Controls.Add(Me.btnAceptarModificar)
         Me.Controls.Add(Me.dtpFechaCancelacion)
         Me.Controls.Add(Me.txtDescripcion)
@@ -140,4 +160,6 @@ Partial Class frmCancelaciones
     Friend WithEvents txtDescripcion As System.Windows.Forms.TextBox
     Friend WithEvents dtpFechaCancelacion As System.Windows.Forms.DateTimePicker
     Friend WithEvents btnAceptarModificar As System.Windows.Forms.Button
+    Friend WithEvents lblReembolso As System.Windows.Forms.Label
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
 End Class

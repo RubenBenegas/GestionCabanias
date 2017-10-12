@@ -54,7 +54,7 @@ Partial Class lstEstadosReservas
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvEstadoReservas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvEstadoReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvEstadoReservas.Location = New System.Drawing.Point(12, 44)
+        Me.dgvEstadoReservas.Location = New System.Drawing.Point(13, 44)
         Me.dgvEstadoReservas.MultiSelect = False
         Me.dgvEstadoReservas.Name = "dgvEstadoReservas"
         Me.dgvEstadoReservas.ReadOnly = True
@@ -81,7 +81,7 @@ Partial Class lstEstadosReservas
         Me.rbEnEspera.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.rbEnEspera.AutoSize = True
         Me.rbEnEspera.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbEnEspera.Location = New System.Drawing.Point(93, 15)
+        Me.rbEnEspera.Location = New System.Drawing.Point(146, 15)
         Me.rbEnEspera.Name = "rbEnEspera"
         Me.rbEnEspera.Size = New System.Drawing.Size(82, 17)
         Me.rbEnEspera.TabIndex = 2
@@ -94,7 +94,7 @@ Partial Class lstEstadosReservas
         Me.rbSeniada.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.rbSeniada.AutoSize = True
         Me.rbSeniada.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbSeniada.Location = New System.Drawing.Point(172, 15)
+        Me.rbSeniada.Location = New System.Drawing.Point(225, 15)
         Me.rbSeniada.Name = "rbSeniada"
         Me.rbSeniada.Size = New System.Drawing.Size(68, 17)
         Me.rbSeniada.TabIndex = 3
@@ -107,7 +107,7 @@ Partial Class lstEstadosReservas
         Me.rbCancelada.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.rbCancelada.AutoSize = True
         Me.rbCancelada.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbCancelada.Location = New System.Drawing.Point(321, 15)
+        Me.rbCancelada.Location = New System.Drawing.Point(374, 15)
         Me.rbCancelada.Name = "rbCancelada"
         Me.rbCancelada.Size = New System.Drawing.Size(85, 17)
         Me.rbCancelada.TabIndex = 4
@@ -133,7 +133,7 @@ Partial Class lstEstadosReservas
         Me.rdEnCurso.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.rdEnCurso.AutoSize = True
         Me.rdEnCurso.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rdEnCurso.Location = New System.Drawing.Point(240, 15)
+        Me.rdEnCurso.Location = New System.Drawing.Point(293, 15)
         Me.rdEnCurso.Name = "rdEnCurso"
         Me.rdEnCurso.Size = New System.Drawing.Size(75, 17)
         Me.rdEnCurso.TabIndex = 6
@@ -147,7 +147,7 @@ Partial Class lstEstadosReservas
         Me.btnTodos.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnTodos.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTodos.ForeColor = System.Drawing.Color.White
-        Me.btnTodos.Location = New System.Drawing.Point(412, 8)
+        Me.btnTodos.Location = New System.Drawing.Point(93, 8)
         Me.btnTodos.Name = "btnTodos"
         Me.btnTodos.Size = New System.Drawing.Size(47, 30)
         Me.btnTodos.TabIndex = 8

@@ -515,7 +515,7 @@ Partial Class frmReservas
         '
         'btnDetalleCancelacion
         '
-        Me.btnDetalleCancelacion.Location = New System.Drawing.Point(252, 167)
+        Me.btnDetalleCancelacion.Location = New System.Drawing.Point(372, 496)
         Me.btnDetalleCancelacion.Name = "btnDetalleCancelacion"
         Me.btnDetalleCancelacion.Size = New System.Drawing.Size(114, 23)
         Me.btnDetalleCancelacion.TabIndex = 50

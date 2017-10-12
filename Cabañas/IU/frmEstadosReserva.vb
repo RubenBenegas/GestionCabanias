@@ -67,34 +67,34 @@
 
 
     Private Sub frmEstadosReserva_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        If frmReservas.modificar = True Then
+        'If frmReservas.modificar = True Then
 
-            rdCancelada.Visible = True
-            
-            If frmReservas.idEstado = 1 Then
-                rdEspera.Checked = True
-            End If
-            If frmReservas.idEstado = 2 Then
-                rdSeniada.Checked = True
-            End If
-            If frmReservas.idEstado = 3 Then
-                rdEnCurso.Checked = True
-            End If
-            If frmReservas.idEstado = 4 Then
-                rdCancelada.Checked = True
+        rdCancelada.Visible = True
 
-
-                'cancelacion.RecuperarCancelacion(frmReservas.idReserva)
-                'Dim fecha As Date
-
-                ''dtpFechaCancelacion.Value = cancelacion.fCancelacion
-                'TextBox1.Text = cancelacion.fCancelacion.ToString
-                'txtDescripcion.Text = cancelacion.Descripcion
-            Else
-                rdEspera.Checked = True
-            End If
-
+        If frmReservas.idEstado = 1 Then
+            rdEspera.Checked = True
         End If
+        If frmReservas.idEstado = 2 Then
+            rdSeniada.Checked = True
+        End If
+        If frmReservas.idEstado = 3 Then
+            rdEnCurso.Checked = True
+        End If
+        If frmReservas.idEstado = 4 Then
+            rdCancelada.Checked = True
+
+
+            'cancelacion.RecuperarCancelacion(frmReservas.idReserva)
+            'Dim fecha As Date
+
+            ''dtpFechaCancelacion.Value = cancelacion.fCancelacion
+            'TextBox1.Text = cancelacion.fCancelacion.ToString
+            'txtDescripcion.Text = cancelacion.Descripcion
+            'Else
+            '    rdEspera.Checked = True
+        End If
+
+        'End If
 
 
 
@@ -107,9 +107,9 @@
 
 
         If frmReservas.modificar = False Then
-            
+
             rdCancelada.Visible = False
-            
+
         End If
 
     End Sub

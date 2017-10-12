@@ -351,7 +351,18 @@
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEstadoReserva.Click
+        'If idEstado = 1 Then
+        '    frmEstadosReserva.rdEspera.Checked = True
+        'End If
+        'If idEstado = 2 Then
+        '    frmEstadosReserva.rdSeniada.Checked = True
+        'End If
+        'If idEstado = 3 Then
+        '    frmEstadosReserva.rdEnCurso.Checked = True
+        'End If
 
+        'frmEstadosReserva.
+        'frmEstadosReserva.modifica = True
         frmEstadosReserva.ShowDialog()
     End Sub
 

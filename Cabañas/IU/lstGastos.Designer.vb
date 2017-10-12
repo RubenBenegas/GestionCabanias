@@ -32,6 +32,8 @@ Partial Class lstGastos
         Me.btnBuscar = New System.Windows.Forms.Button
         Me.cmbCategoria = New System.Windows.Forms.ComboBox
         Me.btnTodos = New System.Windows.Forms.Button
+        Me.btnCalcular = New System.Windows.Forms.Button
+        Me.txtTotal = New System.Windows.Forms.TextBox
         CType(Me.dgvGastos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -131,7 +133,7 @@ Partial Class lstGastos
         'cmbCategoria
         '
         Me.cmbCategoria.FormattingEnabled = True
-        Me.cmbCategoria.Location = New System.Drawing.Point(108, 18)
+        Me.cmbCategoria.Location = New System.Drawing.Point(161, 18)
         Me.cmbCategoria.Name = "cmbCategoria"
         Me.cmbCategoria.Size = New System.Drawing.Size(139, 21)
         Me.cmbCategoria.TabIndex = 6
@@ -142,12 +144,32 @@ Partial Class lstGastos
         Me.btnTodos.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnTodos.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTodos.ForeColor = System.Drawing.Color.White
-        Me.btnTodos.Location = New System.Drawing.Point(253, 12)
+        Me.btnTodos.Location = New System.Drawing.Point(108, 12)
         Me.btnTodos.Name = "btnTodos"
         Me.btnTodos.Size = New System.Drawing.Size(47, 30)
         Me.btnTodos.TabIndex = 7
         Me.btnTodos.Text = "X"
         Me.btnTodos.UseVisualStyleBackColor = False
+        '
+        'btnCalcular
+        '
+        Me.btnCalcular.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnCalcular.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnCalcular.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCalcular.ForeColor = System.Drawing.Color.White
+        Me.btnCalcular.Location = New System.Drawing.Point(488, 428)
+        Me.btnCalcular.Name = "btnCalcular"
+        Me.btnCalcular.Size = New System.Drawing.Size(90, 30)
+        Me.btnCalcular.TabIndex = 8
+        Me.btnCalcular.Text = "Calcular"
+        Me.btnCalcular.UseVisualStyleBackColor = False
+        '
+        'txtTotal
+        '
+        Me.txtTotal.Location = New System.Drawing.Point(584, 434)
+        Me.txtTotal.Name = "txtTotal"
+        Me.txtTotal.Size = New System.Drawing.Size(100, 20)
+        Me.txtTotal.TabIndex = 9
         '
         'lstGastos
         '
@@ -155,6 +177,8 @@ Partial Class lstGastos
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(984, 461)
+        Me.Controls.Add(Me.txtTotal)
+        Me.Controls.Add(Me.btnCalcular)
         Me.Controls.Add(Me.btnTodos)
         Me.Controls.Add(Me.cmbCategoria)
         Me.Controls.Add(Me.btnBuscar)
@@ -170,6 +194,7 @@ Partial Class lstGastos
         Me.Text = "Lista gastos"
         CType(Me.dgvGastos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents dgvGastos As System.Windows.Forms.DataGridView
@@ -180,4 +205,6 @@ Partial Class lstGastos
     Friend WithEvents btnBuscar As System.Windows.Forms.Button
     Friend WithEvents cmbCategoria As System.Windows.Forms.ComboBox
     Friend WithEvents btnTodos As System.Windows.Forms.Button
+    Friend WithEvents btnCalcular As System.Windows.Forms.Button
+    Friend WithEvents txtTotal As System.Windows.Forms.TextBox
 End Class

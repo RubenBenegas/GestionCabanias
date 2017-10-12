@@ -71,7 +71,7 @@ Partial Class lstEstadosReservas
         Me.btnCerrar.ForeColor = System.Drawing.Color.White
         Me.btnCerrar.Location = New System.Drawing.Point(966, 308)
         Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(78, 29)
+        Me.btnCerrar.Size = New System.Drawing.Size(79, 29)
         Me.btnCerrar.TabIndex = 1
         Me.btnCerrar.Text = "Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = False

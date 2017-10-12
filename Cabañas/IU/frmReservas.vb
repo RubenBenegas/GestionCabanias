@@ -104,6 +104,9 @@
                 lblImporteSenia.Visible = False
                 txtSenia.Visible = False
 
+                btnEstadoReserva.Visible = False
+                btnDetalleCancelacion.Visible = True
+
 
                 If DateDiff(DateInterval.Day, Today, reserva.fIngreso) > 14 Then
                     'MessageBox.Show(DateDiff(DateInterval.Day, Today, reserva.fIngreso))
@@ -142,6 +145,10 @@
                 dtpFechaPagoSenia.Visible = True
                 lblImporteSenia.Visible = True
                 txtSenia.Visible = True
+
+
+                btnEstadoReserva.Visible = True
+                btnDetalleCancelacion.Visible = False
                 'txtCostoEstadia.Text = reserva.ReservaCostoEstadia(idReserva)
                 'If dgvServiciosAdicionales.Rows.Count <> 0 Then
                 '    txtCostoAdicionales.Text = reserva.ReservaCostoAdicionales(idReserva)
@@ -343,8 +350,16 @@
         'TextBox1.Text = dtpFechaReserva.Value.Date.AddDays(3)
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEstadoReserva.Click
 
         frmEstadosReserva.ShowDialog()
+    End Sub
+
+    Private Sub btnDetalleCancelacion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDetalleCancelacion.Click
+        frmCancelaciones.idReserva = txtId.Text
+        frmCancelaciones.modificar = True
+        frmCancelaciones.ShowDialog()
+
+
     End Sub
 End Class

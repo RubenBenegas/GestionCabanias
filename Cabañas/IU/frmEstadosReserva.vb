@@ -1,17 +1,5 @@
 ﻿Public Class frmEstadosReserva
 
-
-    Private idCancelacion_ As Integer
-    Public Property idCancelacion() As Integer
-        Get
-            Return idCancelacion_
-        End Get
-        Set(ByVal value As Integer)
-            idCancelacion_ = value
-        End Set
-    End Property
-
-
     Private modifica_ As Boolean
     Public Property modifica() As Boolean
         Get
@@ -24,23 +12,25 @@
 
 
     Private Sub rdEspera_CheckedChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles rdEspera.CheckedChanged
-        dtpFechaCancelacion.Visible = False
-        txtDescripcion.Visible = False
+        btnCancelarReserva.Visible = False
+        
+
     End Sub
 
     Private Sub rdSeniada_CheckedChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles rdSeniada.CheckedChanged
-        dtpFechaCancelacion.Visible = False
-        txtDescripcion.Visible = False
+        btnCancelarReserva.Visible = False
+        
     End Sub
 
     Private Sub rdEnCurso_CheckedChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles rdEnCurso.CheckedChanged
-        dtpFechaCancelacion.Visible = False
-        txtDescripcion.Visible = False
+        btnCancelarReserva.Visible = False
+        
     End Sub
 
     Private Sub rdCancelada_CheckedChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles rdCancelada.CheckedChanged
-        dtpFechaCancelacion.Visible = True
-        txtDescripcion.Visible = True
+        btnCancelarReserva.Visible = True
+        
+
     End Sub
 
 
@@ -48,41 +38,10 @@
         Close()
     End Sub
 
-    Dim cancelacion As New Cancelaciones
 
     Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
         If rdCancelada.Checked = True Then
             frmReservas.idEstado = 4
-
-            cancelacion.fCancelacion = dtpFechaCancelacion.Value
-            cancelacion.Descripcion = txtDescripcion.Text
-            cancelacion.IdReserva = frmReservas.txtId.Text
-
-
-            'If frmReservas.modificar = True Then
-            '    If cancelacion.ModificarCancelacion(cancelacion) = True Then
-            '        MsgBox("La cancelacion ha sido correctamente modificada.")
-
-            '    Else
-            '        MsgBox("Error al modificar la cancelacion." + Chr(13) + "Intentelo de nuevo.")
-            '    End If
-            'Else
-            If cancelacion.InsertarCancelacion(cancelacion) = True Then
-                MsgBox("La cancelacion ha sido correctamente insertada.")
-
-                '        Else
-                '            MsgBox("Error al insertar cancelacion." + Chr(13) + "Intentelo de nuevo.")
-                '        End If
-            End If
-            Close()
-            'Else
-            '    MsgBox("Completar los campos obligatorios.", MsgBoxStyle.Information, "Importante")
-            'End If
-
-
-
-
-
         ElseIf rdEspera.Checked = True Then
             frmReservas.idEstado = 1
         ElseIf rdSeniada.Checked = True Then
@@ -123,6 +82,8 @@
             End If
             If frmReservas.idEstado = 4 Then
                 rdCancelada.Checked = True
+
+
                 'cancelacion.RecuperarCancelacion(frmReservas.idReserva)
                 'Dim fecha As Date
 
@@ -148,9 +109,17 @@
         If frmReservas.modificar = False Then
             
             rdCancelada.Visible = False
-            dtpFechaCancelacion.Visible = False
-            txtDescripcion.Visible = False
+            
         End If
+
+    End Sub
+
+    Private Sub btnCancelarReserva_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelarReserva.Click
+
+        frmCancelaciones.idCancelacion = 0
+        frmCancelaciones.idReserva = frmReservas.txtId.Text
+        frmCancelaciones.modificar = False
+        frmCancelaciones.ShowDialog()
 
     End Sub
 End Class

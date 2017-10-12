@@ -22,36 +22,19 @@ Partial Class frmEstadosReserva
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.dtpFechaCancelacion = New System.Windows.Forms.DateTimePicker
-        Me.txtDescripcion = New System.Windows.Forms.TextBox
         Me.rdCancelada = New System.Windows.Forms.RadioButton
         Me.rdSeniada = New System.Windows.Forms.RadioButton
         Me.rdEspera = New System.Windows.Forms.RadioButton
         Me.Cancelar = New System.Windows.Forms.Button
         Me.btnAceptar = New System.Windows.Forms.Button
         Me.rdEnCurso = New System.Windows.Forms.RadioButton
+        Me.btnCancelarReserva = New System.Windows.Forms.Button
         Me.SuspendLayout()
-        '
-        'dtpFechaCancelacion
-        '
-        Me.dtpFechaCancelacion.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaCancelacion.Location = New System.Drawing.Point(163, 14)
-        Me.dtpFechaCancelacion.Name = "dtpFechaCancelacion"
-        Me.dtpFechaCancelacion.Size = New System.Drawing.Size(97, 20)
-        Me.dtpFechaCancelacion.TabIndex = 9
-        '
-        'txtDescripcion
-        '
-        Me.txtDescripcion.Location = New System.Drawing.Point(163, 43)
-        Me.txtDescripcion.Multiline = True
-        Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(155, 118)
-        Me.txtDescripcion.TabIndex = 8
         '
         'rdCancelada
         '
         Me.rdCancelada.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rdCancelada.Location = New System.Drawing.Point(29, 145)
+        Me.rdCancelada.Location = New System.Drawing.Point(168, 58)
         Me.rdCancelada.Name = "rdCancelada"
         Me.rdCancelada.Size = New System.Drawing.Size(111, 40)
         Me.rdCancelada.TabIndex = 7
@@ -62,7 +45,7 @@ Partial Class frmEstadosReserva
         'rdSeniada
         '
         Me.rdSeniada.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rdSeniada.Location = New System.Drawing.Point(29, 58)
+        Me.rdSeniada.Location = New System.Drawing.Point(179, 12)
         Me.rdSeniada.Name = "rdSeniada"
         Me.rdSeniada.Size = New System.Drawing.Size(100, 40)
         Me.rdSeniada.TabIndex = 6
@@ -83,7 +66,7 @@ Partial Class frmEstadosReserva
         '
         'Cancelar
         '
-        Me.Cancelar.Location = New System.Drawing.Point(243, 176)
+        Me.Cancelar.Location = New System.Drawing.Point(155, 160)
         Me.Cancelar.Name = "Cancelar"
         Me.Cancelar.Size = New System.Drawing.Size(75, 23)
         Me.Cancelar.TabIndex = 10
@@ -92,7 +75,7 @@ Partial Class frmEstadosReserva
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(142, 176)
+        Me.btnAceptar.Location = New System.Drawing.Point(54, 160)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
         Me.btnAceptar.TabIndex = 11
@@ -102,7 +85,7 @@ Partial Class frmEstadosReserva
         'rdEnCurso
         '
         Me.rdEnCurso.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rdEnCurso.Location = New System.Drawing.Point(29, 99)
+        Me.rdEnCurso.Location = New System.Drawing.Point(29, 58)
         Me.rdEnCurso.Name = "rdEnCurso"
         Me.rdEnCurso.Size = New System.Drawing.Size(100, 40)
         Me.rdEnCurso.TabIndex = 12
@@ -110,17 +93,25 @@ Partial Class frmEstadosReserva
         Me.rdEnCurso.Text = "En curso"
         Me.rdEnCurso.UseVisualStyleBackColor = True
         '
+        'btnCancelarReserva
+        '
+        Me.btnCancelarReserva.Location = New System.Drawing.Point(84, 104)
+        Me.btnCancelarReserva.Name = "btnCancelarReserva"
+        Me.btnCancelarReserva.Size = New System.Drawing.Size(110, 33)
+        Me.btnCancelarReserva.TabIndex = 13
+        Me.btnCancelarReserva.Text = "Cancelar reserva"
+        Me.btnCancelarReserva.UseVisualStyleBackColor = True
+        '
         'frmEstadosReserva
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(331, 213)
+        Me.ClientSize = New System.Drawing.Size(296, 197)
+        Me.Controls.Add(Me.btnCancelarReserva)
         Me.Controls.Add(Me.rdEnCurso)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.Cancelar)
-        Me.Controls.Add(Me.dtpFechaCancelacion)
-        Me.Controls.Add(Me.txtDescripcion)
         Me.Controls.Add(Me.rdCancelada)
         Me.Controls.Add(Me.rdSeniada)
         Me.Controls.Add(Me.rdEspera)
@@ -129,15 +120,13 @@ Partial Class frmEstadosReserva
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "EstadosReserva"
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents dtpFechaCancelacion As System.Windows.Forms.DateTimePicker
-    Friend WithEvents txtDescripcion As System.Windows.Forms.TextBox
     Friend WithEvents rdCancelada As System.Windows.Forms.RadioButton
     Friend WithEvents rdSeniada As System.Windows.Forms.RadioButton
     Friend WithEvents rdEspera As System.Windows.Forms.RadioButton
     Friend WithEvents Cancelar As System.Windows.Forms.Button
     Friend WithEvents btnAceptar As System.Windows.Forms.Button
     Friend WithEvents rdEnCurso As System.Windows.Forms.RadioButton
+    Friend WithEvents btnCancelarReserva As System.Windows.Forms.Button
 End Class

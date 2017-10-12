@@ -69,7 +69,8 @@ Partial Class frmReservas
         Me.lblFechaSenia = New System.Windows.Forms.Label
         Me.txtFaltaDePagar = New System.Windows.Forms.TextBox
         Me.lblFaltaPAgar = New System.Windows.Forms.Label
-        Me.Button1 = New System.Windows.Forms.Button
+        Me.btnEstadoReserva = New System.Windows.Forms.Button
+        Me.btnDetalleCancelacion = New System.Windows.Forms.Button
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvServiciosAdicionales, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -503,21 +504,31 @@ Partial Class frmReservas
         Me.lblFaltaPAgar.TabIndex = 38
         Me.lblFaltaPAgar.Text = "Falta de pagar:"
         '
-        'Button1
+        'btnEstadoReserva
         '
-        Me.Button1.Location = New System.Drawing.Point(372, 167)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(114, 23)
-        Me.Button1.TabIndex = 49
-        Me.Button1.Text = "Estado de Reserva"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnEstadoReserva.Location = New System.Drawing.Point(372, 167)
+        Me.btnEstadoReserva.Name = "btnEstadoReserva"
+        Me.btnEstadoReserva.Size = New System.Drawing.Size(114, 23)
+        Me.btnEstadoReserva.TabIndex = 49
+        Me.btnEstadoReserva.Text = "Estado de Reserva"
+        Me.btnEstadoReserva.UseVisualStyleBackColor = True
+        '
+        'btnDetalleCancelacion
+        '
+        Me.btnDetalleCancelacion.Location = New System.Drawing.Point(252, 167)
+        Me.btnDetalleCancelacion.Name = "btnDetalleCancelacion"
+        Me.btnDetalleCancelacion.Size = New System.Drawing.Size(114, 23)
+        Me.btnDetalleCancelacion.TabIndex = 50
+        Me.btnDetalleCancelacion.Text = "Detalle cancelacion"
+        Me.btnDetalleCancelacion.UseVisualStyleBackColor = True
         '
         'frmReservas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(503, 616)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnDetalleCancelacion)
+        Me.Controls.Add(Me.btnEstadoReserva)
         Me.Controls.Add(Me.dtpFechaPagoSenia)
         Me.Controls.Add(Me.lblFechaSenia)
         Me.Controls.Add(Me.lblImporteSenia)
@@ -621,5 +632,6 @@ Partial Class frmReservas
     Friend WithEvents lblFechaSenia As System.Windows.Forms.Label
     Friend WithEvents lblFaltaPAgar As System.Windows.Forms.Label
     Friend WithEvents txtFaltaDePagar As System.Windows.Forms.TextBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btnEstadoReserva As System.Windows.Forms.Button
+    Friend WithEvents btnDetalleCancelacion As System.Windows.Forms.Button
 End Class

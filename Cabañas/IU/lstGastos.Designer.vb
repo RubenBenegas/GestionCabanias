@@ -54,13 +54,13 @@ Partial Class lstGastos
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvGastos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvGastos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvGastos.Location = New System.Drawing.Point(12, 12)
+        Me.dgvGastos.Location = New System.Drawing.Point(12, 48)
         Me.dgvGastos.MultiSelect = False
         Me.dgvGastos.Name = "dgvGastos"
         Me.dgvGastos.ReadOnly = True
         Me.dgvGastos.RowHeadersVisible = False
         Me.dgvGastos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvGastos.Size = New System.Drawing.Size(960, 410)
+        Me.dgvGastos.Size = New System.Drawing.Size(960, 374)
         Me.dgvGastos.TabIndex = 0
         '
         'btnBorrar
@@ -121,7 +121,7 @@ Partial Class lstGastos
         Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.ForeColor = System.Drawing.Color.White
-        Me.btnBuscar.Location = New System.Drawing.Point(590, 428)
+        Me.btnBuscar.Location = New System.Drawing.Point(12, 12)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(90, 30)
         Me.btnBuscar.TabIndex = 5
@@ -131,7 +131,7 @@ Partial Class lstGastos
         'cmbCategoria
         '
         Me.cmbCategoria.FormattingEnabled = True
-        Me.cmbCategoria.Location = New System.Drawing.Point(419, 434)
+        Me.cmbCategoria.Location = New System.Drawing.Point(108, 18)
         Me.cmbCategoria.Name = "cmbCategoria"
         Me.cmbCategoria.Size = New System.Drawing.Size(139, 21)
         Me.cmbCategoria.TabIndex = 6
@@ -142,7 +142,7 @@ Partial Class lstGastos
         Me.btnTodos.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnTodos.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTodos.ForeColor = System.Drawing.Color.White
-        Me.btnTodos.Location = New System.Drawing.Point(686, 428)
+        Me.btnTodos.Location = New System.Drawing.Point(253, 12)
         Me.btnTodos.Name = "btnTodos"
         Me.btnTodos.Size = New System.Drawing.Size(47, 30)
         Me.btnTodos.TabIndex = 7

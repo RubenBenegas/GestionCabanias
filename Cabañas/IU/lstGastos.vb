@@ -87,4 +87,8 @@
     Private Sub btnTodos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTodos.Click
         Gastos.verTodos(dgvGastos)
     End Sub
+
+    Private Sub dgvGastos_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvGastos.CellContentClick
+
+    End Sub
 End Class

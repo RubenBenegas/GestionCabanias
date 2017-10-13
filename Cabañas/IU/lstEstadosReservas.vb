@@ -45,6 +45,36 @@
     Private Sub dgvEstadoReservas_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvEstadoReservas.CellDoubleClick
         Editar()
 
+
+
+
+        frmReservas.lblCostoEstadia.Visible = False
+        frmReservas.txtCostoEstadia.Visible = False
+
+        frmReservas.lblCostoAdicionales.Visible = False
+        frmReservas.txtCostoAdicionales.Visible = False
+
+        frmReservas.lblCostoTotal.Visible = False
+        frmReservas.txtCostoTotal.Visible = False
+
+        frmReservas.lblFaltaPAgar.Visible = False
+        frmReservas.txtFaltaDePagar.Visible = False
+
+        frmReservas.lblReservaCancelada.Visible = True
+        frmReservas.btnAgregar.Enabled = False
+        frmReservas.btnBorrar.Enabled = False
+        frmReservas.btnConsultarCostos.Visible = False
+        frmReservas.lblFechaSenia.Visible = False
+        frmReservas.dtpFechaPagoSenia.Visible = False
+        frmReservas.lblImporteSenia.Visible = False
+        frmReservas.txtSenia.Visible = False
+
+        frmReservas.btnEstadoReserva.Visible = False
+        frmReservas.btnDetalleCancelacion.Visible = True
+
+
+
+
     End Sub
 
 

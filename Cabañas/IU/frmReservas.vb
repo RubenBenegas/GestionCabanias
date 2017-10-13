@@ -32,6 +32,7 @@
 
 
     Dim reserva As New Reservas
+    Dim cancelacion As New Cancelaciones
     Dim btnReserva As New BotonReservas
 
     Private Sub frmReservas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -62,9 +63,6 @@
             txtCostoEstadia.Text = reserva.CostoEstadia
             txtCostoAdicionales.Text = reserva.CostoAdicionales
             txtCostoTotal.Text = reserva.CostoTotal
-            'chkCancelada.Checked = reserva.Cancelada
-
-            'chkCancelada.Visible = True
 
             btnAgregar.Enabled = True
             btnBorrar.Enabled = True
@@ -78,23 +76,18 @@
 
             idEstado = reserva.IdEstado
 
-
-
-
-
             If idEstado = 4 Then
+
+                cancelacion.RecuperarCancelacion(idReserva)
+
                 lblCostoEstadia.Visible = False
                 txtCostoEstadia.Visible = False
-                txtCostoEstadia.Text = 0
                 lblCostoAdicionales.Visible = False
                 txtCostoAdicionales.Visible = False
-                txtCostoAdicionales.Text = 0
                 lblCostoTotal.Visible = False
                 txtCostoTotal.Visible = False
-                txtCostoTotal.Text = 0
                 lblFaltaPAgar.Visible = False
                 txtFaltaDePagar.Visible = False
-                txtFaltaDePagar.Text = 0
                 lblReservaCancelada.Visible = True
                 btnAgregar.Enabled = False
                 btnBorrar.Enabled = False
@@ -103,43 +96,26 @@
                 dtpFechaPagoSenia.Visible = False
                 lblImporteSenia.Visible = False
                 txtSenia.Visible = False
-
+                txtReembolso.Visible = True
+                txtReembolso.Text = cancelacion.Reembolso
+                lblReembolso.Visible = True
                 btnEstadoReserva.Visible = False
                 btnDetalleCancelacion.Visible = True
 
-
-
-
-
-
-
-
-
                 'ACA CALCULAMOS EL REEMBOLSO Y HAY QUE LLEVARLO PARA EL LADO DE CANCELACIONES
-                If DateDiff(DateInterval.Day, Today, reserva.fIngreso) > 14 Then
-                    'MessageBox.Show(DateDiff(DateInterval.Day, Today, reserva.fIngreso))
+                If DateDiff(DateInterval.Day, cancelacion.fCancelacion, reserva.fIngreso) > 14 Then
                     lblReembolso.Visible = True
                     lblReembolso.ForeColor = Color.Green
                     lblReembolso.Text = "Reembolso de: "
                     txtReembolso.Visible = True
                     txtReembolso.Text = CStr(reserva.Senia / 2)
                 Else
-                    'MessageBox.Show(DateDiff(DateInterval.Day, Today, reserva.fIngreso))
                     lblReembolso.Visible = True
                     lblReembolso.ForeColor = Color.Red
                     lblReembolso.Text = "Sin reembolso"
                     txtReembolso.Text = 0
                     txtReembolso.Visible = False
                 End If
-
-
-
-
-
-
-
-
-
             Else
                 lblCostoEstadia.Visible = True
                 txtCostoEstadia.Visible = True
@@ -149,38 +125,18 @@
                 txtCostoTotal.Visible = True
                 lblFaltaPAgar.Visible = True
                 txtFaltaDePagar.Visible = True
-
                 lblReservaCancelada.Visible = False
                 lblReembolso.Visible = False
                 txtReembolso.Text = 0
                 txtReembolso.Visible = False
-
                 btnConsultarCostos.Visible = True
-
-
                 lblFechaSenia.Visible = True
                 dtpFechaPagoSenia.Visible = True
                 lblImporteSenia.Visible = True
                 txtSenia.Visible = True
-
-
                 btnEstadoReserva.Visible = True
                 btnDetalleCancelacion.Visible = False
-                'txtCostoEstadia.Text = reserva.ReservaCostoEstadia(idReserva)
-                'If dgvServiciosAdicionales.Rows.Count <> 0 Then
-                '    txtCostoAdicionales.Text = reserva.ReservaCostoAdicionales(idReserva)
-                'Else
-                '    txtCostoAdicionales.Text = 0
-                'End If
-
-                'txtCostoTotal.Text = CInt(txtCostoEstadia.Text) + CInt(txtCostoAdicionales.Text)
-                'txtFaltaDePagar.Text = CInt(txtCostoTotal.Text) - CInt(txtSenia.Text)
-
-
             End If
-
-
-
             Me.Text = "Modificar reserva"
         Else
             txtId.Text = Nothing
@@ -194,7 +150,6 @@
             chkConSenia.Checked = Nothing
             dtpCheckin.Value = Today
             dtpCheckout.Value = Today
-
             lblCostoEstadia.Visible = True
             txtCostoEstadia.Visible = True
             txtCostoEstadia.Text = Nothing
@@ -208,25 +163,41 @@
             txtCostoTotal.Text = Nothing
 
             lblFaltaPAgar.Visible = True
+
+
             txtFaltaDePagar.Visible = True
+
             txtFaltaDePagar.Text = Nothing
 
+
             lblReembolso.Visible = False
+
             txtReembolso.Text = Nothing
+
 
             txtReembolso.Text = Nothing
             txtReembolso.Visible = False
 
+
             lblReservaCancelada.Visible = False
 
-            'reserva.Cancelada = False
-
-            'chkCancelada.Visible = False
 
             btnAgregar.Enabled = True
             btnBorrar.Enabled = True
+
+            btnConsultarCostos.Visible = True
+            lblFechaSenia.Visible = True
+            dtpFechaPagoSenia.Visible = True
+            lblImporteSenia.Visible = True
+            txtSenia.Visible = True
+
+
+            btnEstadoReserva.Visible = True
+            btnDetalleCancelacion.Visible = False
+
             Me.Text = "Agregar reserva"
         End If
+
     End Sub
 
     Dim fun As New Validaciones
@@ -253,38 +224,17 @@
             reserva.CostoEstadia = txtCostoEstadia.Text
             reserva.CostoAdicionales = txtCostoAdicionales.Text
             reserva.CostoTotal = txtCostoTotal.Text
-            'reserva.Cancelada = chkCancelada.Checked
-
-
-
             reserva.IdEstado = idEstado
 
             If modificar = True Then
                 If reserva.ModificarReserva(reserva) = True Then
-                    'If reserva.Cancelada = True Then
-                    '    If DateDiff(DateInterval.Day, Today, reserva.fIngreso) > 14 Then
-                    '        'MessageBox.Show(DateDiff(DateInterval.Day, Today, reserva.fIngreso))
-                    '        lblReembolso.ForeColor = Color.Green
-                    '        lblReembolso.Text = "Reembolso de: " + CStr((reserva.Senia / 2))
-                    '    Else
-                    '        'MessageBox.Show(DateDiff(DateInterval.Day, Today, reserva.fIngreso))
-                    '        lblReembolso.ForeColor = Color.Red
-                    '        lblReembolso.Text = "Sin reembolso"
-                    '    End If
-
-                    'End If
-
                     MsgBox("La reserva ha sido correctamente modificada.")
-                    'reserva.TraerTabReservas(lstReservas.dgvReservas)
-                    'grafReservas.ActualizarGrafico()
                 Else
                     MsgBox("Error al modificar la reserva." + Chr(13) + "Intentelo de nuevo.")
                 End If
             Else
                 If reserva.InsertarReserva(reserva) = True Then
                     MsgBox("La reserva ha sido correctamente insertada.")
-                    'reserva.TraerTabReservas(lstReservas.dgvReservas)
-                    'grafReservas.ActualizarGrafico()
                 Else
                     MsgBox("Error al insertar la reserva." + Chr(13) + "Intentelo de nuevo.")
                 End If
@@ -343,7 +293,6 @@
     Private Sub btnConsultarCostos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnConsultarCostos.Click
         Dim montoCabania As Decimal
         montoCabania = reserva.ReservaTraerMontoDeCabania(cmbIdCabania.SelectedValue)
-        'MessageBox.Show(montoCabania)
         Dim dias As Integer
         dias = DateDiff(DateInterval.Day, dtpFechaIngreso.Value, dtpFechaSalida.Value)
         txtCostoEstadia.Text = dias * montoCabania
@@ -364,22 +313,9 @@
 
         dtpFechaPagoSenia.Value = dtpFechaReserva.Value.Date.AddDays(3)
 
-        'TextBox1.Text = dtpFechaReserva.Value.Date.AddDays(3)
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEstadoReserva.Click
-        'If idEstado = 1 Then
-        '    frmEstadosReserva.rdEspera.Checked = True
-        'End If
-        'If idEstado = 2 Then
-        '    frmEstadosReserva.rdSeniada.Checked = True
-        'End If
-        'If idEstado = 3 Then
-        '    frmEstadosReserva.rdEnCurso.Checked = True
-        'End If
-
-        'frmEstadosReserva.
-        'frmEstadosReserva.modifica = True
         frmEstadosReserva.ShowDialog()
     End Sub
 

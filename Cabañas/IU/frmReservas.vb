@@ -197,6 +197,7 @@
             btnEstadoReserva.Visible = True
             btnDetalleCancelacion.Visible = False
 
+            idEstado = 1
             Me.Text = "Agregar reserva"
         End If
 
@@ -333,7 +334,7 @@
         dtpCheckin.Value = dtpFechaIngreso.Value
     End Sub
 
-    Private Sub lblFechaSalidad_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblFechaSalidad.LostFocus
+    Private Sub dtpFechaSalida_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles dtpFechaSalida.LostFocus
         dtpCheckout.Value = dtpFechaSalida.Value
     End Sub
 
@@ -341,4 +342,5 @@
         dtpFechaPagoSenia.Value = dtpFechaReserva.Value.Date.AddDays(3)
     End Sub
 
+   
 End Class

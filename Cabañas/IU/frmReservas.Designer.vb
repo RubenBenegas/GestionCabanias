@@ -253,6 +253,7 @@ Partial Class frmReservas
         '
         'dtpCheckin
         '
+        Me.dtpCheckin.Enabled = False
         Me.dtpCheckin.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpCheckin.Location = New System.Drawing.Point(381, 99)
         Me.dtpCheckin.Name = "dtpCheckin"
@@ -261,6 +262,7 @@ Partial Class frmReservas
         '
         'dtpCheckout
         '
+        Me.dtpCheckout.Enabled = False
         Me.dtpCheckout.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpCheckout.Location = New System.Drawing.Point(381, 132)
         Me.dtpCheckout.Name = "dtpCheckout"

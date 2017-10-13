@@ -144,12 +144,13 @@
             txtIdHuesped.Text = Nothing
             txtNombreHuesped.Text = Nothing
             dtpFechaIngreso.Value = Today
-            dtpFechaSalida.Value = Today
+            dtpFechaSalida.Value = Today.AddDays(1)
+
             txtNumeroPasajeros.Text = Nothing
             txtSenia.Text = Nothing
             chkConSenia.Checked = Nothing
             dtpCheckin.Value = Today
-            dtpCheckout.Value = Today
+            dtpCheckout.Value = dtpFechaSalida.Value
             lblCostoEstadia.Visible = True
             txtCostoEstadia.Visible = True
             txtCostoEstadia.Text = Nothing
@@ -188,6 +189,7 @@
             btnConsultarCostos.Visible = True
             lblFechaSenia.Visible = True
             dtpFechaPagoSenia.Visible = True
+            dtpFechaPagoSenia.Value = Today.AddDays(3)
             lblImporteSenia.Visible = True
             txtSenia.Visible = True
 
@@ -326,4 +328,17 @@
 
 
     End Sub
+
+    Private Sub dtpFechaIngreso_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles dtpFechaIngreso.LostFocus
+        dtpCheckin.Value = dtpFechaIngreso.Value
+    End Sub
+
+    Private Sub lblFechaSalidad_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblFechaSalidad.LostFocus
+        dtpCheckout.Value = dtpFechaSalida.Value
+    End Sub
+
+    Private Sub dtpFechaReserva_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles dtpFechaReserva.LostFocus
+        dtpFechaPagoSenia.Value = dtpFechaReserva.Value.Date.AddDays(3)
+    End Sub
+
 End Class

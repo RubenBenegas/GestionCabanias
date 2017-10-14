@@ -247,14 +247,18 @@ Public Class Gastos
     Public Function GastosCalcularTotal() As Decimal
         Try
             abrirConexion()
+
             Dim Total As Decimal
             Dim objComando As New SqlCommand("GastosCalcularTotal", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
+
             Dim objDataTable As New Data.DataTable
             Dim objDataAdapter As New SqlDataAdapter(objComando)
             objDataAdapter.Fill(objDataTable)
+
             Total = objDataTable.Rows(0).Item("Total")
             Return Total
+
         Catch ex As Exception
             MsgBox(ex.Message)
         Finally
@@ -265,6 +269,29 @@ Public Class Gastos
 
 
 
+    Public Function GastosCalcularPorCategoria(ByVal idCategoria As Integer) As Decimal
+        Try
+            abrirConexion()
+
+            Dim Total As Decimal
+            Dim objComando As New SqlCommand("GastosCalcularPorCategoria", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            objComando.Parameters.AddWithValue("@IdCategoria", idCategoria)
+            Dim objDataTable As New Data.DataTable
+            Dim objDataAdapter As New SqlDataAdapter(objComando)
+            objDataAdapter.Fill(objDataTable)
+
+            Total = objDataTable.Rows(0).Item("Total")
+            Return Total
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            cerrarConexion()
+
+        End Try
+    End Function
+
 
     Public Sub GastosFiltrarPorCategoria(ByVal idCategoria As Integer, ByVal tabla As DataGridView)
         abrirConexion()
@@ -272,11 +299,12 @@ Public Class Gastos
         Dim objComando As New SqlCommand("GastosFiltrarPorCategoria", objConexion)
         objComando.CommandType = CommandType.StoredProcedure
         objComando.Parameters.AddWithValue("@idCategoria", idCategoria)
+
         Dim objDataTable As New Data.DataTable
         Dim objDataAdapter As New SqlDataAdapter(objComando)
         objDataAdapter.Fill(objDataTable)
-        tabla.DataSource = objDataTable
 
+        tabla.DataSource = objDataTable
         tabla.Columns("Id").Width = 50
         tabla.Columns("Descripcion").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 

@@ -20,7 +20,7 @@
 
     Private Sub lstGastos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Gastos.verTodos(dgvGastos)
-        Gastos.CargarComboCategoria(cmbCategoria)
+        txtTotal.Text = Gastos.GastosCalcularTotal()
 
         Dim monto As New Decimal
         monto = Gastos.GastosCalcularTotal()
@@ -81,14 +81,61 @@
     End Sub
 
     Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
-        Gastos.GastosFiltrarPorCategoria(cmbCategoria.SelectedValue, dgvGastos)
+        Dim idCategoria As New Integer
+
+        If rdServicios.Checked = True Then
+            idCategoria = 1
+            Gastos.GastosFiltrarPorCategoria(idCategoria, dgvGastos)
+            txtTotal.Text = Gastos.GastosCalcularPorCategoria(idCategoria)
+        ElseIf rdProductos.Checked = True Then
+            idCategoria = 2
+            Gastos.GastosFiltrarPorCategoria(idCategoria, dgvGastos)
+            txtTotal.Text = Gastos.GastosCalcularPorCategoria(idCategoria)
+        ElseIf rdArreglos.Checked = True Then
+            idCategoria = 3
+            Gastos.GastosFiltrarPorCategoria(idCategoria, dgvGastos)
+            txtTotal.Text = Gastos.GastosCalcularPorCategoria(idCategoria)
+        End If
+
+
+
+
+
+
+
+
+
     End Sub
 
     Private Sub btnTodos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTodos.Click
         Gastos.verTodos(dgvGastos)
+        txtTotal.Text = Gastos.GastosCalcularTotal
     End Sub
 
     Private Sub dgvGastos_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvGastos.CellContentClick
+
+    End Sub
+
+    Private Sub btnCalcular_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+        Dim idCategoria As New Integer
+
+        If rdServicios.Checked = True Then
+            idCategoria = 1
+            Gastos.GastosFiltrarPorCategoria(idCategoria, dgvGastos)
+            txtTotal.Text = Gastos.GastosCalcularPorCategoria(idCategoria)
+        ElseIf rdProductos.Checked = True Then
+            idCategoria = 2
+            Gastos.GastosFiltrarPorCategoria(idCategoria, dgvGastos)
+            txtTotal.Text = Gastos.GastosCalcularPorCategoria(idCategoria)
+        ElseIf rdArreglos.Checked = True Then
+            idCategoria = 3
+            Gastos.GastosFiltrarPorCategoria(idCategoria, dgvGastos)
+            txtTotal.Text = Gastos.GastosCalcularPorCategoria(idCategoria)
+        End If
+
+        'txtTotal.Text = Gastos.GastosCalcularPorCategoria(cmbCategoria.SelectedValue)
+
 
     End Sub
 End Class

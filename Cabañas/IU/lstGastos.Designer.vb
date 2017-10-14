@@ -30,10 +30,12 @@ Partial Class lstGastos
         Me.btnAgregar = New System.Windows.Forms.Button
         Me.btnCerrar = New System.Windows.Forms.Button
         Me.btnBuscar = New System.Windows.Forms.Button
-        Me.cmbCategoria = New System.Windows.Forms.ComboBox
         Me.btnTodos = New System.Windows.Forms.Button
-        Me.btnCalcular = New System.Windows.Forms.Button
         Me.txtTotal = New System.Windows.Forms.TextBox
+        Me.rdServicios = New System.Windows.Forms.RadioButton
+        Me.rdProductos = New System.Windows.Forms.RadioButton
+        Me.rdArreglos = New System.Windows.Forms.RadioButton
+        Me.Label1 = New System.Windows.Forms.Label
         CType(Me.dgvGastos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -130,14 +132,6 @@ Partial Class lstGastos
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = False
         '
-        'cmbCategoria
-        '
-        Me.cmbCategoria.FormattingEnabled = True
-        Me.cmbCategoria.Location = New System.Drawing.Point(161, 18)
-        Me.cmbCategoria.Name = "cmbCategoria"
-        Me.cmbCategoria.Size = New System.Drawing.Size(139, 21)
-        Me.cmbCategoria.TabIndex = 6
-        '
         'btnTodos
         '
         Me.btnTodos.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
@@ -151,25 +145,56 @@ Partial Class lstGastos
         Me.btnTodos.Text = "X"
         Me.btnTodos.UseVisualStyleBackColor = False
         '
-        'btnCalcular
-        '
-        Me.btnCalcular.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnCalcular.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnCalcular.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCalcular.ForeColor = System.Drawing.Color.White
-        Me.btnCalcular.Location = New System.Drawing.Point(488, 428)
-        Me.btnCalcular.Name = "btnCalcular"
-        Me.btnCalcular.Size = New System.Drawing.Size(90, 30)
-        Me.btnCalcular.TabIndex = 8
-        Me.btnCalcular.Text = "Calcular"
-        Me.btnCalcular.UseVisualStyleBackColor = False
-        '
         'txtTotal
         '
-        Me.txtTotal.Location = New System.Drawing.Point(584, 434)
+        Me.txtTotal.Enabled = False
+        Me.txtTotal.Location = New System.Drawing.Point(547, 434)
         Me.txtTotal.Name = "txtTotal"
-        Me.txtTotal.Size = New System.Drawing.Size(100, 20)
+        Me.txtTotal.Size = New System.Drawing.Size(137, 20)
         Me.txtTotal.TabIndex = 9
+        Me.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'rdServicios
+        '
+        Me.rdServicios.AutoSize = True
+        Me.rdServicios.Location = New System.Drawing.Point(161, 19)
+        Me.rdServicios.Name = "rdServicios"
+        Me.rdServicios.Size = New System.Drawing.Size(68, 17)
+        Me.rdServicios.TabIndex = 10
+        Me.rdServicios.TabStop = True
+        Me.rdServicios.Text = "Servicios"
+        Me.rdServicios.UseVisualStyleBackColor = True
+        '
+        'rdProductos
+        '
+        Me.rdProductos.AutoSize = True
+        Me.rdProductos.Location = New System.Drawing.Point(235, 19)
+        Me.rdProductos.Name = "rdProductos"
+        Me.rdProductos.Size = New System.Drawing.Size(73, 17)
+        Me.rdProductos.TabIndex = 11
+        Me.rdProductos.TabStop = True
+        Me.rdProductos.Text = "Productos"
+        Me.rdProductos.UseVisualStyleBackColor = True
+        '
+        'rdArreglos
+        '
+        Me.rdArreglos.AutoSize = True
+        Me.rdArreglos.Location = New System.Drawing.Point(314, 19)
+        Me.rdArreglos.Name = "rdArreglos"
+        Me.rdArreglos.Size = New System.Drawing.Size(63, 17)
+        Me.rdArreglos.TabIndex = 12
+        Me.rdArreglos.TabStop = True
+        Me.rdArreglos.Text = "Arreglos"
+        Me.rdArreglos.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(494, 437)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(37, 13)
+        Me.Label1.TabIndex = 14
+        Me.Label1.Text = "Costo:"
         '
         'lstGastos
         '
@@ -177,10 +202,12 @@ Partial Class lstGastos
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(984, 461)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.rdArreglos)
+        Me.Controls.Add(Me.rdProductos)
+        Me.Controls.Add(Me.rdServicios)
         Me.Controls.Add(Me.txtTotal)
-        Me.Controls.Add(Me.btnCalcular)
         Me.Controls.Add(Me.btnTodos)
-        Me.Controls.Add(Me.cmbCategoria)
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.btnBorrar)
@@ -203,8 +230,10 @@ Partial Class lstGastos
     Friend WithEvents btnAgregar As System.Windows.Forms.Button
     Friend WithEvents btnCerrar As System.Windows.Forms.Button
     Friend WithEvents btnBuscar As System.Windows.Forms.Button
-    Friend WithEvents cmbCategoria As System.Windows.Forms.ComboBox
     Friend WithEvents btnTodos As System.Windows.Forms.Button
-    Friend WithEvents btnCalcular As System.Windows.Forms.Button
     Friend WithEvents txtTotal As System.Windows.Forms.TextBox
+    Friend WithEvents rdServicios As System.Windows.Forms.RadioButton
+    Friend WithEvents rdProductos As System.Windows.Forms.RadioButton
+    Friend WithEvents rdArreglos As System.Windows.Forms.RadioButton
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class

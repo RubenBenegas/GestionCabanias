@@ -189,7 +189,19 @@
             btnConsultarCostos.Visible = True
             lblFechaSenia.Visible = True
             dtpFechaPagoSenia.Visible = True
-            dtpFechaPagoSenia.Value = Today.AddDays(3)
+
+
+            If dtpFechaReserva.Value.DayOfWeek = DayOfWeek.Friday Then
+                dtpFechaPagoSenia.Value = dtpFechaReserva.Value.Date.AddDays(3)
+            ElseIf dtpFechaReserva.Value.DayOfWeek = DayOfWeek.Saturday Then
+                dtpFechaPagoSenia.Value = dtpFechaReserva.Value.Date.AddDays(2)
+            Else
+                dtpFechaPagoSenia.Value = dtpFechaReserva.Value.Date.AddDays(1)
+            End If
+
+
+
+
             lblImporteSenia.Visible = True
             txtSenia.Visible = True
 
@@ -327,7 +339,6 @@
         frmCancelaciones.modificar = True
         frmCancelaciones.ShowDialog()
 
-
     End Sub
 
     Private Sub dtpFechaIngreso_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles dtpFechaIngreso.LostFocus
@@ -339,7 +350,13 @@
     End Sub
 
     Private Sub dtpFechaReserva_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles dtpFechaReserva.LostFocus
-        dtpFechaPagoSenia.Value = dtpFechaReserva.Value.Date.AddDays(3)
+        If dtpFechaReserva.Value.DayOfWeek = DayOfWeek.Friday Then
+            dtpFechaPagoSenia.Value = dtpFechaReserva.Value.Date.AddDays(3)
+        ElseIf dtpFechaReserva.Value.DayOfWeek = DayOfWeek.Saturday Then
+            dtpFechaPagoSenia.Value = dtpFechaReserva.Value.Date.AddDays(2)
+        Else
+            dtpFechaPagoSenia.Value = dtpFechaReserva.Value.Date.AddDays(1)
+        End If
     End Sub
 
    

@@ -417,7 +417,7 @@ Partial Class frmReservas
         Me.txtReembolso.Location = New System.Drawing.Point(200, 526)
         Me.txtReembolso.Multiline = True
         Me.txtReembolso.Name = "txtReembolso"
-        Me.txtReembolso.Size = New System.Drawing.Size(162, 30)
+        Me.txtReembolso.Size = New System.Drawing.Size(131, 30)
         Me.txtReembolso.TabIndex = 41
         Me.txtReembolso.Visible = False
         '

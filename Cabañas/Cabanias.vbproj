@@ -301,6 +301,9 @@
     <EmbeddedResource Include="IU\frmEstadosReserva.resx">
       <DependentUpon>frmEstadosReserva.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IU\frmPagos.resx">
+      <DependentUpon>frmPagos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IU\lstCabaniaServicios.resx">
       <DependentUpon>lstCabaniaServicios.vb</DependentUpon>
     </EmbeddedResource>

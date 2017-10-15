@@ -141,7 +141,7 @@ Public Class Pagos
 
         Try
             abrirConexion()
-            Dim servicio As New Servicios
+            Dim Pagos As New Pagos
             Dim objComando As New SqlCommand("PagosRecuperar", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
             objComando.Parameters.AddWithValue("@IdPagos", IdPago)

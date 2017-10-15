@@ -39,6 +39,7 @@ Partial Class frmPrincipal
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
         Me.PruebaABMReservasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.PagosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -55,7 +56,7 @@ Partial Class frmPrincipal
         '
         'FileMenu
         '
-        Me.FileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CabañasToolStripMenuItem, Me.HuespedesToolStripMenuItem, Me.PersonalToolStripMenuItem, Me.InsumosToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.TipoCabaniaToolStripMenuItem, Me.ReservasToolStripMenuItem, Me.ServiciosToolStripMenuItem, Me.ToolStripMenuItem2, Me.EstadoToolStripMenuItem})
+        Me.FileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CabañasToolStripMenuItem, Me.HuespedesToolStripMenuItem, Me.PersonalToolStripMenuItem, Me.InsumosToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.TipoCabaniaToolStripMenuItem, Me.ReservasToolStripMenuItem, Me.ServiciosToolStripMenuItem, Me.ToolStripMenuItem2, Me.EstadoToolStripMenuItem, Me.PagosToolStripMenuItem})
         Me.FileMenu.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.FileMenu.ForeColor = System.Drawing.Color.Black
         Me.FileMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -164,6 +165,12 @@ Partial Class frmPrincipal
         Me.PruebaABMReservasToolStripMenuItem.Size = New System.Drawing.Size(130, 19)
         Me.PruebaABMReservasToolStripMenuItem.Text = "Prueba ABMReservas"
         '
+        'PagosToolStripMenuItem
+        '
+        Me.PagosToolStripMenuItem.Name = "PagosToolStripMenuItem"
+        Me.PagosToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.PagosToolStripMenuItem.Text = "Pagos"
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -201,5 +208,6 @@ Partial Class frmPrincipal
     Friend WithEvents ServiciosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents EstadoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PagosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

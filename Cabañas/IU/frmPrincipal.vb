@@ -68,6 +68,10 @@ Public Class frmPrincipal
     Private Sub EstadoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EstadoToolStripMenuItem.Click
         lstEstadosReservas.ShowDialog()
 
+    End Sub
+
+    Private Sub PagosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PagosToolStripMenuItem.Click
+        lstPagos.ShowDialog()
 
     End Sub
 End Class

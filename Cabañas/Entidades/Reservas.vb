@@ -556,4 +556,22 @@ Public Class Reservas
         cerrarConexion()
 
     End Sub
+
+    Public Sub ReservasTraerSinSenia(ByVal tabla As DataGridView)
+        abrirConexion()
+
+        Dim objComando As New SqlCommand("ReservasTraerSinSenia", objConexion)
+        objComando.CommandType = CommandType.StoredProcedure
+
+        Dim objDataTable As New Data.DataTable
+        Dim objDataAdapter As New SqlDataAdapter(objComando)
+        objDataAdapter.Fill(objDataTable)
+        tabla.DataSource = objDataTable
+
+        tabla.Columns("Id").Width = 50
+        tabla.Columns("Nombre").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+
+        cerrarConexion()
+
+    End Sub
 End Class

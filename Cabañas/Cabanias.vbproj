@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{BE3CA8BE-78C3-47FF-98BA-CD4F533BBBB4}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Cabañas.frmPrincipal</StartupObject>
+    <StartupObject>Cabañas.lstPagosReservas</StartupObject>
     <RootNamespace>Cabañas</RootNamespace>
     <AssemblyName>Cabañas</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -141,6 +141,12 @@
       <DependentUpon>lstPagos.vb</DependentUpon>
     </Compile>
     <Compile Include="IU\lstPagos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IU\lstPagosReservas.Designer.vb">
+      <DependentUpon>lstPagosReservas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IU\lstPagosReservas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="IU\lstReservasAdicionales.Designer.vb">
@@ -316,6 +322,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IU\lstPagos.resx">
       <DependentUpon>lstPagos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IU\lstPagosReservas.resx">
+      <DependentUpon>lstPagosReservas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IU\lstReservasAdicionales.resx">
       <DependentUpon>lstReservasAdicionales.vb</DependentUpon>

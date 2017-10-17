@@ -55,7 +55,7 @@
             pagos.IdReserva = txtIdReserva.Text
 
             If modificar = True Then
-                If pagos.PagoModificar(pagos) = True Then
+                If pagos.PagosModificar(pagos) = True Then
                     MsgBox("El pago ha sido correctamente modificado.")
                     pagos.PagosTraerTab(lstPagos.dgvPagos)
                 Else

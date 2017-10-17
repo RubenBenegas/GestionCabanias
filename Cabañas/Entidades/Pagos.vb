@@ -89,7 +89,7 @@ Public Class Pagos
         End Try
     End Function
 
-    Public Function PagoModificar(ByVal Pago As Pagos) As Boolean
+    Public Function PagosModificar(ByVal Pago As Pagos) As Boolean
 
         Try
             abrirConexion()

@@ -81,4 +81,8 @@
     Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
         Close()
     End Sub
+
+    Private Sub btnConsulta_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnConsulta.Click
+        lstPagosReservas.ShowDialog()
+    End Sub
 End Class

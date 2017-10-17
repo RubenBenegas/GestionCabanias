@@ -40,7 +40,7 @@
 
             txtId.Text = Nothing
             txtMonto.Text = Nothing
-            dtpFecha.Value = Nothing
+            dtpFecha.Value = Today
             txtIdReserva.Text = Nothing
             Me.Text = "Agregar pago"
         End If

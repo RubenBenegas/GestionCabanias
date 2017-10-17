@@ -39,6 +39,16 @@
             '    MsgBox("No hay elementos para modificar.", MsgBoxStyle.Information, "Mensaje")
         End If
     End Sub
+
+    Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
+        frmPagos.modificar = False
+        frmPagos.IdPago = 0
+        frmPagos.ShowDialog()
+    End Sub
+
+    Private Sub btnCerrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCerrar.Click
+        Close()
+    End Sub
 End Class
 
 

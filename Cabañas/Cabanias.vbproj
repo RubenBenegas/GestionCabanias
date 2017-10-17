@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{BE3CA8BE-78C3-47FF-98BA-CD4F533BBBB4}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Cabañas.lstPagosReservas</StartupObject>
+    <StartupObject>Cabañas.frmPrincipal</StartupObject>
     <RootNamespace>Cabañas</RootNamespace>
     <AssemblyName>Cabañas</AssemblyName>
     <FileAlignment>512</FileAlignment>

@@ -96,6 +96,7 @@ Partial Class frmPagos
         '
         'txtIdReserva
         '
+        Me.txtIdReserva.Enabled = False
         Me.txtIdReserva.Location = New System.Drawing.Point(92, 95)
         Me.txtIdReserva.Name = "txtIdReserva"
         Me.txtIdReserva.Size = New System.Drawing.Size(149, 20)

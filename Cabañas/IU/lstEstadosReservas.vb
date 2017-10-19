@@ -69,7 +69,7 @@
         frmReservas.lblImporteSenia.Visible = False
         frmReservas.txtSenia.Visible = False
 
-        frmReservas.btnEstadoReserva.Visible = False
+        frmReservas.btnCancelarReserva.Visible = False
         frmReservas.btnDetalleCancelacion.Visible = True
 
 

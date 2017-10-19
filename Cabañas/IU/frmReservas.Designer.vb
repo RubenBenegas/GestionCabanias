@@ -69,7 +69,7 @@ Partial Class frmReservas
         Me.lblFechaSenia = New System.Windows.Forms.Label
         Me.txtFaltaDePagar = New System.Windows.Forms.TextBox
         Me.lblFaltaPAgar = New System.Windows.Forms.Label
-        Me.btnEstadoReserva = New System.Windows.Forms.Button
+        Me.btnCancelarReserva = New System.Windows.Forms.Button
         Me.btnDetalleCancelacion = New System.Windows.Forms.Button
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvServiciosAdicionales, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -506,14 +506,14 @@ Partial Class frmReservas
         Me.lblFaltaPAgar.TabIndex = 38
         Me.lblFaltaPAgar.Text = "Falta de pagar:"
         '
-        'btnEstadoReserva
+        'btnCancelarReserva
         '
-        Me.btnEstadoReserva.Location = New System.Drawing.Point(372, 167)
-        Me.btnEstadoReserva.Name = "btnEstadoReserva"
-        Me.btnEstadoReserva.Size = New System.Drawing.Size(114, 23)
-        Me.btnEstadoReserva.TabIndex = 49
-        Me.btnEstadoReserva.Text = "Estado de Reserva"
-        Me.btnEstadoReserva.UseVisualStyleBackColor = True
+        Me.btnCancelarReserva.Location = New System.Drawing.Point(372, 167)
+        Me.btnCancelarReserva.Name = "btnCancelarReserva"
+        Me.btnCancelarReserva.Size = New System.Drawing.Size(114, 23)
+        Me.btnCancelarReserva.TabIndex = 49
+        Me.btnCancelarReserva.Text = "Cancelar Reserva"
+        Me.btnCancelarReserva.UseVisualStyleBackColor = True
         '
         'btnDetalleCancelacion
         '
@@ -530,7 +530,7 @@ Partial Class frmReservas
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(503, 616)
         Me.Controls.Add(Me.btnDetalleCancelacion)
-        Me.Controls.Add(Me.btnEstadoReserva)
+        Me.Controls.Add(Me.btnCancelarReserva)
         Me.Controls.Add(Me.dtpFechaPagoSenia)
         Me.Controls.Add(Me.lblFechaSenia)
         Me.Controls.Add(Me.lblImporteSenia)
@@ -634,6 +634,6 @@ Partial Class frmReservas
     Friend WithEvents lblFechaSenia As System.Windows.Forms.Label
     Friend WithEvents lblFaltaPAgar As System.Windows.Forms.Label
     Friend WithEvents txtFaltaDePagar As System.Windows.Forms.TextBox
-    Friend WithEvents btnEstadoReserva As System.Windows.Forms.Button
+    Friend WithEvents btnCancelarReserva As System.Windows.Forms.Button
     Friend WithEvents btnDetalleCancelacion As System.Windows.Forms.Button
 End Class

@@ -572,6 +572,28 @@ Public Class Reservas
         tabla.Columns("Nombre").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
         cerrarConexion()
-
     End Sub
+
+
+
+    Public Function ReservasActualizarEstado(ByVal idEstado As Integer, ByVal idReserva As Integer) As Boolean
+
+        Try
+            abrirConexion()
+            Dim objComando As New SqlCommand("ReservasActualizarEstado", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            objComando.Parameters.AddWithValue("@IdEstadoReserva", idEstado)
+            objComando.Parameters.AddWithValue("@IdReserva", idReserva)
+            If objComando.ExecuteNonQuery() Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            cerrarConexion()
+        End Try
+    End Function
 End Class

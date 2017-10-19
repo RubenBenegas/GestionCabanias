@@ -107,12 +107,6 @@
     <Compile Include="IU\frmCancelaciones.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IU\frmEstadosReserva.Designer.vb">
-      <DependentUpon>frmEstadosReserva.vb</DependentUpon>
-    </Compile>
-    <Compile Include="IU\frmEstadosReserva.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="IU\frmPagos.Designer.vb">
       <DependentUpon>frmPagos.vb</DependentUpon>
     </Compile>
@@ -304,9 +298,6 @@
   <ItemGroup>
     <EmbeddedResource Include="IU\frmCancelaciones.resx">
       <DependentUpon>frmCancelaciones.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="IU\frmEstadosReserva.resx">
-      <DependentUpon>frmEstadosReserva.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IU\frmPagos.resx">
       <DependentUpon>frmPagos.vb</DependentUpon>

@@ -23,6 +23,7 @@
     End Property
 
     Dim pagos As New Pagos
+    Dim reserva As New Reservas
     Private Sub frmPagos_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
         ErrorProvider1.Clear()
@@ -42,6 +43,7 @@
             txtMonto.Text = Nothing
             dtpFecha.Value = Today
             txtIdReserva.Text = Nothing
+            reserva.IdEstado = 2
             Me.Text = "Agregar pago"
         End If
     End Sub
@@ -56,6 +58,7 @@
 
             If modificar = True Then
                 If pagos.PagosModificar(pagos) = True Then
+                    reserva.ReservasActualizarEstado(2, txtIdReserva.Text)
                     MsgBox("El pago ha sido correctamente modificado.")
                     pagos.PagosTraerTab(lstPagos.dgvPagos)
                 Else
@@ -63,6 +66,7 @@
                 End If
             Else
                 If pagos.PagosInsertar(pagos) = True Then
+                    reserva.ReservasActualizarEstado(2, txtIdReserva.Text)
                     MsgBox("El pago ha sido correctamente insertado.")
                     pagos.PagosTraerTab(lstPagos.dgvPagos)
                 Else

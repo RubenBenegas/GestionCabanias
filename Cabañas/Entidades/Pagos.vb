@@ -94,9 +94,9 @@ Public Class Pagos
         Try
             abrirConexion()
 
-            Dim objComando As New SqlCommand("ServiciosModificar", objConexion)
+            Dim objComando As New SqlCommand("PagosModificar", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
-            objComando.Parameters.AddWithValue("@Id", Pago.Id)
+            objComando.Parameters.AddWithValue("@IdPago", Pago.Id)
             objComando.Parameters.AddWithValue("@Fecha", Pago.Fecha)
             objComando.Parameters.AddWithValue("@Monto", Pago.Monto)
             objComando.Parameters.AddWithValue("@IdReserva", Pago.IdReserva)

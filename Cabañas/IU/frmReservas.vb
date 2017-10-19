@@ -74,6 +74,8 @@
             lblImporteSenia.Visible = True
             txtSenia.Visible = True
 
+            btnCancelarReserva.Visible = True
+
             idEstado = reserva.IdEstado
 
             If idEstado = 4 Then
@@ -99,7 +101,7 @@
                 txtReembolso.Visible = True
                 txtReembolso.Text = cancelacion.Reembolso
                 lblReembolso.Visible = True
-                btnEstadoReserva.Visible = False
+                btnCancelarReserva.Visible = False
                 btnDetalleCancelacion.Visible = True
 
                 'ACA CALCULAMOS EL REEMBOLSO Y HAY QUE LLEVARLO PARA EL LADO DE CANCELACIONES
@@ -134,7 +136,7 @@
                 dtpFechaPagoSenia.Visible = True
                 lblImporteSenia.Visible = True
                 txtSenia.Visible = True
-                btnEstadoReserva.Visible = True
+                btnCancelarReserva.Visible = True
                 btnDetalleCancelacion.Visible = False
             End If
             Me.Text = "Modificar reserva"
@@ -190,7 +192,6 @@
             lblFechaSenia.Visible = True
             dtpFechaPagoSenia.Visible = True
 
-
             If dtpFechaReserva.Value.DayOfWeek = DayOfWeek.Friday Then
                 dtpFechaPagoSenia.Value = dtpFechaReserva.Value.Date.AddDays(3)
             ElseIf dtpFechaReserva.Value.DayOfWeek = DayOfWeek.Saturday Then
@@ -206,7 +207,7 @@
             txtSenia.Visible = True
 
 
-            btnEstadoReserva.Visible = True
+            btnCancelarReserva.Visible = False
             btnDetalleCancelacion.Visible = False
 
             idEstado = 1
@@ -330,8 +331,9 @@
 
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEstadoReserva.Click
-        frmEstadosReserva.ShowDialog()
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelarReserva.Click
+        frmCancelaciones.idReserva = txtId.Text
+        frmCancelaciones.ShowDialog()
     End Sub
 
     Private Sub btnDetalleCancelacion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDetalleCancelacion.Click

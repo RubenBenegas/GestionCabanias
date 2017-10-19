@@ -94,6 +94,7 @@
 
         If modificar = True Then
             If cancelacion.ModificarCancelacion(cancelacion) = True Then
+                frmReservas.idEstado = 4
                 MsgBox("La cancelacion ha sido correctamente modificada.")
 
             Else
@@ -101,6 +102,7 @@
             End If
         Else
             If cancelacion.InsertarCancelacion(cancelacion) = True Then
+                frmReservas.idEstado = 4
                 MsgBox("La cancelacion ha sido correctamente insertada.")
 
             Else
@@ -147,7 +149,7 @@
         frmReservas.lblImporteSenia.Visible = False
         frmReservas.txtSenia.Visible = False
 
-        frmReservas.btnEstadoReserva.Visible = False
+        frmReservas.btnCancelarReserva.Visible = False
         frmReservas.btnDetalleCancelacion.Visible = True
 
         Close()
@@ -168,28 +170,28 @@
 
         End If
 
-        frmReservas.lblCostoEstadia.Visible = False
-        frmReservas.txtCostoEstadia.Visible = False
+        'frmReservas.lblCostoEstadia.Visible = False
+        'frmReservas.txtCostoEstadia.Visible = False
 
-        frmReservas.lblCostoAdicionales.Visible = False
-        frmReservas.txtCostoAdicionales.Visible = False
+        'frmReservas.lblCostoAdicionales.Visible = False
+        'frmReservas.txtCostoAdicionales.Visible = False
 
-        frmReservas.lblCostoTotal.Visible = False
-        frmReservas.txtCostoTotal.Visible = False
+        'frmReservas.lblCostoTotal.Visible = False
+        'frmReservas.txtCostoTotal.Visible = False
 
-        frmReservas.lblFaltaPAgar.Visible = False
-        frmReservas.txtFaltaDePagar.Visible = False
+        'frmReservas.lblFaltaPAgar.Visible = False
+        'frmReservas.txtFaltaDePagar.Visible = False
 
-        frmReservas.lblReservaCancelada.Visible = True
-        frmReservas.btnAgregar.Enabled = False
-        frmReservas.btnBorrar.Enabled = False
-        frmReservas.btnConsultarCostos.Visible = False
-        frmReservas.lblFechaSenia.Visible = False
-        frmReservas.dtpFechaPagoSenia.Visible = False
-        frmReservas.lblImporteSenia.Visible = False
-        frmReservas.txtSenia.Visible = False
+        'frmReservas.lblReservaCancelada.Visible = True
+        'frmReservas.btnAgregar.Enabled = False
+        'frmReservas.btnBorrar.Enabled = False
+        'frmReservas.btnConsultarCostos.Visible = False
+        'frmReservas.lblFechaSenia.Visible = False
+        'frmReservas.dtpFechaPagoSenia.Visible = False
+        'frmReservas.lblImporteSenia.Visible = False
+        'frmReservas.txtSenia.Visible = False
 
-        frmReservas.btnEstadoReserva.Visible = False
-        frmReservas.btnDetalleCancelacion.Visible = True
+        'frmReservas.btnEstadoReserva.Visible = False
+        'frmReservas.btnDetalleCancelacion.Visible = True
     End Sub
 End Class

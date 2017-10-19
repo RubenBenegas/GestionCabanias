@@ -36,7 +36,6 @@ Partial Class lstHuesped
         '
         Me.dgvHuesped.AllowUserToAddRows = False
         Me.dgvHuesped.AllowUserToDeleteRows = False
-        Me.dgvHuesped.AllowUserToOrderColumns = True
         Me.dgvHuesped.AllowUserToResizeColumns = False
         Me.dgvHuesped.AllowUserToResizeRows = False
         Me.dgvHuesped.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _

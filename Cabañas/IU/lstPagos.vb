@@ -17,7 +17,7 @@
     Private Sub btnEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminar.Click
         If dgvPagos.Rows.Count <> 0 Then
             Pago.Id = dgvPagos.Item("id", dgvPagos.CurrentRow.Index).Value
-            Dim mensaje As DialogResult = MsgBox("Està seguro que quiere borrar ...", MsgBoxStyle.OkCancel, "Advertencia")
+            Dim mensaje As DialogResult = MsgBox("¿Està seguro que quiere borrar?", MsgBoxStyle.OkCancel, "Advertencia")
             If mensaje = Windows.Forms.DialogResult.OK Then
                 If Pago.PagosBorrar(Pago.Id) Then
                     MessageBox.Show("El cliente se ha borrado correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information)

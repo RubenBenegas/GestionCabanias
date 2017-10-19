@@ -144,7 +144,7 @@ Public Class Pagos
             Dim Pagos As New Pagos
             Dim objComando As New SqlCommand("PagosRecuperar", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
-            objComando.Parameters.AddWithValue("@IdPagos", IdPago)
+            objComando.Parameters.AddWithValue("@IdPago", IdPago)
             Dim objDataAdapter As New SqlDataAdapter(objComando)
             Dim objDataTable As New Data.DataTable
             objDataAdapter.Fill(objDataTable)

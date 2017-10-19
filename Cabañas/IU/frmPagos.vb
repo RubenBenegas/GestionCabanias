@@ -64,7 +64,7 @@
             Else
                 If pagos.PagosInsertar(pagos) = True Then
                     MsgBox("El pago ha sido correctamente insertado.")
-                    pagos.PagosTraerTab(lstPersonal.dgvPersonal)
+                    pagos.PagosTraerTab(lstPagos.dgvPagos)
                 Else
                     MsgBox("Error al insertar pago." + Chr(13) + "Intentelo de nuevo.")
                 End If

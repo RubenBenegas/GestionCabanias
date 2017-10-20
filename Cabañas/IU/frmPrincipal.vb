@@ -74,4 +74,11 @@ Public Class frmPrincipal
         lstPagos.ShowDialog()
 
     End Sub
+
+    Private Sub CancelacionesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CancelacionesToolStripMenuItem.Click
+        lstCancelaciones.ShowDialog()
+
+    End Sub
+
+
 End Class

@@ -37,10 +37,10 @@ Partial Class frmPrincipal
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem
         Me.EstadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.PagosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.CancelacionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
         Me.PruebaABMReservasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.CancelacionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -153,6 +153,12 @@ Partial Class frmPrincipal
         Me.PagosToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.PagosToolStripMenuItem.Text = "Pagos"
         '
+        'CancelacionesToolStripMenuItem
+        '
+        Me.CancelacionesToolStripMenuItem.Name = "CancelacionesToolStripMenuItem"
+        Me.CancelacionesToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.CancelacionesToolStripMenuItem.Text = "Cancelaciones"
+        '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
@@ -171,12 +177,6 @@ Partial Class frmPrincipal
         Me.PruebaABMReservasToolStripMenuItem.Name = "PruebaABMReservasToolStripMenuItem"
         Me.PruebaABMReservasToolStripMenuItem.Size = New System.Drawing.Size(130, 19)
         Me.PruebaABMReservasToolStripMenuItem.Text = "Prueba ABMReservas"
-        '
-        'CancelacionesToolStripMenuItem
-        '
-        Me.CancelacionesToolStripMenuItem.Name = "CancelacionesToolStripMenuItem"
-        Me.CancelacionesToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
-        Me.CancelacionesToolStripMenuItem.Text = "Cancelaciones"
         '
         'frmPrincipal
         '

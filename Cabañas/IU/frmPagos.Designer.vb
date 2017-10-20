@@ -62,7 +62,7 @@ Partial Class frmPagos
         '
         Me.lblMonto.AutoSize = True
         Me.lblMonto.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMonto.Location = New System.Drawing.Point(12, 70)
+        Me.lblMonto.Location = New System.Drawing.Point(12, 90)
         Me.lblMonto.Name = "lblMonto"
         Me.lblMonto.Size = New System.Drawing.Size(42, 13)
         Me.lblMonto.TabIndex = 2
@@ -72,7 +72,7 @@ Partial Class frmPagos
         '
         Me.lblIdReserva.AutoSize = True
         Me.lblIdReserva.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblIdReserva.Location = New System.Drawing.Point(12, 102)
+        Me.lblIdReserva.Location = New System.Drawing.Point(12, 68)
         Me.lblIdReserva.Name = "lblIdReserva"
         Me.lblIdReserva.Size = New System.Drawing.Size(65, 13)
         Me.lblIdReserva.TabIndex = 3
@@ -88,7 +88,7 @@ Partial Class frmPagos
         '
         'txtMonto
         '
-        Me.txtMonto.Location = New System.Drawing.Point(92, 67)
+        Me.txtMonto.Location = New System.Drawing.Point(92, 87)
         Me.txtMonto.Name = "txtMonto"
         Me.txtMonto.Size = New System.Drawing.Size(149, 20)
         Me.txtMonto.TabIndex = 6
@@ -97,7 +97,7 @@ Partial Class frmPagos
         'txtIdReserva
         '
         Me.txtIdReserva.Enabled = False
-        Me.txtIdReserva.Location = New System.Drawing.Point(92, 95)
+        Me.txtIdReserva.Location = New System.Drawing.Point(92, 61)
         Me.txtIdReserva.Name = "txtIdReserva"
         Me.txtIdReserva.Size = New System.Drawing.Size(149, 20)
         Me.txtIdReserva.TabIndex = 7
@@ -105,7 +105,7 @@ Partial Class frmPagos
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(68, 130)
+        Me.btnAceptar.Location = New System.Drawing.Point(73, 125)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
         Me.btnAceptar.TabIndex = 8
@@ -114,7 +114,7 @@ Partial Class frmPagos
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(149, 130)
+        Me.btnCancelar.Location = New System.Drawing.Point(154, 125)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
         Me.btnCancelar.TabIndex = 9
@@ -135,7 +135,7 @@ Partial Class frmPagos
         '
         'btnConsulta
         '
-        Me.btnConsulta.Location = New System.Drawing.Point(247, 93)
+        Me.btnConsulta.Location = New System.Drawing.Point(247, 59)
         Me.btnConsulta.Name = "btnConsulta"
         Me.btnConsulta.Size = New System.Drawing.Size(32, 23)
         Me.btnConsulta.TabIndex = 11
@@ -147,7 +147,7 @@ Partial Class frmPagos
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(307, 165)
+        Me.ClientSize = New System.Drawing.Size(307, 161)
         Me.Controls.Add(Me.btnConsulta)
         Me.Controls.Add(Me.dtpFecha)
         Me.Controls.Add(Me.btnCancelar)

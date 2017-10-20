@@ -32,6 +32,7 @@ Partial Class lstCabaniaServicios
         '
         Me.Aceptarbtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Aceptarbtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Aceptarbtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Aceptarbtn.Location = New System.Drawing.Point(148, 320)
         Me.Aceptarbtn.Name = "Aceptarbtn"
         Me.Aceptarbtn.Size = New System.Drawing.Size(90, 30)
@@ -43,6 +44,7 @@ Partial Class lstCabaniaServicios
         '
         Me.Cancelarbtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Cancelarbtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Cancelarbtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Cancelarbtn.Location = New System.Drawing.Point(244, 320)
         Me.Cancelarbtn.Name = "Cancelarbtn"
         Me.Cancelarbtn.Size = New System.Drawing.Size(90, 30)

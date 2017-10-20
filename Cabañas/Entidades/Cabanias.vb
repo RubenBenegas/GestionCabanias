@@ -278,7 +278,7 @@ Public Class Cabanias
         tabla.DataSource = objDataTable
 
         tabla.Columns("Id").Width = 50
-
+        tabla.Columns("Descripcion").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         cerrarConexion()
 
     End Sub

@@ -89,4 +89,8 @@
     Private Sub btnConsulta_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnConsulta.Click
         lstPagosReservas.ShowDialog()
     End Sub
+
+    Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
+        lstPagosAdicionales.ShowDialog()
+    End Sub
 End Class

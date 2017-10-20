@@ -63,8 +63,8 @@ Partial Class frmPrincipal
         Me.FileMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.FileMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder
         Me.FileMenu.Name = "FileMenu"
-        Me.FileMenu.Size = New System.Drawing.Size(84, 19)
-        Me.FileMenu.Text = "Formularios"
+        Me.FileMenu.Size = New System.Drawing.Size(74, 19)
+        Me.FileMenu.Text = "Secciones"
         '
         'CabañasToolStripMenuItem
         '

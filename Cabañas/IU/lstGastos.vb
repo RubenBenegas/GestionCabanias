@@ -11,10 +11,6 @@
         End Set
     End Property
 
-
-
-
-
     Dim Gastos As New Gastos
 
 
@@ -22,9 +18,6 @@
         Gastos.verTodos(dgvGastos)
         txtTotal.Text = Gastos.GastosCalcularTotal()
 
-        Dim monto As New Decimal
-        monto = Gastos.GastosCalcularTotal()
-        MessageBox.Show(monto)
     End Sub
 
     Private Sub btnSalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)

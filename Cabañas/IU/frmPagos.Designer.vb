@@ -35,7 +35,10 @@ Partial Class frmPagos
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.dtpFecha = New System.Windows.Forms.DateTimePicker
         Me.btnConsulta = New System.Windows.Forms.Button
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView
+        Me.btnAgregar = New System.Windows.Forms.Button
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblId
@@ -105,7 +108,7 @@ Partial Class frmPagos
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(73, 125)
+        Me.btnAceptar.Location = New System.Drawing.Point(92, 357)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
         Me.btnAceptar.TabIndex = 8
@@ -114,7 +117,7 @@ Partial Class frmPagos
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(154, 125)
+        Me.btnCancelar.Location = New System.Drawing.Point(204, 357)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
         Me.btnCancelar.TabIndex = 9
@@ -142,12 +145,31 @@ Partial Class frmPagos
         Me.btnConsulta.Text = "..."
         Me.btnConsulta.UseVisualStyleBackColor = True
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(15, 141)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(264, 195)
+        Me.DataGridView1.TabIndex = 12
+        '
+        'btnAgregar
+        '
+        Me.btnAgregar.Location = New System.Drawing.Point(285, 141)
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
+        Me.btnAgregar.TabIndex = 13
+        Me.btnAgregar.Text = "Agregar"
+        Me.btnAgregar.UseVisualStyleBackColor = True
+        '
         'frmPagos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(307, 161)
+        Me.ClientSize = New System.Drawing.Size(368, 392)
+        Me.Controls.Add(Me.btnAgregar)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnConsulta)
         Me.Controls.Add(Me.dtpFecha)
         Me.Controls.Add(Me.btnCancelar)
@@ -164,6 +186,7 @@ Partial Class frmPagos
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmPagos"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -180,4 +203,6 @@ Partial Class frmPagos
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
     Friend WithEvents dtpFecha As System.Windows.Forms.DateTimePicker
     Friend WithEvents btnConsulta As System.Windows.Forms.Button
+    Friend WithEvents btnAgregar As System.Windows.Forms.Button
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
 End Class

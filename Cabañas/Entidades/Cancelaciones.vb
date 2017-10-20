@@ -58,6 +58,28 @@ Public Class Cancelaciones
         End Set
     End Property
 
+    Public Sub TraerTabCancelaciones(ByVal tabla As DataGridView)
+        abrirConexion()
+
+        Dim objComando As New SqlCommand("CancelacionesTraerTab", objConexion)
+        objComando.CommandType = CommandType.StoredProcedure
+
+        Dim objDataTable As New Data.DataTable
+        Dim objDataAdapter As New SqlDataAdapter(objComando)
+        objDataAdapter.Fill(objDataTable)
+        tabla.DataSource = objDataTable
+
+        tabla.Columns("Id").Width = 50
+        tabla.Columns("fCancelacion").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        tabla.Columns("Reembolso").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        tabla.Columns("IdReserva").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        tabla.Columns("Descripcion").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+
+        cerrarConexion()
+
+    End Sub
+
+
     Public Function InsertarCancelacion(ByVal cancelacion As Cancelaciones) As Boolean
 
         Try

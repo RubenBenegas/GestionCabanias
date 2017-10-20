@@ -94,7 +94,7 @@
 
         If modificar = True Then
             If cancelacion.ModificarCancelacion(cancelacion) = True Then
-                frmReservas.idEstado = 4
+                frmReservas.idEstado = 5
                 MsgBox("La cancelacion ha sido correctamente modificada.")
 
             Else
@@ -102,7 +102,7 @@
             End If
         Else
             If cancelacion.InsertarCancelacion(cancelacion) = True Then
-                frmReservas.idEstado = 4
+                frmReservas.idEstado = 5
                 MsgBox("La cancelacion ha sido correctamente insertada.")
 
             Else

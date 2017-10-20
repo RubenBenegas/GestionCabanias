@@ -25,14 +25,17 @@
         If rbEnEspera.Checked = True Then
             idEstado = 1
             reservas.ReservasFiltrarPorEstado(idEstado, dgvEstadoReservas)
-        ElseIf rbSeniada.Checked = True Then
+        ElseIf rdSinSenia.Checked = True Then
             idEstado = 2
             reservas.ReservasFiltrarPorEstado(idEstado, dgvEstadoReservas)
-        ElseIf rdEnCurso.Checked = True Then
+        ElseIf rbSeniada.Checked = True Then
             idEstado = 3
             reservas.ReservasFiltrarPorEstado(idEstado, dgvEstadoReservas)
-        Else
+        ElseIf rdEnCurso.Checked = True Then
             idEstado = 4
+            reservas.ReservasFiltrarPorEstado(idEstado, dgvEstadoReservas)
+        Else
+            idEstado = 5
             reservas.ReservasFiltrarPorEstado(idEstado, dgvEstadoReservas)
         End If
 

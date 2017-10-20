@@ -123,12 +123,15 @@
                 btnReserva.BackColor = Color.Orange
             End If
             If btnReserva.idEstado = 2 Then
-                btnReserva.BackColor = Color.Yellow
+                btnReserva.BackColor = Color.Violet
             End If
             If btnReserva.idEstado = 3 Then
-                btnReserva.BackColor = Color.Green
+                btnReserva.BackColor = Color.Yellow
             End If
             If btnReserva.idEstado = 4 Then
+                btnReserva.BackColor = Color.Green
+            End If
+            If btnReserva.idEstado = 5 Then
                 btnReserva.BackColor = Color.Red
             End If
 

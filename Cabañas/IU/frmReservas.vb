@@ -78,7 +78,7 @@
 
             idEstado = reserva.IdEstado
 
-            If idEstado = 4 Then
+            If idEstado = 5 Then
 
                 cancelacion.RecuperarCancelacion(idReserva)
 
@@ -211,6 +211,8 @@
             btnDetalleCancelacion.Visible = False
 
             idEstado = 1
+
+
             Me.Text = "Agregar reserva"
         End If
 
@@ -230,8 +232,10 @@
             reserva.ConSenia = chkConSenia.Checked
             If reserva.ConSenia = True Then
                 reserva.Senia = txtSenia.Text
+                idEstado = 1
             Else
                 reserva.Senia = 0
+                idEstado = 2
             End If
 
             reserva.fPagoSenia = dtpFechaPagoSenia.Value

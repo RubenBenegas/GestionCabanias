@@ -58,7 +58,7 @@
 
             If modificar = True Then
                 If pagos.PagosModificar(pagos) = True Then
-                    reserva.ReservasActualizarEstado(2, txtIdReserva.Text)
+                    reserva.ReservasActualizarEstado(3, txtIdReserva.Text)
                     MsgBox("El pago ha sido correctamente modificado.")
                     pagos.PagosTraerTab(lstPagos.dgvPagos)
                 Else
@@ -66,7 +66,7 @@
                 End If
             Else
                 If pagos.PagosInsertar(pagos) = True Then
-                    reserva.ReservasActualizarEstado(2, txtIdReserva.Text)
+                    reserva.ReservasActualizarEstado(3, txtIdReserva.Text)
                     MsgBox("El pago ha sido correctamente insertado.")
                     pagos.PagosTraerTab(lstPagos.dgvPagos)
                 Else

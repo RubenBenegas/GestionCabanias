@@ -31,6 +31,7 @@ Partial Class lstEstadosReservas
         Me.btnBuscar = New System.Windows.Forms.Button
         Me.rdEnCurso = New System.Windows.Forms.RadioButton
         Me.btnTodos = New System.Windows.Forms.Button
+        Me.rdSinSenia = New System.Windows.Forms.RadioButton
         CType(Me.dgvEstadoReservas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -94,7 +95,7 @@ Partial Class lstEstadosReservas
         Me.rbSeniada.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.rbSeniada.AutoSize = True
         Me.rbSeniada.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbSeniada.Location = New System.Drawing.Point(225, 15)
+        Me.rbSeniada.Location = New System.Drawing.Point(312, 15)
         Me.rbSeniada.Name = "rbSeniada"
         Me.rbSeniada.Size = New System.Drawing.Size(68, 17)
         Me.rbSeniada.TabIndex = 3
@@ -107,7 +108,7 @@ Partial Class lstEstadosReservas
         Me.rbCancelada.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.rbCancelada.AutoSize = True
         Me.rbCancelada.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbCancelada.Location = New System.Drawing.Point(374, 15)
+        Me.rbCancelada.Location = New System.Drawing.Point(461, 15)
         Me.rbCancelada.Name = "rbCancelada"
         Me.rbCancelada.Size = New System.Drawing.Size(85, 17)
         Me.rbCancelada.TabIndex = 4
@@ -133,7 +134,7 @@ Partial Class lstEstadosReservas
         Me.rdEnCurso.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.rdEnCurso.AutoSize = True
         Me.rdEnCurso.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rdEnCurso.Location = New System.Drawing.Point(293, 15)
+        Me.rdEnCurso.Location = New System.Drawing.Point(380, 15)
         Me.rdEnCurso.Name = "rdEnCurso"
         Me.rdEnCurso.Size = New System.Drawing.Size(75, 17)
         Me.rdEnCurso.TabIndex = 6
@@ -154,6 +155,19 @@ Partial Class lstEstadosReservas
         Me.btnTodos.Text = "X"
         Me.btnTodos.UseVisualStyleBackColor = False
         '
+        'rdSinSenia
+        '
+        Me.rdSinSenia.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.rdSinSenia.AutoSize = True
+        Me.rdSinSenia.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdSinSenia.Location = New System.Drawing.Point(234, 15)
+        Me.rdSinSenia.Name = "rdSinSenia"
+        Me.rdSinSenia.Size = New System.Drawing.Size(74, 17)
+        Me.rdSinSenia.TabIndex = 9
+        Me.rdSinSenia.TabStop = True
+        Me.rdSinSenia.Text = "Sin seña"
+        Me.rdSinSenia.UseVisualStyleBackColor = True
+        '
         'lstEstadosReservas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -161,6 +175,7 @@ Partial Class lstEstadosReservas
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1056, 343)
+        Me.Controls.Add(Me.rdSinSenia)
         Me.Controls.Add(Me.btnTodos)
         Me.Controls.Add(Me.rdEnCurso)
         Me.Controls.Add(Me.btnBuscar)
@@ -185,4 +200,5 @@ Partial Class lstEstadosReservas
     Friend WithEvents btnBuscar As System.Windows.Forms.Button
     Friend WithEvents rdEnCurso As System.Windows.Forms.RadioButton
     Friend WithEvents btnTodos As System.Windows.Forms.Button
+    Friend WithEvents rdSinSenia As System.Windows.Forms.RadioButton
 End Class

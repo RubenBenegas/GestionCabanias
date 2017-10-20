@@ -125,6 +125,12 @@
     <Compile Include="IU\frmAdicionales.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="IU\lstCancelaciones.Designer.vb">
+      <DependentUpon>lstCancelaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IU\lstCancelaciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="IU\lstEstadosReservas.Designer.vb">
       <DependentUpon>lstEstadosReservas.vb</DependentUpon>
     </Compile>
@@ -307,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IU\frmAdicionales.resx">
       <DependentUpon>frmAdicionales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IU\lstCancelaciones.resx">
+      <DependentUpon>lstCancelaciones.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IU\lstEstadosReservas.resx">
       <DependentUpon>lstEstadosReservas.vb</DependentUpon>

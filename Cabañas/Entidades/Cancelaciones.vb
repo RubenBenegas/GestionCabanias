@@ -61,7 +61,7 @@ Public Class Cancelaciones
     Public Sub TraerTabCancelaciones(ByVal tabla As DataGridView)
         abrirConexion()
 
-        Dim objComando As New SqlCommand("CancelacionTraerTab", objConexion)
+        Dim objComando As New SqlCommand("CancelacionesTraerTab", objConexion)
         objComando.CommandType = CommandType.StoredProcedure
 
         Dim objDataTable As New Data.DataTable

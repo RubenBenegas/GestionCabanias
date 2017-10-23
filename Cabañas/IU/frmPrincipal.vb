@@ -70,7 +70,7 @@ Public Class frmPrincipal
 
     End Sub
 
-    Private Sub PagosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PagosToolStripMenuItem.Click
+    Private Sub PagosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         lstPagos.ShowDialog()
 
     End Sub

@@ -121,7 +121,6 @@ Partial Class lstGastos
         '
         'btnBuscar
         '
-        Me.btnBuscar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.ForeColor = System.Drawing.Color.White
@@ -134,7 +133,6 @@ Partial Class lstGastos
         '
         'btnTodos
         '
-        Me.btnTodos.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnTodos.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnTodos.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTodos.ForeColor = System.Drawing.Color.White
@@ -147,6 +145,7 @@ Partial Class lstGastos
         '
         'txtTotal
         '
+        Me.txtTotal.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.txtTotal.Enabled = False
         Me.txtTotal.Location = New System.Drawing.Point(547, 434)
         Me.txtTotal.Name = "txtTotal"
@@ -189,6 +188,7 @@ Partial Class lstGastos
         '
         'Label1
         '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(494, 437)
         Me.Label1.Name = "Label1"

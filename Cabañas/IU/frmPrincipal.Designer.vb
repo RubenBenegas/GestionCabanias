@@ -149,12 +149,14 @@ Partial Class frmPrincipal
         '
         'PagosToolStripMenuItem
         '
+        Me.PagosToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.PagosToolStripMenuItem.Name = "PagosToolStripMenuItem"
         Me.PagosToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.PagosToolStripMenuItem.Text = "Pagos"
         '
         'CancelacionesToolStripMenuItem
         '
+        Me.CancelacionesToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.CancelacionesToolStripMenuItem.Name = "CancelacionesToolStripMenuItem"
         Me.CancelacionesToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.CancelacionesToolStripMenuItem.Text = "Cancelaciones"

@@ -143,18 +143,6 @@
     <Compile Include="IU\lstPagos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IU\lstPagosAdicionales.Designer.vb">
-      <DependentUpon>lstPagosAdicionales.vb</DependentUpon>
-    </Compile>
-    <Compile Include="IU\lstPagosAdicionales.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="IU\lstPagosReservas.Designer.vb">
-      <DependentUpon>lstPagosReservas.vb</DependentUpon>
-    </Compile>
-    <Compile Include="IU\lstPagosReservas.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="IU\lstReservasAdicionales.Designer.vb">
       <DependentUpon>lstReservasAdicionales.vb</DependentUpon>
     </Compile>
@@ -328,12 +316,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IU\lstPagos.resx">
       <DependentUpon>lstPagos.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="IU\lstPagosAdicionales.resx">
-      <DependentUpon>lstPagosAdicionales.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="IU\lstPagosReservas.resx">
-      <DependentUpon>lstPagosReservas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IU\lstReservasAdicionales.resx">
       <DependentUpon>lstReservasAdicionales.vb</DependentUpon>

@@ -26,19 +26,15 @@ Partial Class frmPagos
         Me.lblId = New System.Windows.Forms.Label
         Me.lblFecha = New System.Windows.Forms.Label
         Me.lblMonto = New System.Windows.Forms.Label
-        Me.lblIdReserva = New System.Windows.Forms.Label
         Me.txtId = New System.Windows.Forms.TextBox
         Me.txtMonto = New System.Windows.Forms.TextBox
-        Me.txtIdReserva = New System.Windows.Forms.TextBox
         Me.btnAceptar = New System.Windows.Forms.Button
         Me.btnCancelar = New System.Windows.Forms.Button
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.dtpFecha = New System.Windows.Forms.DateTimePicker
-        Me.btnConsulta = New System.Windows.Forms.Button
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView
-        Me.btnAgregar = New System.Windows.Forms.Button
+        Me.txtDescripcion = New System.Windows.Forms.TextBox
+        Me.Label1 = New System.Windows.Forms.Label
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblId
@@ -71,56 +67,37 @@ Partial Class frmPagos
         Me.lblMonto.TabIndex = 2
         Me.lblMonto.Text = "Monto"
         '
-        'lblIdReserva
-        '
-        Me.lblIdReserva.AutoSize = True
-        Me.lblIdReserva.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblIdReserva.Location = New System.Drawing.Point(12, 68)
-        Me.lblIdReserva.Name = "lblIdReserva"
-        Me.lblIdReserva.Size = New System.Drawing.Size(65, 13)
-        Me.lblIdReserva.TabIndex = 3
-        Me.lblIdReserva.Text = "IdReserva"
-        '
         'txtId
         '
         Me.txtId.Enabled = False
         Me.txtId.Location = New System.Drawing.Point(92, 9)
         Me.txtId.Name = "txtId"
         Me.txtId.Size = New System.Drawing.Size(36, 20)
-        Me.txtId.TabIndex = 4
+        Me.txtId.TabIndex = 0
         '
         'txtMonto
         '
         Me.txtMonto.Location = New System.Drawing.Point(92, 87)
         Me.txtMonto.Name = "txtMonto"
         Me.txtMonto.Size = New System.Drawing.Size(149, 20)
-        Me.txtMonto.TabIndex = 6
+        Me.txtMonto.TabIndex = 5
         Me.txtMonto.Tag = "*"
-        '
-        'txtIdReserva
-        '
-        Me.txtIdReserva.Enabled = False
-        Me.txtIdReserva.Location = New System.Drawing.Point(92, 61)
-        Me.txtIdReserva.Name = "txtIdReserva"
-        Me.txtIdReserva.Size = New System.Drawing.Size(149, 20)
-        Me.txtIdReserva.TabIndex = 7
-        Me.txtIdReserva.Tag = "*"
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(92, 357)
+        Me.btnAceptar.Location = New System.Drawing.Point(72, 125)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
-        Me.btnAceptar.TabIndex = 8
+        Me.btnAceptar.TabIndex = 6
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = True
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(204, 357)
+        Me.btnCancelar.Location = New System.Drawing.Point(168, 125)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
-        Me.btnCancelar.TabIndex = 9
+        Me.btnCancelar.TabIndex = 7
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
         '
@@ -134,50 +111,39 @@ Partial Class frmPagos
         Me.dtpFecha.Location = New System.Drawing.Point(92, 35)
         Me.dtpFecha.Name = "dtpFecha"
         Me.dtpFecha.Size = New System.Drawing.Size(95, 20)
-        Me.dtpFecha.TabIndex = 10
+        Me.dtpFecha.TabIndex = 1
         '
-        'btnConsulta
+        'txtDescripcion
         '
-        Me.btnConsulta.Location = New System.Drawing.Point(247, 59)
-        Me.btnConsulta.Name = "btnConsulta"
-        Me.btnConsulta.Size = New System.Drawing.Size(32, 23)
-        Me.btnConsulta.TabIndex = 11
-        Me.btnConsulta.Text = "..."
-        Me.btnConsulta.UseVisualStyleBackColor = True
+        Me.txtDescripcion.Location = New System.Drawing.Point(92, 61)
+        Me.txtDescripcion.Name = "txtDescripcion"
+        Me.txtDescripcion.Size = New System.Drawing.Size(149, 20)
+        Me.txtDescripcion.TabIndex = 4
+        Me.txtDescripcion.Tag = "*"
         '
-        'DataGridView1
+        'Label1
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(15, 141)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(264, 195)
-        Me.DataGridView1.TabIndex = 12
-        '
-        'btnAgregar
-        '
-        Me.btnAgregar.Location = New System.Drawing.Point(285, 141)
-        Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
-        Me.btnAgregar.TabIndex = 13
-        Me.btnAgregar.Text = "Agregar"
-        Me.btnAgregar.UseVisualStyleBackColor = True
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(12, 64)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(74, 13)
+        Me.Label1.TabIndex = 12
+        Me.Label1.Text = "Descripcion"
         '
         'frmPagos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(368, 392)
-        Me.Controls.Add(Me.btnAgregar)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.btnConsulta)
+        Me.ClientSize = New System.Drawing.Size(272, 163)
+        Me.Controls.Add(Me.txtDescripcion)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dtpFecha)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAceptar)
-        Me.Controls.Add(Me.txtIdReserva)
         Me.Controls.Add(Me.txtMonto)
         Me.Controls.Add(Me.txtId)
-        Me.Controls.Add(Me.lblIdReserva)
         Me.Controls.Add(Me.lblMonto)
         Me.Controls.Add(Me.lblFecha)
         Me.Controls.Add(Me.lblId)
@@ -186,7 +152,6 @@ Partial Class frmPagos
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmPagos"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -194,15 +159,12 @@ Partial Class frmPagos
     Friend WithEvents lblId As System.Windows.Forms.Label
     Friend WithEvents lblFecha As System.Windows.Forms.Label
     Friend WithEvents lblMonto As System.Windows.Forms.Label
-    Friend WithEvents lblIdReserva As System.Windows.Forms.Label
     Friend WithEvents txtId As System.Windows.Forms.TextBox
     Friend WithEvents txtMonto As System.Windows.Forms.TextBox
-    Friend WithEvents txtIdReserva As System.Windows.Forms.TextBox
     Friend WithEvents btnAceptar As System.Windows.Forms.Button
     Friend WithEvents btnCancelar As System.Windows.Forms.Button
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
     Friend WithEvents dtpFecha As System.Windows.Forms.DateTimePicker
-    Friend WithEvents btnConsulta As System.Windows.Forms.Button
-    Friend WithEvents btnAgregar As System.Windows.Forms.Button
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents txtDescripcion As System.Windows.Forms.TextBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class

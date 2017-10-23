@@ -35,6 +35,17 @@ Public Class Pagos
         End Set
     End Property
 
+
+    Private Descripcion_ As String
+    Public Property Descripcion() As String
+        Get
+            Return Descripcion_
+        End Get
+        Set(ByVal value As String)
+            Descripcion_ = value
+        End Set
+    End Property
+
     Private IdReserva_ As Integer
     Public Property IdReserva() As Integer
         Get
@@ -46,12 +57,12 @@ Public Class Pagos
     End Property
 
 
-    Public Sub PagosTraerTab(ByVal tabla As DataGridView)
+    Public Sub PagosTraerTab(ByVal idReserva As Integer, ByVal tabla As DataGridView)
         abrirConexion()
 
         Dim objComando As New SqlCommand("PagosTraerTab", objConexion)
         objComando.CommandType = CommandType.StoredProcedure
-
+        objComando.Parameters.AddWithValue("@IdReserva", idReserva)
         Dim objDataTable As New Data.DataTable
         Dim objDataAdapter As New SqlDataAdapter(objComando)
         objDataAdapter.Fill(objDataTable)
@@ -60,7 +71,6 @@ Public Class Pagos
         tabla.Columns("Id").Width = 50
         tabla.Columns("Fecha").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         tabla.Columns("Monto").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        tabla.Columns("IdReserva").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
         cerrarConexion()
 
@@ -75,6 +85,7 @@ Public Class Pagos
             objComando.CommandType = CommandType.StoredProcedure
             objComando.Parameters.AddWithValue("@Fecha", Pago.Fecha)
             objComando.Parameters.AddWithValue("@Monto", Pago.Monto)
+            objComando.Parameters.AddWithValue("@Descripcion", Pago.Descripcion)
             objComando.Parameters.AddWithValue("@IdReserva", Pago.IdReserva)
 
             If objComando.ExecuteNonQuery() Then
@@ -99,6 +110,7 @@ Public Class Pagos
             objComando.Parameters.AddWithValue("@IdPago", Pago.Id)
             objComando.Parameters.AddWithValue("@Fecha", Pago.Fecha)
             objComando.Parameters.AddWithValue("@Monto", Pago.Monto)
+            objComando.Parameters.AddWithValue("@Descripcion", Pago.Descripcion)
             objComando.Parameters.AddWithValue("@IdReserva", Pago.IdReserva)
             If objComando.ExecuteNonQuery() Then
                 Return True
@@ -153,6 +165,7 @@ Public Class Pagos
                 Pagos.Id = objDataTable.Rows(0).Item("Id")
                 Pagos.Fecha = objDataTable.Rows(0).Item("Fecha")
                 Pagos.Monto = objDataTable.Rows(0).Item("Monto")
+                Pagos.Descripcion = objDataTable.Rows(0).Item("Descripcion")
                 Pagos.IdReserva = objDataTable.Rows(0).Item("IdReserva")
                 Return Pagos
             End If

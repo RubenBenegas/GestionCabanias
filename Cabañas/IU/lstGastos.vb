@@ -1,6 +1,5 @@
 ﻿Public Class lstGastos
 
-
     Private idCategoria_ As Integer
     Public Property idCategoria() As Integer
         Get

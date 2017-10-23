@@ -71,6 +71,7 @@ Partial Class frmReservas
         Me.lblFaltaPAgar = New System.Windows.Forms.Label
         Me.btnCancelarReserva = New System.Windows.Forms.Button
         Me.btnDetalleCancelacion = New System.Windows.Forms.Button
+        Me.btnPagos = New System.Windows.Forms.Button
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvServiciosAdicionales, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -524,11 +525,21 @@ Partial Class frmReservas
         Me.btnDetalleCancelacion.Text = "Detalle cancelacion"
         Me.btnDetalleCancelacion.UseVisualStyleBackColor = True
         '
+        'btnPagos
+        '
+        Me.btnPagos.Location = New System.Drawing.Point(422, 300)
+        Me.btnPagos.Name = "btnPagos"
+        Me.btnPagos.Size = New System.Drawing.Size(75, 59)
+        Me.btnPagos.TabIndex = 51
+        Me.btnPagos.Text = "Efectuar pagos"
+        Me.btnPagos.UseVisualStyleBackColor = True
+        '
         'frmReservas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(503, 616)
+        Me.Controls.Add(Me.btnPagos)
         Me.Controls.Add(Me.btnDetalleCancelacion)
         Me.Controls.Add(Me.btnCancelarReserva)
         Me.Controls.Add(Me.dtpFechaPagoSenia)
@@ -636,4 +647,5 @@ Partial Class frmReservas
     Friend WithEvents txtFaltaDePagar As System.Windows.Forms.TextBox
     Friend WithEvents btnCancelarReserva As System.Windows.Forms.Button
     Friend WithEvents btnDetalleCancelacion As System.Windows.Forms.Button
+    Friend WithEvents btnPagos As System.Windows.Forms.Button
 End Class

@@ -366,4 +366,7 @@
     End Sub
 
    
+    Private Sub btnPagos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPagos.Click
+        lstPagos.ShowDialog()
+    End Sub
 End Class

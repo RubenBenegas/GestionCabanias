@@ -2,7 +2,8 @@
     Dim Pago As New Pagos
 
     Private Sub lstPagos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Pago.PagosTraerTab(dgvPagos)
+        Pago.PagosTraerTab(frmReservas.txtId.Text, dgvPagos)
+
     End Sub
 
     Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
@@ -30,8 +31,8 @@
             Dim mensaje As DialogResult = MsgBox("¿Està seguro que quiere borrar?", MsgBoxStyle.OkCancel, "Advertencia")
             If mensaje = Windows.Forms.DialogResult.OK Then
                 If Pago.PagosBorrar(Pago.Id) Then
-                    MessageBox.Show("El cliente se ha borrado correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    Pago.PagosTraerTab(dgvPagos)
+                    MessageBox.Show("El pago se ha borrado correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Pago.PagosTraerTab(frmReservas.txtId.Text, dgvPagos)
                 Else
                     MessageBox.Show("El cliente NO se ha borrado correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 End If

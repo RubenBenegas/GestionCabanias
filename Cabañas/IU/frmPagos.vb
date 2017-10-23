@@ -1,6 +1,17 @@
 ﻿Public Class frmPagos
 
 
+    Private idReserva_ As Integer
+    Public Property IdReserva() As Integer
+        Get
+            Return idReserva_
+        End Get
+        Set(ByVal value As Integer)
+            idReserva_ = value
+        End Set
+    End Property
+
+
     Private IdPago_ As Integer
     Public Property IdPago() As Integer
         Get
@@ -35,14 +46,15 @@
             txtId.Text = pagos.Id
             txtMonto.Text = pagos.Monto
             dtpFecha.Value = pagos.Fecha
-            txtIdReserva.Text = pagos.IdReserva
+            txtDescripcion.Text = pagos.Descripcion
+            IdReserva = pagos.IdReserva
             Me.Text = "Modificar pago"
         Else
 
             txtId.Text = Nothing
             txtMonto.Text = Nothing
             dtpFecha.Value = Today
-            txtIdReserva.Text = Nothing
+            IdReserva = frmReservas.txtId.Text
             reserva.IdEstado = 2
             Me.Text = "Agregar pago"
         End If
@@ -54,21 +66,22 @@
         If fun.validarCampos(Me, ErrorProvider1) = True Then
             pagos.Fecha = dtpFecha.Value
             pagos.Monto = txtMonto.Text
-            pagos.IdReserva = txtIdReserva.Text
+            pagos.Descripcion = txtDescripcion.Text
+            pagos.IdReserva = IdReserva
 
             If modificar = True Then
                 If pagos.PagosModificar(pagos) = True Then
-                    reserva.ReservasActualizarEstado(3, txtIdReserva.Text)
+                    reserva.ReservasActualizarEstado(3, IdReserva)
                     MsgBox("El pago ha sido correctamente modificado.")
-                    pagos.PagosTraerTab(lstPagos.dgvPagos)
+                    pagos.PagosTraerTab(frmReservas.txtId.Text, lstPagos.dgvPagos)
                 Else
                     MsgBox("Error al modificar el pago." + Chr(13) + "Intentelo de nuevo.")
                 End If
             Else
                 If pagos.PagosInsertar(pagos) = True Then
-                    reserva.ReservasActualizarEstado(3, txtIdReserva.Text)
+                    reserva.ReservasActualizarEstado(3, IdReserva)
                     MsgBox("El pago ha sido correctamente insertado.")
-                    pagos.PagosTraerTab(lstPagos.dgvPagos)
+                    pagos.PagosTraerTab(frmReservas.txtId.Text, lstPagos.dgvPagos)
                 Else
                     MsgBox("Error al insertar pago." + Chr(13) + "Intentelo de nuevo.")
                 End If
@@ -86,11 +99,6 @@
         Close()
     End Sub
 
-    Private Sub btnConsulta_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnConsulta.Click
-        lstPagosReservas.ShowDialog()
-    End Sub
 
-    Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
-        lstPagosAdicionales.ShowDialog()
-    End Sub
+
 End Class

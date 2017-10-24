@@ -538,7 +538,7 @@ Partial Class frmReservas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(503, 616)
+        Me.ClientSize = New System.Drawing.Size(603, 626)
         Me.Controls.Add(Me.btnPagos)
         Me.Controls.Add(Me.btnDetalleCancelacion)
         Me.Controls.Add(Me.btnCancelarReserva)

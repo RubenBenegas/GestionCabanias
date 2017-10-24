@@ -61,4 +61,17 @@
         Close()
 
     End Sub
+
+    Private Sub btnAgregar_MouseHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.MouseHover
+        btnAgregar.Size = New Size(94, 34)
+        btnAgregar.ForeColor = Color.Black
+        btnAgregar.Cursor = Cursors.Hand
+
+    End Sub
+
+    Private Sub btnAgregar_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.MouseLeave
+        btnAgregar.Size = New Size(90, 30)
+        btnAgregar.ForeColor = Color.White
+        btnAgregar.Cursor = Cursors.Arrow
+    End Sub
 End Class

@@ -414,6 +414,9 @@
     <Content Include="Recursos\03.jpg" />
     <Content Include="Recursos\fondo.jpg" />
     <Content Include="Recursos\lunamorena.000.s4.jpg" />
+    <None Include="Resources\boton-fondo-2.png" />
+    <None Include="Resources\boton-fondo.png" />
+    <None Include="Resources\boton-agregar.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

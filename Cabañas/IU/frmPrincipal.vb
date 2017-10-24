@@ -80,5 +80,8 @@ Public Class frmPrincipal
 
     End Sub
 
+    Private Sub frmPrincipal_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
+        frmArranque.Close()
 
+    End Sub
 End Class

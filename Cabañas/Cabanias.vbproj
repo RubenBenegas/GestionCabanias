@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{BE3CA8BE-78C3-47FF-98BA-CD4F533BBBB4}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Cabañas.frmPrincipal</StartupObject>
+    <StartupObject>Cabañas.frmArranque</StartupObject>
     <RootNamespace>Cabañas</RootNamespace>
     <AssemblyName>Cabañas</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -100,6 +100,12 @@
     <Compile Include="Entidades\Servicios.vb" />
     <Compile Include="Huecos.vb">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IU\frmArranque.Designer.vb">
+      <DependentUpon>frmArranque.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IU\frmArranque.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="IU\frmCancelaciones.Designer.vb">
       <DependentUpon>frmCancelaciones.vb</DependentUpon>
@@ -296,6 +302,9 @@
     <Compile Include="Entidades\Personal.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="IU\frmArranque.resx">
+      <DependentUpon>frmArranque.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IU\frmCancelaciones.resx">
       <DependentUpon>frmCancelaciones.vb</DependentUpon>
     </EmbeddedResource>

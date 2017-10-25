@@ -60,27 +60,6 @@ Namespace My.Resources
             End Set
         End Property
         
-        Friend ReadOnly Property boton_agregar() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("boton-agregar", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        Friend ReadOnly Property boton_fondo() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("boton-fondo", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        Friend ReadOnly Property boton_fondo_2() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("boton-fondo-2", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
         Friend ReadOnly Property fondo() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("fondo", resourceCulture)

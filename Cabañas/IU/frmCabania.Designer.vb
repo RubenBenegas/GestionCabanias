@@ -79,7 +79,7 @@ Partial Class frmCabania
         '
         'ButtAceptar
         '
-        Me.ButtAceptar.Location = New System.Drawing.Point(268, 484)
+        Me.ButtAceptar.Location = New System.Drawing.Point(223, 484)
         Me.ButtAceptar.Name = "ButtAceptar"
         Me.ButtAceptar.Size = New System.Drawing.Size(75, 23)
         Me.ButtAceptar.TabIndex = 6
@@ -88,7 +88,7 @@ Partial Class frmCabania
         '
         'ButtCancelar
         '
-        Me.ButtCancelar.Location = New System.Drawing.Point(380, 484)
+        Me.ButtCancelar.Location = New System.Drawing.Point(335, 484)
         Me.ButtCancelar.Name = "ButtCancelar"
         Me.ButtCancelar.Size = New System.Drawing.Size(75, 23)
         Me.ButtCancelar.TabIndex = 7
@@ -243,7 +243,7 @@ Partial Class frmCabania
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(481, 519)
+        Me.ClientSize = New System.Drawing.Size(447, 519)
         Me.Controls.Add(Me.btnConsultarCostos)
         Me.Controls.Add(Me.lblCostoTotal)
         Me.Controls.Add(Me.lblCostoServicios)

@@ -51,6 +51,7 @@
             Me.Text = "Agregar Cabaña"
 
             txtIdCabania.Text = Nothing
+            cmbTipoCabania.SelectedValue = 1
             txtMonto.Text = Nothing
             txtDescripcion.Text = Nothing
             txtCostoServicios.Text = Nothing
@@ -79,12 +80,18 @@
                     MsgBox("Error al modificar la cabaña." + Chr(13) + "Intentelo de nuevo.")
                 End If
             Else
-                If cabania.InsertarCabania(cabania) = True Then
-                    MsgBox("La cabaña ha sido correctamente insertada.")
-                    cabania.TraerTabCabania(lstcabania.dgvCabanias)
-                Else
-                    MsgBox("Error al insertar cabaña." + Chr(13) + "Intentelo de nuevo.")
+                If txtIdCabania.Text = "" Then
+
+
+                    If cabania.InsertarCabania(cabania) = False Then
+                        
+                        MsgBox("Error al insertar cabaña." + Chr(13) + "Intentelo de nuevo.")
+                    Else
+                        MsgBox("La cabaña ha sido correctamente insertada.")
+
+                    End If
                 End If
+                cabania.TraerTabCabania(lstcabania.dgvCabanias)
             End If
             Close()
         Else
@@ -98,25 +105,23 @@
 
     End Sub
 
-    Private Sub txtmonto_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
-        If Char.IsNumber(e.KeyChar) Or e.KeyChar = "," Or Char.IsControl(e.KeyChar) Then
-
-            e.Handled = False
-
-        Else
-
-            e.Handled = True
-
-        End If
-    End Sub
-
     
-    Private Sub cmbTipoCabania_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbTipoCabania.SelectedIndexChanged
-        ' txtMonto.Text = 
-    End Sub
+    'Private Sub cmbTipoCabania_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbTipoCabania.SelectedIndexChanged
+    '     txtMonto.Text = 
+    'End Sub
 
     Private Sub Agregarbtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Agregarbtn.Click
+        If txtIdCabania.Text = "" Then
 
+            cabania.idTipo = cmbTipoCabania.SelectedValue
+            cabania.descripcion = txtDescripcion.Text
+            cabania.CostoServicios = txtCostoServicios.Text
+            cabania.CostoTotal = txtCostoTotal.Text
+
+            cabania.InsertarCabania(cabania)
+            cabania.idCabania = cabania.CabaniaTraerUltimo
+            txtIdCabania.Text = cabania.idCabania
+        End If
         lstCabaniaServicios.idCabania = txtIdCabania.Text
         lstCabaniaServicios.ShowDialog()
 
@@ -139,6 +144,19 @@
         End If
 
         txtCostoTotal.Text = CDec(txtMonto.Text) + CDec(txtCostoServicios.Text)
+    End Sub
+
+
+    'Private Sub cmbTipoCabania_SelectedValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmbTipoCabania.SelectedValueChanged
+    '    txtMonto.Text = cabania.CabaniaTraerMontoPorTipo(CInt(cmbTipoCabania.SelectedValue))
+    'End Sub
+
+    'Private Sub cmbTipoCabania_ValueMemberChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmbTipoCabania.ValueMemberChanged
+    '    txtMonto.Text = cabania.CabaniaTraerMontoPorTipo(cmbTipoCabania.SelectedValue)
+    'End Sub
+
+    Private Sub cmbTipoCabania_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmbTipoCabania.LostFocus
+        txtMonto.Text = cabania.CabaniaTraerMontoPorTipo(cmbTipoCabania.SelectedValue)
     End Sub
 End Class
 

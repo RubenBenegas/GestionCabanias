@@ -114,6 +114,39 @@ Public Class Cabanias
         End Try
     End Function
 
+    Public Function CabaniaTraerUltimo() As Integer
+        Try
+            abrirConexion()
+
+            Dim objComando As New SqlCommand("CabaniaTraerUltimo", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+
+            Return objComando.ExecuteScalar
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            cerrarConexion()
+        End Try
+    End Function
+
+    Public Function CabaniaTraerMontoPorTipo(ByVal idTipo As Integer) As Integer
+        Try
+            abrirConexion()
+
+            Dim objComando As New SqlCommand("CabaniaTraerMontoPorTipo", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            objComando.Parameters.AddWithValue("@IdTipoCabania", idTipo)
+            Return objComando.ExecuteScalar
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            cerrarConexion()
+        End Try
+    End Function
+
+
     Public Function ModificarCabania(ByVal Cabania As Cabanias) As Boolean
 
         Try

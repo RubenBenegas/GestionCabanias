@@ -253,10 +253,15 @@
                     MsgBox("Error al modificar la reserva." + Chr(13) + "Intentelo de nuevo.")
                 End If
             Else
-                If reserva.InsertarReserva(reserva) = True Then
-                    MsgBox("La reserva ha sido correctamente insertada.")
-                Else
-                    MsgBox("Error al insertar la reserva." + Chr(13) + "Intentelo de nuevo.")
+                If txtId.Text = "" Then
+                    If reserva.InsertarReserva(reserva) = False Then
+                        MsgBox("Error al insertar la reserva." + Chr(13) + "Intentelo de nuevo.")
+                    Else
+
+                        MsgBox("La reserva ha sido correctamente insertada.")
+                    End If
+                    'Else
+                    '    MsgBox("Error al insertar la reserva." + Chr(13) + "Intentelo de nuevo.")
                 End If
             End If
             Close()
@@ -274,11 +279,40 @@
     End Sub
 
     Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
-        If txtId.Text <> "" Then
-            lstReservasAdicionales.idReserva = txtId.Text
-            lstReservasAdicionales.ShowDialog()
-        End If
+        If txtId.Text = "" Then
 
+            reserva.fReserva = dtpFechaReserva.Value
+            reserva.IdHuesped = txtIdHuesped.Text
+            reserva.fIngreso = dtpFechaIngreso.Value
+            reserva.fSalida = dtpFechaSalida.Value
+            reserva.IdCabania = cmbIdCabania.SelectedValue
+            reserva.NroPasajeros = txtNumeroPasajeros.Text
+            reserva.ConSenia = chkConSenia.Checked
+            If reserva.ConSenia = True Then
+                reserva.Senia = txtSenia.Text
+                idEstado = 1
+            Else
+                reserva.Senia = 0
+                idEstado = 2
+            End If
+
+            reserva.fPagoSenia = dtpFechaPagoSenia.Value
+            reserva.Checkin = dtpCheckin.Value
+            reserva.Checkout = dtpCheckout.Value
+            reserva.CostoEstadia = txtCostoEstadia.Text
+            reserva.CostoAdicionales = txtCostoAdicionales.Text
+            reserva.CostoTotal = txtCostoTotal.Text
+            reserva.IdEstado = idEstado
+
+
+
+            reserva.InsertarReserva(reserva)
+            reserva.Id = reserva.ReservasTraerUltimo
+            txtId.Text = reserva.Id
+
+        End If
+        lstReservasAdicionales.idReserva = txtId.Text
+        lstReservasAdicionales.ShowDialog()
     End Sub
 
     Private Sub btnBorrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBorrar.Click
@@ -367,6 +401,38 @@
 
    
     Private Sub btnPagos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPagos.Click
+
+        If txtId.Text = "" Then
+
+            reserva.fReserva = dtpFechaReserva.Value
+            reserva.IdHuesped = txtIdHuesped.Text
+            reserva.fIngreso = dtpFechaIngreso.Value
+            reserva.fSalida = dtpFechaSalida.Value
+            reserva.IdCabania = cmbIdCabania.SelectedValue
+            reserva.NroPasajeros = txtNumeroPasajeros.Text
+            reserva.ConSenia = chkConSenia.Checked
+            If reserva.ConSenia = True Then
+                reserva.Senia = txtSenia.Text
+                idEstado = 1
+            Else
+                reserva.Senia = 0
+                idEstado = 2
+            End If
+
+            reserva.fPagoSenia = dtpFechaPagoSenia.Value
+            reserva.Checkin = dtpCheckin.Value
+            reserva.Checkout = dtpCheckout.Value
+            reserva.CostoEstadia = txtCostoEstadia.Text
+            reserva.CostoAdicionales = txtCostoAdicionales.Text
+            reserva.CostoTotal = txtCostoTotal.Text
+            reserva.IdEstado = idEstado
+
+            reserva.InsertarReserva(reserva)
+            reserva.Id = reserva.ReservasTraerUltimo
+            txtId.Text = reserva.Id
+        End If
+
+
         lstPagos.ShowDialog()
     End Sub
 End Class

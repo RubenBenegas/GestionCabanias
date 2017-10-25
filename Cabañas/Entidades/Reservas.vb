@@ -14,7 +14,6 @@ Public Class Reservas
         End Set
     End Property
 
-
     Private fReserva_ As Date
     Public Property fReserva() As Date
         Get
@@ -231,6 +230,7 @@ Public Class Reservas
             objComando.Parameters.AddWithValue("@CostoTotal", reserva.CostoTotal)
             objComando.Parameters.AddWithValue("@IdEstadoReserva", reserva.IdEstado)
 
+
             If objComando.ExecuteNonQuery() Then
                 Return True
             Else
@@ -243,6 +243,21 @@ Public Class Reservas
         End Try
     End Function
 
+    Public Function ReservasTraerUltimo() As Integer
+        Try
+            abrirConexion()
+
+            Dim objComando As New SqlCommand("ReservasTraerUltimo", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+
+            Return objComando.ExecuteScalar
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            cerrarConexion()
+        End Try
+    End Function
 
     Public Function BorraReserva(ByVal idReserva As Integer) As Boolean
 

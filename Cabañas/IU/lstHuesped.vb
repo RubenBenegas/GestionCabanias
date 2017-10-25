@@ -75,20 +75,8 @@
         btnAgregar.Cursor = Cursors.Arrow
     End Sub
 
-    Private Sub RectangleShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.Click
-        frmHuesped.modificar = False
-        frmHuesped.idHuesped = 0
-        frmHuesped.ShowDialog()
-    End Sub
 
 
-    Private Sub RectangleShape1_MouseHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.MouseHover
-        RectangleShape1.Size = New Size(132, 132)
-        RectangleShape1.BackgroundImage = My.Resources.boton_fondo
-    End Sub
 
-    Private Sub RectangleShape1_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.MouseLeave
-        RectangleShape1.Size = New Size(128, 128)
-        RectangleShape1.BackgroundImage = My.Resources.boton_fondo
-    End Sub
+    
 End Class

@@ -29,8 +29,6 @@ Partial Class lstHuesped
         Me.btnModificar = New System.Windows.Forms.Button
         Me.btnEliminar = New System.Windows.Forms.Button
         Me.btnCerrar = New System.Windows.Forms.Button
-        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
-        Me.RectangleShape1 = New Microsoft.VisualBasic.PowerPacks.RectangleShape
         CType(Me.dgvHuesped, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -40,7 +38,8 @@ Partial Class lstHuesped
         Me.dgvHuesped.AllowUserToDeleteRows = False
         Me.dgvHuesped.AllowUserToResizeColumns = False
         Me.dgvHuesped.AllowUserToResizeRows = False
-        Me.dgvHuesped.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.dgvHuesped.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvHuesped.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(153, Byte), Integer))
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -67,7 +66,7 @@ Partial Class lstHuesped
         Me.btnAgregar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAgregar.ForeColor = System.Drawing.Color.White
-        Me.btnAgregar.Location = New System.Drawing.Point(12, 523)
+        Me.btnAgregar.Location = New System.Drawing.Point(12, 428)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(90, 30)
         Me.btnAgregar.TabIndex = 1
@@ -80,7 +79,7 @@ Partial Class lstHuesped
         Me.btnModificar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnModificar.ForeColor = System.Drawing.Color.White
-        Me.btnModificar.Location = New System.Drawing.Point(108, 523)
+        Me.btnModificar.Location = New System.Drawing.Point(108, 428)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(90, 30)
         Me.btnModificar.TabIndex = 2
@@ -93,7 +92,7 @@ Partial Class lstHuesped
         Me.btnEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEliminar.ForeColor = System.Drawing.Color.White
-        Me.btnEliminar.Location = New System.Drawing.Point(204, 523)
+        Me.btnEliminar.Location = New System.Drawing.Point(204, 428)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(90, 30)
         Me.btnEliminar.TabIndex = 3
@@ -106,34 +105,12 @@ Partial Class lstHuesped
         Me.btnCerrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCerrar.ForeColor = System.Drawing.Color.White
-        Me.btnCerrar.Location = New System.Drawing.Point(822, 523)
+        Me.btnCerrar.Location = New System.Drawing.Point(822, 428)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(150, 30)
         Me.btnCerrar.TabIndex = 4
         Me.btnCerrar.Text = "Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = False
-        '
-        'ShapeContainer1
-        '
-        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
-        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
-        Me.ShapeContainer1.Name = "ShapeContainer1"
-        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(984, 556)
-        Me.ShapeContainer1.TabIndex = 5
-        Me.ShapeContainer1.TabStop = False
-        '
-        'RectangleShape1
-        '
-        Me.RectangleShape1.BackColor = System.Drawing.Color.Red
-        Me.RectangleShape1.BackgroundImage = Global.Cabañas.My.Resources.Resources.boton_fondo
-        Me.RectangleShape1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.RectangleShape1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
-        Me.RectangleShape1.CornerRadius = 11
-        Me.RectangleShape1.FillGradientColor = System.Drawing.Color.Red
-        Me.RectangleShape1.Location = New System.Drawing.Point(372, 423)
-        Me.RectangleShape1.Name = "RectangleShape1"
-        Me.RectangleShape1.Size = New System.Drawing.Size(128, 128)
         '
         'lstHuesped
         '
@@ -141,13 +118,12 @@ Partial Class lstHuesped
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(984, 556)
+        Me.ClientSize = New System.Drawing.Size(984, 461)
         Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.dgvHuesped)
-        Me.Controls.Add(Me.ShapeContainer1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(500, 300)
         Me.Name = "lstHuesped"
@@ -162,7 +138,5 @@ Partial Class lstHuesped
     Friend WithEvents btnModificar As System.Windows.Forms.Button
     Friend WithEvents btnEliminar As System.Windows.Forms.Button
     Friend WithEvents btnCerrar As System.Windows.Forms.Button
-    Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
-    Friend WithEvents RectangleShape1 As Microsoft.VisualBasic.PowerPacks.RectangleShape
 
 End Class

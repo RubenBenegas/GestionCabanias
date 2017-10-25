@@ -85,7 +85,7 @@ Partial Class frmPagos
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(72, 125)
+        Me.btnAceptar.Location = New System.Drawing.Point(65, 119)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
         Me.btnAceptar.TabIndex = 6
@@ -94,7 +94,7 @@ Partial Class frmPagos
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(168, 125)
+        Me.btnCancelar.Location = New System.Drawing.Point(161, 119)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
         Me.btnCancelar.TabIndex = 7
@@ -136,7 +136,7 @@ Partial Class frmPagos
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(272, 163)
+        Me.ClientSize = New System.Drawing.Size(256, 156)
         Me.Controls.Add(Me.txtDescripcion)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dtpFecha)

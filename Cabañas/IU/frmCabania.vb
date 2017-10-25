@@ -52,7 +52,7 @@
 
             txtIdCabania.Text = Nothing
             cmbTipoCabania.SelectedValue = 1
-            txtMonto.Text = Nothing
+            txtMonto.Text = cabania.CabaniaTraerMontoPorTipo(1)
             txtDescripcion.Text = Nothing
             txtCostoServicios.Text = Nothing
             txtCostoTotal.Text = Nothing

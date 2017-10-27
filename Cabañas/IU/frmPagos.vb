@@ -54,6 +54,7 @@
             txtId.Text = Nothing
             txtMonto.Text = Nothing
             dtpFecha.Value = Today
+            txtDescripcion.Text = Nothing
             IdReserva = frmReservas.txtId.Text
             reserva.IdEstado = 2
             Me.Text = "Agregar pago"

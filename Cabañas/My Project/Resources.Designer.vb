@@ -60,27 +60,6 @@ Namespace My.Resources
             End Set
         End Property
         
-        Friend ReadOnly Property _22834647_10156758733242586_1545685985_n() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("22834647_10156758733242586_1545685985_n", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        Friend ReadOnly Property boton1() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("boton1", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        Friend ReadOnly Property boton2() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("boton2", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
         Friend ReadOnly Property can_stock_photo_csp42993829() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("can-stock-photo_csp42993829", resourceCulture)

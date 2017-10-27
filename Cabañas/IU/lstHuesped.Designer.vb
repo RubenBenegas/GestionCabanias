@@ -127,7 +127,6 @@ Partial Class lstHuesped
         'RectangleShape1
         '
         Me.RectangleShape1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.RectangleShape1.BackgroundImage = Global.Cabañas.My.Resources.Resources.boton1
         Me.RectangleShape1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.RectangleShape1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
         Me.RectangleShape1.CornerRadius = 15

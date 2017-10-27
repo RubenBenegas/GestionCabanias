@@ -414,6 +414,14 @@
     <Content Include="Recursos\03.jpg" />
     <Content Include="Recursos\fondo.jpg" />
     <Content Include="Recursos\lunamorena.000.s4.jpg" />
+    <None Include="Resources\can-stock-photo_csp42993829.jpg" />
+    <None Include="Resources\boton21.png" />
+    <None Include="Resources\boton11.png" />
+    <None Include="Resources\th1_372503.jpg" />
+    <None Include="Resources\Dark-Blue-620x387_z9Tu6fR.jpg" />
+    <None Include="Resources\orig_372503.jpg" />
+    <None Include="Resources\thumb_COLOURBOX24169832.jpg" />
+    <None Include="Resources\22834647_10156758733242586_1545685985_n.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -446,9 +454,6 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

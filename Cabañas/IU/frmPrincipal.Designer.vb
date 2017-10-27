@@ -40,7 +40,12 @@ Partial Class frmPrincipal
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
         Me.PruebaABMReservasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.Panel1 = New System.Windows.Forms.Panel
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
+        Me.OvalShape2 = New Microsoft.VisualBasic.PowerPacks.OvalShape
+        Me.OvalShape1 = New Microsoft.VisualBasic.PowerPacks.OvalShape
         Me.MenuStrip.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip
@@ -172,13 +177,53 @@ Partial Class frmPrincipal
         Me.PruebaABMReservasToolStripMenuItem.Size = New System.Drawing.Size(130, 19)
         Me.PruebaABMReservasToolStripMenuItem.Text = "Prueba ABMReservas"
         '
+        'Panel1
+        '
+        Me.Panel1.BackgroundImage = Global.Cabañas.My.Resources.Resources.fondo
+        Me.Panel1.Controls.Add(Me.ShapeContainer1)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Panel1.Location = New System.Drawing.Point(0, 23)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(135, 638)
+        Me.Panel1.TabIndex = 7
+        '
+        'ShapeContainer1
+        '
+        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer1.Name = "ShapeContainer1"
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.OvalShape2, Me.OvalShape1})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(135, 638)
+        Me.ShapeContainer1.TabIndex = 0
+        Me.ShapeContainer1.TabStop = False
+        '
+        'OvalShape2
+        '
+        Me.OvalShape2.BackgroundImage = Global.Cabañas.My.Resources.Resources.can_stock_photo_csp42993829
+        Me.OvalShape2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.OvalShape2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
+        Me.OvalShape2.Location = New System.Drawing.Point(27, 112)
+        Me.OvalShape2.Name = "OvalShape2"
+        Me.OvalShape2.Size = New System.Drawing.Size(75, 75)
+        '
+        'OvalShape1
+        '
+        Me.OvalShape1.BackgroundImage = Global.Cabañas.My.Resources.Resources.thumb_COLOURBOX24169832
+        Me.OvalShape1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.OvalShape1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
+        Me.OvalShape1.Location = New System.Drawing.Point(26, 18)
+        Me.OvalShape1.Name = "OvalShape1"
+        Me.OvalShape1.Size = New System.Drawing.Size(75, 75)
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.BackgroundImage = Global.Cabañas.My.Resources.Resources.fondo
-        Me.ClientSize = New System.Drawing.Size(1362, 741)
+        Me.BackgroundImage = Global.Cabañas.My.Resources.Resources.th1_372503
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(1362, 661)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
@@ -190,6 +235,7 @@ Partial Class frmPrincipal
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip.ResumeLayout(False)
         Me.MenuStrip.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -210,5 +256,9 @@ Partial Class frmPrincipal
     Friend WithEvents ToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents EstadoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CancelacionesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
+    Friend WithEvents OvalShape1 As Microsoft.VisualBasic.PowerPacks.OvalShape
+    Friend WithEvents OvalShape2 As Microsoft.VisualBasic.PowerPacks.OvalShape
 
 End Class

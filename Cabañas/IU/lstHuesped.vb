@@ -79,4 +79,23 @@
 
 
     
+    Private Sub RectangleShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.Click
+        frmHuesped.modificar = False
+        RectangleShape1.Size = New Size(90, 30)
+        RectangleShape1.BackgroundImage = My.Resources.boton1
+        frmHuesped.idHuesped = 0
+        frmHuesped.ShowDialog()
+    End Sub
+
+    Private Sub RectangleShape1_MouseHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.MouseHover
+        RectangleShape1.Size = New Size(94, 34)
+        RectangleShape1.BackgroundImage = My.Resources.boton2
+        RectangleShape1.Cursor = Cursors.Hand
+    End Sub
+
+    Private Sub RectangleShape1_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.MouseLeave
+        RectangleShape1.Size = New Size(90, 30)
+        RectangleShape1.BackgroundImage = My.Resources.boton1
+        RectangleShape1.Cursor = Cursors.Hand
+    End Sub
 End Class

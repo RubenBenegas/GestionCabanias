@@ -70,14 +70,14 @@
             If Modificar = True Then
                 If Personal.PersonalModificar(Personal) = True Then
                     MsgBox("El personal ha sido correctamente modificado.")
-                    Personal.PersonalTraerTab(lstPersonal.dgvPersonal)
+                    Personal.PersonalTraerTab(z.dgvPersonal)
                 Else
                     MsgBox("Error al modificar el personsal." + Chr(13) + "Intentelo de nuevo.")
                 End If
             Else
                 If Personal.PersonalInsertar(Personal) = True Then
                     MsgBox("El personal ha sido correctamente insertado.")
-                    Personal.PersonalTraerTab(lstPersonal.dgvPersonal)
+                    Personal.PersonalTraerTab(z.dgvPersonal)
                 Else
                     MsgBox("Error al insertar personal." + Chr(13) + "Intentelo de nuevo.")
                 End If

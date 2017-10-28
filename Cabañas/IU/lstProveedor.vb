@@ -6,13 +6,6 @@
 
     End Sub
 
-    Private Sub Aceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Aceptar.Click
-        FrmProveedor.modificar = False
-        FrmProveedor.idProveedor = 0
-        FrmProveedor.ShowDialog()
-
-    End Sub
-
     Private Sub Editar()
         FrmProveedor.modificar = True
 
@@ -60,5 +53,11 @@
     Private Sub dgvProveedores_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvProveedores.CellDoubleClick
         Editar()
 
+    End Sub
+
+    Private Sub Aceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Aceptar.Click
+        FrmProveedor.modificar = False
+        FrmProveedor.idProveedor = 0
+        FrmProveedor.ShowDialog()
     End Sub
 End Class

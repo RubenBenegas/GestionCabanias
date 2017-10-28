@@ -52,7 +52,7 @@ Partial Class LstProveedor
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvProveedores.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvProveedores.Location = New System.Drawing.Point(12, 12)
+        Me.dgvProveedores.Location = New System.Drawing.Point(12, 0)
         Me.dgvProveedores.MultiSelect = False
         Me.dgvProveedores.Name = "dgvProveedores"
         Me.dgvProveedores.ReadOnly = True
@@ -61,7 +61,7 @@ Partial Class LstProveedor
         Me.dgvProveedores.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvProveedores.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText
         Me.dgvProveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvProveedores.Size = New System.Drawing.Size(960, 410)
+        Me.dgvProveedores.Size = New System.Drawing.Size(960, 422)
         Me.dgvProveedores.TabIndex = 0
         '
         'Aceptar

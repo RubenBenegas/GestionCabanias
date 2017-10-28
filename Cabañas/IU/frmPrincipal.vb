@@ -11,7 +11,7 @@ Public Class frmPrincipal
 
     Private Sub PersonalToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PersonalToolStripMenuItem.Click
 
-        lstPersonal.ShowDialog()
+        z.ShowDialog()
 
     End Sub
 

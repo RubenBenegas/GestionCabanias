@@ -1,6 +1,6 @@
-﻿Public Class lstPersonal
+﻿Public Class z
     Dim Personal As New Personal
-   
+
     Private Sub lstPersonal_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Personal.PersonalTraerTab(dgvPersonal)
     End Sub
@@ -16,17 +16,23 @@
 
     End Sub
 
-    Private Sub btnModificar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnModificar.Click
+    Private Sub dgvPersonal_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvPersonal.CellDoubleClick
         Editar()
+
     End Sub
 
-    Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
+    Private Sub RectangleShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.Click
         frmPersonal.Modificar = False
         frmPersonal.IdPersonal = 0
         frmPersonal.ShowDialog()
     End Sub
 
-    Private Sub btnBorrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBorrar.Click
+    Private Sub RectangleShape2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape2.Click
+        Editar()
+    End Sub
+
+    Private Sub RectangleShape3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape3.Click
+
         If dgvPersonal.Rows.Count <> 0 Then
             Personal.Id = dgvPersonal.Item("id", dgvPersonal.CurrentRow.Index).Value
             Dim mensaje As DialogResult = MsgBox("Està seguro que quiere borrar ...", MsgBoxStyle.OkCancel, "Advertencia")
@@ -43,12 +49,7 @@
         End If
     End Sub
 
-    Private Sub btnCerrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCerrar.Click
+    Private Sub RectangleShape4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape4.Click
         Close()
-    End Sub
-
-    Private Sub dgvPersonal_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvPersonal.CellDoubleClick
-        Editar()
-
     End Sub
 End Class

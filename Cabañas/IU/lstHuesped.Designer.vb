@@ -29,6 +29,7 @@ Partial Class lstHuesped
         Me.btnEliminar = New System.Windows.Forms.Button
         Me.btnCerrar = New System.Windows.Forms.Button
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
+        Me.RectangleShape2 = New Microsoft.VisualBasic.PowerPacks.RectangleShape
         Me.RectangleShape1 = New Cabañas.BotonAgregar
         CType(Me.dgvHuesped, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -105,10 +106,16 @@ Partial Class lstHuesped
         Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
-        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape1})
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape2, Me.RectangleShape1})
         Me.ShapeContainer1.Size = New System.Drawing.Size(984, 461)
         Me.ShapeContainer1.TabIndex = 5
         Me.ShapeContainer1.TabStop = False
+        '
+        'RectangleShape2
+        '
+        Me.RectangleShape2.Location = New System.Drawing.Point(454, 428)
+        Me.RectangleShape2.Name = "RectangleShape2"
+        Me.RectangleShape2.Size = New System.Drawing.Size(75, 23)
         '
         'RectangleShape1
         '
@@ -149,5 +156,6 @@ Partial Class lstHuesped
     Friend WithEvents btnCerrar As System.Windows.Forms.Button
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents RectangleShape1 As Cabañas.BotonAgregar
+    Friend WithEvents RectangleShape2 As BotonModificar
 
 End Class

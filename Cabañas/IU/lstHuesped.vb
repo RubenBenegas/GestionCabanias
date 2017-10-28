@@ -6,11 +6,7 @@
         huesped.TraerTabHuespedes(dgvHuesped)
     End Sub
 
-    Private Sub btnModificar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnModificar.Click
 
-        Editar()
-
-    End Sub
 
     Private Sub dgvHuesped_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvHuesped.CellDoubleClick
 
@@ -61,5 +57,9 @@
         frmHuesped.modificar = False
         frmHuesped.idHuesped = 0
         frmHuesped.ShowDialog()
+    End Sub
+
+    Private Sub RectangleShape2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape2.Click
+        Editar()
     End Sub
 End Class

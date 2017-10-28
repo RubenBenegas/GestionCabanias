@@ -128,7 +128,7 @@ Public Class frmPrincipal
         OvalShape3.Size = New Size(75, 75)
         OvalShape3.BorderStyle = Drawing2D.DashStyle.Custom
         OvalShape3.BorderWidth = 0
-        lstReservas.ShowDialog()
+        grafReservas.ShowDialog()
     End Sub
 
 

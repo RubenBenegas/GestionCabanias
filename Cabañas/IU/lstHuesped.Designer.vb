@@ -29,6 +29,8 @@ Partial Class lstHuesped
         Me.btnModificar = New System.Windows.Forms.Button
         Me.btnEliminar = New System.Windows.Forms.Button
         Me.btnCerrar = New System.Windows.Forms.Button
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
+        Me.RectangleShape1 = New Microsoft.VisualBasic.PowerPacks.RectangleShape
         CType(Me.dgvHuesped, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -51,7 +53,7 @@ Partial Class lstHuesped
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvHuesped.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvHuesped.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvHuesped.Location = New System.Drawing.Point(12, 12)
+        Me.dgvHuesped.Location = New System.Drawing.Point(12, 3)
         Me.dgvHuesped.MultiSelect = False
         Me.dgvHuesped.Name = "dgvHuesped"
         Me.dgvHuesped.ReadOnly = True
@@ -112,6 +114,22 @@ Partial Class lstHuesped
         Me.btnCerrar.Text = "Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = False
         '
+        'ShapeContainer1
+        '
+        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer1.Name = "ShapeContainer1"
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape1})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(984, 461)
+        Me.ShapeContainer1.TabIndex = 5
+        Me.ShapeContainer1.TabStop = False
+        '
+        'RectangleShape1
+        '
+        Me.RectangleShape1.Location = New System.Drawing.Point(322, 430)
+        Me.RectangleShape1.Name = "RectangleShape1"
+        Me.RectangleShape1.Size = New System.Drawing.Size(75, 25)
+        '
         'lstHuesped
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -125,6 +143,7 @@ Partial Class lstHuesped
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.dgvHuesped)
+        Me.Controls.Add(Me.ShapeContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(500, 300)
@@ -140,5 +159,7 @@ Partial Class lstHuesped
     Friend WithEvents btnModificar As System.Windows.Forms.Button
     Friend WithEvents btnEliminar As System.Windows.Forms.Button
     Friend WithEvents btnCerrar As System.Windows.Forms.Button
+    Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
+    Friend WithEvents RectangleShape1 As Microsoft.VisualBasic.PowerPacks.RectangleShape
 
 End Class

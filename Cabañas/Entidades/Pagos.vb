@@ -176,4 +176,30 @@ Public Class Pagos
         End Try
     End Function
 
+    Public Function PagosTraerTotalPagosPorReserva(ByVal idReserva As Integer) As Decimal
+        Try
+            abrirConexion()
+            Dim MontoTotal
+            Dim objComando As New SqlCommand("PagosTraerTotalPagosPorReserva", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            objComando.Parameters.AddWithValue("@IdReserva", idReserva)
+            Dim objDataTable As New Data.DataTable
+            Dim objDataAdapter As New SqlDataAdapter(objComando)
+            objDataAdapter.Fill(objDataTable)
+
+            If objDataTable.Rows(0).Item("MontoTotal") Is DBNull.Value Then
+                MontoTotal = 0
+            Else
+                MontoTotal = objDataTable.Rows(0).Item("MontoTotal")
+            End If
+
+            Return MontoTotal
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            cerrarConexion()
+        End Try
+    End Function
+
 End Class

@@ -493,8 +493,8 @@ Public Class Reservas
             abrirConexion()
             Dim CostoEstadia As Decimal
             Dim objComando As New SqlCommand("ReservaCostoEstadia", objConexion)
-            objComando.Parameters.AddWithValue("@IdReserva", idReserva)
             objComando.CommandType = CommandType.StoredProcedure
+            objComando.Parameters.AddWithValue("@IdReserva", idReserva)
             Dim objDataTable As New Data.DataTable
             Dim objDataAdapter As New SqlDataAdapter(objComando)
             objDataAdapter.Fill(objDataTable)
@@ -514,8 +514,9 @@ Public Class Reservas
             abrirConexion()
             Dim CostoAdicionales As Decimal
             Dim objComando As New SqlCommand("ReservaCostoAdicionales", objConexion)
-            objComando.Parameters.AddWithValue("@IdReserva", idReserva)
             objComando.CommandType = CommandType.StoredProcedure
+            objComando.Parameters.AddWithValue("@IdReserva", idReserva)
+
             Dim objDataTable As New Data.DataTable
             Dim objDataAdapter As New SqlDataAdapter(objComando)
             objDataAdapter.Fill(objDataTable)
@@ -537,8 +538,8 @@ Public Class Reservas
             abrirConexion()
             Dim MontoDeCabania As Decimal
             Dim objComando As New SqlCommand("ReservaTraerMontoDeCabania", objConexion)
-            objComando.Parameters.AddWithValue("@idCabania", idCabania)
             objComando.CommandType = CommandType.StoredProcedure
+            objComando.Parameters.AddWithValue("@idCabania", idCabania)
             Dim objDataTable As New Data.DataTable
             Dim objDataAdapter As New SqlDataAdapter(objComando)
             objDataAdapter.Fill(objDataTable)
@@ -607,6 +608,31 @@ Public Class Reservas
         Catch ex As Exception
             MsgBox(ex.Message)
             Return False
+        Finally
+            cerrarConexion()
+        End Try
+    End Function
+
+
+
+
+    Public Function ReservasTraerMontoTotal(ByVal idReserva As Integer) As Decimal
+        Try
+            abrirConexion()
+            Dim MontoTotal
+            Dim objComando As New SqlCommand("ReservasTraerMontoTotal", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            objComando.Parameters.AddWithValue("@IdReserva", idReserva)
+            Dim objDataTable As New Data.DataTable
+            Dim objDataAdapter As New SqlDataAdapter(objComando)
+            objDataAdapter.Fill(objDataTable)
+
+            MontoTotal = objDataTable.Rows(0).Item("CostoTotal")
+            Return MontoTotal
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
         Finally
             cerrarConexion()
         End Try

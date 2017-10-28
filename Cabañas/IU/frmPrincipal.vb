@@ -93,7 +93,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub OvalShape1_MouseHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OvalShape1.MouseHover
-        OvalShape1.Size = New Size(78, 78)
+        OvalShape1.Size = New Size(82, 82)
         OvalShape1.BorderStyle = Drawing2D.DashStyle.Solid
         OvalShape1.BorderWidth = 3
 
@@ -106,7 +106,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub OvalShape2_MouseHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OvalShape2.MouseHover
-        OvalShape2.Size = New Size(78, 78)
+        OvalShape2.Size = New Size(82, 82)
         OvalShape2.BorderStyle = Drawing2D.DashStyle.Solid
         OvalShape2.BorderWidth = 3
     End Sub
@@ -118,6 +118,29 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub OvalShape2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OvalShape2.Click
+        OvalShape2.Size = New Size(75, 75)
+        OvalShape2.BorderStyle = Drawing2D.DashStyle.Custom
+        OvalShape2.BorderWidth = 0
         lstHuesped.ShowDialog()
+    End Sub
+
+    Private Sub OvalShape3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OvalShape3.Click
+        OvalShape3.Size = New Size(75, 75)
+        OvalShape3.BorderStyle = Drawing2D.DashStyle.Custom
+        OvalShape3.BorderWidth = 0
+        lstReservas.ShowDialog()
+    End Sub
+
+
+    Private Sub OvalShape3_MouseHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OvalShape3.MouseHover
+        OvalShape3.Size = New Size(82, 82)
+        OvalShape3.BorderStyle = Drawing2D.DashStyle.Solid
+        OvalShape3.BorderWidth = 3
+    End Sub
+
+    Private Sub OvalShape3_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OvalShape3.MouseLeave
+        OvalShape3.Size = New Size(75, 75)
+        OvalShape3.BorderStyle = Drawing2D.DashStyle.Custom
+        OvalShape3.BorderWidth = 0
     End Sub
 End Class

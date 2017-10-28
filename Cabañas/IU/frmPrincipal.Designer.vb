@@ -42,6 +42,7 @@ Partial Class frmPrincipal
         Me.PruebaABMReservasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.Panel1 = New System.Windows.Forms.Panel
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
+        Me.OvalShape3 = New Microsoft.VisualBasic.PowerPacks.OvalShape
         Me.OvalShape2 = New Microsoft.VisualBasic.PowerPacks.OvalShape
         Me.OvalShape1 = New Microsoft.VisualBasic.PowerPacks.OvalShape
         Me.MenuStrip.SuspendLayout()
@@ -192,10 +193,19 @@ Partial Class frmPrincipal
         Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
-        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.OvalShape2, Me.OvalShape1})
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.OvalShape3, Me.OvalShape2, Me.OvalShape1})
         Me.ShapeContainer1.Size = New System.Drawing.Size(135, 638)
         Me.ShapeContainer1.TabIndex = 0
         Me.ShapeContainer1.TabStop = False
+        '
+        'OvalShape3
+        '
+        Me.OvalShape3.BackgroundImage = Global.Cabañas.My.Resources.Resources.icono_calendario
+        Me.OvalShape3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.OvalShape3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
+        Me.OvalShape3.Location = New System.Drawing.Point(25, 203)
+        Me.OvalShape3.Name = "OvalShape3"
+        Me.OvalShape3.Size = New System.Drawing.Size(75, 75)
         '
         'OvalShape2
         '
@@ -260,5 +270,6 @@ Partial Class frmPrincipal
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents OvalShape1 As Microsoft.VisualBasic.PowerPacks.OvalShape
     Friend WithEvents OvalShape2 As Microsoft.VisualBasic.PowerPacks.OvalShape
+    Friend WithEvents OvalShape3 As Microsoft.VisualBasic.PowerPacks.OvalShape
 
 End Class

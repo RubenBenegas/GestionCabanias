@@ -137,6 +137,13 @@ Namespace My.Resources
             End Get
         End Property
         
+        Friend ReadOnly Property icono_calendario() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icono_calendario", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
         Friend ReadOnly Property orig_372503() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("orig_372503", resourceCulture)

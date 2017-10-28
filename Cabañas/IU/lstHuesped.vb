@@ -79,19 +79,19 @@
 
 
     
-    Private Sub RectangleShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.Click
+    Private Sub RectangleShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         frmHuesped.modificar = False
         RectangleShape1.Size = New Size(90, 30)
         frmHuesped.idHuesped = 0
         frmHuesped.ShowDialog()
     End Sub
 
-    Private Sub RectangleShape1_MouseHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.MouseHover
+    Private Sub RectangleShape1_MouseHover(ByVal sender As System.Object, ByVal e As System.EventArgs)
         RectangleShape1.Size = New Size(94, 34)
         RectangleShape1.Cursor = Cursors.Hand
     End Sub
 
-    Private Sub RectangleShape1_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.MouseLeave
+    Private Sub RectangleShape1_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs)
         RectangleShape1.Size = New Size(90, 30)
         RectangleShape1.Cursor = Cursors.Hand
     End Sub

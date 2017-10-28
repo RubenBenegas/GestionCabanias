@@ -29,7 +29,7 @@ Partial Class lstHuesped
         Me.btnEliminar = New System.Windows.Forms.Button
         Me.btnCerrar = New System.Windows.Forms.Button
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
-        Me.RectangleShape2 = New Microsoft.VisualBasic.PowerPacks.RectangleShape
+        Me.RectangleShape2 = New Cabañas.BotonModificar
         Me.RectangleShape1 = New Cabañas.BotonAgregar
         CType(Me.dgvHuesped, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -115,7 +115,7 @@ Partial Class lstHuesped
         '
         Me.RectangleShape2.Location = New System.Drawing.Point(454, 428)
         Me.RectangleShape2.Name = "RectangleShape2"
-        Me.RectangleShape2.Size = New System.Drawing.Size(75, 23)
+        'Me.RectangleShape2.Size = New System.Drawing.Size(75, 23)
         '
         'RectangleShape1
         '

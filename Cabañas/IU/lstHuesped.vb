@@ -49,50 +49,17 @@
 
     End Sub
 
-    Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
-        frmHuesped.modificar = False
-        frmHuesped.idHuesped = 0
-        frmHuesped.ShowDialog()
-    End Sub
-
-
 
     Private Sub btnCerrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCerrar.Click
         Close()
 
     End Sub
 
-    Private Sub btnAgregar_MouseHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.MouseHover
-        btnAgregar.Size = New Size(94, 34)
-        btnAgregar.ForeColor = Color.Black
-        btnAgregar.Cursor = Cursors.Hand
-
-    End Sub
-
-    Private Sub btnAgregar_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.MouseLeave
-        btnAgregar.Size = New Size(90, 30)
-        btnAgregar.ForeColor = Color.White
-        btnAgregar.Cursor = Cursors.Arrow
-    End Sub
 
 
-
-
-    
-    Private Sub RectangleShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Sub RectangleShape1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.Click
         frmHuesped.modificar = False
-        RectangleShape1.Size = New Size(90, 30)
         frmHuesped.idHuesped = 0
         frmHuesped.ShowDialog()
-    End Sub
-
-    Private Sub RectangleShape1_MouseHover(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        RectangleShape1.Size = New Size(94, 34)
-        RectangleShape1.Cursor = Cursors.Hand
-    End Sub
-
-    Private Sub RectangleShape1_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        RectangleShape1.Size = New Size(90, 30)
-        RectangleShape1.Cursor = Cursors.Hand
     End Sub
 End Class

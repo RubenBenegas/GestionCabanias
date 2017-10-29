@@ -6,26 +6,31 @@
 
     End Sub
 
-    Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
+    Private Sub dgvPagos_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvPagos.CellDoubleClick
+        Editar()
+    End Sub
+
+    Private Sub Editar()
+        frmPagos.modificar = True
+        If dgvPagos.Rows.Count <> 0 Then
+            frmPagos.IdPago = dgvPagos.Item("id", dgvPagos.CurrentRow.Index).Value
+            frmPagos.ShowDialog()
+            'Else
+            '    MsgBox("No hay elementos para modificar.", MsgBoxStyle.Information, "Mensaje")
+        End If
+    End Sub
+
+    Private Sub RectangleShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.Click
         frmPagos.modificar = False
         frmPagos.IdPago = 0
         frmPagos.ShowDialog()
     End Sub
 
-    Private Sub btnModificar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnModificar.Click
+    Private Sub RectangleShape2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape2.Click
         Editar()
     End Sub
 
-    Private Sub dgvPagos_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvPagos.CellDoubleClick
-        Editar()
-    End Sub
-
-    Private Sub btnCerrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCerrar.Click
-        Close()
-    End Sub
- 
-
-    Private Sub btnEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminar.Click
+    Private Sub RectangleShape3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape3.Click
         If dgvPagos.Rows.Count <> 0 Then
             Pago.Id = dgvPagos.Item("id", dgvPagos.CurrentRow.Index).Value
             Dim mensaje As DialogResult = MsgBox("¿Està seguro que quiere borrar?", MsgBoxStyle.OkCancel, "Advertencia")
@@ -41,14 +46,9 @@
             '    MsgBox("No hay elementos para eliminar.", MsgBoxStyle.Information, "Mensaje")
         End If
     End Sub
-    Private Sub Editar()
-        frmPagos.modificar = True
-        If dgvPagos.Rows.Count <> 0 Then
-            frmPagos.IdPago = dgvPagos.Item("id", dgvPagos.CurrentRow.Index).Value
-            frmPagos.ShowDialog()
-            'Else
-            '    MsgBox("No hay elementos para modificar.", MsgBoxStyle.Information, "Mensaje")
-        End If
+
+    Private Sub RectangleShape4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape4.Click
+        Close()
     End Sub
 End Class
 

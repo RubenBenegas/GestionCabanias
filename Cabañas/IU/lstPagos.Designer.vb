@@ -24,11 +24,13 @@ Partial Class lstPagos
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(lstPagos))
         Me.dgvPagos = New System.Windows.Forms.DataGridView
-        Me.btnAgregar = New System.Windows.Forms.Button
-        Me.btnModificar = New System.Windows.Forms.Button
-        Me.btnEliminar = New System.Windows.Forms.Button
-        Me.btnCerrar = New System.Windows.Forms.Button
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
+        Me.RectangleShape4 = New Cabañas.BotonCerrar
+        Me.RectangleShape3 = New Cabañas.BotonEliminar
+        Me.RectangleShape2 = New Cabañas.BotonModificar
+        Me.RectangleShape1 = New Cabañas.BotonAgregar
         CType(Me.dgvPagos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -68,57 +70,55 @@ Partial Class lstPagos
         Me.dgvPagos.Size = New System.Drawing.Size(544, 410)
         Me.dgvPagos.TabIndex = 0
         '
-        'btnAgregar
+        'ShapeContainer1
         '
-        Me.btnAgregar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnAgregar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregar.ForeColor = System.Drawing.Color.White
-        Me.btnAgregar.Location = New System.Drawing.Point(12, 430)
-        Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(90, 30)
-        Me.btnAgregar.TabIndex = 1
-        Me.btnAgregar.Text = "Agregar"
-        Me.btnAgregar.UseVisualStyleBackColor = False
+        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer1.Name = "ShapeContainer1"
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape4, Me.RectangleShape3, Me.RectangleShape2, Me.RectangleShape1})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(568, 461)
+        Me.ShapeContainer1.TabIndex = 5
+        Me.ShapeContainer1.TabStop = False
         '
-        'btnModificar
+        'RectangleShape4
         '
-        Me.btnModificar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnModificar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnModificar.ForeColor = System.Drawing.Color.White
-        Me.btnModificar.Location = New System.Drawing.Point(108, 430)
-        Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(90, 30)
-        Me.btnModificar.TabIndex = 2
-        Me.btnModificar.Text = "Modificar"
-        Me.btnModificar.UseVisualStyleBackColor = False
+        Me.RectangleShape4.BackgroundImage = CType(resources.GetObject("RectangleShape4.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.RectangleShape4.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape4.CornerRadius = 17
+        Me.RectangleShape4.Location = New System.Drawing.Point(429, 424)
+        Me.RectangleShape4.Name = "RectangleShape4"
+        Me.RectangleShape4.Size = New System.Drawing.Size(122, 35)
         '
-        'btnEliminar
+        'RectangleShape3
         '
-        Me.btnEliminar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEliminar.ForeColor = System.Drawing.Color.White
-        Me.btnEliminar.Location = New System.Drawing.Point(204, 430)
-        Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(90, 30)
-        Me.btnEliminar.TabIndex = 3
-        Me.btnEliminar.Text = "Eliminar"
-        Me.btnEliminar.UseVisualStyleBackColor = False
+        Me.RectangleShape3.BackgroundImage = CType(resources.GetObject("RectangleShape3.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.RectangleShape3.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape3.CornerRadius = 17
+        Me.RectangleShape3.Location = New System.Drawing.Point(235, 425)
+        Me.RectangleShape3.Name = "RectangleShape3"
+        Me.RectangleShape3.Size = New System.Drawing.Size(122, 35)
         '
-        'btnCerrar
+        'RectangleShape2
         '
-        Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCerrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCerrar.ForeColor = System.Drawing.Color.White
-        Me.btnCerrar.Location = New System.Drawing.Point(406, 430)
-        Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(150, 30)
-        Me.btnCerrar.TabIndex = 4
-        Me.btnCerrar.Text = "Cerrar"
-        Me.btnCerrar.UseVisualStyleBackColor = False
+        Me.RectangleShape2.BackgroundImage = CType(resources.GetObject("RectangleShape2.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.RectangleShape2.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape2.CornerRadius = 17
+        Me.RectangleShape2.Location = New System.Drawing.Point(116, 424)
+        Me.RectangleShape2.Name = "RectangleShape2"
+        Me.RectangleShape2.Size = New System.Drawing.Size(122, 35)
+        '
+        'RectangleShape1
+        '
+        Me.RectangleShape1.BackgroundImage = CType(resources.GetObject("RectangleShape1.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.RectangleShape1.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape1.CornerRadius = 17
+        Me.RectangleShape1.Location = New System.Drawing.Point(6, 424)
+        Me.RectangleShape1.Name = "RectangleShape1"
+        Me.RectangleShape1.Size = New System.Drawing.Size(118, 35)
         '
         'lstPagos
         '
@@ -127,11 +127,8 @@ Partial Class lstPagos
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(568, 461)
-        Me.Controls.Add(Me.btnCerrar)
-        Me.Controls.Add(Me.btnEliminar)
-        Me.Controls.Add(Me.btnModificar)
-        Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.dgvPagos)
+        Me.Controls.Add(Me.ShapeContainer1)
         Me.Name = "lstPagos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Lista Pagos"
@@ -140,8 +137,9 @@ Partial Class lstPagos
 
     End Sub
     Friend WithEvents dgvPagos As System.Windows.Forms.DataGridView
-    Friend WithEvents btnAgregar As System.Windows.Forms.Button
-    Friend WithEvents btnModificar As System.Windows.Forms.Button
-    Friend WithEvents btnEliminar As System.Windows.Forms.Button
-    Friend WithEvents btnCerrar As System.Windows.Forms.Button
+    Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
+    Friend WithEvents RectangleShape1 As Cabañas.BotonAgregar
+    Friend WithEvents RectangleShape2 As Cabañas.BotonModificar
+    Friend WithEvents RectangleShape3 As Cabañas.BotonEliminar
+    Friend WithEvents RectangleShape4 As Cabañas.BotonCerrar
 End Class

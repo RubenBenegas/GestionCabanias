@@ -4,13 +4,6 @@
         reservas.TraerTabReservas(dgvReservas)
     End Sub
 
-    Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
-        frmReservas.modificar = False
-        frmReservas.idReserva = 0
-        frmReservas.ShowDialog()
-
-    End Sub
-
     Private Sub Editar()
         frmReservas.modificar = True
 
@@ -23,13 +16,22 @@
 
     End Sub
 
+    Private Sub dgvReservas_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvReservas.CellDoubleClick
+        Editar()
 
-    Private Sub Modificar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Modificar.Click
+    End Sub
+
+    Private Sub RectangleShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.Click
+        frmReservas.modificar = False
+        frmReservas.idReserva = 0
+        frmReservas.ShowDialog()
+    End Sub
+
+    Private Sub RectangleShape2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape2.Click
         Editar()
     End Sub
 
-    Private Sub Eliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Eliminar.Click
-
+    Private Sub RectangleShape3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape3.Click
         If dgvReservas.Rows.Count <> 0 Then
             reservas.Id = dgvReservas.Item("id", dgvReservas.CurrentRow.Index).Value
 
@@ -45,18 +47,9 @@
             'Else
             '    MsgBox("No hay elementos para eliminar.", MsgBoxStyle.Information, "Mensaje")
         End If
-
     End Sub
 
-    Private Sub Cerrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cerrar.Click
+    Private Sub RectangleShape4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape4.Click
         Close()
-
-    End Sub
-
-
-
-    Private Sub dgvReservas_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvReservas.CellDoubleClick
-        Editar()
-
     End Sub
 End Class

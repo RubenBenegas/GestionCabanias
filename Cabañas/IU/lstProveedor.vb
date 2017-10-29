@@ -18,13 +18,22 @@
 
     End Sub
 
+    Private Sub dgvProveedores_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvProveedores.CellDoubleClick
+        Editar()
 
-    Private Sub Modificar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Modificar.Click
+    End Sub
+
+    Private Sub RectangleShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.Click
+        FrmProveedor.modificar = False
+        FrmProveedor.idProveedor = 0
+        FrmProveedor.ShowDialog()
+    End Sub
+
+    Private Sub RectangleShape2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape2.Click
         Editar()
     End Sub
 
-    Private Sub Eliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Eliminar.Click
-
+    Private Sub RectangleShape3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape3.Click
         If dgvProveedores.Rows.Count <> 0 Then
             Proveedor.id = dgvProveedores.Item("id", dgvProveedores.CurrentRow.Index).Value
 
@@ -40,24 +49,9 @@
             'Else
             '    MsgBox("No hay elementos para eliminar.", MsgBoxStyle.Information, "Mensaje")
         End If
-
     End Sub
 
-    Private Sub Cerrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cerrar.Click
+    Private Sub RectangleShape4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape4.Click
         Close()
-
-    End Sub
-
-
-
-    Private Sub dgvProveedores_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvProveedores.CellDoubleClick
-        Editar()
-
-    End Sub
-
-    Private Sub Aceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Aceptar.Click
-        FrmProveedor.modificar = False
-        FrmProveedor.idProveedor = 0
-        FrmProveedor.ShowDialog()
     End Sub
 End Class

@@ -8,20 +8,25 @@
 
     End Sub
 
-    Private Sub btnModificar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnModificar.Click
+    Private Sub Editar()
+        frmServicios.modificar = True
+        If dgvServicios.Rows.Count <> 0 Then
+            frmServicios.idServicio = dgvServicios.Item("Id", dgvServicios.CurrentRow.Index).Value
+            frmServicios.ShowDialog()
+
+              End If
+
+    End Sub
+
+    Private Sub dgvServicios_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvServicios.CellDoubleClick
         Editar()
-
     End Sub
 
-
-    Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
-        frmServicios.modificar = False
-        frmServicios.idServicio = 0
-        frmServicios.ShowDialog()
+    Private Sub RectangleShape2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape2.Click
+        Editar()
     End Sub
 
-
-    Private Sub btnEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminar.Click
+    Private Sub RectangleShape3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape3.Click
         If dgvServicios.Rows.Count <> 0 Then
             servicio.Id = dgvServicios.Item("Id", dgvServicios.CurrentRow.Index).Value
 
@@ -39,23 +44,13 @@
         End If
     End Sub
 
-    Private Sub btnCerrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCerrar.Click
+    Private Sub RectangleShape4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape4.Click
         Close()
-
     End Sub
 
-    Private Sub Editar()
-        frmServicios.modificar = True
-        If dgvServicios.Rows.Count <> 0 Then
-            frmServicios.idServicio = dgvServicios.Item("Id", dgvServicios.CurrentRow.Index).Value
-            frmServicios.ShowDialog()
-
-              End If
-
-    End Sub
-
-
-    Private Sub dgvServicios_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvServicios.CellDoubleClick
-        Editar()
+    Private Sub RectangleShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.Click
+        frmServicios.modificar = False
+        frmServicios.idServicio = 0
+        frmServicios.ShowDialog()
     End Sub
 End Class

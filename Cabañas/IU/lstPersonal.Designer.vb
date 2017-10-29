@@ -52,13 +52,13 @@ Partial Class z
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvPersonal.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvPersonal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvPersonal.Location = New System.Drawing.Point(21, -14)
+        Me.dgvPersonal.Location = New System.Drawing.Point(12, 12)
         Me.dgvPersonal.MultiSelect = False
         Me.dgvPersonal.Name = "dgvPersonal"
         Me.dgvPersonal.ReadOnly = True
         Me.dgvPersonal.RowHeadersVisible = False
         Me.dgvPersonal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvPersonal.Size = New System.Drawing.Size(960, 429)
+        Me.dgvPersonal.Size = New System.Drawing.Size(960, 399)
         Me.dgvPersonal.TabIndex = 0
         '
         'ShapeContainer1
@@ -67,7 +67,7 @@ Partial Class z
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape4, Me.RectangleShape3, Me.RectangleShape2, Me.RectangleShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(984, 461)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(984, 468)
         Me.ShapeContainer1.TabIndex = 4
         Me.ShapeContainer1.TabStop = False
         '
@@ -116,7 +116,7 @@ Partial Class z
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(984, 461)
+        Me.ClientSize = New System.Drawing.Size(984, 468)
         Me.Controls.Add(Me.dgvPersonal)
         Me.Controls.Add(Me.ShapeContainer1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

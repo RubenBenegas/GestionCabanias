@@ -100,7 +100,7 @@
                 
                 
 
-                If montoAgregado > montoTotal - montoPagos Then
+                If montoDiferencia > montoTotal - montoPagos Then
                     MessageBox.Show("El nuevo monto es superior a la deuda actual")
                 ElseIf pagos.PagosModificar(pagos) = True Then
                     MsgBox("El pago ha sido correctamente modificado.")

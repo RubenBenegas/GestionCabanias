@@ -12,10 +12,7 @@
     End Property
 
     Dim reservas As New Reservas
-    Private Sub btnCerrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCerrar.Click
-        Close()
-    End Sub
-
+ 
     Private Sub lstEstadosReservas_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         reservas.TraerTabReservas(dgvEstadoReservas)
     End Sub
@@ -95,5 +92,9 @@
 
     Private Sub btnTodos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTodos.Click
         reservas.TraerTabReservas(dgvEstadoReservas)
+    End Sub
+
+    Private Sub RectangleShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.Click
+        Close()
     End Sub
 End Class

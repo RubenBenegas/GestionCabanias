@@ -23,8 +23,8 @@ Partial Class lstEstadosReservas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(lstEstadosReservas))
         Me.dgvEstadoReservas = New System.Windows.Forms.DataGridView
-        Me.btnCerrar = New System.Windows.Forms.Button
         Me.rbEnEspera = New System.Windows.Forms.RadioButton
         Me.rbSeniada = New System.Windows.Forms.RadioButton
         Me.rbCancelada = New System.Windows.Forms.RadioButton
@@ -32,6 +32,8 @@ Partial Class lstEstadosReservas
         Me.rdEnCurso = New System.Windows.Forms.RadioButton
         Me.btnTodos = New System.Windows.Forms.Button
         Me.rdSinSenia = New System.Windows.Forms.RadioButton
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
+        Me.RectangleShape1 = New Cabañas.BotonCerrar
         CType(Me.dgvEstadoReservas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -63,19 +65,6 @@ Partial Class lstEstadosReservas
         Me.dgvEstadoReservas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvEstadoReservas.Size = New System.Drawing.Size(1032, 258)
         Me.dgvEstadoReservas.TabIndex = 0
-        '
-        'btnCerrar
-        '
-        Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCerrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCerrar.ForeColor = System.Drawing.Color.White
-        Me.btnCerrar.Location = New System.Drawing.Point(966, 308)
-        Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(79, 29)
-        Me.btnCerrar.TabIndex = 1
-        Me.btnCerrar.Text = "Cerrar"
-        Me.btnCerrar.UseVisualStyleBackColor = False
         '
         'rbEnEspera
         '
@@ -168,6 +157,26 @@ Partial Class lstEstadosReservas
         Me.rdSinSenia.Text = "Sin seña"
         Me.rdSinSenia.UseVisualStyleBackColor = True
         '
+        'ShapeContainer1
+        '
+        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer1.Name = "ShapeContainer1"
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape1})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(1056, 343)
+        Me.ShapeContainer1.TabIndex = 10
+        Me.ShapeContainer1.TabStop = False
+        '
+        'RectangleShape1
+        '
+        Me.RectangleShape1.BackgroundImage = CType(resources.GetObject("RectangleShape1.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.RectangleShape1.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape1.CornerRadius = 17
+        Me.RectangleShape1.Location = New System.Drawing.Point(913, 304)
+        Me.RectangleShape1.Name = "RectangleShape1"
+        Me.RectangleShape1.Size = New System.Drawing.Size(122, 35)
+        '
         'lstEstadosReservas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -182,8 +191,8 @@ Partial Class lstEstadosReservas
         Me.Controls.Add(Me.rbCancelada)
         Me.Controls.Add(Me.rbSeniada)
         Me.Controls.Add(Me.rbEnEspera)
-        Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.dgvEstadoReservas)
+        Me.Controls.Add(Me.ShapeContainer1)
         Me.Name = "lstEstadosReservas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "lstEstadosReservas"
@@ -193,7 +202,6 @@ Partial Class lstEstadosReservas
 
     End Sub
     Friend WithEvents dgvEstadoReservas As System.Windows.Forms.DataGridView
-    Friend WithEvents btnCerrar As System.Windows.Forms.Button
     Friend WithEvents rbEnEspera As System.Windows.Forms.RadioButton
     Friend WithEvents rbSeniada As System.Windows.Forms.RadioButton
     Friend WithEvents rbCancelada As System.Windows.Forms.RadioButton
@@ -201,4 +209,6 @@ Partial Class lstEstadosReservas
     Friend WithEvents rdEnCurso As System.Windows.Forms.RadioButton
     Friend WithEvents btnTodos As System.Windows.Forms.Button
     Friend WithEvents rdSinSenia As System.Windows.Forms.RadioButton
+    Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
+    Friend WithEvents RectangleShape1 As Cabañas.BotonCerrar
 End Class

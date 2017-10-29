@@ -25,14 +25,10 @@ Partial Class lstEstadosReservas
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(lstEstadosReservas))
         Me.dgvEstadoReservas = New System.Windows.Forms.DataGridView
-        Me.rbEnEspera = New System.Windows.Forms.RadioButton
-        Me.rbSeniada = New System.Windows.Forms.RadioButton
-        Me.rbCancelada = New System.Windows.Forms.RadioButton
         Me.btnBuscar = New System.Windows.Forms.Button
-        Me.rdEnCurso = New System.Windows.Forms.RadioButton
         Me.btnTodos = New System.Windows.Forms.Button
-        Me.rdSinSenia = New System.Windows.Forms.RadioButton
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
+        Me.cmbEstados = New System.Windows.Forms.ComboBox
         Me.RectangleShape1 = New Cabañas.BotonCerrar
         CType(Me.dgvEstadoReservas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -66,96 +62,35 @@ Partial Class lstEstadosReservas
         Me.dgvEstadoReservas.Size = New System.Drawing.Size(1032, 258)
         Me.dgvEstadoReservas.TabIndex = 0
         '
-        'rbEnEspera
-        '
-        Me.rbEnEspera.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.rbEnEspera.AutoSize = True
-        Me.rbEnEspera.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbEnEspera.Location = New System.Drawing.Point(146, 15)
-        Me.rbEnEspera.Name = "rbEnEspera"
-        Me.rbEnEspera.Size = New System.Drawing.Size(82, 17)
-        Me.rbEnEspera.TabIndex = 2
-        Me.rbEnEspera.TabStop = True
-        Me.rbEnEspera.Text = "En espera"
-        Me.rbEnEspera.UseVisualStyleBackColor = True
-        '
-        'rbSeniada
-        '
-        Me.rbSeniada.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.rbSeniada.AutoSize = True
-        Me.rbSeniada.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbSeniada.Location = New System.Drawing.Point(312, 15)
-        Me.rbSeniada.Name = "rbSeniada"
-        Me.rbSeniada.Size = New System.Drawing.Size(68, 17)
-        Me.rbSeniada.TabIndex = 3
-        Me.rbSeniada.TabStop = True
-        Me.rbSeniada.Text = "Señada"
-        Me.rbSeniada.UseVisualStyleBackColor = True
-        '
-        'rbCancelada
-        '
-        Me.rbCancelada.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.rbCancelada.AutoSize = True
-        Me.rbCancelada.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbCancelada.Location = New System.Drawing.Point(461, 15)
-        Me.rbCancelada.Name = "rbCancelada"
-        Me.rbCancelada.Size = New System.Drawing.Size(85, 17)
-        Me.rbCancelada.TabIndex = 4
-        Me.rbCancelada.TabStop = True
-        Me.rbCancelada.Text = "Cancelada"
-        Me.rbCancelada.UseVisualStyleBackColor = True
-        '
         'btnBuscar
         '
         Me.btnBuscar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.ForeColor = System.Drawing.Color.White
-        Me.btnBuscar.Location = New System.Drawing.Point(12, 8)
+        Me.btnBuscar.Location = New System.Drawing.Point(137, 6)
+        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(0)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(75, 30)
         Me.btnBuscar.TabIndex = 5
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = False
         '
-        'rdEnCurso
-        '
-        Me.rdEnCurso.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.rdEnCurso.AutoSize = True
-        Me.rdEnCurso.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rdEnCurso.Location = New System.Drawing.Point(380, 15)
-        Me.rdEnCurso.Name = "rdEnCurso"
-        Me.rdEnCurso.Size = New System.Drawing.Size(75, 17)
-        Me.rdEnCurso.TabIndex = 6
-        Me.rdEnCurso.TabStop = True
-        Me.rdEnCurso.Text = "En curso"
-        Me.rdEnCurso.UseVisualStyleBackColor = True
-        '
         'btnTodos
         '
         Me.btnTodos.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnTodos.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnTodos.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTodos.ForeColor = System.Drawing.Color.White
-        Me.btnTodos.Location = New System.Drawing.Point(93, 8)
+        Me.btnTodos.Location = New System.Drawing.Point(212, 6)
+        Me.btnTodos.Margin = New System.Windows.Forms.Padding(0)
         Me.btnTodos.Name = "btnTodos"
         Me.btnTodos.Size = New System.Drawing.Size(47, 30)
         Me.btnTodos.TabIndex = 8
         Me.btnTodos.Text = "X"
         Me.btnTodos.UseVisualStyleBackColor = False
-        '
-        'rdSinSenia
-        '
-        Me.rdSinSenia.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.rdSinSenia.AutoSize = True
-        Me.rdSinSenia.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rdSinSenia.Location = New System.Drawing.Point(234, 15)
-        Me.rdSinSenia.Name = "rdSinSenia"
-        Me.rdSinSenia.Size = New System.Drawing.Size(74, 17)
-        Me.rdSinSenia.TabIndex = 9
-        Me.rdSinSenia.TabStop = True
-        Me.rdSinSenia.Text = "Sin seña"
-        Me.rdSinSenia.UseVisualStyleBackColor = True
         '
         'ShapeContainer1
         '
@@ -166,6 +101,15 @@ Partial Class lstEstadosReservas
         Me.ShapeContainer1.Size = New System.Drawing.Size(1056, 343)
         Me.ShapeContainer1.TabIndex = 10
         Me.ShapeContainer1.TabStop = False
+        '
+        'cmbEstados
+        '
+        Me.cmbEstados.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbEstados.FormattingEnabled = True
+        Me.cmbEstados.Location = New System.Drawing.Point(13, 6)
+        Me.cmbEstados.Name = "cmbEstados"
+        Me.cmbEstados.Size = New System.Drawing.Size(121, 21)
+        Me.cmbEstados.TabIndex = 11
         '
         'RectangleShape1
         '
@@ -184,13 +128,9 @@ Partial Class lstEstadosReservas
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1056, 343)
-        Me.Controls.Add(Me.rdSinSenia)
+        Me.Controls.Add(Me.cmbEstados)
         Me.Controls.Add(Me.btnTodos)
-        Me.Controls.Add(Me.rdEnCurso)
         Me.Controls.Add(Me.btnBuscar)
-        Me.Controls.Add(Me.rbCancelada)
-        Me.Controls.Add(Me.rbSeniada)
-        Me.Controls.Add(Me.rbEnEspera)
         Me.Controls.Add(Me.dgvEstadoReservas)
         Me.Controls.Add(Me.ShapeContainer1)
         Me.Name = "lstEstadosReservas"
@@ -198,17 +138,12 @@ Partial Class lstEstadosReservas
         Me.Text = "lstEstadosReservas"
         CType(Me.dgvEstadoReservas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents dgvEstadoReservas As System.Windows.Forms.DataGridView
-    Friend WithEvents rbEnEspera As System.Windows.Forms.RadioButton
-    Friend WithEvents rbSeniada As System.Windows.Forms.RadioButton
-    Friend WithEvents rbCancelada As System.Windows.Forms.RadioButton
     Friend WithEvents btnBuscar As System.Windows.Forms.Button
-    Friend WithEvents rdEnCurso As System.Windows.Forms.RadioButton
     Friend WithEvents btnTodos As System.Windows.Forms.Button
-    Friend WithEvents rdSinSenia As System.Windows.Forms.RadioButton
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents RectangleShape1 As Cabañas.BotonCerrar
+    Friend WithEvents cmbEstados As System.Windows.Forms.ComboBox
 End Class

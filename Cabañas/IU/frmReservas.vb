@@ -33,6 +33,7 @@
 
     Dim reserva As New Reservas
     Dim cancelacion As New Cancelaciones
+    Dim pagos As New Pagos
     Dim btnReserva As New BotonReservas
 
     Private Sub frmReservas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -230,12 +231,26 @@
             reserva.IdCabania = cmbIdCabania.SelectedValue
             reserva.NroPasajeros = txtNumeroPasajeros.Text
             reserva.ConSenia = chkConSenia.Checked
-            If reserva.ConSenia = True Then
-                reserva.Senia = txtSenia.Text
-                idEstado = 1
-            Else
-                reserva.Senia = 0
-                idEstado = 2
+
+            If idEstado <> 5 Then
+                If reserva.ConSenia = True Then
+                    reserva.Senia = txtSenia.Text
+                    idEstado = 1
+                Else
+                    reserva.Senia = 0
+                    idEstado = 2
+                End If
+
+                Dim montoTotal As Decimal
+                Dim montoPagos As Decimal
+                montoTotal = reserva.ReservasTraerMontoTotal(txtId.Text)
+                montoPagos = pagos.PagosTraerTotalPagosPorReserva(txtId.Text)
+                If montoPagos >= CDec(txtSenia.Text) And montoPagos < montoTotal Then
+                    idEstado = 3
+                End If
+                If montoTotal - montoPagos = 0 Then
+                    idEstado = 4
+                End If
             End If
 
             reserva.fPagoSenia = dtpFechaPagoSenia.Value

@@ -637,4 +637,26 @@ Public Class Reservas
             cerrarConexion()
         End Try
     End Function
+
+
+    Public Function CargarComboEstados(ByVal ComboActual As ComboBox)
+        Try
+            abrirConexion()
+            Dim objComando As New SqlCommand("EstadosReservasCargarComboEstado", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            Dim objDataAdapter As New SqlDataAdapter(objComando)
+            Dim objDataTable As New Data.DataTable
+            objDataAdapter.Fill(objDataTable)
+            With ComboActual
+                .DataSource = objDataTable
+                .DisplayMember = "Descripcion"
+                .ValueMember = "id"
+            End With
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            cerrarConexion()
+        End Try
+
+    End Function
 End Class

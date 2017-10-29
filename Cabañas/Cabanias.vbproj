@@ -435,7 +435,6 @@
     <Content Include="Resources\BotonModificar1.png" />
     <Content Include="Resources\BotonModificar2.png" />
     <None Include="Resources\icono calendario.png" />
-    <None Include="Resources\iconoCalendario.png" />
     <None Include="Resources\can-stock-photo_csp42993829.jpg" />
     <None Include="Resources\th1_372503.jpg" />
     <None Include="Resources\Dark-Blue-620x387_z9Tu6fR.jpg" />

@@ -15,30 +15,11 @@
  
     Private Sub lstEstadosReservas_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         reservas.TraerTabReservas(dgvEstadoReservas)
+        reservas.CargarComboEstados(cmbEstados)
     End Sub
 
     Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
-
-        If rbEnEspera.Checked = True Then
-            idEstado = 1
-            reservas.ReservasFiltrarPorEstado(idEstado, dgvEstadoReservas)
-        ElseIf rdSinSenia.Checked = True Then
-            idEstado = 2
-            reservas.ReservasFiltrarPorEstado(idEstado, dgvEstadoReservas)
-        ElseIf rbSeniada.Checked = True Then
-            idEstado = 3
-            reservas.ReservasFiltrarPorEstado(idEstado, dgvEstadoReservas)
-        ElseIf rdEnCurso.Checked = True Then
-            idEstado = 4
-            reservas.ReservasFiltrarPorEstado(idEstado, dgvEstadoReservas)
-        Else
-            idEstado = 5
-            reservas.ReservasFiltrarPorEstado(idEstado, dgvEstadoReservas)
-        End If
-
-
-
-        'reservas.ReservasFiltrarPorEstado(idEstado, dgvEstadoReservas)
+        reservas.ReservasFiltrarPorEstado(cmbEstados.SelectedValue, dgvEstadoReservas)
     End Sub
 
 

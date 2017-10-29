@@ -28,15 +28,13 @@ Partial Class lstGastos
         Me.btnBuscar = New System.Windows.Forms.Button
         Me.btnTodos = New System.Windows.Forms.Button
         Me.txtTotal = New System.Windows.Forms.TextBox
-        Me.rdServicios = New System.Windows.Forms.RadioButton
-        Me.rdProductos = New System.Windows.Forms.RadioButton
-        Me.rdArreglos = New System.Windows.Forms.RadioButton
         Me.Label1 = New System.Windows.Forms.Label
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
         Me.RectangleShape4 = New Cabañas.BotonCerrar
         Me.RectangleShape3 = New Cabañas.BotonEliminar
         Me.RectangleShape2 = New Cabañas.BotonModificar
         Me.RectangleShape1 = New Cabañas.BotonAgregar
+        Me.cmbCategoria = New System.Windows.Forms.ComboBox
         CType(Me.dgvGastos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -71,9 +69,11 @@ Partial Class lstGastos
         'btnBuscar
         '
         Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.ForeColor = System.Drawing.Color.White
-        Me.btnBuscar.Location = New System.Drawing.Point(12, 12)
+        Me.btnBuscar.Location = New System.Drawing.Point(136, 12)
+        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(0)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(90, 30)
         Me.btnBuscar.TabIndex = 5
@@ -83,9 +83,11 @@ Partial Class lstGastos
         'btnTodos
         '
         Me.btnTodos.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnTodos.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTodos.ForeColor = System.Drawing.Color.White
-        Me.btnTodos.Location = New System.Drawing.Point(108, 12)
+        Me.btnTodos.Location = New System.Drawing.Point(226, 12)
+        Me.btnTodos.Margin = New System.Windows.Forms.Padding(0)
         Me.btnTodos.Name = "btnTodos"
         Me.btnTodos.Size = New System.Drawing.Size(47, 30)
         Me.btnTodos.TabIndex = 7
@@ -101,39 +103,6 @@ Partial Class lstGastos
         Me.txtTotal.Size = New System.Drawing.Size(137, 20)
         Me.txtTotal.TabIndex = 9
         Me.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'rdServicios
-        '
-        Me.rdServicios.AutoSize = True
-        Me.rdServicios.Location = New System.Drawing.Point(161, 19)
-        Me.rdServicios.Name = "rdServicios"
-        Me.rdServicios.Size = New System.Drawing.Size(68, 17)
-        Me.rdServicios.TabIndex = 10
-        Me.rdServicios.TabStop = True
-        Me.rdServicios.Text = "Servicios"
-        Me.rdServicios.UseVisualStyleBackColor = True
-        '
-        'rdProductos
-        '
-        Me.rdProductos.AutoSize = True
-        Me.rdProductos.Location = New System.Drawing.Point(235, 19)
-        Me.rdProductos.Name = "rdProductos"
-        Me.rdProductos.Size = New System.Drawing.Size(73, 17)
-        Me.rdProductos.TabIndex = 11
-        Me.rdProductos.TabStop = True
-        Me.rdProductos.Text = "Productos"
-        Me.rdProductos.UseVisualStyleBackColor = True
-        '
-        'rdArreglos
-        '
-        Me.rdArreglos.AutoSize = True
-        Me.rdArreglos.Location = New System.Drawing.Point(314, 19)
-        Me.rdArreglos.Name = "rdArreglos"
-        Me.rdArreglos.Size = New System.Drawing.Size(63, 17)
-        Me.rdArreglos.TabIndex = 12
-        Me.rdArreglos.TabStop = True
-        Me.rdArreglos.Text = "Arreglos"
-        Me.rdArreglos.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -195,16 +164,24 @@ Partial Class lstGastos
         Me.RectangleShape1.Name = "RectangleShape1"
         Me.RectangleShape1.Size = New System.Drawing.Size(122, 35)
         '
+        'cmbCategoria
+        '
+        Me.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbCategoria.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbCategoria.FormattingEnabled = True
+        Me.cmbCategoria.Location = New System.Drawing.Point(10, 12)
+        Me.cmbCategoria.Name = "cmbCategoria"
+        Me.cmbCategoria.Size = New System.Drawing.Size(121, 23)
+        Me.cmbCategoria.TabIndex = 16
+        '
         'lstGastos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(984, 461)
+        Me.Controls.Add(Me.cmbCategoria)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.rdArreglos)
-        Me.Controls.Add(Me.rdProductos)
-        Me.Controls.Add(Me.rdServicios)
         Me.Controls.Add(Me.txtTotal)
         Me.Controls.Add(Me.btnTodos)
         Me.Controls.Add(Me.btnBuscar)
@@ -224,13 +201,11 @@ Partial Class lstGastos
     Friend WithEvents btnBuscar As System.Windows.Forms.Button
     Friend WithEvents btnTodos As System.Windows.Forms.Button
     Friend WithEvents txtTotal As System.Windows.Forms.TextBox
-    Friend WithEvents rdServicios As System.Windows.Forms.RadioButton
-    Friend WithEvents rdProductos As System.Windows.Forms.RadioButton
-    Friend WithEvents rdArreglos As System.Windows.Forms.RadioButton
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents RectangleShape1 As Cabañas.BotonAgregar
     Friend WithEvents RectangleShape3 As Cabañas.BotonEliminar
     Friend WithEvents RectangleShape2 As Cabañas.BotonModificar
     Friend WithEvents RectangleShape4 As Cabañas.BotonCerrar
+    Friend WithEvents cmbCategoria As System.Windows.Forms.ComboBox
 End Class

@@ -81,16 +81,16 @@
 
             If modificar = True Then
                 If pagos.PagosModificar(pagos) = True Then
-                    Dim montoTotal As Decimal
-                    Dim montoPagos As Decimal
-                    montoTotal = reserva.ReservasTraerMontoTotal(frmReservas.txtId.Text)
-                    montoPagos = pagos.PagosTraerTotalPagosPorReserva(frmReservas.txtId.Text)
-                    If montoPagos >= CDec(frmReservas.txtSenia.Text) And montoPagos < montoTotal Then
-                        reserva.ReservasActualizarEstado(3, IdReserva)
-                    End If
-                    If montoTotal - montoPagos = 0 Then
-                        reserva.ReservasActualizarEstado(4, IdReserva)
-                    End If
+                    'Dim montoTotal As Decimal
+                    'Dim montoPagos As Decimal
+                    'montoTotal = reserva.ReservasTraerMontoTotal(frmReservas.txtId.Text)
+                    'montoPagos = pagos.PagosTraerTotalPagosPorReserva(frmReservas.txtId.Text)
+                    'If montoPagos >= CDec(frmReservas.txtSenia.Text) And montoPagos < montoTotal Then
+                    '    reserva.ReservasActualizarEstado(3, IdReserva)
+                    'End If
+                    'If montoTotal - montoPagos = 0 Then
+                    '    reserva.ReservasActualizarEstado(4, IdReserva)
+                    'End If
                     MsgBox("El pago ha sido correctamente modificado.")
                     pagos.PagosTraerTab(frmReservas.txtId.Text, lstPagos.dgvPagos)
                 Else
@@ -98,16 +98,16 @@
                 End If
             Else
                 If pagos.PagosInsertar(pagos) = True Then
-                    Dim montoTotal As Decimal
-                    Dim montoPagos As Decimal
-                    montoTotal = reserva.ReservasTraerMontoTotal(frmReservas.txtId.Text)
-                    montoPagos = pagos.PagosTraerTotalPagosPorReserva(frmReservas.txtId.Text)
-                    If montoPagos >= CDec(frmReservas.txtSenia.Text) Then
-                        reserva.ReservasActualizarEstado(3, IdReserva)
-                    End If
-                    If montoTotal - montoPagos = 0 Then
-                        reserva.ReservasActualizarEstado(4, IdReserva)
-                    End If
+                    'Dim montoTotal As Decimal
+                    'Dim montoPagos As Decimal
+                    'montoTotal = reserva.ReservasTraerMontoTotal(frmReservas.txtId.Text)
+                    'montoPagos = pagos.PagosTraerTotalPagosPorReserva(frmReservas.txtId.Text)
+                    'If montoPagos >= CDec(frmReservas.txtSenia.Text) Then
+                    '    reserva.ReservasActualizarEstado(3, IdReserva)
+                    'End If
+                    'If montoTotal - montoPagos = 0 Then
+                    '    reserva.ReservasActualizarEstado(4, IdReserva)
+                    'End If
                     MsgBox("El pago ha sido correctamente insertado.")
                     pagos.PagosTraerTab(frmReservas.txtId.Text, lstPagos.dgvPagos)
                 Else

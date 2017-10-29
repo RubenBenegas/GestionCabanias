@@ -23,12 +23,6 @@
         Me.Close()
     End Sub
 
-    Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
-        frmGastos.modificar = False
-        frmGastos.IdGasto = 0
-        frmGastos.ShowDialog()
-    End Sub
-
     Private Sub Editar()
         frmGastos.modificar = True
         If dgvGastos.Rows.Count <> 0 Then
@@ -41,34 +35,8 @@
 
     End Sub
 
-    Private Sub btnModificar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnModificar.Click
-        Editar()
-    End Sub
-
-    Private Sub btnBorrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBorrar.Click
-        If dgvGastos.Rows.Count <> 0 Then
-            Gastos.id = dgvGastos.Item("Id", dgvGastos.CurrentRow.Index).Value
-            Dim mensaje As DialogResult = MessageBox.Show("¿Está seguro que quiere borrar?", "Advertencia", MessageBoxButtons.OKCancel)
-            If mensaje = Windows.Forms.DialogResult.OK Then
-                If Gastos.BorrarGasto(Gastos.id) Then
-                    MessageBox.Show("El gasto se ha borrado correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    Gastos.verTodos(dgvGastos)
-                End If
-            End If
-            'Else
-            '    MsgBox("No hay elementos para eliminar.", MsgBoxStyle.Information, "Mensaje")
-        End If
-
-    End Sub
-
-
     Private Sub dgvGasto_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvGastos.CellDoubleClick
         Editar()
-
-    End Sub
-
-    Private Sub btnCerrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCerrar.Click
-        Close()
 
     End Sub
 
@@ -104,10 +72,6 @@
         txtTotal.Text = Gastos.GastosCalcularTotal
     End Sub
 
-    Private Sub dgvGastos_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvGastos.CellContentClick
-
-    End Sub
-
     Private Sub btnCalcular_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
         Dim idCategoria As New Integer
@@ -129,5 +93,34 @@
         'txtTotal.Text = Gastos.GastosCalcularPorCategoria(cmbCategoria.SelectedValue)
 
 
+    End Sub
+
+    Private Sub RectangleShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.Click
+        frmGastos.modificar = False
+        frmGastos.IdGasto = 0
+        frmGastos.ShowDialog()
+    End Sub
+
+    Private Sub RectangleShape2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape2.Click
+        Editar()
+    End Sub
+
+    Private Sub RectangleShape3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape3.Click
+        If dgvGastos.Rows.Count <> 0 Then
+            Gastos.id = dgvGastos.Item("Id", dgvGastos.CurrentRow.Index).Value
+            Dim mensaje As DialogResult = MessageBox.Show("¿Está seguro que quiere borrar?", "Advertencia", MessageBoxButtons.OKCancel)
+            If mensaje = Windows.Forms.DialogResult.OK Then
+                If Gastos.BorrarGasto(Gastos.id) Then
+                    MessageBox.Show("El gasto se ha borrado correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Gastos.verTodos(dgvGastos)
+                End If
+            End If
+            'Else
+            '    MsgBox("No hay elementos para eliminar.", MsgBoxStyle.Information, "Mensaje")
+        End If
+    End Sub
+
+    Private Sub RectangleShape4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape4.Click
+        Close()
     End Sub
 End Class

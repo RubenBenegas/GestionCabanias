@@ -35,6 +35,7 @@
 
     Dim pagos As New Pagos
     Dim reserva As New Reservas
+    Dim montoAntesDeModificar As New Decimal
     Private Sub frmPagos_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
         ErrorProvider1.Clear()
@@ -49,6 +50,9 @@
             txtDescripcion.Text = pagos.Descripcion
             IdReserva = pagos.IdReserva
             Me.Text = "Modificar pago"
+
+            'Aca guardamos el monto antes de modificar para luego calcular el montoDiferencia
+            montoAntesDeModificar = pagos.Monto
         Else
 
             Dim montoTotal As Decimal
@@ -74,52 +78,64 @@
 
     Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
         If fun.validarCampos(Me, ErrorProvider1) = True Then
+
+            'aca obtenemos el monto que se agrego o se quito
+            Dim montoDiferencia As New Decimal
+            montoDiferencia = CDec(txtMonto.Text) - montoAntesDeModificar
+
             pagos.Fecha = dtpFecha.Value
             pagos.Monto = txtMonto.Text
             pagos.Descripcion = txtDescripcion.Text
             pagos.IdReserva = IdReserva
 
+            
+
             If modificar = True Then
-                If pagos.PagosModificar(pagos) = True Then
-                    'Dim montoTotal As Decimal
-                    'Dim montoPagos As Decimal
-                    'montoTotal = reserva.ReservasTraerMontoTotal(frmReservas.txtId.Text)
-                    'montoPagos = pagos.PagosTraerTotalPagosPorReserva(frmReservas.txtId.Text)
-                    'If montoPagos >= CDec(frmReservas.txtSenia.Text) And montoPagos < montoTotal Then
-                    '    reserva.ReservasActualizarEstado(3, IdReserva)
-                    'End If
-                    'If montoTotal - montoPagos = 0 Then
-                    '    reserva.ReservasActualizarEstado(4, IdReserva)
-                    'End If
+
+                Dim montoTotal As Decimal
+                Dim montoPagos As Decimal
+                montoTotal = reserva.ReservasTraerMontoTotal(frmReservas.txtId.Text)
+                montoPagos = pagos.PagosTraerTotalPagosPorReserva(frmReservas.txtId.Text)
+
+                
+                
+
+                If montoAgregado > montoTotal - montoPagos Then
+                    MessageBox.Show("El nuevo monto es superior a la deuda actual")
+                ElseIf pagos.PagosModificar(pagos) = True Then
                     MsgBox("El pago ha sido correctamente modificado.")
                     pagos.PagosTraerTab(frmReservas.txtId.Text, lstPagos.dgvPagos)
                 Else
                     MsgBox("Error al modificar el pago." + Chr(13) + "Intentelo de nuevo.")
                 End If
-            Else
-                If pagos.PagosInsertar(pagos) = True Then
-                    'Dim montoTotal As Decimal
-                    'Dim montoPagos As Decimal
-                    'montoTotal = reserva.ReservasTraerMontoTotal(frmReservas.txtId.Text)
-                    'montoPagos = pagos.PagosTraerTotalPagosPorReserva(frmReservas.txtId.Text)
-                    'If montoPagos >= CDec(frmReservas.txtSenia.Text) Then
-                    '    reserva.ReservasActualizarEstado(3, IdReserva)
-                    'End If
-                    'If montoTotal - montoPagos = 0 Then
-                    '    reserva.ReservasActualizarEstado(4, IdReserva)
-                    'End If
-                    MsgBox("El pago ha sido correctamente insertado.")
-                    pagos.PagosTraerTab(frmReservas.txtId.Text, lstPagos.dgvPagos)
                 Else
-                    MsgBox("Error al insertar pago." + Chr(13) + "Intentelo de nuevo.")
+                    Dim montoTotal As Decimal
+                    Dim montoPagos As Decimal
+                    montoTotal = reserva.ReservasTraerMontoTotal(frmReservas.txtId.Text)
+                    montoPagos = pagos.PagosTraerTotalPagosPorReserva(frmReservas.txtId.Text)
+                    If montoPagos + CDec(txtMonto.Text) > montoTotal Then
+                        MessageBox.Show("El monto ingresado es superior a la deuda actual")
+
+
+                    ElseIf pagos.PagosInsertar(pagos) = True Then
+
+                        MsgBox("El pago ha sido correctamente insertado.")
+                        pagos.PagosTraerTab(frmReservas.txtId.Text, lstPagos.dgvPagos)
+
+                    Else
+                        MsgBox("Error al insertar pago." + Chr(13) + "Intentelo de nuevo.")
+                    End If
                 End If
-            End If
 
-            Close()
-        Else
 
-            MsgBox("Completar los campos obligatorios.", MsgBoxStyle.Information, "Importante")
+
+
+                Close()
+            Else
+
+                MsgBox("Completar los campos obligatorios.", MsgBoxStyle.Information, "Importante")
         End If
+
 
     End Sub
 

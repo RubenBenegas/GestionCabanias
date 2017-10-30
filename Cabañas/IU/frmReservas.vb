@@ -31,10 +31,23 @@
     End Property
 
 
+    Private montoDiferencia2_ As Decimal
+    Public Property montoDiferenciaEnTotal() As Decimal
+        Get
+            Return montoDiferencia2_
+        End Get
+        Set(ByVal value As Decimal)
+            montoDiferencia2_ = value
+        End Set
+    End Property
+
+
+
     Dim reserva As New Reservas
     Dim cancelacion As New Cancelaciones
     Dim pagos As New Pagos
     Dim btnReserva As New BotonReservas
+    Dim montoAntesModificar As New Decimal
 
     Private Sub frmReservas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
@@ -64,6 +77,11 @@
             txtCostoEstadia.Text = reserva.CostoEstadia
             txtCostoAdicionales.Text = reserva.CostoAdicionales
             txtCostoTotal.Text = reserva.CostoTotal
+
+            'Aqui guardamos el monto antes de ser modificado
+            montoAntesModificar = reserva.CostoTotal
+
+            
 
             btnAgregar.Enabled = True
             btnBorrar.Enabled = True
@@ -224,6 +242,11 @@
 
         If fun.validarCampos(Me, ErrorProvider1) = True Then
 
+
+            Dim montoDiferencia As New Decimal
+            montoDiferencia = CDec(txtCostoTotal.Text) - montoAntesModificar
+
+
             reserva.fReserva = dtpFechaReserva.Value
             reserva.IdHuesped = txtIdHuesped.Text
             reserva.fIngreso = dtpFechaIngreso.Value
@@ -245,12 +268,13 @@
                 Dim montoPagos As Decimal
                 montoTotal = reserva.ReservasTraerMontoTotal(txtId.Text)
                 montoPagos = pagos.PagosTraerTotalPagosPorReserva(txtId.Text)
-                If montoPagos >= CDec(txtSenia.Text) And montoPagos < montoTotal Then
+                If montoPagos >= CDec(txtSenia.Text) And montoPagos < montoTotal + montoDiferencia Then
                     idEstado = 3
                 End If
-                If montoTotal - montoPagos = 0 Then
+                If (montoDiferencia + montoTotal) - montoPagos = 0 Then
                     idEstado = 4
                 End If
+                
             End If
 
             reserva.fPagoSenia = dtpFechaPagoSenia.Value
@@ -382,6 +406,8 @@
 
         dtpFechaPagoSenia.Value = dtpFechaReserva.Value.Date.AddDays(3)
 
+
+
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelarReserva.Click
@@ -419,6 +445,7 @@
 
         If txtId.Text = "" Then
 
+
             reserva.fReserva = dtpFechaReserva.Value
             reserva.IdHuesped = txtIdHuesped.Text
             reserva.fIngreso = dtpFechaIngreso.Value
@@ -447,6 +474,9 @@
             txtId.Text = reserva.Id
         End If
 
+        Dim montoDiferencia As New Decimal
+        montoDiferencia = CDec(txtCostoTotal.Text) - montoAntesModificar
+        montoDiferenciaEnTotal = montoDiferencia
 
         lstPagos.ShowDialog()
     End Sub

@@ -57,7 +57,7 @@
 
             Dim montoTotal As Decimal
             Dim montoPagos As Decimal
-            montoTotal = reserva.ReservasTraerMontoTotal(frmReservas.txtId.Text)
+            montoTotal = reserva.ReservasTraerMontoTotal(frmReservas.txtId.Text) + frmReservas.montoDiferenciaEnTotal
             montoPagos = pagos.PagosTraerTotalPagosPorReserva(frmReservas.txtId.Text)
 
             If montoTotal - montoPagos = 0 Then
@@ -113,18 +113,18 @@
                     Dim montoPagos As Decimal
                     montoTotal = reserva.ReservasTraerMontoTotal(frmReservas.txtId.Text)
                     montoPagos = pagos.PagosTraerTotalPagosPorReserva(frmReservas.txtId.Text)
-                    If montoPagos + CDec(txtMonto.Text) > montoTotal Then
-                        MessageBox.Show("El monto ingresado es superior a la deuda actual")
+                If montoPagos + CDec(txtMonto.Text) > montoTotal + frmReservas.montoDiferenciaEnTotal Then
+                    MessageBox.Show("El monto ingresado es superior a la deuda actual")
 
 
-                    ElseIf pagos.PagosInsertar(pagos) = True Then
+                ElseIf pagos.PagosInsertar(pagos) = True Then
 
-                        MsgBox("El pago ha sido correctamente insertado.")
-                        pagos.PagosTraerTab(frmReservas.txtId.Text, lstPagos.dgvPagos)
+                    MsgBox("El pago ha sido correctamente insertado.")
+                    pagos.PagosTraerTab(frmReservas.txtId.Text, lstPagos.dgvPagos)
 
-                    Else
-                        MsgBox("Error al insertar pago." + Chr(13) + "Intentelo de nuevo.")
-                    End If
+                Else
+                    MsgBox("Error al insertar pago." + Chr(13) + "Intentelo de nuevo.")
+                End If
                 End If
 
 

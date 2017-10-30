@@ -8,22 +8,32 @@
 
     End Sub
 
+    Private Sub Editar()
+        frmAdicionales.modificar = True
+        If DgvAdicionales.Rows.Count <> 0 Then
+            frmAdicionales.id = DgvAdicionales.Item("Id", DgvAdicionales.CurrentRow.Index).Value
+            frmAdicionales.ShowDialog()
+            'Else
+            '    MsgBox("No hay elementos para modificar.", MsgBoxStyle.Information, "Mensaje")           
+        End If
 
+    End Sub
 
-    Private Sub BtnModificar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles BtnModificar.Click
+    Private Sub dgvAdicional_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DgvAdicionales.CellDoubleClick
         Editar()
     End Sub
 
-
-    Private Sub BtnAgregar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles BtnAgregar.Click
+    Private Sub RectangleShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.Click
         frmAdicionales.modificar = False
         frmAdicionales.id = 0
         frmAdicionales.ShowDialog()
-
     End Sub
 
-    Private Sub BtnEliminar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles BtnEliminar.Click
+    Private Sub RectangleShape2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape2.Click
+        Editar()
+    End Sub
 
+    Private Sub RectangleShape3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape3.Click
         If DgvAdicionales.Rows.Count <> 0 Then
             Adicional.Id = DgvAdicionales.Item("Id", DgvAdicionales.CurrentRow.Index).Value
 
@@ -40,26 +50,9 @@
             'Else
             '    MsgBox("No hay elementos para eliminar.", MsgBoxStyle.Information, "Mensaje")
         End If
-
     End Sub
 
-
-    Private Sub BtnCerrar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles BtnCerrar.Click
+    Private Sub RectangleShape4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape4.Click
         Close()
-    End Sub
-
-    Private Sub Editar()
-        frmAdicionales.modificar = True
-        If DgvAdicionales.Rows.Count <> 0 Then
-            frmAdicionales.id = DgvAdicionales.Item("Id", DgvAdicionales.CurrentRow.Index).Value
-            frmAdicionales.ShowDialog()
-            'Else
-            '    MsgBox("No hay elementos para modificar.", MsgBoxStyle.Information, "Mensaje")           
-        End If
-
-    End Sub
-
-    Private Sub dgvAdicional_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DgvAdicionales.CellDoubleClick
-        Editar()
     End Sub
 End Class

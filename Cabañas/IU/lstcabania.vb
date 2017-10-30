@@ -8,22 +8,33 @@
 
     End Sub
 
+    Private Sub Editar()
+        frmCabania.modificar = True
+        If dgvCabanias.Rows.Count <> 0 Then
+            frmCabania.idCabania = dgvCabanias.Item("Id", dgvCabanias.CurrentRow.Index).Value
+            frmCabania.ShowDialog()
+            'Else
+            '    MsgBox("No hay elementos para modificar.", MsgBoxStyle.Information, "Mensaje")           
+        End If
 
+    End Sub
 
-    Private Sub BtnModifica_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles BtnModifica.Click
+    Private Sub dgvCabanias_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvCabanias.CellDoubleClick
         Editar()
     End Sub
 
-
-    Private Sub BtnAlta_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles BtnAlta.Click
+    Private Sub RectangleShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.Click
         frmCabania.modificar = False
         frmCabania.idCabania = 0
         frmCabania.ShowDialog()
 
     End Sub
 
-    Private Sub BtnBaja_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles BtnBaja.Click
+    Private Sub RectangleShape2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape2.Click
+        Editar()
+    End Sub
 
+    Private Sub RectangleShape3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape3.Click
         If dgvCabanias.Rows.Count <> 0 Then
             cabania.idCabania = dgvCabanias.Item("Id", dgvCabanias.CurrentRow.Index).Value
 
@@ -40,26 +51,9 @@
             'Else
             '    MsgBox("No hay elementos para eliminar.", MsgBoxStyle.Information, "Mensaje")
         End If
-
     End Sub
 
-
-    Private Sub BtnCerrar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles BtnCerrar.Click
+    Private Sub RectangleShape4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape4.Click
         Close()
-    End Sub
-
-    Private Sub Editar()
-        frmCabania.modificar = True
-        If dgvCabanias.Rows.Count <> 0 Then
-            frmCabania.idCabania = dgvCabanias.Item("Id", dgvCabanias.CurrentRow.Index).Value
-            frmCabania.ShowDialog()
-            'Else
-            '    MsgBox("No hay elementos para modificar.", MsgBoxStyle.Information, "Mensaje")           
-        End If
-
-    End Sub
-
-    Private Sub dgvCabanias_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvCabanias.CellDoubleClick
-        Editar()
     End Sub
 End Class

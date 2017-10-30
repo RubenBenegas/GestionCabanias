@@ -26,10 +26,11 @@ Partial Class lstcabania
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(lstcabania))
         Me.dgvCabanias = New System.Windows.Forms.DataGridView
-        Me.BtnAlta = New System.Windows.Forms.Button
-        Me.BtnModifica = New System.Windows.Forms.Button
-        Me.BtnBaja = New System.Windows.Forms.Button
-        Me.BtnCerrar = New System.Windows.Forms.Button
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
+        Me.RectangleShape4 = New Cabañas.BotonCerrar
+        Me.RectangleShape3 = New Cabañas.BotonEliminar
+        Me.RectangleShape2 = New Cabañas.BotonModificar
+        Me.RectangleShape1 = New Cabañas.BotonAgregar
         CType(Me.dgvCabanias, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -52,7 +53,7 @@ Partial Class lstcabania
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvCabanias.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvCabanias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvCabanias.Location = New System.Drawing.Point(12, 12)
+        Me.dgvCabanias.Location = New System.Drawing.Point(3, 3)
         Me.dgvCabanias.MultiSelect = False
         Me.dgvCabanias.Name = "dgvCabanias"
         Me.dgvCabanias.ReadOnly = True
@@ -66,60 +67,58 @@ Partial Class lstcabania
         Me.dgvCabanias.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvCabanias.RowHeadersVisible = False
         Me.dgvCabanias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvCabanias.Size = New System.Drawing.Size(960, 410)
+        Me.dgvCabanias.Size = New System.Drawing.Size(960, 415)
         Me.dgvCabanias.TabIndex = 0
         '
-        'BtnAlta
+        'ShapeContainer1
         '
-        Me.BtnAlta.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.BtnAlta.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BtnAlta.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAlta.ForeColor = System.Drawing.Color.White
-        Me.BtnAlta.Location = New System.Drawing.Point(12, 428)
-        Me.BtnAlta.Name = "BtnAlta"
-        Me.BtnAlta.Size = New System.Drawing.Size(90, 30)
-        Me.BtnAlta.TabIndex = 1
-        Me.BtnAlta.Text = "Agregar"
-        Me.BtnAlta.UseVisualStyleBackColor = False
+        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer1.Name = "ShapeContainer1"
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape4, Me.RectangleShape3, Me.RectangleShape2, Me.RectangleShape1})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(984, 461)
+        Me.ShapeContainer1.TabIndex = 5
+        Me.ShapeContainer1.TabStop = False
         '
-        'BtnModifica
+        'RectangleShape4
         '
-        Me.BtnModifica.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.BtnModifica.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BtnModifica.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnModifica.ForeColor = System.Drawing.Color.White
-        Me.BtnModifica.Location = New System.Drawing.Point(108, 428)
-        Me.BtnModifica.Name = "BtnModifica"
-        Me.BtnModifica.Size = New System.Drawing.Size(90, 30)
-        Me.BtnModifica.TabIndex = 2
-        Me.BtnModifica.Text = "Modificar"
-        Me.BtnModifica.UseVisualStyleBackColor = False
+        Me.RectangleShape4.BackgroundImage = CType(resources.GetObject("RectangleShape4.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.RectangleShape4.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape4.CornerRadius = 17
+        Me.RectangleShape4.Location = New System.Drawing.Point(838, 422)
+        Me.RectangleShape4.Name = "RectangleShape4"
+        Me.RectangleShape4.Size = New System.Drawing.Size(122, 35)
         '
-        'BtnBaja
+        'RectangleShape3
         '
-        Me.BtnBaja.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.BtnBaja.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BtnBaja.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnBaja.ForeColor = System.Drawing.Color.White
-        Me.BtnBaja.Location = New System.Drawing.Point(204, 428)
-        Me.BtnBaja.Name = "BtnBaja"
-        Me.BtnBaja.Size = New System.Drawing.Size(90, 30)
-        Me.BtnBaja.TabIndex = 3
-        Me.BtnBaja.Text = "Eliminar"
-        Me.BtnBaja.UseVisualStyleBackColor = False
+        Me.RectangleShape3.BackgroundImage = CType(resources.GetObject("RectangleShape3.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.RectangleShape3.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape3.CornerRadius = 17
+        Me.RectangleShape3.Location = New System.Drawing.Point(231, 424)
+        Me.RectangleShape3.Name = "RectangleShape3"
+        Me.RectangleShape3.Size = New System.Drawing.Size(122, 35)
         '
-        'BtnCerrar
+        'RectangleShape2
         '
-        Me.BtnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnCerrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BtnCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnCerrar.ForeColor = System.Drawing.Color.White
-        Me.BtnCerrar.Location = New System.Drawing.Point(822, 428)
-        Me.BtnCerrar.Name = "BtnCerrar"
-        Me.BtnCerrar.Size = New System.Drawing.Size(150, 30)
-        Me.BtnCerrar.TabIndex = 4
-        Me.BtnCerrar.Text = "Cerrar"
-        Me.BtnCerrar.UseVisualStyleBackColor = False
+        Me.RectangleShape2.BackgroundImage = CType(resources.GetObject("RectangleShape2.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.RectangleShape2.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape2.CornerRadius = 17
+        Me.RectangleShape2.Location = New System.Drawing.Point(115, 424)
+        Me.RectangleShape2.Name = "RectangleShape2"
+        Me.RectangleShape2.Size = New System.Drawing.Size(122, 35)
+        '
+        'RectangleShape1
+        '
+        Me.RectangleShape1.BackgroundImage = CType(resources.GetObject("RectangleShape1.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.RectangleShape1.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape1.CornerRadius = 17
+        Me.RectangleShape1.Location = New System.Drawing.Point(1, 423)
+        Me.RectangleShape1.Name = "RectangleShape1"
+        Me.RectangleShape1.Size = New System.Drawing.Size(122, 35)
         '
         'lstcabania
         '
@@ -127,11 +126,8 @@ Partial Class lstcabania
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(984, 461)
-        Me.Controls.Add(Me.BtnCerrar)
-        Me.Controls.Add(Me.BtnBaja)
-        Me.Controls.Add(Me.BtnModifica)
-        Me.Controls.Add(Me.BtnAlta)
         Me.Controls.Add(Me.dgvCabanias)
+        Me.Controls.Add(Me.ShapeContainer1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(500, 300)
         Me.Name = "lstcabania"
@@ -142,8 +138,9 @@ Partial Class lstcabania
 
     End Sub
     Friend WithEvents dgvCabanias As System.Windows.Forms.DataGridView
-    Friend WithEvents BtnAlta As System.Windows.Forms.Button
-    Friend WithEvents BtnModifica As System.Windows.Forms.Button
-    Friend WithEvents BtnBaja As System.Windows.Forms.Button
-    Friend WithEvents BtnCerrar As System.Windows.Forms.Button
+    Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
+    Friend WithEvents RectangleShape4 As Cabañas.BotonCerrar
+    Friend WithEvents RectangleShape3 As Cabañas.BotonEliminar
+    Friend WithEvents RectangleShape2 As Cabañas.BotonModificar
+    Friend WithEvents RectangleShape1 As Cabañas.BotonAgregar
 End Class

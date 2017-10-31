@@ -146,6 +146,8 @@ Partial Class frmCancelaciones
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAceptar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmCancelaciones"
         Me.Text = "frmCancelaciones"
         Me.ResumeLayout(False)

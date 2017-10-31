@@ -176,6 +176,8 @@ Partial Class FrmProveedor
         Me.Controls.Add(Me.Tipo)
         Me.Controls.Add(Me.Id)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "FrmProveedor"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmProveedor"

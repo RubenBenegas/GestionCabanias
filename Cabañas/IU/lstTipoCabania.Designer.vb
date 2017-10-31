@@ -52,7 +52,7 @@ Partial Class lstTipoCabania
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DgvTipoCabania.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DgvTipoCabania.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvTipoCabania.Location = New System.Drawing.Point(3, 12)
+        Me.DgvTipoCabania.Location = New System.Drawing.Point(12, 12)
         Me.DgvTipoCabania.MultiSelect = False
         Me.DgvTipoCabania.Name = "DgvTipoCabania"
         Me.DgvTipoCabania.ReadOnly = True
@@ -77,7 +77,7 @@ Partial Class lstTipoCabania
         Me.RectangleShape4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.RectangleShape4.BorderColor = System.Drawing.Color.Transparent
         Me.RectangleShape4.CornerRadius = 17
-        Me.RectangleShape4.Location = New System.Drawing.Point(840, 420)
+        Me.RectangleShape4.Location = New System.Drawing.Point(852, 420)
         Me.RectangleShape4.Name = "RectangleShape4"
         Me.RectangleShape4.Size = New System.Drawing.Size(122, 35)
         '

@@ -148,6 +148,8 @@ Partial Class frmPagos
         Me.Controls.Add(Me.lblFecha)
         Me.Controls.Add(Me.lblId)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmPagos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmPagos"

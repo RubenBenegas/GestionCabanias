@@ -53,7 +53,7 @@ Partial Class lstAdicional
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DgvAdicionales.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DgvAdicionales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvAdicionales.Location = New System.Drawing.Point(3, 12)
+        Me.DgvAdicionales.Location = New System.Drawing.Point(12, 12)
         Me.DgvAdicionales.MultiSelect = False
         Me.DgvAdicionales.Name = "DgvAdicionales"
         Me.DgvAdicionales.ReadOnly = True
@@ -86,7 +86,7 @@ Partial Class lstAdicional
         Me.RectangleShape4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.RectangleShape4.BorderColor = System.Drawing.Color.Transparent
         Me.RectangleShape4.CornerRadius = 17
-        Me.RectangleShape4.Location = New System.Drawing.Point(829, 420)
+        Me.RectangleShape4.Location = New System.Drawing.Point(851, 420)
         Me.RectangleShape4.Name = "RectangleShape4"
         Me.RectangleShape4.Size = New System.Drawing.Size(122, 35)
         '

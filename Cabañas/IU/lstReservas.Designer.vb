@@ -58,7 +58,7 @@ Partial Class lstReservas
         Me.dgvReservas.ReadOnly = True
         Me.dgvReservas.RowHeadersVisible = False
         Me.dgvReservas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvReservas.Size = New System.Drawing.Size(960, 410)
+        Me.dgvReservas.Size = New System.Drawing.Size(960, 407)
         Me.dgvReservas.TabIndex = 5
         '
         'ShapeContainer1
@@ -67,7 +67,7 @@ Partial Class lstReservas
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape4, Me.RectangleShape3, Me.RectangleShape2, Me.RectangleShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(984, 461)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(984, 462)
         Me.ShapeContainer1.TabIndex = 10
         Me.ShapeContainer1.TabStop = False
         '
@@ -77,7 +77,7 @@ Partial Class lstReservas
         Me.RectangleShape4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.RectangleShape4.BorderColor = System.Drawing.Color.Transparent
         Me.RectangleShape4.CornerRadius = 17
-        Me.RectangleShape4.Location = New System.Drawing.Point(839, 422)
+        Me.RectangleShape4.Location = New System.Drawing.Point(839, 420)
         Me.RectangleShape4.Name = "RectangleShape4"
         Me.RectangleShape4.Size = New System.Drawing.Size(122, 35)
         '
@@ -87,7 +87,7 @@ Partial Class lstReservas
         Me.RectangleShape3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.RectangleShape3.BorderColor = System.Drawing.Color.Transparent
         Me.RectangleShape3.CornerRadius = 17
-        Me.RectangleShape3.Location = New System.Drawing.Point(247, 425)
+        Me.RectangleShape3.Location = New System.Drawing.Point(247, 423)
         Me.RectangleShape3.Name = "RectangleShape3"
         Me.RectangleShape3.Size = New System.Drawing.Size(122, 35)
         '
@@ -97,7 +97,7 @@ Partial Class lstReservas
         Me.RectangleShape2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.RectangleShape2.BorderColor = System.Drawing.Color.Transparent
         Me.RectangleShape2.CornerRadius = 17
-        Me.RectangleShape2.Location = New System.Drawing.Point(129, 425)
+        Me.RectangleShape2.Location = New System.Drawing.Point(129, 423)
         Me.RectangleShape2.Name = "RectangleShape2"
         Me.RectangleShape2.Size = New System.Drawing.Size(122, 35)
         '
@@ -107,7 +107,7 @@ Partial Class lstReservas
         Me.RectangleShape1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.RectangleShape1.BorderColor = System.Drawing.Color.Transparent
         Me.RectangleShape1.CornerRadius = 17
-        Me.RectangleShape1.Location = New System.Drawing.Point(15, 423)
+        Me.RectangleShape1.Location = New System.Drawing.Point(15, 421)
         Me.RectangleShape1.Name = "RectangleShape1"
         Me.RectangleShape1.Size = New System.Drawing.Size(122, 35)
         '
@@ -116,7 +116,7 @@ Partial Class lstReservas
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(984, 461)
+        Me.ClientSize = New System.Drawing.Size(984, 462)
         Me.Controls.Add(Me.dgvReservas)
         Me.Controls.Add(Me.ShapeContainer1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

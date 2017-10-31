@@ -33,7 +33,7 @@ Partial Class lstCabaniaServicios
         Me.Aceptarbtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Aceptarbtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Aceptarbtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Aceptarbtn.Location = New System.Drawing.Point(148, 320)
+        Me.Aceptarbtn.Location = New System.Drawing.Point(87, 309)
         Me.Aceptarbtn.Name = "Aceptarbtn"
         Me.Aceptarbtn.Size = New System.Drawing.Size(90, 30)
         Me.Aceptarbtn.TabIndex = 1
@@ -45,7 +45,7 @@ Partial Class lstCabaniaServicios
         Me.Cancelarbtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Cancelarbtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Cancelarbtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Cancelarbtn.Location = New System.Drawing.Point(244, 320)
+        Me.Cancelarbtn.Location = New System.Drawing.Point(183, 309)
         Me.Cancelarbtn.Name = "Cancelarbtn"
         Me.Cancelarbtn.Size = New System.Drawing.Size(90, 30)
         Me.Cancelarbtn.TabIndex = 2
@@ -64,14 +64,14 @@ Partial Class lstCabaniaServicios
         Me.dgvCabaniaServicios.ReadOnly = True
         Me.dgvCabaniaServicios.RowHeadersVisible = False
         Me.dgvCabaniaServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvCabaniaServicios.Size = New System.Drawing.Size(342, 289)
+        Me.dgvCabaniaServicios.Size = New System.Drawing.Size(353, 289)
         Me.dgvCabaniaServicios.TabIndex = 0
         '
         'lstCabaniaServicios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(377, 362)
+        Me.ClientSize = New System.Drawing.Size(377, 351)
         Me.Controls.Add(Me.dgvCabaniaServicios)
         Me.Controls.Add(Me.Cancelarbtn)
         Me.Controls.Add(Me.Aceptarbtn)

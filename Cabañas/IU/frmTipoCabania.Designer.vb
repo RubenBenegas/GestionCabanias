@@ -127,6 +127,8 @@ Partial Class frmTipoCabania
         Me.Controls.Add(Me.BtnCancelar)
         Me.Controls.Add(Me.btnAceptar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmTipoCabania"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmTipoCabana"

@@ -57,7 +57,7 @@ Partial Class lstServicios
         Me.dgvServicios.ReadOnly = True
         Me.dgvServicios.RowHeadersVisible = False
         Me.dgvServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvServicios.Size = New System.Drawing.Size(960, 408)
+        Me.dgvServicios.Size = New System.Drawing.Size(960, 406)
         Me.dgvServicios.TabIndex = 0
         '
         'ShapeContainer1
@@ -66,7 +66,7 @@ Partial Class lstServicios
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape4, Me.RectangleShape3, Me.RectangleShape2, Me.RectangleShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(984, 461)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(984, 459)
         Me.ShapeContainer1.TabIndex = 5
         Me.ShapeContainer1.TabStop = False
         '
@@ -115,7 +115,7 @@ Partial Class lstServicios
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(984, 461)
+        Me.ClientSize = New System.Drawing.Size(984, 459)
         Me.Controls.Add(Me.dgvServicios)
         Me.Controls.Add(Me.ShapeContainer1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

@@ -77,7 +77,7 @@ Partial Class lstTipoCabania
         Me.RectangleShape4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.RectangleShape4.BorderColor = System.Drawing.Color.Transparent
         Me.RectangleShape4.CornerRadius = 17
-        Me.RectangleShape4.Location = New System.Drawing.Point(852, 420)
+        Me.RectangleShape4.Location = New System.Drawing.Point(855, 419)
         Me.RectangleShape4.Name = "RectangleShape4"
         Me.RectangleShape4.Size = New System.Drawing.Size(122, 35)
         '

@@ -41,13 +41,13 @@
         End Set
     End Property
 
-
-
     Dim reserva As New Reservas
     Dim cancelacion As New Cancelaciones
     Dim pagos As New Pagos
     Dim btnReserva As New BotonReservas
     Dim montoAntesModificar As New Decimal
+
+#Region "Load"
 
     Private Sub frmReservas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
@@ -56,6 +56,8 @@
         reserva.ReservasCargarAdicionales(idReserva, dgvServiciosAdicionales)
 
         reserva.CargarComboCabania(cmbIdCabania)
+
+
         If modificar = True Then
 
             reserva = reserva.RecuperarReserva(idReserva)
@@ -81,8 +83,6 @@
             'Aqui guardamos el monto antes de ser modificado
             montoAntesModificar = reserva.CostoTotal
 
-            
-
             btnAgregar.Enabled = True
             btnBorrar.Enabled = True
 
@@ -93,7 +93,12 @@
             lblImporteSenia.Visible = True
             txtSenia.Visible = True
 
-            btnCancelarReserva.Visible = True
+            'If dtpFechaSalida.Value > Today Then
+            '    btnCancelarReserva.Visible = True
+            'Else
+            '    btnCancelarReserva.Visible = False
+            'End If
+
 
             idEstado = reserva.IdEstado
 
@@ -155,10 +160,22 @@
                 dtpFechaPagoSenia.Visible = True
                 lblImporteSenia.Visible = True
                 txtSenia.Visible = True
-                btnCancelarReserva.Visible = True
                 btnDetalleCancelacion.Visible = False
+
+
+                btnCancelarReserva.Visible = True
+                
+
             End If
+
+            If dtpFechaSalida.Value >= Today Then
+                btnCancelarReserva.Visible = True
+            Else
+                btnCancelarReserva.Visible = False
+            End If
+
             Me.Text = "Modificar reserva"
+
         Else
             txtId.Text = Nothing
             dtpFechaReserva.Value = Today
@@ -235,7 +252,10 @@
             Me.Text = "Agregar reserva"
         End If
 
+
+
     End Sub
+#End Region
 
     Dim fun As New Validaciones
     Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
@@ -271,7 +291,7 @@
                 If montoPagos >= CDec(txtSenia.Text) And montoPagos < montoTotal + montoDiferencia Then
                     idEstado = 3
                 End If
-                If (montoDiferencia + montoTotal) - montoPagos = 0 Then
+                If (montoDiferencia + montoTotal) - montoPagos <= 0 Then
                     idEstado = 4
                 End If
                 

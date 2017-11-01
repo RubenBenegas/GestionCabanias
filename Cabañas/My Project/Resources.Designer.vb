@@ -193,6 +193,13 @@ Namespace My.Resources
             End Get
         End Property
         
+        Friend ReadOnly Property IconoHuespedSombra() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("IconoHuespedSombra", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
         Friend ReadOnly Property orig_372503() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("orig_372503", resourceCulture)

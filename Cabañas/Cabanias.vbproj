@@ -434,6 +434,7 @@
     <Content Include="Resources\BotonEliminar2.png" />
     <Content Include="Resources\BotonModificar1.png" />
     <Content Include="Resources\BotonModificar2.png" />
+    <None Include="Resources\IconoHuespedSombra.png" />
     <None Include="Resources\IconoHuesped.png" />
     <None Include="Resources\IconoCalendario2.png" />
     <None Include="Resources\IconoCabania.png" />

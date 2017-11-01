@@ -107,18 +107,21 @@ Public Class frmPrincipal
 
     Private Sub OvalShape2_MouseHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OvalShape2.MouseHover
         OvalShape2.Size = New Size(82, 82)
+        OvalShape2.BackgroundImage = My.Resources.IconoHuespedSombra
         OvalShape2.BorderStyle = Drawing2D.DashStyle.Custom
         OvalShape2.BorderWidth = 0
     End Sub
 
     Private Sub OvalShape2_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OvalShape2.MouseLeave
         OvalShape2.Size = New Size(75, 75)
+        OvalShape2.BackgroundImage = My.Resources.IconoHuesped
         OvalShape2.BorderStyle = Drawing2D.DashStyle.Custom
         OvalShape2.BorderWidth = 0
     End Sub
 
     Private Sub OvalShape2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OvalShape2.Click
         OvalShape2.Size = New Size(75, 75)
+        OvalShape2.BackgroundImage = My.Resources.IconoHuesped
         OvalShape2.BorderStyle = Drawing2D.DashStyle.Custom
         OvalShape2.BorderWidth = 0
         lstHuesped.ShowDialog()

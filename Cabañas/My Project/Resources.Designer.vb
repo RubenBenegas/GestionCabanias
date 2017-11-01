@@ -137,9 +137,58 @@ Namespace My.Resources
             End Get
         End Property
         
+        Friend ReadOnly Property FondoMaderaClaro() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("FondoMaderaClaro", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property FondoMaderaClaro2() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("FondoMaderaClaro2", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property FondoMaderaClaro3() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("FondoMaderaClaro3", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property FondoMaderaPanel() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("FondoMaderaPanel", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
         Friend ReadOnly Property icono_calendario() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("icono_calendario", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property IconoCabania() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("IconoCabania", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property IconoCalendario2() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("IconoCalendario2", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property IconoHuesped() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("IconoHuesped", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

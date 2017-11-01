@@ -4,12 +4,16 @@
         For i As Integer = flpContenedor.Controls.Count - 1 To 0 Step -1
             flpContenedor.Controls.Item(i).Dispose()
         Next
+
+        For i As Integer = flpCabanias.Controls.Count - 1 To 0 Step -1
+            flpCabanias.Controls.Item(i).Dispose()
+        Next
     End Sub
 
     Private Sub Alquileres_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         flpContenedor.Controls.Clear()
-        dtpfechaDesde.Value = Today.Date.AddDays(-10)
-        dtpFechaHasta.Value = Today.Date.AddDays(10)
+        'dtpfechaDesde.Value = Today.Date.AddDays(-10)
+        'dtpFechaHasta.Value = Today.Date.AddDays(10)
         ActualizarGrafico()
     End Sub
 

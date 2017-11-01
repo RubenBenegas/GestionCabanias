@@ -434,6 +434,13 @@
     <Content Include="Resources\BotonEliminar2.png" />
     <Content Include="Resources\BotonModificar1.png" />
     <Content Include="Resources\BotonModificar2.png" />
+    <None Include="Resources\IconoHuesped.png" />
+    <None Include="Resources\IconoCalendario2.png" />
+    <None Include="Resources\IconoCabania.png" />
+    <None Include="Resources\FondoMaderaPanel.png" />
+    <None Include="Resources\FondoMaderaClaro3.png" />
+    <None Include="Resources\FondoMaderaClaro2.png" />
+    <None Include="Resources\FondoMaderaClaro.png" />
     <None Include="Resources\icono calendario.png" />
     <None Include="Resources\can-stock-photo_csp42993829.jpg" />
     <None Include="Resources\th1_372503.jpg" />

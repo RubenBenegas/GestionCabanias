@@ -51,30 +51,35 @@ Partial Class frmPrincipal
         '
         'MenuStrip
         '
+        Me.MenuStrip.AutoSize = False
         Me.MenuStrip.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.MenuStrip.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
+        Me.MenuStrip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.SalirToolStripMenuItem, Me.ToolStripMenuItem1, Me.PruebaABMReservasToolStripMenuItem})
         Me.MenuStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.Name = "MenuStrip"
-        Me.MenuStrip.Size = New System.Drawing.Size(1362, 23)
+        Me.MenuStrip.Size = New System.Drawing.Size(1362, 32)
         Me.MenuStrip.TabIndex = 5
         Me.MenuStrip.Text = "MenuStrip"
         '
         'FileMenu
         '
+        Me.FileMenu.AutoSize = False
         Me.FileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CabañasToolStripMenuItem, Me.HuespedesToolStripMenuItem, Me.PersonalToolStripMenuItem, Me.InsumosToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.TipoCabaniaToolStripMenuItem, Me.ReservasToolStripMenuItem, Me.ServiciosToolStripMenuItem, Me.ToolStripMenuItem2, Me.EstadoToolStripMenuItem, Me.CancelacionesToolStripMenuItem})
         Me.FileMenu.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.FileMenu.ForeColor = System.Drawing.Color.Black
         Me.FileMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.FileMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder
         Me.FileMenu.Name = "FileMenu"
-        Me.FileMenu.Size = New System.Drawing.Size(74, 19)
+        Me.FileMenu.Size = New System.Drawing.Size(94, 25)
         Me.FileMenu.Text = "Secciones"
         '
         'CabañasToolStripMenuItem
         '
         Me.CabañasToolStripMenuItem.AutoSize = False
         Me.CabañasToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.CabañasToolStripMenuItem.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
         Me.CabañasToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.CabañasToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.CabañasToolStripMenuItem.Name = "CabañasToolStripMenuItem"
@@ -84,6 +89,7 @@ Partial Class frmPrincipal
         'HuespedesToolStripMenuItem
         '
         Me.HuespedesToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.HuespedesToolStripMenuItem.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
         Me.HuespedesToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.HuespedesToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.HuespedesToolStripMenuItem.Name = "HuespedesToolStripMenuItem"
@@ -93,6 +99,7 @@ Partial Class frmPrincipal
         'PersonalToolStripMenuItem
         '
         Me.PersonalToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.PersonalToolStripMenuItem.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
         Me.PersonalToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.PersonalToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.PersonalToolStripMenuItem.Name = "PersonalToolStripMenuItem"
@@ -102,6 +109,7 @@ Partial Class frmPrincipal
         'InsumosToolStripMenuItem
         '
         Me.InsumosToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.InsumosToolStripMenuItem.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
         Me.InsumosToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.InsumosToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.InsumosToolStripMenuItem.Name = "InsumosToolStripMenuItem"
@@ -111,6 +119,7 @@ Partial Class frmPrincipal
         'ProveedoresToolStripMenuItem
         '
         Me.ProveedoresToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ProveedoresToolStripMenuItem.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
         Me.ProveedoresToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.ProveedoresToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
@@ -120,6 +129,7 @@ Partial Class frmPrincipal
         'TipoCabaniaToolStripMenuItem
         '
         Me.TipoCabaniaToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.TipoCabaniaToolStripMenuItem.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
         Me.TipoCabaniaToolStripMenuItem.Name = "TipoCabaniaToolStripMenuItem"
         Me.TipoCabaniaToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.TipoCabaniaToolStripMenuItem.Text = "TipoCabania"
@@ -127,6 +137,7 @@ Partial Class frmPrincipal
         'ReservasToolStripMenuItem
         '
         Me.ReservasToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ReservasToolStripMenuItem.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
         Me.ReservasToolStripMenuItem.Name = "ReservasToolStripMenuItem"
         Me.ReservasToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.ReservasToolStripMenuItem.Text = "Reservas"
@@ -134,6 +145,7 @@ Partial Class frmPrincipal
         'ServiciosToolStripMenuItem
         '
         Me.ServiciosToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ServiciosToolStripMenuItem.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
         Me.ServiciosToolStripMenuItem.Name = "ServiciosToolStripMenuItem"
         Me.ServiciosToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.ServiciosToolStripMenuItem.Text = "Servicios"
@@ -141,6 +153,7 @@ Partial Class frmPrincipal
         'ToolStripMenuItem2
         '
         Me.ToolStripMenuItem2.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ToolStripMenuItem2.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
         Me.ToolStripMenuItem2.Size = New System.Drawing.Size(165, 22)
         Me.ToolStripMenuItem2.Text = "Adicionales"
@@ -148,6 +161,7 @@ Partial Class frmPrincipal
         'EstadoToolStripMenuItem
         '
         Me.EstadoToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.EstadoToolStripMenuItem.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
         Me.EstadoToolStripMenuItem.Name = "EstadoToolStripMenuItem"
         Me.EstadoToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.EstadoToolStripMenuItem.Text = "EstadosReservas"
@@ -155,16 +169,18 @@ Partial Class frmPrincipal
         'CancelacionesToolStripMenuItem
         '
         Me.CancelacionesToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.CancelacionesToolStripMenuItem.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
         Me.CancelacionesToolStripMenuItem.Name = "CancelacionesToolStripMenuItem"
         Me.CancelacionesToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.CancelacionesToolStripMenuItem.Text = "Cancelaciones"
         '
         'SalirToolStripMenuItem
         '
+        Me.SalirToolStripMenuItem.AutoSize = False
         Me.SalirToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.SalirToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(43, 19)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(43, 25)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'ToolStripMenuItem1
@@ -180,12 +196,13 @@ Partial Class frmPrincipal
         '
         'Panel1
         '
-        Me.Panel1.BackgroundImage = Global.Cabañas.My.Resources.Resources.fondo
+        Me.Panel1.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
+        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel1.Controls.Add(Me.ShapeContainer1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel1.Location = New System.Drawing.Point(0, 23)
+        Me.Panel1.Location = New System.Drawing.Point(0, 32)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(135, 638)
+        Me.Panel1.Size = New System.Drawing.Size(135, 629)
         Me.Panel1.TabIndex = 7
         '
         'ShapeContainer1
@@ -194,13 +211,13 @@ Partial Class frmPrincipal
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.OvalShape3, Me.OvalShape2, Me.OvalShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(135, 638)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(135, 629)
         Me.ShapeContainer1.TabIndex = 0
         Me.ShapeContainer1.TabStop = False
         '
         'OvalShape3
         '
-        Me.OvalShape3.BackgroundImage = Global.Cabañas.My.Resources.Resources.icono_calendario
+        Me.OvalShape3.BackgroundImage = Global.Cabañas.My.Resources.Resources.IconoCalendario2
         Me.OvalShape3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.OvalShape3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
         Me.OvalShape3.Location = New System.Drawing.Point(25, 203)
@@ -209,7 +226,7 @@ Partial Class frmPrincipal
         '
         'OvalShape2
         '
-        Me.OvalShape2.BackgroundImage = Global.Cabañas.My.Resources.Resources.can_stock_photo_csp42993829
+        Me.OvalShape2.BackgroundImage = Global.Cabañas.My.Resources.Resources.IconoHuesped
         Me.OvalShape2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.OvalShape2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
         Me.OvalShape2.Location = New System.Drawing.Point(27, 112)
@@ -218,7 +235,7 @@ Partial Class frmPrincipal
         '
         'OvalShape1
         '
-        Me.OvalShape1.BackgroundImage = Global.Cabañas.My.Resources.Resources.thumb_COLOURBOX24169832
+        Me.OvalShape1.BackgroundImage = Global.Cabañas.My.Resources.Resources.IconoCabania
         Me.OvalShape1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.OvalShape1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
         Me.OvalShape1.Location = New System.Drawing.Point(26, 18)
@@ -230,11 +247,12 @@ Partial Class frmPrincipal
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.BackgroundImage = Global.Cabañas.My.Resources.Resources.th1_372503
+        Me.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaClaro3
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1362, 661)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip)
+        Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip
@@ -247,7 +265,6 @@ Partial Class frmPrincipal
         Me.MenuStrip.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents FileMenu As System.Windows.Forms.ToolStripMenuItem

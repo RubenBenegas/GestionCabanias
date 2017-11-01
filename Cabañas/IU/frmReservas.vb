@@ -47,6 +47,7 @@
     Dim btnReserva As New BotonReservas
     Dim montoAntesModificar As New Decimal
 
+
 #Region "Load"
 
     Private Sub frmReservas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -92,13 +93,6 @@
             dtpFechaPagoSenia.Visible = True
             lblImporteSenia.Visible = True
             txtSenia.Visible = True
-
-            'If dtpFechaSalida.Value > Today Then
-            '    btnCancelarReserva.Visible = True
-            'Else
-            '    btnCancelarReserva.Visible = False
-            'End If
-
 
             idEstado = reserva.IdEstado
 
@@ -257,6 +251,7 @@
     End Sub
 #End Region
 
+#Region "Boton aceptar"
     Dim fun As New Validaciones
     Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
 
@@ -294,7 +289,7 @@
                 If (montoDiferencia + montoTotal) - montoPagos <= 0 Then
                     idEstado = 4
                 End If
-                
+
             End If
 
             reserva.fPagoSenia = dtpFechaPagoSenia.Value
@@ -329,14 +324,21 @@
         End If
     End Sub
 
+#End Region
+
+#Region "Boton Cancelar"
     Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
         Close()
     End Sub
+#End Region
 
+#Region "Boton buscar huesped"
     Private Sub btnBuscarHuesped_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscarHuesped.Click
         lstConsHuesped.ShowDialog()
     End Sub
+#End Region
 
+#Region "Boton agregar servicio"
     Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
         If txtId.Text = "" Then
 
@@ -373,15 +375,21 @@
         lstReservasAdicionales.idReserva = txtId.Text
         lstReservasAdicionales.ShowDialog()
     End Sub
+#End Region
 
+#Region "Boton borrar servicio"
     Private Sub btnBorrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBorrar.Click
 
         Dim idAdicional As Integer = dgvServiciosAdicionales.Item("id", dgvServiciosAdicionales.CurrentRow.Index).Value
         reserva.ReservaAdicionalBorrar(idAdicional)
         reserva.ReservasCargarAdicionales(txtId.Text, dgvServiciosAdicionales)
     End Sub
+#End Region
+
 
     'ESTE BOTON SOLAMENTE SE UTILIZA CUANDO ACCEDEMOS DESDE EL HISTORIAL DE HUESPEDES
+
+#Region "Boton salir (desde huespedes)"
     Private Sub btnSalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSalir.Click
 
         Close()
@@ -402,7 +410,9 @@
         btnConsultarCostos.Visible = True
         btnSalir.Visible = False
     End Sub
+#End Region
 
+#Region "Consultar costo"
     Private Sub btnConsultarCostos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnConsultarCostos.Click
         Dim montoCabania As Decimal
         montoCabania = reserva.ReservaTraerMontoDeCabania(cmbIdCabania.SelectedValue)
@@ -423,44 +433,27 @@
         End If
 
         txtCostoTotal.Text = CDec(txtCostoEstadia.Text) + CDec(txtCostoAdicionales.Text)
-
         dtpFechaPagoSenia.Value = dtpFechaReserva.Value.Date.AddDays(3)
 
-
-
     End Sub
+#End Region
 
+#Region "Boton cancelacion"
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelarReserva.Click
         frmCancelaciones.idReserva = txtId.Text
         frmCancelaciones.ShowDialog()
     End Sub
+#End Region
 
+#Region "Boton detalle de cancelacion"
     Private Sub btnDetalleCancelacion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDetalleCancelacion.Click
         frmCancelaciones.idReserva = txtId.Text
         frmCancelaciones.modificar = True
         frmCancelaciones.ShowDialog()
-
     End Sub
+#End Region
 
-    Private Sub dtpFechaIngreso_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles dtpFechaIngreso.LostFocus
-        dtpCheckin.Value = dtpFechaIngreso.Value
-    End Sub
-
-    Private Sub dtpFechaSalida_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles dtpFechaSalida.LostFocus
-        dtpCheckout.Value = dtpFechaSalida.Value
-    End Sub
-
-    Private Sub dtpFechaReserva_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles dtpFechaReserva.LostFocus
-        If dtpFechaReserva.Value.DayOfWeek = DayOfWeek.Friday Then
-            dtpFechaPagoSenia.Value = dtpFechaReserva.Value.Date.AddDays(3)
-        ElseIf dtpFechaReserva.Value.DayOfWeek = DayOfWeek.Saturday Then
-            dtpFechaPagoSenia.Value = dtpFechaReserva.Value.Date.AddDays(2)
-        Else
-            dtpFechaPagoSenia.Value = dtpFechaReserva.Value.Date.AddDays(1)
-        End If
-    End Sub
-
-   
+#Region "Boton pagos"
     Private Sub btnPagos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPagos.Click
 
         If txtId.Text = "" Then
@@ -500,4 +493,28 @@
 
         lstPagos.ShowDialog()
     End Sub
+#End Region
+
+
+#Region "Eventos"
+    Private Sub dtpFechaIngreso_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles dtpFechaIngreso.LostFocus
+        dtpCheckin.Value = dtpFechaIngreso.Value
+    End Sub
+
+    Private Sub dtpFechaSalida_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles dtpFechaSalida.LostFocus
+        dtpCheckout.Value = dtpFechaSalida.Value
+    End Sub
+
+    Private Sub dtpFechaReserva_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles dtpFechaReserva.LostFocus
+        If dtpFechaReserva.Value.DayOfWeek = DayOfWeek.Friday Then
+            dtpFechaPagoSenia.Value = dtpFechaReserva.Value.Date.AddDays(3)
+        ElseIf dtpFechaReserva.Value.DayOfWeek = DayOfWeek.Saturday Then
+            dtpFechaPagoSenia.Value = dtpFechaReserva.Value.Date.AddDays(2)
+        Else
+            dtpFechaPagoSenia.Value = dtpFechaReserva.Value.Date.AddDays(1)
+        End If
+    End Sub
+
+#End Region
+
 End Class

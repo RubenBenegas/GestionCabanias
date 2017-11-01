@@ -399,12 +399,15 @@ Public Class Reservas
         End Try
     End Sub
 
-    Public Function DataTableReservas() As Data.DataTable
+
+    Public Function DataTableReservas(ByVal fDesde As Date, ByVal fHasta As Date) As Data.DataTable
         Try
             abrirConexion()
 
             Dim objComando As New SqlCommand("ReservasDataTable", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
+            objComando.Parameters.AddWithValue("@fDesde", fDesde)
+            objComando.Parameters.AddWithValue("@fHasta", fHasta)
             Dim objDataTable As New Data.DataTable
             Dim objDataAdapter As New SqlDataAdapter(objComando)
             objDataAdapter.Fill(objDataTable)
@@ -416,6 +419,25 @@ Public Class Reservas
             cerrarConexion()
         End Try
     End Function
+
+
+    'Public Function DataTableReservas() As Data.DataTable
+    '    Try
+    '        abrirConexion()
+
+    '        Dim objComando As New SqlCommand("ReservasDataTable", objConexion)
+    '        objComando.CommandType = CommandType.StoredProcedure
+    '        Dim objDataTable As New Data.DataTable
+    '        Dim objDataAdapter As New SqlDataAdapter(objComando)
+    '        objDataAdapter.Fill(objDataTable)
+    '        Return objDataTable
+
+    '    Catch ex As Exception
+    '        MsgBox(ex.Message)
+    '    Finally
+    '        cerrarConexion()
+    '    End Try
+    'End Function
 
 
     Public Function ReservaAdicionalInsertar(ByVal idReserva As Integer, ByVal idAdicional As Integer)

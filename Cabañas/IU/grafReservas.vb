@@ -7,66 +7,8 @@
     End Sub
 
     Private Sub Alquileres_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
+        flpContenedor.Controls.Clear()
         ActualizarGrafico()
-        'Dim cab As New Cabanias
-        'Dim dtc As New Data.DataTable
-        'dtc = cab.DataTableCabanias
-
-        'Dim res As New Reservas
-        'Dim dt As New Data.DataTable
-        'dt = res.DataTableReservas
-
-        'Dim posX As Integer = 0
-        'Dim posY As Integer = 0
-        'Dim tamanio As Integer = 30
-        'Dim btnReserva As BotonReservas
-
-        'Dim flpHabitacion As FlpCabanias
-        'Dim arflpHabitaciones(10)
-
-        'For Each row As DataRow In dtc.Rows
-        '    flpHabitacion = New FlpCabanias
-        '    flpHabitacion.BackColor = Color.White
-        '    flpHabitacion.Width = 591
-        '    flpHabitacion.Height = 32
-        '    flpHabitacion.FlowDirection = FlowDirection.LeftToRight
-        '    flpHabitacion.id = row.Item("id")
-        '    flpContenedor.Controls.Add(flpHabitacion)
-        'Next
-
-        'For Each row As DataRow In dt.Rows
-        '    btnReserva = New BotonReservas
-        '    btnReserva.Left = posX
-        '    btnReserva.Top = posY
-        '    btnReserva.BackColor = Color.SkyBlue
-        '    btnReserva.ForeColor = Color.Transparent
-        '    btnReserva.id = row.Item("id")
-        '    btnReserva.Width = row.Item("dias") * 10
-
-        '    Dim res2 As Reservas
-        '    res2 = res.RecuperarReserva(btnReserva.id)
-        '    btnReserva.fIngreso = res2.fIngreso
-        '    btnReserva.fSalida = res2.fSalida
-
-        '    For i As Integer = 0 To flpContenedor.Controls.Count - 1
-        '        Dim idHabitacion As Integer = DirectCast(flpContenedor.Controls.Item(i), FlpCabanias).id
-        '        If row.Item("idCabania") = idHabitacion Then
-        '            If flpContenedor.Controls.Item(i).Controls.Count > 0 Then
-        '                Dim fechaActual As Date = btnReserva.fIngreso
-        '                Dim anterior As Integer = flpContenedor.Controls.Item(i).Controls.Count - 1
-        '                Dim fechaAnterior As Date = DirectCast(flpContenedor.Controls.Item(i).Controls.Item(anterior), BotonReservas).fSalida
-        '                Dim cantDias As Integer = DateDiff(DateInterval.Day, fechaAnterior, fechaActual)
-        '                Dim hueco As New Huecos(cantDias)
-        '                flpContenedor.Controls.Item(i).Controls.Add(hueco)
-        '            End If
-        '            flpContenedor.Controls.Item(i).Controls.Add(btnReserva)
-        '            Exit For
-        '        End If
-        '    Next
-        '    btnReserva.Show()
-        '    posY += 20
-        'Next
     End Sub
 
     Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
@@ -75,8 +17,6 @@
         frmReservas.ShowDialog()
     End Sub
 
-
-
     Public Sub ActualizarGrafico()
         Dim cab As New Cabanias
         Dim dtc As New Data.DataTable
@@ -84,20 +24,91 @@
 
         Dim res As New Reservas
         Dim dt As New Data.DataTable
-        dt = res.DataTableReservas
+        dt = res.DataTableReservas(dtpfechaDesde.Value, dtpFechaHasta.Value)
 
         Dim posX As Integer = 0
         Dim posY As Integer = 0
-        Dim tamanio As Integer = 30
+        Dim anchoDia As Integer = 30
         Dim btnReserva As BotonReservas
-
         Dim flpHabitacion As FlpCabanias
-        Dim arflpHabitaciones(10)
+        Dim flpSuperior1 As New FlpCabanias
+        Dim flpSuperior2 As New FlpCabanias
+        Dim ttReserva As New ToolTip
+
+        Dim btnCabania As New Huecos(1, flpCabanias.Width)
+        btnCabania.BackColor = Color.Yellow
+        btnCabania.ForeColor = Color.White
+        Dim mrg As Padding = btnCabania.Margin
+        btnCabania.Margin = New Padding(mrg.Left, 3, mrg.Right, 3)
+        flpCabanias.Controls.Add(btnCabania)
+
+        Dim btnCabania2 As New Huecos(1, flpCabanias.Width)
+        btnCabania2.BackColor = Color.Yellow
+        btnCabania2.ForeColor = Color.White
+        btnCabania2.Margin = New Padding(mrg.Left, 3, mrg.Right, 3)
+        flpCabanias.Controls.Add(btnCabania2)
+
+        For Each row As DataRow In dtc.Rows
+            btnCabania = New Huecos(1, flpCabanias.Width)
+            btnCabania.BackColor = Color.Black
+            btnCabania.ForeColor = Color.White
+            btnCabania.Margin = New Padding(mrg.Left, 3, mrg.Right, 3)
+            btnCabania.Text = row.Item("id")
+            flpCabanias.Controls.Add(btnCabania)
+        Next
+
+        flpSuperior1.BackColor = Color.White
+        flpSuperior1.Width = anchoDia * (DateDiff(DateInterval.Day, dtpfechaDesde.Value, dtpFechaHasta.Value) + 1)
+        flpSuperior1.Height = 32
+        flpSuperior1.FlowDirection = FlowDirection.LeftToRight
+        flpContenedor.Controls.Add(flpSuperior1)
+
+        Dim diasMes As Integer = 0
+        Dim mesAnterior As Integer = Month(dtpfechaDesde.Value)
+        For i As Integer = 0 To DateDiff(DateInterval.Day, dtpfechaDesde.Value, dtpFechaHasta.Value)
+            If Month(DateAdd(DateInterval.Day, i, dtpfechaDesde.Value)) = mesAnterior Then
+                diasMes += 1
+            Else
+                Dim btnMes As New Huecos(diasMes, anchoDia)
+                btnMes.BackColor = Color.Black
+                btnMes.ForeColor = Color.White
+                Dim tituloMes As String = MonthName(mesAnterior)
+                btnMes.Text = tituloMes
+                flpContenedor.Controls.Item(0).Controls.Add(btnMes)
+                mesAnterior = Month(DateAdd(DateInterval.Day, i, dtpfechaDesde.Value))
+                diasMes = 1
+            End If
+        Next
+        If diasMes > 0 Then
+            Dim btnMes As New Huecos(diasMes, anchoDia)
+            btnMes.BackColor = Color.Black
+            btnMes.ForeColor = Color.White
+            Dim tituloMes As String = MonthName(mesAnterior)
+            btnMes.Text = tituloMes
+            flpContenedor.Controls.Item(0).Controls.Add(btnMes)
+            mesAnterior = Month(DateAdd(DateInterval.Day, DateDiff(DateInterval.Day, dtpfechaDesde.Value, dtpFechaHasta.Value), dtpfechaDesde.Value))
+        End If
+
+        flpSuperior2.BackColor = Color.White
+        flpSuperior2.Width = anchoDia * (DateDiff(DateInterval.Day, dtpfechaDesde.Value, dtpFechaHasta.Value) + 1)
+        flpSuperior2.Height = 32
+        flpSuperior2.FlowDirection = FlowDirection.LeftToRight
+        flpContenedor.Controls.Add(flpSuperior2)
+
+        Dim tituloDia As Date = dtpfechaDesde.Value
+        For i As Integer = 1 To DateDiff(DateInterval.Day, dtpfechaDesde.Value, dtpFechaHasta.Value) + 1
+            Dim btnDia As New Huecos(1, anchoDia)
+            btnDia.BackColor = Color.Black
+            btnDia.ForeColor = Color.White
+            btnDia.Text = tituloDia.Day.ToString
+            flpContenedor.Controls.Item(1).Controls.Add(btnDia)
+            tituloDia = tituloDia.AddDays(1)
+        Next
 
         For Each row As DataRow In dtc.Rows
             flpHabitacion = New FlpCabanias
             flpHabitacion.BackColor = Color.White
-            flpHabitacion.Width = 591
+            flpHabitacion.Width = anchoDia * (DateDiff(DateInterval.Day, dtpfechaDesde.Value, dtpFechaHasta.Value) + 1)
             flpHabitacion.Height = 32
             flpHabitacion.FlowDirection = FlowDirection.LeftToRight
             flpHabitacion.id = row.Item("id")
@@ -111,7 +122,8 @@
             btnReserva.BackColor = Color.SkyBlue
             btnReserva.ForeColor = Color.Transparent
             btnReserva.id = row.Item("id")
-            btnReserva.Width = row.Item("dias") * 10
+            btnReserva.Width = row.Item("dias") * anchoDia
+            ttReserva.SetToolTip(btnReserva, row.Item("nombre"))
 
             Dim res2 As Reservas
             res2 = res.RecuperarReserva(btnReserva.id)
@@ -135,8 +147,7 @@
                 btnReserva.BackColor = Color.Red
             End If
 
-
-            For i As Integer = 0 To flpContenedor.Controls.Count - 1
+            For i As Integer = 2 To flpContenedor.Controls.Count
                 Dim idHabitacion As Integer = DirectCast(flpContenedor.Controls.Item(i), FlpCabanias).id
                 If row.Item("idCabania") = idHabitacion Then
                     If flpContenedor.Controls.Item(i).Controls.Count > 0 Then
@@ -144,8 +155,17 @@
                         Dim anterior As Integer = flpContenedor.Controls.Item(i).Controls.Count - 1
                         Dim fechaAnterior As Date = DirectCast(flpContenedor.Controls.Item(i).Controls.Item(anterior), BotonReservas).fSalida
                         Dim cantDias As Integer = DateDiff(DateInterval.Day, fechaAnterior, fechaActual)
-                        Dim hueco As New Huecos(cantDias)
+                        Dim hueco As New Huecos(cantDias, anchoDia)
                         flpContenedor.Controls.Item(i).Controls.Add(hueco)
+                    Else
+                        Dim fechaActual As Date = btnReserva.fIngreso
+                        Dim fechaInicial As Date = dtpfechaDesde.Value
+                        Dim cantDias As Integer
+                        If fechaActual > fechaInicial Then
+                            cantDias = DateDiff(DateInterval.Day, fechaInicial, fechaActual) + 1
+                            Dim hueco As New Huecos(cantDias, anchoDia)
+                            flpContenedor.Controls.Item(i).Controls.Add(hueco)
+                        End If
                     End If
                     flpContenedor.Controls.Item(i).Controls.Add(btnReserva)
                     Exit For
@@ -155,4 +175,11 @@
             posY += 20
         Next
     End Sub
+
+    Private Sub btnActualizar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnActualizar.Click
+        flpCabanias.Controls.Clear()
+        flpContenedor.Controls.Clear()
+        ActualizarGrafico()
+    End Sub
+
 End Class

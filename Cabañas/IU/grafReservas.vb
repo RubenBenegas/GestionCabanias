@@ -8,6 +8,8 @@
 
     Private Sub Alquileres_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         flpContenedor.Controls.Clear()
+        dtpfechaDesde.Value = Today.Date.AddDays(-10)
+        dtpFechaHasta.Value = Today.Date.AddDays(10)
         ActualizarGrafico()
     End Sub
 
@@ -18,6 +20,7 @@
     End Sub
 
     Public Sub ActualizarGrafico()
+
         Dim cab As New Cabanias
         Dim dtc As New Data.DataTable
         dtc = cab.DataTableCabanias
@@ -36,21 +39,23 @@
         Dim ttReserva As New ToolTip
 
         Dim btnCabania As New Huecos(1, flpCabanias.Width)
-        btnCabania.BackColor = Color.Yellow
+        btnCabania.BackColor = Color.Transparent
         btnCabania.ForeColor = Color.White
+        btnCabania.Enabled = False
         Dim mrg As Padding = btnCabania.Margin
         btnCabania.Margin = New Padding(mrg.Left, 3, mrg.Right, 3)
         flpCabanias.Controls.Add(btnCabania)
 
         Dim btnCabania2 As New Huecos(1, flpCabanias.Width)
-        btnCabania2.BackColor = Color.Yellow
+        btnCabania2.BackColor = Color.Transparent
         btnCabania2.ForeColor = Color.White
+        btnCabania2.Enabled = False
         btnCabania2.Margin = New Padding(mrg.Left, 3, mrg.Right, 3)
         flpCabanias.Controls.Add(btnCabania2)
 
         For Each row As DataRow In dtc.Rows
             btnCabania = New Huecos(1, flpCabanias.Width)
-            btnCabania.BackColor = Color.Black
+            btnCabania.BackColor = Color.Maroon
             btnCabania.ForeColor = Color.White
             btnCabania.Margin = New Padding(mrg.Left, 3, mrg.Right, 3)
             btnCabania.Text = row.Item("id")
@@ -70,10 +75,10 @@
                 diasMes += 1
             Else
                 Dim btnMes As New Huecos(diasMes, anchoDia)
-                btnMes.BackColor = Color.Black
+                btnMes.BackColor = Color.Maroon
                 btnMes.ForeColor = Color.White
                 Dim tituloMes As String = MonthName(mesAnterior)
-                btnMes.Text = tituloMes
+                btnMes.Text = tituloMes.ToUpper
                 flpContenedor.Controls.Item(0).Controls.Add(btnMes)
                 mesAnterior = Month(DateAdd(DateInterval.Day, i, dtpfechaDesde.Value))
                 diasMes = 1
@@ -81,10 +86,10 @@
         Next
         If diasMes > 0 Then
             Dim btnMes As New Huecos(diasMes, anchoDia)
-            btnMes.BackColor = Color.Black
+            btnMes.BackColor = Color.Maroon
             btnMes.ForeColor = Color.White
             Dim tituloMes As String = MonthName(mesAnterior)
-            btnMes.Text = tituloMes
+            btnMes.Text = tituloMes.ToUpper
             flpContenedor.Controls.Item(0).Controls.Add(btnMes)
             mesAnterior = Month(DateAdd(DateInterval.Day, DateDiff(DateInterval.Day, dtpfechaDesde.Value, dtpFechaHasta.Value), dtpfechaDesde.Value))
         End If
@@ -98,7 +103,7 @@
         Dim tituloDia As Date = dtpfechaDesde.Value
         For i As Integer = 1 To DateDiff(DateInterval.Day, dtpfechaDesde.Value, dtpFechaHasta.Value) + 1
             Dim btnDia As New Huecos(1, anchoDia)
-            btnDia.BackColor = Color.Black
+            btnDia.BackColor = Color.Maroon
             btnDia.ForeColor = Color.White
             btnDia.Text = tituloDia.Day.ToString
             flpContenedor.Controls.Item(1).Controls.Add(btnDia)

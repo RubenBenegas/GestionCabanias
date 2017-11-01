@@ -149,6 +149,7 @@ Partial Class frmCancelaciones
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmCancelaciones"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmCancelaciones"
         Me.ResumeLayout(False)
         Me.PerformLayout()

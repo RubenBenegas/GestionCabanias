@@ -68,7 +68,7 @@ Partial Class frmPrincipal
         Me.FileMenu.AutoSize = False
         Me.FileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CabañasToolStripMenuItem, Me.HuespedesToolStripMenuItem, Me.PersonalToolStripMenuItem, Me.InsumosToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.TipoCabaniaToolStripMenuItem, Me.ReservasToolStripMenuItem, Me.ServiciosToolStripMenuItem, Me.ToolStripMenuItem2, Me.EstadoToolStripMenuItem, Me.CancelacionesToolStripMenuItem})
         Me.FileMenu.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.FileMenu.ForeColor = System.Drawing.Color.Black
+        Me.FileMenu.ForeColor = System.Drawing.Color.White
         Me.FileMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.FileMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder
         Me.FileMenu.Name = "FileMenu"
@@ -81,7 +81,7 @@ Partial Class frmPrincipal
         Me.CabañasToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.CabañasToolStripMenuItem.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
         Me.CabañasToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.CabañasToolStripMenuItem.ForeColor = System.Drawing.Color.Black
+        Me.CabañasToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.CabañasToolStripMenuItem.Name = "CabañasToolStripMenuItem"
         Me.CabañasToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.CabañasToolStripMenuItem.Text = "Cabañas"
@@ -91,7 +91,7 @@ Partial Class frmPrincipal
         Me.HuespedesToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.HuespedesToolStripMenuItem.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
         Me.HuespedesToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.HuespedesToolStripMenuItem.ForeColor = System.Drawing.Color.Black
+        Me.HuespedesToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.HuespedesToolStripMenuItem.Name = "HuespedesToolStripMenuItem"
         Me.HuespedesToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.HuespedesToolStripMenuItem.Text = "Huespedes"
@@ -101,7 +101,7 @@ Partial Class frmPrincipal
         Me.PersonalToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.PersonalToolStripMenuItem.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
         Me.PersonalToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.PersonalToolStripMenuItem.ForeColor = System.Drawing.Color.Black
+        Me.PersonalToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.PersonalToolStripMenuItem.Name = "PersonalToolStripMenuItem"
         Me.PersonalToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.PersonalToolStripMenuItem.Text = "Personal"
@@ -111,7 +111,7 @@ Partial Class frmPrincipal
         Me.InsumosToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.InsumosToolStripMenuItem.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
         Me.InsumosToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.InsumosToolStripMenuItem.ForeColor = System.Drawing.Color.Black
+        Me.InsumosToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.InsumosToolStripMenuItem.Name = "InsumosToolStripMenuItem"
         Me.InsumosToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.InsumosToolStripMenuItem.Text = "Gastos"
@@ -121,7 +121,7 @@ Partial Class frmPrincipal
         Me.ProveedoresToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ProveedoresToolStripMenuItem.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
         Me.ProveedoresToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.ProveedoresToolStripMenuItem.ForeColor = System.Drawing.Color.Black
+        Me.ProveedoresToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
         Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
@@ -130,6 +130,7 @@ Partial Class frmPrincipal
         '
         Me.TipoCabaniaToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.TipoCabaniaToolStripMenuItem.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
+        Me.TipoCabaniaToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.TipoCabaniaToolStripMenuItem.Name = "TipoCabaniaToolStripMenuItem"
         Me.TipoCabaniaToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.TipoCabaniaToolStripMenuItem.Text = "TipoCabania"
@@ -138,6 +139,7 @@ Partial Class frmPrincipal
         '
         Me.ReservasToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ReservasToolStripMenuItem.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
+        Me.ReservasToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.ReservasToolStripMenuItem.Name = "ReservasToolStripMenuItem"
         Me.ReservasToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.ReservasToolStripMenuItem.Text = "Reservas"
@@ -146,6 +148,7 @@ Partial Class frmPrincipal
         '
         Me.ServiciosToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ServiciosToolStripMenuItem.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
+        Me.ServiciosToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.ServiciosToolStripMenuItem.Name = "ServiciosToolStripMenuItem"
         Me.ServiciosToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.ServiciosToolStripMenuItem.Text = "Servicios"
@@ -154,6 +157,7 @@ Partial Class frmPrincipal
         '
         Me.ToolStripMenuItem2.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ToolStripMenuItem2.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
+        Me.ToolStripMenuItem2.ForeColor = System.Drawing.Color.White
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
         Me.ToolStripMenuItem2.Size = New System.Drawing.Size(165, 22)
         Me.ToolStripMenuItem2.Text = "Adicionales"
@@ -162,6 +166,7 @@ Partial Class frmPrincipal
         '
         Me.EstadoToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.EstadoToolStripMenuItem.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
+        Me.EstadoToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.EstadoToolStripMenuItem.Name = "EstadoToolStripMenuItem"
         Me.EstadoToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.EstadoToolStripMenuItem.Text = "EstadosReservas"
@@ -170,6 +175,7 @@ Partial Class frmPrincipal
         '
         Me.CancelacionesToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.CancelacionesToolStripMenuItem.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
+        Me.CancelacionesToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.CancelacionesToolStripMenuItem.Name = "CancelacionesToolStripMenuItem"
         Me.CancelacionesToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.CancelacionesToolStripMenuItem.Text = "Cancelaciones"
@@ -178,9 +184,9 @@ Partial Class frmPrincipal
         '
         Me.SalirToolStripMenuItem.AutoSize = False
         Me.SalirToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.SalirToolStripMenuItem.ForeColor = System.Drawing.Color.Black
+        Me.SalirToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(43, 25)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(94, 25)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'ToolStripMenuItem1
@@ -253,6 +259,7 @@ Partial Class frmPrincipal
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip)
         Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip

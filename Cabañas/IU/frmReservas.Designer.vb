@@ -79,88 +79,115 @@ Partial Class frmReservas
         'lblId
         '
         Me.lblId.AutoSize = True
+        Me.lblId.BackColor = System.Drawing.Color.Transparent
+        Me.lblId.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblId.ForeColor = System.Drawing.Color.White
         Me.lblId.Location = New System.Drawing.Point(12, 9)
         Me.lblId.Name = "lblId"
-        Me.lblId.Size = New System.Drawing.Size(19, 13)
+        Me.lblId.Size = New System.Drawing.Size(22, 13)
         Me.lblId.TabIndex = 0
         Me.lblId.Text = "Id:"
         '
         'lblIdHuesped
         '
         Me.lblIdHuesped.AutoSize = True
+        Me.lblIdHuesped.BackColor = System.Drawing.Color.Transparent
+        Me.lblIdHuesped.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIdHuesped.ForeColor = System.Drawing.Color.White
         Me.lblIdHuesped.Location = New System.Drawing.Point(12, 70)
         Me.lblIdHuesped.Name = "lblIdHuesped"
-        Me.lblIdHuesped.Size = New System.Drawing.Size(65, 13)
+        Me.lblIdHuesped.Size = New System.Drawing.Size(76, 13)
         Me.lblIdHuesped.TabIndex = 1
         Me.lblIdHuesped.Text = "Id Huesped:"
         '
         'lblFechaIngreso
         '
         Me.lblFechaIngreso.AutoSize = True
+        Me.lblFechaIngreso.BackColor = System.Drawing.Color.Transparent
+        Me.lblFechaIngreso.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFechaIngreso.ForeColor = System.Drawing.Color.White
         Me.lblFechaIngreso.Location = New System.Drawing.Point(12, 104)
         Me.lblFechaIngreso.Name = "lblFechaIngreso"
-        Me.lblFechaIngreso.Size = New System.Drawing.Size(78, 13)
+        Me.lblFechaIngreso.Size = New System.Drawing.Size(92, 13)
         Me.lblFechaIngreso.TabIndex = 2
         Me.lblFechaIngreso.Text = "Fecha Ingreso:"
         '
         'lblFechaSalidad
         '
         Me.lblFechaSalidad.AutoSize = True
+        Me.lblFechaSalidad.BackColor = System.Drawing.Color.Transparent
+        Me.lblFechaSalidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFechaSalidad.ForeColor = System.Drawing.Color.White
         Me.lblFechaSalidad.Location = New System.Drawing.Point(12, 137)
         Me.lblFechaSalidad.Name = "lblFechaSalidad"
-        Me.lblFechaSalidad.Size = New System.Drawing.Size(72, 13)
+        Me.lblFechaSalidad.Size = New System.Drawing.Size(85, 13)
         Me.lblFechaSalidad.TabIndex = 3
         Me.lblFechaSalidad.Text = "Fecha Salida:"
         '
         'lblIdIdCabania
         '
         Me.lblIdIdCabania.AutoSize = True
+        Me.lblIdIdCabania.BackColor = System.Drawing.Color.Transparent
+        Me.lblIdIdCabania.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIdIdCabania.ForeColor = System.Drawing.Color.White
         Me.lblIdIdCabania.Location = New System.Drawing.Point(12, 170)
         Me.lblIdIdCabania.Name = "lblIdIdCabania"
-        Me.lblIdIdCabania.Size = New System.Drawing.Size(59, 13)
+        Me.lblIdIdCabania.Size = New System.Drawing.Size(69, 13)
         Me.lblIdIdCabania.TabIndex = 4
         Me.lblIdIdCabania.Text = "Id Cabaña:"
         '
         'lblNroPasajeros
         '
         Me.lblNroPasajeros.AutoSize = True
+        Me.lblNroPasajeros.BackColor = System.Drawing.Color.Transparent
+        Me.lblNroPasajeros.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNroPasajeros.ForeColor = System.Drawing.Color.White
         Me.lblNroPasajeros.Location = New System.Drawing.Point(270, 9)
         Me.lblNroPasajeros.Name = "lblNroPasajeros"
-        Me.lblNroPasajeros.Size = New System.Drawing.Size(96, 13)
+        Me.lblNroPasajeros.Size = New System.Drawing.Size(113, 13)
         Me.lblNroPasajeros.TabIndex = 5
         Me.lblNroPasajeros.Text = "Numero Pasajeros:"
         '
         'lblSenia
         '
         Me.lblSenia.AutoSize = True
+        Me.lblSenia.BackColor = System.Drawing.Color.Transparent
+        Me.lblSenia.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSenia.ForeColor = System.Drawing.Color.White
         Me.lblSenia.Location = New System.Drawing.Point(272, 40)
         Me.lblSenia.Name = "lblSenia"
-        Me.lblSenia.Size = New System.Drawing.Size(35, 13)
+        Me.lblSenia.Size = New System.Drawing.Size(40, 13)
         Me.lblSenia.TabIndex = 6
         Me.lblSenia.Text = "Seña:"
         '
         'lblCheckIn
         '
         Me.lblCheckIn.AutoSize = True
+        Me.lblCheckIn.BackColor = System.Drawing.Color.Transparent
+        Me.lblCheckIn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCheckIn.ForeColor = System.Drawing.Color.White
         Me.lblCheckIn.Location = New System.Drawing.Point(272, 105)
         Me.lblCheckIn.Name = "lblCheckIn"
-        Me.lblCheckIn.Size = New System.Drawing.Size(50, 13)
+        Me.lblCheckIn.Size = New System.Drawing.Size(58, 13)
         Me.lblCheckIn.TabIndex = 8
         Me.lblCheckIn.Text = "CheckIn:"
         '
         'lblCheckOut
         '
         Me.lblCheckOut.AutoSize = True
+        Me.lblCheckOut.BackColor = System.Drawing.Color.Transparent
+        Me.lblCheckOut.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCheckOut.ForeColor = System.Drawing.Color.White
         Me.lblCheckOut.Location = New System.Drawing.Point(270, 138)
         Me.lblCheckOut.Name = "lblCheckOut"
-        Me.lblCheckOut.Size = New System.Drawing.Size(58, 13)
+        Me.lblCheckOut.Size = New System.Drawing.Size(67, 13)
         Me.lblCheckOut.TabIndex = 9
         Me.lblCheckOut.Text = "CheckOut:"
         '
         'txtId
         '
         Me.txtId.Enabled = False
-        Me.txtId.Location = New System.Drawing.Point(108, 6)
+        Me.txtId.Location = New System.Drawing.Point(127, 6)
         Me.txtId.Name = "txtId"
         Me.txtId.Size = New System.Drawing.Size(100, 20)
         Me.txtId.TabIndex = 10
@@ -188,12 +215,15 @@ Partial Class frmReservas
         'chkConSenia
         '
         Me.chkConSenia.AutoSize = True
+        Me.chkConSenia.BackColor = System.Drawing.Color.Transparent
+        Me.chkConSenia.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkConSenia.ForeColor = System.Drawing.Color.White
         Me.chkConSenia.Location = New System.Drawing.Point(381, 39)
         Me.chkConSenia.Name = "chkConSenia"
-        Me.chkConSenia.Size = New System.Drawing.Size(73, 17)
+        Me.chkConSenia.Size = New System.Drawing.Size(81, 17)
         Me.chkConSenia.TabIndex = 6
         Me.chkConSenia.Text = "Con Seña"
-        Me.chkConSenia.UseVisualStyleBackColor = True
+        Me.chkConSenia.UseVisualStyleBackColor = False
         '
         'btnAceptar
         '
@@ -216,14 +246,14 @@ Partial Class frmReservas
         'txtIdHuesped
         '
         Me.txtIdHuesped.Enabled = False
-        Me.txtIdHuesped.Location = New System.Drawing.Point(108, 67)
+        Me.txtIdHuesped.Location = New System.Drawing.Point(127, 67)
         Me.txtIdHuesped.Name = "txtIdHuesped"
         Me.txtIdHuesped.Size = New System.Drawing.Size(100, 20)
         Me.txtIdHuesped.TabIndex = 24
         '
         'btnBuscarHuesped
         '
-        Me.btnBuscarHuesped.Location = New System.Drawing.Point(214, 65)
+        Me.btnBuscarHuesped.Location = New System.Drawing.Point(233, 65)
         Me.btnBuscarHuesped.Name = "btnBuscarHuesped"
         Me.btnBuscarHuesped.Size = New System.Drawing.Size(34, 23)
         Me.btnBuscarHuesped.TabIndex = 25
@@ -237,7 +267,7 @@ Partial Class frmReservas
         'dtpFechaIngreso
         '
         Me.dtpFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaIngreso.Location = New System.Drawing.Point(108, 104)
+        Me.dtpFechaIngreso.Location = New System.Drawing.Point(127, 104)
         Me.dtpFechaIngreso.Name = "dtpFechaIngreso"
         Me.dtpFechaIngreso.Size = New System.Drawing.Size(100, 20)
         Me.dtpFechaIngreso.TabIndex = 1
@@ -246,7 +276,7 @@ Partial Class frmReservas
         'dtpFechaSalida
         '
         Me.dtpFechaSalida.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaSalida.Location = New System.Drawing.Point(108, 137)
+        Me.dtpFechaSalida.Location = New System.Drawing.Point(127, 137)
         Me.dtpFechaSalida.Name = "dtpFechaSalida"
         Me.dtpFechaSalida.Size = New System.Drawing.Size(100, 20)
         Me.dtpFechaSalida.TabIndex = 2
@@ -274,7 +304,7 @@ Partial Class frmReservas
         '
         Me.cmbIdCabania.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbIdCabania.FormattingEnabled = True
-        Me.cmbIdCabania.Location = New System.Drawing.Point(108, 167)
+        Me.cmbIdCabania.Location = New System.Drawing.Point(127, 167)
         Me.cmbIdCabania.Name = "cmbIdCabania"
         Me.cmbIdCabania.Size = New System.Drawing.Size(100, 21)
         Me.cmbIdCabania.TabIndex = 3
@@ -282,7 +312,7 @@ Partial Class frmReservas
         'txtNombreHuesped
         '
         Me.txtNombreHuesped.Enabled = False
-        Me.txtNombreHuesped.Location = New System.Drawing.Point(108, 67)
+        Me.txtNombreHuesped.Location = New System.Drawing.Point(127, 67)
         Me.txtNombreHuesped.Name = "txtNombreHuesped"
         Me.txtNombreHuesped.Size = New System.Drawing.Size(100, 20)
         Me.txtNombreHuesped.TabIndex = 0
@@ -325,9 +355,12 @@ Partial Class frmReservas
         'lblServiciosAdicionales
         '
         Me.lblServiciosAdicionales.AutoSize = True
+        Me.lblServiciosAdicionales.BackColor = System.Drawing.Color.Transparent
+        Me.lblServiciosAdicionales.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblServiciosAdicionales.ForeColor = System.Drawing.Color.White
         Me.lblServiciosAdicionales.Location = New System.Drawing.Point(12, 202)
         Me.lblServiciosAdicionales.Name = "lblServiciosAdicionales"
-        Me.lblServiciosAdicionales.Size = New System.Drawing.Size(110, 13)
+        Me.lblServiciosAdicionales.Size = New System.Drawing.Size(132, 13)
         Me.lblServiciosAdicionales.TabIndex = 29
         Me.lblServiciosAdicionales.Text = "Servicios Adicionales:"
         '
@@ -377,27 +410,36 @@ Partial Class frmReservas
         'lblCostoEstadia
         '
         Me.lblCostoEstadia.AutoSize = True
+        Me.lblCostoEstadia.BackColor = System.Drawing.Color.Transparent
+        Me.lblCostoEstadia.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCostoEstadia.ForeColor = System.Drawing.Color.White
         Me.lblCostoEstadia.Location = New System.Drawing.Point(12, 449)
         Me.lblCostoEstadia.Name = "lblCostoEstadia"
-        Me.lblCostoEstadia.Size = New System.Drawing.Size(89, 13)
+        Me.lblCostoEstadia.Size = New System.Drawing.Size(106, 13)
         Me.lblCostoEstadia.TabIndex = 35
         Me.lblCostoEstadia.Text = "Costo de estadia:"
         '
         'lblCostoAdicionales
         '
         Me.lblCostoAdicionales.AutoSize = True
+        Me.lblCostoAdicionales.BackColor = System.Drawing.Color.Transparent
+        Me.lblCostoAdicionales.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCostoAdicionales.ForeColor = System.Drawing.Color.White
         Me.lblCostoAdicionales.Location = New System.Drawing.Point(118, 449)
         Me.lblCostoAdicionales.Name = "lblCostoAdicionales"
-        Me.lblCostoAdicionales.Size = New System.Drawing.Size(108, 13)
+        Me.lblCostoAdicionales.Size = New System.Drawing.Size(129, 13)
         Me.lblCostoAdicionales.TabIndex = 36
         Me.lblCostoAdicionales.Text = "Costo de adicionales:"
         '
         'lblCostoTotal
         '
         Me.lblCostoTotal.AutoSize = True
+        Me.lblCostoTotal.BackColor = System.Drawing.Color.Transparent
+        Me.lblCostoTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCostoTotal.ForeColor = System.Drawing.Color.White
         Me.lblCostoTotal.Location = New System.Drawing.Point(228, 449)
         Me.lblCostoTotal.Name = "lblCostoTotal"
-        Me.lblCostoTotal.Size = New System.Drawing.Size(64, 13)
+        Me.lblCostoTotal.Size = New System.Drawing.Size(76, 13)
         Me.lblCostoTotal.TabIndex = 37
         Me.lblCostoTotal.Text = "Costo Total:"
         '
@@ -425,6 +467,7 @@ Partial Class frmReservas
         'lblReservaCancelada
         '
         Me.lblReservaCancelada.AutoSize = True
+        Me.lblReservaCancelada.BackColor = System.Drawing.Color.Transparent
         Me.lblReservaCancelada.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblReservaCancelada.ForeColor = System.Drawing.Color.Red
         Me.lblReservaCancelada.Location = New System.Drawing.Point(46, 480)
@@ -446,7 +489,7 @@ Partial Class frmReservas
         'dtpFechaReserva
         '
         Me.dtpFechaReserva.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaReserva.Location = New System.Drawing.Point(108, 36)
+        Me.dtpFechaReserva.Location = New System.Drawing.Point(127, 36)
         Me.dtpFechaReserva.Name = "dtpFechaReserva"
         Me.dtpFechaReserva.Size = New System.Drawing.Size(100, 20)
         Me.dtpFechaReserva.TabIndex = 44
@@ -455,18 +498,24 @@ Partial Class frmReservas
         'lblFechaReserva
         '
         Me.lblFechaReserva.AutoSize = True
+        Me.lblFechaReserva.BackColor = System.Drawing.Color.Transparent
+        Me.lblFechaReserva.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFechaReserva.ForeColor = System.Drawing.Color.White
         Me.lblFechaReserva.Location = New System.Drawing.Point(12, 36)
         Me.lblFechaReserva.Name = "lblFechaReserva"
-        Me.lblFechaReserva.Size = New System.Drawing.Size(93, 13)
+        Me.lblFechaReserva.Size = New System.Drawing.Size(110, 13)
         Me.lblFechaReserva.TabIndex = 45
         Me.lblFechaReserva.Text = "Fecha de reserva:"
         '
         'lblImporteSenia
         '
         Me.lblImporteSenia.AutoSize = True
+        Me.lblImporteSenia.BackColor = System.Drawing.Color.Transparent
+        Me.lblImporteSenia.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblImporteSenia.ForeColor = System.Drawing.Color.White
         Me.lblImporteSenia.Location = New System.Drawing.Point(12, 510)
         Me.lblImporteSenia.Name = "lblImporteSenia"
-        Me.lblImporteSenia.Size = New System.Drawing.Size(86, 13)
+        Me.lblImporteSenia.Size = New System.Drawing.Size(102, 13)
         Me.lblImporteSenia.TabIndex = 46
         Me.lblImporteSenia.Text = "Importe de seña:"
         '
@@ -482,9 +531,12 @@ Partial Class frmReservas
         'lblFechaSenia
         '
         Me.lblFechaSenia.AutoSize = True
+        Me.lblFechaSenia.BackColor = System.Drawing.Color.Transparent
+        Me.lblFechaSenia.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFechaSenia.ForeColor = System.Drawing.Color.White
         Me.lblFechaSenia.Location = New System.Drawing.Point(131, 510)
         Me.lblFechaSenia.Name = "lblFechaSenia"
-        Me.lblFechaSenia.Size = New System.Drawing.Size(90, 13)
+        Me.lblFechaSenia.Size = New System.Drawing.Size(105, 13)
         Me.lblFechaSenia.TabIndex = 48
         Me.lblFechaSenia.Text = "Fecha pago seña"
         '
@@ -538,6 +590,8 @@ Partial Class frmReservas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaClaro3
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(514, 626)
         Me.Controls.Add(Me.btnPagos)
         Me.Controls.Add(Me.btnDetalleCancelacion)
@@ -587,6 +641,7 @@ Partial Class frmReservas
         Me.Controls.Add(Me.lblFechaIngreso)
         Me.Controls.Add(Me.lblIdHuesped)
         Me.Controls.Add(Me.lblId)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False

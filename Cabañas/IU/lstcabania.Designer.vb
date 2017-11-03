@@ -93,7 +93,7 @@ Partial Class lstcabania
         'RectangleShape3
         '
         Me.RectangleShape3.BackgroundImage = CType(resources.GetObject("RectangleShape3.BackgroundImage"), System.Drawing.Image)
-        Me.RectangleShape3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.RectangleShape3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.RectangleShape3.BorderColor = System.Drawing.Color.Transparent
         Me.RectangleShape3.CornerRadius = 17
         Me.RectangleShape3.Location = New System.Drawing.Point(261, 424)
@@ -103,7 +103,7 @@ Partial Class lstcabania
         'RectangleShape2
         '
         Me.RectangleShape2.BackgroundImage = CType(resources.GetObject("RectangleShape2.BackgroundImage"), System.Drawing.Image)
-        Me.RectangleShape2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.RectangleShape2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.RectangleShape2.BorderColor = System.Drawing.Color.Transparent
         Me.RectangleShape2.CornerRadius = 17
         Me.RectangleShape2.Location = New System.Drawing.Point(138, 424)

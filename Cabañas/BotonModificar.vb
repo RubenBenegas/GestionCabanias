@@ -6,7 +6,7 @@ Public Class BotonModificar
     Public Sub New()
         Me.BackgroundImage = My.Resources.BotonModificarMaderaNegro
         Me.BorderColor = Color.Transparent
-        Me.Size = New Size(122, 35)
+        Me.Size = New Size(90, 30)
         Me.BackgroundImageLayout = ImageLayout.Center
         Me.CornerRadius = 20
     End Sub

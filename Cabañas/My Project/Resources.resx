@@ -205,4 +205,16 @@
   <data name="IconoHuespedSombra" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconoHuespedSombra.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BotonAceptarMaderaBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonAceptarMaderaBlanco.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonAceptarMaderaNegro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonAceptarMaderaNegro.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonCancelarMaderaBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonCancelarMaderaBlanco.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonCancelarMaderaNegro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonCancelarMaderaNegro.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

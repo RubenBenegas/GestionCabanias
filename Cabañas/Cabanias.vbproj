@@ -432,10 +432,14 @@
     <Content Include="Recursos\03.jpg" />
     <Content Include="Recursos\fondo.jpg" />
     <Content Include="Recursos\lunamorena.000.s4.jpg" />
+    <None Include="Resources\BotonAceptarMaderaBlanco.png" />
+    <None Include="Resources\BotonAceptarMaderaNegro.png" />
     <Content Include="Resources\BotonAgregar1.png" />
     <Content Include="Resources\BotonAgregar2.png" />
     <None Include="Resources\BotonAgregarMaderaBlanco.png" />
     <None Include="Resources\BotonAgregarMaderaNegro.png" />
+    <None Include="Resources\BotonCancelarMaderaBlanco.png" />
+    <None Include="Resources\BotonCancelarMaderaNegro.png" />
     <Content Include="Resources\BotonCerrar1.png" />
     <Content Include="Resources\BotonCerrar2.png" />
     <None Include="Resources\BotonEleiminarMaderaBlanco.png" />

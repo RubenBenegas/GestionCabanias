@@ -90,7 +90,13 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BotonAceptar.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="BotonAgregar.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BotonCancelar.vb">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="BotonCerrar.vb">

@@ -91,6 +91,8 @@ Partial Class grafReservas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(619, 531)
         Me.Controls.Add(Me.flpCabanias)
         Me.Controls.Add(Me.btnActualizar)
@@ -98,6 +100,7 @@ Partial Class grafReservas
         Me.Controls.Add(Me.dtpfechaDesde)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.flpContenedor)
+        Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "grafReservas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

@@ -43,7 +43,7 @@ Partial Class lstcabania
         Me.dgvCabanias.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvCabanias.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.dgvCabanias.BackgroundColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -53,7 +53,7 @@ Partial Class lstcabania
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvCabanias.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvCabanias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvCabanias.Location = New System.Drawing.Point(12, 3)
+        Me.dgvCabanias.Location = New System.Drawing.Point(12, 12)
         Me.dgvCabanias.MultiSelect = False
         Me.dgvCabanias.Name = "dgvCabanias"
         Me.dgvCabanias.ReadOnly = True
@@ -67,7 +67,7 @@ Partial Class lstcabania
         Me.dgvCabanias.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvCabanias.RowHeadersVisible = False
         Me.dgvCabanias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvCabanias.Size = New System.Drawing.Size(960, 418)
+        Me.dgvCabanias.Size = New System.Drawing.Size(960, 409)
         Me.dgvCabanias.TabIndex = 0
         '
         'ShapeContainer1
@@ -86,7 +86,7 @@ Partial Class lstcabania
         Me.RectangleShape4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.RectangleShape4.BorderColor = System.Drawing.Color.Transparent
         Me.RectangleShape4.CornerRadius = 17
-        Me.RectangleShape4.Location = New System.Drawing.Point(845, 424)
+        Me.RectangleShape4.Location = New System.Drawing.Point(847, 424)
         Me.RectangleShape4.Name = "RectangleShape4"
         Me.RectangleShape4.Size = New System.Drawing.Size(122, 35)
         '
@@ -96,7 +96,7 @@ Partial Class lstcabania
         Me.RectangleShape3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.RectangleShape3.BorderColor = System.Drawing.Color.Transparent
         Me.RectangleShape3.CornerRadius = 17
-        Me.RectangleShape3.Location = New System.Drawing.Point(237, 424)
+        Me.RectangleShape3.Location = New System.Drawing.Point(261, 424)
         Me.RectangleShape3.Name = "RectangleShape3"
         Me.RectangleShape3.Size = New System.Drawing.Size(122, 35)
         '
@@ -106,17 +106,17 @@ Partial Class lstcabania
         Me.RectangleShape2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.RectangleShape2.BorderColor = System.Drawing.Color.Transparent
         Me.RectangleShape2.CornerRadius = 17
-        Me.RectangleShape2.Location = New System.Drawing.Point(121, 424)
+        Me.RectangleShape2.Location = New System.Drawing.Point(138, 424)
         Me.RectangleShape2.Name = "RectangleShape2"
         Me.RectangleShape2.Size = New System.Drawing.Size(122, 35)
         '
         'RectangleShape1
         '
         Me.RectangleShape1.BackgroundImage = CType(resources.GetObject("RectangleShape1.BackgroundImage"), System.Drawing.Image)
-        Me.RectangleShape1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.RectangleShape1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.RectangleShape1.BorderColor = System.Drawing.Color.Transparent
         Me.RectangleShape1.CornerRadius = 17
-        Me.RectangleShape1.Location = New System.Drawing.Point(7, 423)
+        Me.RectangleShape1.Location = New System.Drawing.Point(9, 425)
         Me.RectangleShape1.Name = "RectangleShape1"
         Me.RectangleShape1.Size = New System.Drawing.Size(122, 35)
         '
@@ -125,9 +125,12 @@ Partial Class lstcabania
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
+        Me.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(984, 464)
         Me.Controls.Add(Me.dgvCabanias)
         Me.Controls.Add(Me.ShapeContainer1)
+        Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(500, 300)
         Me.Name = "lstcabania"

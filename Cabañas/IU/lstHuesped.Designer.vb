@@ -42,7 +42,7 @@ Partial Class lstHuesped
         Me.dgvHuesped.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvHuesped.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.dgvHuesped.BackgroundColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -52,13 +52,13 @@ Partial Class lstHuesped
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvHuesped.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvHuesped.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvHuesped.Location = New System.Drawing.Point(12, 3)
+        Me.dgvHuesped.Location = New System.Drawing.Point(12, 12)
         Me.dgvHuesped.MultiSelect = False
         Me.dgvHuesped.Name = "dgvHuesped"
         Me.dgvHuesped.ReadOnly = True
         Me.dgvHuesped.RowHeadersVisible = False
         Me.dgvHuesped.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvHuesped.Size = New System.Drawing.Size(960, 410)
+        Me.dgvHuesped.Size = New System.Drawing.Size(960, 401)
         Me.dgvHuesped.TabIndex = 0
         '
         'ShapeContainer1
@@ -87,7 +87,7 @@ Partial Class lstHuesped
         Me.RectangleShape3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.RectangleShape3.BorderColor = System.Drawing.Color.Transparent
         Me.RectangleShape3.CornerRadius = 17
-        Me.RectangleShape3.Location = New System.Drawing.Point(243, 422)
+        Me.RectangleShape3.Location = New System.Drawing.Point(254, 421)
         Me.RectangleShape3.Name = "RectangleShape3"
         Me.RectangleShape3.Size = New System.Drawing.Size(122, 35)
         '
@@ -97,16 +97,16 @@ Partial Class lstHuesped
         Me.RectangleShape2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.RectangleShape2.BorderColor = System.Drawing.Color.Transparent
         Me.RectangleShape2.CornerRadius = 17
-        Me.RectangleShape2.Location = New System.Drawing.Point(124, 421)
+        Me.RectangleShape2.Location = New System.Drawing.Point(135, 420)
         Me.RectangleShape2.Name = "RectangleShape2"
         Me.RectangleShape2.Size = New System.Drawing.Size(122, 35)
         '
         'RectangleShape1
         '
         Me.RectangleShape1.BackgroundImage = CType(resources.GetObject("RectangleShape1.BackgroundImage"), System.Drawing.Image)
-        Me.RectangleShape1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.RectangleShape1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.RectangleShape1.BorderColor = System.Drawing.Color.Transparent
-        Me.RectangleShape1.CornerRadius = 17
+        Me.RectangleShape1.CornerRadius = 15
         Me.RectangleShape1.Location = New System.Drawing.Point(8, 420)
         Me.RectangleShape1.Name = "RectangleShape1"
         Me.RectangleShape1.Size = New System.Drawing.Size(122, 35)
@@ -117,6 +117,7 @@ Partial Class lstHuesped
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
+        Me.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(984, 461)
         Me.Controls.Add(Me.dgvHuesped)

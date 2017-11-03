@@ -5,7 +5,7 @@ Public Class BotonEliminar
     Inherits RectangleShape
 
     Public Sub New()
-        Me.BackgroundImage = My.Resources.BotonEliminar1
+        Me.BackgroundImage = My.Resources.BotonEliminarMaderaNegro
         Me.BorderColor = Color.Transparent
         Me.Size = New Size(122, 35)
         Me.BackgroundImageLayout = ImageLayout.Center
@@ -13,11 +13,11 @@ Public Class BotonEliminar
     End Sub
 
     Private Sub me_MouseHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Me.MouseHover
-        Me.BackgroundImage = My.Resources.BotonEliminar2
+        Me.BackgroundImage = My.Resources.BotonModificarMaderaBlanco
     End Sub
 
     Private Sub me_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Me.MouseLeave
-        Me.BackgroundImage = My.Resources.BotonEliminar1
+        Me.BackgroundImage = My.Resources.BotonEliminarMaderaNegro
     End Sub
 
 

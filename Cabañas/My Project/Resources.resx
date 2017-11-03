@@ -184,6 +184,24 @@
   <data name="IconoHuesped" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconoHuesped.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BotonAgregarMaderaBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonAgregarMaderaBlanco.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonAgregarMaderaNegro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonAgregarMaderaNegro.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonEleiminarMaderaBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonEleiminarMaderaBlanco.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonEliminarMaderaNegro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonEliminarMaderaNegro.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonModificarMaderaBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonModificarMaderaBlanco.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonModificarMaderaNegro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonModificarMaderaNegro.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="IconoHuespedSombra" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconoHuespedSombra.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

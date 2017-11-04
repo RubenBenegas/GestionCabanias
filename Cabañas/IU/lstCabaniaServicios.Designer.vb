@@ -22,35 +22,13 @@ Partial Class lstCabaniaServicios
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Aceptarbtn = New System.Windows.Forms.Button
-        Me.Cancelarbtn = New System.Windows.Forms.Button
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(lstCabaniaServicios))
         Me.dgvCabaniaServicios = New System.Windows.Forms.DataGridView
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
+        Me.RectangleShape2 = New Cabañas.BotonCancelar
+        Me.RectangleShape1 = New Cabañas.BotonAceptar
         CType(Me.dgvCabaniaServicios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Aceptarbtn
-        '
-        Me.Aceptarbtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Aceptarbtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Aceptarbtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Aceptarbtn.Location = New System.Drawing.Point(87, 309)
-        Me.Aceptarbtn.Name = "Aceptarbtn"
-        Me.Aceptarbtn.Size = New System.Drawing.Size(90, 30)
-        Me.Aceptarbtn.TabIndex = 1
-        Me.Aceptarbtn.Text = "Aceptar"
-        Me.Aceptarbtn.UseVisualStyleBackColor = False
-        '
-        'Cancelarbtn
-        '
-        Me.Cancelarbtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Cancelarbtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Cancelarbtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Cancelarbtn.Location = New System.Drawing.Point(183, 309)
-        Me.Cancelarbtn.Name = "Cancelarbtn"
-        Me.Cancelarbtn.Size = New System.Drawing.Size(90, 30)
-        Me.Cancelarbtn.TabIndex = 2
-        Me.Cancelarbtn.Text = "Cancelar"
-        Me.Cancelarbtn.UseVisualStyleBackColor = False
         '
         'dgvCabaniaServicios
         '
@@ -67,21 +45,54 @@ Partial Class lstCabaniaServicios
         Me.dgvCabaniaServicios.Size = New System.Drawing.Size(353, 289)
         Me.dgvCabaniaServicios.TabIndex = 0
         '
+        'ShapeContainer1
+        '
+        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer1.Name = "ShapeContainer1"
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape2, Me.RectangleShape1})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(377, 351)
+        Me.ShapeContainer1.TabIndex = 3
+        Me.ShapeContainer1.TabStop = False
+        '
+        'RectangleShape2
+        '
+        Me.RectangleShape2.BackgroundImage = CType(resources.GetObject("RectangleShape2.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.RectangleShape2.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape2.CornerRadius = 13
+        Me.RectangleShape2.Location = New System.Drawing.Point(200, 316)
+        Me.RectangleShape2.Name = "RectangleShape2"
+        Me.RectangleShape2.Size = New System.Drawing.Size(80, 26)
+        '
+        'RectangleShape1
+        '
+        Me.RectangleShape1.BackgroundImage = CType(resources.GetObject("RectangleShape1.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.RectangleShape1.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape1.CornerRadius = 13
+        Me.RectangleShape1.Location = New System.Drawing.Point(107, 317)
+        Me.RectangleShape1.Name = "RectangleShape1"
+        Me.RectangleShape1.Size = New System.Drawing.Size(80, 26)
+        '
         'lstCabaniaServicios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(377, 351)
         Me.Controls.Add(Me.dgvCabaniaServicios)
-        Me.Controls.Add(Me.Cancelarbtn)
-        Me.Controls.Add(Me.Aceptarbtn)
+        Me.Controls.Add(Me.ShapeContainer1)
+        Me.DoubleBuffered = True
         Me.Name = "lstCabaniaServicios"
         Me.Text = "CabaniaServicios"
         CType(Me.dgvCabaniaServicios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Aceptarbtn As System.Windows.Forms.Button
-    Friend WithEvents Cancelarbtn As System.Windows.Forms.Button
     Friend WithEvents dgvCabaniaServicios As System.Windows.Forms.DataGridView
+    Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
+    Friend WithEvents RectangleShape1 As Cabañas.BotonAceptar
+    Friend WithEvents RectangleShape2 As Cabañas.BotonCancelar
 End Class

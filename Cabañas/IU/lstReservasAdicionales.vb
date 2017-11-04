@@ -18,15 +18,14 @@
         adicionales.BuscarAdicionales(dgvAdicionales)
     End Sub
 
-    Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
-        Close()
-
-    End Sub
-
-    Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
+    Private Sub RectangleShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.Click
         adicionales.Id = dgvAdicionales.Item("id", dgvAdicionales.CurrentRow.Index).Value
         reserva.ReservaAdicionalInsertar(idReserva, adicionales.Id)
         reserva.ReservasCargarAdicionales(idReserva, frmReservas.dgvServiciosAdicionales)
+        Close()
+    End Sub
+
+    Private Sub RectangleShape2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape2.Click
         Close()
     End Sub
 End Class

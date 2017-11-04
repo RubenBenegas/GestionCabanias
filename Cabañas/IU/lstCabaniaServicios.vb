@@ -20,15 +20,14 @@
 
     End Sub
 
-    Private Sub Cancelarbtn_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Cancelarbtn.Click
-        Close()
-    End Sub
-
-    Private Sub Aceptarbtn_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Aceptarbtn.Click
-
+    Private Sub RectangleShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.Click
         servicio.Id = dgvCabaniaServicios.Item("id", dgvCabaniaServicios.CurrentRow.Index).Value
         cabania.CabaniaServCargar(idCabania, servicio.Id)
         cabania.CabaniaServCarga(idCabania, frmCabania.dgvCabaniaServicios)
+        Close()
+    End Sub
+
+    Private Sub RectangleShape2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape2.Click
         Close()
     End Sub
 End Class

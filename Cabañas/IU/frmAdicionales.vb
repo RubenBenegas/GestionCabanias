@@ -28,11 +28,27 @@
 
     Dim Adicional As New Adicionales
 
+    Private Sub frmAdicionales_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        ErrorProvider1.Clear()
 
-    Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
+        If modificar = True Then
+            Me.Text = "Modificar tipo cabaña"
 
+            Adicional = Adicional.RecuperarAdicional(id)
 
+            txtId.Text = Adicional.id
+            txtAdicional.Text = Adicional.descripcion
+            txtMonto.Text = Adicional.monto
+        Else
+            Me.Text = "Agregar tipo cabaña"
 
+            txtId.Text = Nothing
+            txtAdicional.Text = Nothing
+            txtMonto.Text = Nothing
+        End If
+    End Sub
+
+    Private Sub RectangleShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.Click
         If fun.validarCampos(Me, ErrorProvider1) = True Then
 
             Adicional.descripcion = txtAdicional.Text
@@ -60,28 +76,7 @@
         End If
     End Sub
 
-    Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
+    Private Sub RectangleShape2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape2.Click
         Close()
-
-    End Sub
-
-    Private Sub frmAdicionales_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        ErrorProvider1.Clear()
-
-        If modificar = True Then
-            Me.Text = "Modificar tipo cabaña"
-
-            Adicional = Adicional.RecuperarAdicional(id)
-
-            txtId.Text = Adicional.id
-            txtAdicional.Text = Adicional.descripcion
-            txtMonto.Text = Adicional.monto
-        Else
-            Me.Text = "Agregar tipo cabaña"
-
-            txtId.Text = Nothing
-            txtAdicional.Text = Nothing
-            txtMonto.Text = Nothing
-        End If
     End Sub
 End Class

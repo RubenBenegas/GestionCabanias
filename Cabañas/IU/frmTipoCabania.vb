@@ -29,8 +29,27 @@
     Dim tipocabania As New TipoCabania
 
 
-    Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
+    Private Sub frmTipoCabania_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        ErrorProvider1.Clear()
 
+        If modificar = True Then
+            Me.Text = "Modificar tipo cabaña"
+
+            tipocabania = tipocabania.RecuperarTipoCabania(id)
+
+            txtId.Text = tipocabania.id
+            txtTipoCabania.Text = tipocabania.tipoCabania
+            txtMonto.Text = tipocabania.monto
+        Else
+            Me.Text = "Agregar tipo cabaña"
+
+            txtId.Text = Nothing
+            txtTipoCabania.Text = Nothing
+            txtMonto.Text = Nothing
+        End If
+    End Sub
+
+    Private Sub RectangleShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.Click
         ErrorProvider1.Clear()
 
         If fun.validarCampos(Me, ErrorProvider1) = True Then
@@ -60,28 +79,7 @@
         End If
     End Sub
 
-    Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
+    Private Sub RectangleShape2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape2.Click
         Close()
-
-    End Sub
-
-    Private Sub frmTipoCabania_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        ErrorProvider1.Clear()
-
-        If modificar = True Then
-            Me.Text = "Modificar tipo cabaña"
-
-            tipocabania = tipocabania.RecuperarTipoCabania(id)
-
-            txtId.Text = tipocabania.id
-            txtTipoCabania.Text = tipocabania.tipoCabania
-            txtMonto.Text = tipocabania.monto
-        Else
-            Me.Text = "Agregar tipo cabaña"
-
-            txtId.Text = Nothing
-            txtTipoCabania.Text = Nothing
-            txtMonto.Text = Nothing
-        End If
     End Sub
 End Class

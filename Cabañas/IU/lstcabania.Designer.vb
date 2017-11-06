@@ -82,8 +82,7 @@ Partial Class lstcabania
         '
         'RectangleShape4
         '
-        Me.RectangleShape4.BackgroundImage = CType(resources.GetObject("RectangleShape4.BackgroundImage"), System.Drawing.Image)
-        Me.RectangleShape4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.RectangleShape4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.RectangleShape4.BorderColor = System.Drawing.Color.Transparent
         Me.RectangleShape4.CornerRadius = 17
         Me.RectangleShape4.Location = New System.Drawing.Point(847, 424)

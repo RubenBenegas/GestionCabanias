@@ -22,7 +22,6 @@ Partial Class lstReservasAdicionales
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(lstReservasAdicionales))
         Me.dgvAdicionales = New System.Windows.Forms.DataGridView
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
         Me.RectangleShape2 = New Cabañas.BotonCancelar
@@ -62,7 +61,6 @@ Partial Class lstReservasAdicionales
         '
         'RectangleShape2
         '
-        Me.RectangleShape2.BackgroundImage = CType(resources.GetObject("RectangleShape2.BackgroundImage"), System.Drawing.Image)
         Me.RectangleShape2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.RectangleShape2.BorderColor = System.Drawing.Color.Transparent
         Me.RectangleShape2.CornerRadius = 13
@@ -72,7 +70,6 @@ Partial Class lstReservasAdicionales
         '
         'RectangleShape1
         '
-        Me.RectangleShape1.BackgroundImage = CType(resources.GetObject("RectangleShape1.BackgroundImage"), System.Drawing.Image)
         Me.RectangleShape1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.RectangleShape1.BorderColor = System.Drawing.Color.Transparent
         Me.RectangleShape1.CornerRadius = 13

@@ -23,7 +23,6 @@ Partial Class frmAdicionales
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAdicionales))
         Me.txtAdicional = New System.Windows.Forms.TextBox
         Me.lblTipoCabania = New System.Windows.Forms.Label
         Me.txtMonto = New System.Windows.Forms.TextBox
@@ -114,7 +113,6 @@ Partial Class frmAdicionales
         '
         'RectangleShape2
         '
-        Me.RectangleShape2.BackgroundImage = CType(resources.GetObject("RectangleShape2.BackgroundImage"), System.Drawing.Image)
         Me.RectangleShape2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.RectangleShape2.BorderColor = System.Drawing.Color.Transparent
         Me.RectangleShape2.CornerRadius = 17
@@ -124,7 +122,6 @@ Partial Class frmAdicionales
         '
         'RectangleShape1
         '
-        Me.RectangleShape1.BackgroundImage = CType(resources.GetObject("RectangleShape1.BackgroundImage"), System.Drawing.Image)
         Me.RectangleShape1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.RectangleShape1.BorderColor = System.Drawing.Color.Transparent
         Me.RectangleShape1.CornerRadius = 17

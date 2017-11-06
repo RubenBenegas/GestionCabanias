@@ -23,13 +23,12 @@ Partial Class lstEstadosReservas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(lstEstadosReservas))
         Me.dgvEstadoReservas = New System.Windows.Forms.DataGridView
         Me.btnBuscar = New System.Windows.Forms.Button
         Me.btnTodos = New System.Windows.Forms.Button
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
-        Me.cmbEstados = New System.Windows.Forms.ComboBox
         Me.RectangleShape1 = New Cabañas.BotonCerrar
+        Me.cmbEstados = New System.Windows.Forms.ComboBox
         CType(Me.dgvEstadoReservas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -102,6 +101,15 @@ Partial Class lstEstadosReservas
         Me.ShapeContainer1.TabIndex = 10
         Me.ShapeContainer1.TabStop = False
         '
+        'RectangleShape1
+        '
+        Me.RectangleShape1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.RectangleShape1.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape1.CornerRadius = 17
+        Me.RectangleShape1.Location = New System.Drawing.Point(913, 304)
+        Me.RectangleShape1.Name = "RectangleShape1"
+        Me.RectangleShape1.Size = New System.Drawing.Size(122, 35)
+        '
         'cmbEstados
         '
         Me.cmbEstados.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -110,16 +118,6 @@ Partial Class lstEstadosReservas
         Me.cmbEstados.Name = "cmbEstados"
         Me.cmbEstados.Size = New System.Drawing.Size(121, 21)
         Me.cmbEstados.TabIndex = 11
-        '
-        'RectangleShape1
-        '
-        Me.RectangleShape1.BackgroundImage = CType(resources.GetObject("RectangleShape1.BackgroundImage"), System.Drawing.Image)
-        Me.RectangleShape1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.RectangleShape1.BorderColor = System.Drawing.Color.Transparent
-        Me.RectangleShape1.CornerRadius = 17
-        Me.RectangleShape1.Location = New System.Drawing.Point(913, 304)
-        Me.RectangleShape1.Name = "RectangleShape1"
-        Me.RectangleShape1.Size = New System.Drawing.Size(122, 35)
         '
         'lstEstadosReservas
         '

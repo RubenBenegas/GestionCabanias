@@ -23,7 +23,6 @@ Partial Class lstCancelaciones
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(lstCancelaciones))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
         Me.RectangleShape1 = New Cabañas.BotonCerrar
@@ -70,8 +69,7 @@ Partial Class lstCancelaciones
         '
         'RectangleShape1
         '
-        Me.RectangleShape1.BackgroundImage = CType(resources.GetObject("RectangleShape1.BackgroundImage"), System.Drawing.Image)
-        Me.RectangleShape1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.RectangleShape1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.RectangleShape1.BorderColor = System.Drawing.Color.Transparent
         Me.RectangleShape1.CornerRadius = 17
         Me.RectangleShape1.Location = New System.Drawing.Point(834, 422)

@@ -30,11 +30,11 @@ Partial Class lstGastos
         Me.txtTotal = New System.Windows.Forms.TextBox
         Me.Label1 = New System.Windows.Forms.Label
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
-        Me.cmbCategoria = New System.Windows.Forms.ComboBox
         Me.RectangleShape4 = New Cabañas.BotonCerrar
         Me.RectangleShape3 = New Cabañas.BotonEliminar
         Me.RectangleShape2 = New Cabañas.BotonModificar
         Me.RectangleShape1 = New Cabañas.BotonAgregar
+        Me.cmbCategoria = New System.Windows.Forms.ComboBox
         CType(Me.dgvGastos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -124,20 +124,9 @@ Partial Class lstGastos
         Me.ShapeContainer1.TabIndex = 15
         Me.ShapeContainer1.TabStop = False
         '
-        'cmbCategoria
-        '
-        Me.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbCategoria.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbCategoria.FormattingEnabled = True
-        Me.cmbCategoria.Location = New System.Drawing.Point(10, 12)
-        Me.cmbCategoria.Name = "cmbCategoria"
-        Me.cmbCategoria.Size = New System.Drawing.Size(121, 23)
-        Me.cmbCategoria.TabIndex = 16
-        '
         'RectangleShape4
         '
-        Me.RectangleShape4.BackgroundImage = CType(resources.GetObject("RectangleShape4.BackgroundImage"), System.Drawing.Image)
-        Me.RectangleShape4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.RectangleShape4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.RectangleShape4.BorderColor = System.Drawing.Color.Transparent
         Me.RectangleShape4.CornerRadius = 17
         Me.RectangleShape4.Location = New System.Drawing.Point(844, 419)
@@ -174,11 +163,23 @@ Partial Class lstGastos
         Me.RectangleShape1.Name = "RectangleShape1"
         Me.RectangleShape1.Size = New System.Drawing.Size(122, 35)
         '
+        'cmbCategoria
+        '
+        Me.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbCategoria.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbCategoria.FormattingEnabled = True
+        Me.cmbCategoria.Location = New System.Drawing.Point(10, 12)
+        Me.cmbCategoria.Name = "cmbCategoria"
+        Me.cmbCategoria.Size = New System.Drawing.Size(121, 23)
+        Me.cmbCategoria.TabIndex = 16
+        '
         'lstGastos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
+        Me.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(984, 461)
         Me.Controls.Add(Me.cmbCategoria)
         Me.Controls.Add(Me.Label1)

@@ -77,8 +77,7 @@ Partial Class LstProveedor
         '
         'RectangleShape4
         '
-        Me.RectangleShape4.BackgroundImage = CType(resources.GetObject("RectangleShape4.BackgroundImage"), System.Drawing.Image)
-        Me.RectangleShape4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.RectangleShape4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.RectangleShape4.BorderColor = System.Drawing.Color.Transparent
         Me.RectangleShape4.CornerRadius = 17
         Me.RectangleShape4.Location = New System.Drawing.Point(847, 423)
@@ -125,6 +124,7 @@ Partial Class LstProveedor
         Me.ClientSize = New System.Drawing.Size(984, 461)
         Me.Controls.Add(Me.dgvProveedores)
         Me.Controls.Add(Me.ShapeContainer1)
+        Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(500, 300)
         Me.Name = "LstProveedor"

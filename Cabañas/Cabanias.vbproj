@@ -96,6 +96,9 @@
     <Compile Include="BotonAgregar.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="BotonBuscar.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="BotonCancelar.vb">
       <SubType>Component</SubType>
     </Compile>

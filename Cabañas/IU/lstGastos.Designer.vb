@@ -25,11 +25,11 @@ Partial Class lstGastos
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(lstGastos))
         Me.dgvGastos = New System.Windows.Forms.DataGridView
-        Me.btnBuscar = New System.Windows.Forms.Button
         Me.btnTodos = New System.Windows.Forms.Button
         Me.txtTotal = New System.Windows.Forms.TextBox
         Me.Label1 = New System.Windows.Forms.Label
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
+        Me.RectangleShape5 = New Cabañas.BotonBuscar
         Me.RectangleShape4 = New Cabañas.BotonCerrar
         Me.RectangleShape3 = New Cabañas.BotonEliminar
         Me.RectangleShape2 = New Cabañas.BotonModificar
@@ -66,27 +66,13 @@ Partial Class lstGastos
         Me.dgvGastos.Size = New System.Drawing.Size(960, 367)
         Me.dgvGastos.TabIndex = 0
         '
-        'btnBuscar
-        '
-        Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscar.ForeColor = System.Drawing.Color.White
-        Me.btnBuscar.Location = New System.Drawing.Point(136, 12)
-        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(0)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(90, 30)
-        Me.btnBuscar.TabIndex = 5
-        Me.btnBuscar.Text = "Buscar"
-        Me.btnBuscar.UseVisualStyleBackColor = False
-        '
         'btnTodos
         '
         Me.btnTodos.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnTodos.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTodos.ForeColor = System.Drawing.Color.White
-        Me.btnTodos.Location = New System.Drawing.Point(226, 12)
+        Me.btnTodos.Location = New System.Drawing.Point(230, 13)
         Me.btnTodos.Margin = New System.Windows.Forms.Padding(0)
         Me.btnTodos.Name = "btnTodos"
         Me.btnTodos.Size = New System.Drawing.Size(47, 30)
@@ -119,13 +105,24 @@ Partial Class lstGastos
         Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
-        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape4, Me.RectangleShape3, Me.RectangleShape2, Me.RectangleShape1})
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape5, Me.RectangleShape4, Me.RectangleShape3, Me.RectangleShape2, Me.RectangleShape1})
         Me.ShapeContainer1.Size = New System.Drawing.Size(984, 461)
         Me.ShapeContainer1.TabIndex = 15
         Me.ShapeContainer1.TabStop = False
         '
+        'RectangleShape5
+        '
+        Me.RectangleShape5.BackgroundImage = CType(resources.GetObject("RectangleShape5.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.RectangleShape5.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape5.CornerRadius = 13
+        Me.RectangleShape5.Location = New System.Drawing.Point(149, 13)
+        Me.RectangleShape5.Name = "RectangleShape5"
+        Me.RectangleShape5.Size = New System.Drawing.Size(80, 26)
+        '
         'RectangleShape4
         '
+        Me.RectangleShape4.BackgroundImage = CType(resources.GetObject("RectangleShape4.BackgroundImage"), System.Drawing.Image)
         Me.RectangleShape4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.RectangleShape4.BorderColor = System.Drawing.Color.Transparent
         Me.RectangleShape4.CornerRadius = 17
@@ -185,9 +182,9 @@ Partial Class lstGastos
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtTotal)
         Me.Controls.Add(Me.btnTodos)
-        Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.dgvGastos)
         Me.Controls.Add(Me.ShapeContainer1)
+        Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(500, 300)
         Me.Name = "lstGastos"
@@ -199,7 +196,6 @@ Partial Class lstGastos
 
     End Sub
     Friend WithEvents dgvGastos As System.Windows.Forms.DataGridView
-    Friend WithEvents btnBuscar As System.Windows.Forms.Button
     Friend WithEvents btnTodos As System.Windows.Forms.Button
     Friend WithEvents txtTotal As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
@@ -209,4 +205,5 @@ Partial Class lstGastos
     Friend WithEvents RectangleShape2 As Cabañas.BotonModificar
     Friend WithEvents RectangleShape4 As Cabañas.BotonCerrar
     Friend WithEvents cmbCategoria As System.Windows.Forms.ComboBox
+    Friend WithEvents RectangleShape5 As Cabañas.BotonBuscar
 End Class

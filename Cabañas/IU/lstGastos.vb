@@ -41,13 +41,6 @@
 
     End Sub
 
-    Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
-
-        Gastos.GastosFiltrarPorCategoria(cmbCategoria.SelectedValue, dgvGastos)
-        txtTotal.Text = Gastos.GastosCalcularPorCategoria(cmbCategoria.SelectedValue)
-
-    End Sub
-
     Private Sub btnTodos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTodos.Click
         Gastos.verTodos(dgvGastos)
         txtTotal.Text = Gastos.GastosCalcularTotal
@@ -80,5 +73,12 @@
 
     Private Sub RectangleShape4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape4.Click
         Close()
+    End Sub
+
+    Private Sub RectangleShape5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape5.Click
+
+        Gastos.GastosFiltrarPorCategoria(cmbCategoria.SelectedValue, dgvGastos)
+        txtTotal.Text = Gastos.GastosCalcularPorCategoria(cmbCategoria.SelectedValue)
+
     End Sub
 End Class

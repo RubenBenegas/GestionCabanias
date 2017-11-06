@@ -443,6 +443,8 @@
     <Content Include="Resources\BotonCerrar1.png" />
     <Content Include="Resources\BotonCerrar2.png" />
     <None Include="Resources\BotonEleiminarMaderaBlanco.png" />
+    <None Include="Resources\BotonCerrarMaderaNegro.png" />
+    <None Include="Resources\BotonCerrarMaderaBlanco.png" />
     <Content Include="Resources\BotonEliminar1.png" />
     <Content Include="Resources\BotonEliminar2.png" />
     <None Include="Resources\BotonEliminarMaderaNegro.png" />

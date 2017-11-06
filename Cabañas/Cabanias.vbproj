@@ -440,6 +440,8 @@
     <None Include="Resources\BotonAgregarMaderaNegro.png" />
     <None Include="Resources\BotonCancelarMaderaBlanco.png" />
     <None Include="Resources\BotonCancelarMaderaNegro.png" />
+    <None Include="Resources\BotonBuscarMaderaNegro.png" />
+    <None Include="Resources\BotonBuscarMaderaBlanco.png" />
     <Content Include="Resources\BotonCerrar1.png" />
     <Content Include="Resources\BotonCerrar2.png" />
     <None Include="Resources\BotonEleiminarMaderaBlanco.png" />

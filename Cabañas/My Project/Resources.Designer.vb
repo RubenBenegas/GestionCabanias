@@ -102,6 +102,20 @@ Namespace My.Resources
             End Get
         End Property
         
+        Friend ReadOnly Property BotonBuscarMaderaBlanco() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("BotonBuscarMaderaBlanco", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property BotonBuscarMaderaNegro() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("BotonBuscarMaderaNegro", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
         Friend ReadOnly Property BotonCancelarMaderaBlanco() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("BotonCancelarMaderaBlanco", resourceCulture)

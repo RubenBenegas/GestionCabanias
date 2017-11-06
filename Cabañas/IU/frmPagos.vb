@@ -76,7 +76,11 @@
 
     Dim fun As New Validaciones
 
-    Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
+    Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub RectangleShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.Click
         If fun.validarCampos(Me, ErrorProvider1) = True Then
 
             'aca obtenemos el monto que se agrego o se quito
@@ -88,8 +92,6 @@
             pagos.Descripcion = txtDescripcion.Text
             pagos.IdReserva = IdReserva
 
-            
-
             If modificar = True Then
 
                 Dim montoTotal As Decimal
@@ -97,8 +99,6 @@
                 montoTotal = reserva.ReservasTraerMontoTotal(frmReservas.txtId.Text)
                 montoPagos = pagos.PagosTraerTotalPagosPorReserva(frmReservas.txtId.Text)
 
-                
-                
 
                 If montoDiferencia > montoTotal - montoPagos Then
                     MessageBox.Show("El nuevo monto es superior a la deuda actual")
@@ -108,11 +108,11 @@
                 Else
                     MsgBox("Error al modificar el pago." + Chr(13) + "Intentelo de nuevo.")
                 End If
-                Else
-                    Dim montoTotal As Decimal
-                    Dim montoPagos As Decimal
-                    montoTotal = reserva.ReservasTraerMontoTotal(frmReservas.txtId.Text)
-                    montoPagos = pagos.PagosTraerTotalPagosPorReserva(frmReservas.txtId.Text)
+            Else
+                Dim montoTotal As Decimal
+                Dim montoPagos As Decimal
+                montoTotal = reserva.ReservasTraerMontoTotal(frmReservas.txtId.Text)
+                montoPagos = pagos.PagosTraerTotalPagosPorReserva(frmReservas.txtId.Text)
                 If montoPagos + CDec(txtMonto.Text) > montoTotal + frmReservas.montoDiferenciaEnTotal Then
                     MessageBox.Show("El monto ingresado es superior a la deuda actual")
 
@@ -125,24 +125,14 @@
                 Else
                     MsgBox("Error al insertar pago." + Chr(13) + "Intentelo de nuevo.")
                 End If
-                End If
+            End If
 
+            Close()
+        Else
 
-
-
-                Close()
-            Else
-
-                MsgBox("Completar los campos obligatorios.", MsgBoxStyle.Information, "Importante")
+            MsgBox("Completar los campos obligatorios.", MsgBoxStyle.Information, "Importante")
         End If
 
 
     End Sub
-
-    Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
-        Close()
-    End Sub
-
-
-
 End Class

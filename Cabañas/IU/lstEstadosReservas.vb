@@ -18,11 +18,6 @@
         reservas.CargarComboEstados(cmbEstados)
     End Sub
 
-    Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
-        reservas.ReservasFiltrarPorEstado(cmbEstados.SelectedValue, dgvEstadoReservas)
-    End Sub
-
-
     Private Sub dgvEstadoReservas_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvEstadoReservas.CellDoubleClick
         Editar()
 
@@ -77,5 +72,9 @@
 
     Private Sub RectangleShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.Click
         Close()
+    End Sub
+
+    Private Sub RectangleShape2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape2.Click
+        reservas.ReservasFiltrarPorEstado(cmbEstados.SelectedValue, dgvEstadoReservas)
     End Sub
 End Class

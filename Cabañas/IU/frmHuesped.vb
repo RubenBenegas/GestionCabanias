@@ -53,38 +53,6 @@
     End Sub
 
     Dim fun As New Validaciones
-    Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
-
-        If fun.validarCampos(Me, ErrorProvider1) = True Then
-
-            huesped.nombre = txtNombre.Text
-            huesped.dni = txtDni.Text
-            huesped.localidad = txtLocalidad.Text
-            huesped.direccion = txtDireccion.Text
-            huesped.telefono = txtTelefono.Text
-            huesped.email = txtEmail.Text
-
-            If modificar = True Then
-                If huesped.ModificarHuesped(huesped) = True Then
-                    MsgBox("El huesped ha sido correctamente modificado.")
-                    huesped.TraerTabHuespedes(lstHuesped.dgvHuesped)
-                Else
-                    MsgBox("Error al modificar el huesped." + Chr(13) + "Intentelo de nuevo.")
-                End If
-            Else
-                If huesped.InsertarHuesped(huesped) = True Then
-                    MsgBox("El huesped ha sido correctamente insertado.")
-                    huesped.TraerTabHuespedes(lstHuesped.dgvHuesped)
-                Else
-                    MsgBox("Error al insertar huesped." + Chr(13) + "Intentelo de nuevo.")
-                End If
-            End If
-            Close()
-        Else
-            MsgBox("Completar los campos obligatorios.", MsgBoxStyle.Information, "Importante")
-        End If
-
-    End Sub
 
     Private Sub dgvHistorial_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvHistorial.CellDoubleClick
 
@@ -111,12 +79,6 @@
             'Else          
             '    MsgBox("No hay elementos para modificar.", MsgBoxStyle.Information, "Mensaje")
         End If
-    End Sub
-
-    Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
-
-        Close()
-
     End Sub
 
     'VALIDACIONES
@@ -168,4 +130,38 @@
     End Sub
 
     
+    Private Sub RectangleShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.Click
+        If fun.validarCampos(Me, ErrorProvider1) = True Then
+
+            huesped.nombre = txtNombre.Text
+            huesped.dni = txtDni.Text
+            huesped.localidad = txtLocalidad.Text
+            huesped.direccion = txtDireccion.Text
+            huesped.telefono = txtTelefono.Text
+            huesped.email = txtEmail.Text
+
+            If modificar = True Then
+                If huesped.ModificarHuesped(huesped) = True Then
+                    MsgBox("El huesped ha sido correctamente modificado.")
+                    huesped.TraerTabHuespedes(lstHuesped.dgvHuesped)
+                Else
+                    MsgBox("Error al modificar el huesped." + Chr(13) + "Intentelo de nuevo.")
+                End If
+            Else
+                If huesped.InsertarHuesped(huesped) = True Then
+                    MsgBox("El huesped ha sido correctamente insertado.")
+                    huesped.TraerTabHuespedes(lstHuesped.dgvHuesped)
+                Else
+                    MsgBox("Error al insertar huesped." + Chr(13) + "Intentelo de nuevo.")
+                End If
+            End If
+            Close()
+        Else
+            MsgBox("Completar los campos obligatorios.", MsgBoxStyle.Information, "Importante")
+        End If
+    End Sub
+
+    Private Sub RectangleShape2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape2.Click
+        Close()
+    End Sub
 End Class

@@ -51,44 +51,6 @@
     End Sub
 
     Dim fun As New Validaciones
-    Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
-
-        If fun.validarCampos(Me, ErrorProvider1) = True Then
-            Gasto.descripcion = txtDescripcion.Text
-            Gasto.fecha = DateTimePicker1.Value
-            Gasto.idCategoria = cmbCategoria.SelectedValue
-            Gasto.idProveedor = cmbProveedor.SelectedValue
-            Gasto.MUnitario = txtMUnitario.Text
-            Gasto.Cantidad = txtCantidad.Text
-            Gasto.Total = CDec(txtMUnitario.Text) * CDec(txtCantidad.Text)
-            If modificar = True Then
-                If Gasto.ModificarGasto(Gasto) = True Then
-                    MsgBox("El gasto ha sido correctamente modificado.")
-                    Gasto.verTodos(lstGastos.dgvGastos)
-                Else
-                    MsgBox("Error al modificar el gasto." + Chr(13) + "Intentelo de nuevo.")
-                End If
-            Else
-                If Gasto.InsertarGasto(Gasto) = True Then
-                    MsgBox("El gasto ha sido correctamente insertado.")
-                    Gasto.verTodos(lstGastos.dgvGastos)
-                Else
-                    MsgBox("Error al insertar gasto." + Chr(13) + "Intentelo de nuevo.")
-                End If
-            End If
-            Close()
-        Else
-
-            MsgBox("Completar los campos obligatorios.", MsgBoxStyle.Information, "Importante")
-        End If
-    End Sub
-
-    Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
-        Close()
-
-    End Sub
-
-
 
     Private Sub txtMUnitario_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtMUnitario.KeyPress
         If Char.IsNumber(e.KeyChar) Or Char.IsControl(e.KeyChar) Or e.KeyChar = "," Then
@@ -124,5 +86,41 @@
 
     Private Sub btnCalcular_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCalcular.Click
         TxtTotal.Text = CInt(txtMUnitario.Text) * CInt(txtCantidad.Text)
+    End Sub
+
+    Private Sub RectangleShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.Click
+        If fun.validarCampos(Me, ErrorProvider1) = True Then
+            Gasto.descripcion = txtDescripcion.Text
+            Gasto.fecha = DateTimePicker1.Value
+            Gasto.idCategoria = cmbCategoria.SelectedValue
+            Gasto.idProveedor = cmbProveedor.SelectedValue
+            Gasto.MUnitario = txtMUnitario.Text
+            Gasto.Cantidad = txtCantidad.Text
+            Gasto.Total = CDec(txtMUnitario.Text) * CDec(txtCantidad.Text)
+            If modificar = True Then
+                If Gasto.ModificarGasto(Gasto) = True Then
+                    MsgBox("El gasto ha sido correctamente modificado.")
+                    Gasto.verTodos(lstGastos.dgvGastos)
+                Else
+                    MsgBox("Error al modificar el gasto." + Chr(13) + "Intentelo de nuevo.")
+                End If
+            Else
+                If Gasto.InsertarGasto(Gasto) = True Then
+                    MsgBox("El gasto ha sido correctamente insertado.")
+                    Gasto.verTodos(lstGastos.dgvGastos)
+                Else
+                    MsgBox("Error al insertar gasto." + Chr(13) + "Intentelo de nuevo.")
+                End If
+            End If
+            Close()
+        Else
+
+            MsgBox("Completar los campos obligatorios.", MsgBoxStyle.Information, "Importante")
+        End If
+    End Sub
+
+    Private Sub RectangleShape2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape2.Click
+        Close()
+
     End Sub
 End Class

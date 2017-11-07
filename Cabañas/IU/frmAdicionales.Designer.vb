@@ -54,9 +54,9 @@ Partial Class frmAdicionales
         Me.lblTipoCabania.ForeColor = System.Drawing.Color.White
         Me.lblTipoCabania.Location = New System.Drawing.Point(12, 42)
         Me.lblTipoCabania.Name = "lblTipoCabania"
-        Me.lblTipoCabania.Size = New System.Drawing.Size(74, 13)
+        Me.lblTipoCabania.Size = New System.Drawing.Size(78, 13)
         Me.lblTipoCabania.TabIndex = 16
-        Me.lblTipoCabania.Text = "Descripcion"
+        Me.lblTipoCabania.Text = "Descripcion:"
         '
         'txtMonto
         '
@@ -82,9 +82,9 @@ Partial Class frmAdicionales
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(12, 75)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(42, 13)
+        Me.Label3.Size = New System.Drawing.Size(46, 13)
         Me.Label3.TabIndex = 14
-        Me.Label3.Text = "Monto"
+        Me.Label3.Text = "Monto:"
         '
         'Label1
         '
@@ -94,9 +94,9 @@ Partial Class frmAdicionales
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(18, 13)
+        Me.Label1.Size = New System.Drawing.Size(22, 13)
         Me.Label1.TabIndex = 11
-        Me.Label1.Text = "Id"
+        Me.Label1.Text = "Id:"
         '
         'ErrorProvider1
         '

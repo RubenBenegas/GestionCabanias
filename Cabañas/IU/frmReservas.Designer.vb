@@ -462,6 +462,7 @@ Partial Class frmReservas
         Me.txtReembolso.Name = "txtReembolso"
         Me.txtReembolso.Size = New System.Drawing.Size(131, 30)
         Me.txtReembolso.TabIndex = 41
+        Me.txtReembolso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.txtReembolso.Visible = False
         '
         'lblReservaCancelada

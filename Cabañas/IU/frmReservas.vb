@@ -56,7 +56,7 @@
 
         reserva.ReservasCargarAdicionales(idReserva, dgvServiciosAdicionales)
 
-        reserva.CargarComboCabania(cmbIdCabania)
+        reserva.ReservasCabaniasFiltrarDisponibles(dtpFechaIngreso.Value, dtpFechaSalida.Value, cmbIdCabania)
 
 
         If modificar = True Then
@@ -515,6 +515,13 @@
         End If
     End Sub
 
+
+
+    Private Sub cmbIdCabania_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmbIdCabania.GotFocus
+        reserva.ReservasCabaniasFiltrarDisponibles(dtpFechaIngreso.Value, dtpFechaSalida.Value, cmbIdCabania)
+    End Sub
 #End Region
 
 End Class
+
+

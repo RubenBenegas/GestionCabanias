@@ -102,6 +102,9 @@
     <Compile Include="BotonCancelar.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="BotonCancelarR.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="BotonCerrar.vb">
       <SubType>Component</SubType>
     </Compile>

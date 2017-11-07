@@ -479,11 +479,12 @@ Partial Class frmReservas
         '
         'btnConsultarCostos
         '
-        Me.btnConsultarCostos.Location = New System.Drawing.Point(372, 467)
+        Me.btnConsultarCostos.BackgroundImage = Global.Cabañas.My.Resources.Resources.BotonConsultarCostosMaderaBlanco
+        Me.btnConsultarCostos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnConsultarCostos.Location = New System.Drawing.Point(372, 459)
         Me.btnConsultarCostos.Name = "btnConsultarCostos"
-        Me.btnConsultarCostos.Size = New System.Drawing.Size(99, 23)
+        Me.btnConsultarCostos.Size = New System.Drawing.Size(99, 31)
         Me.btnConsultarCostos.TabIndex = 43
-        Me.btnConsultarCostos.Text = "Consultar costos"
         Me.btnConsultarCostos.UseVisualStyleBackColor = True
         '
         'dtpFechaReserva
@@ -561,6 +562,7 @@ Partial Class frmReservas
         '
         'btnCancelarReserva
         '
+        Me.btnCancelarReserva.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnCancelarReserva.Location = New System.Drawing.Point(372, 167)
         Me.btnCancelarReserva.Name = "btnCancelarReserva"
         Me.btnCancelarReserva.Size = New System.Drawing.Size(114, 23)

@@ -495,7 +495,6 @@
     End Sub
 #End Region
 
-
 #Region "Eventos"
     Private Sub dtpFechaIngreso_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles dtpFechaIngreso.LostFocus
         dtpCheckin.Value = dtpFechaIngreso.Value

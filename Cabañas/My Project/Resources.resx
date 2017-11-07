@@ -229,4 +229,34 @@
   <data name="BotonBuscarMaderaNegro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BotonBuscarMaderaNegro.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BotonAgregarMaderaBlancoFrm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonAgregarMaderaBlancoFrm.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonAgregarMaderaNegroFrm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonAgregarMaderaNegroFrm.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonConsultarCostosMaderaBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonConsultarCostosMaderaBlanco.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonConsultarCostosMaderaNegro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonConsultarCostosMaderaNegro.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonDetalleCancelacionMaderaBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonDetalleCancelacionMaderaBlanco.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonDetalleCancelacionMaderaNegro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonDetalleCancelacionMaderaNegro.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonEliminarMaderaBlancoFrm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonEliminarMaderaBlancoFrm.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonEliminarMaderaNegroFrm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonEliminarMaderaNegroFrm.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonPagosMaderaBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonPagosMaderaBlanco.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonPagosMaderaNegro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonPagosMaderaNegro.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -118,26 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="orig_372503" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\orig_372503.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icono_calendario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icono calendario.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="thumb_COLOURBOX24169832" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\thumb_COLOURBOX24169832.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="FondoMaderaPanel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FondoMaderaPanel.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BotonEliminar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BotonEliminar2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BotonModificar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BotonModificar2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="can-stock-photo_csp42993829" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\can-stock-photo_csp42993829.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IconoCalendario2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconoCalendario2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,38 +130,11 @@
   <data name="BotonCerrar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BotonCerrar1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Dark-Blue-620x387_z9Tu6fR" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Dark-Blue-620x387_z9Tu6fR.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="th1_372503" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\th1_372503.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="IconoCabania" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconoCabania.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BotonCerrar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BotonCerrar2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BotonModificar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BotonModificar1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BotonAgregar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BotonAgregar2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FondoMaderaClaro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FondoMaderaClaro.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FondoMaderaClaro2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FondoMaderaClaro2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BotonEliminar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BotonEliminar1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BotonAgregar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BotonAgregar1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\fondo.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FondoMaderaClaro3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FondoMaderaClaro3.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

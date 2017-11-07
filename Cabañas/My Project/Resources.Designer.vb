@@ -74,20 +74,6 @@ Namespace My.Resources
             End Get
         End Property
         
-        Friend ReadOnly Property BotonAgregar1() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("BotonAgregar1", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        Friend ReadOnly Property BotonAgregar2() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("BotonAgregar2", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
         Friend ReadOnly Property BotonAgregarMaderaBlanco() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("BotonAgregarMaderaBlanco", resourceCulture)
@@ -207,20 +193,6 @@ Namespace My.Resources
             End Get
         End Property
         
-        Friend ReadOnly Property BotonEliminar1() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("BotonEliminar1", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        Friend ReadOnly Property BotonEliminar2() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("BotonEliminar2", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
         Friend ReadOnly Property BotonEliminarMaderaBlancoFrm() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("BotonEliminarMaderaBlancoFrm", resourceCulture)
@@ -238,20 +210,6 @@ Namespace My.Resources
         Friend ReadOnly Property BotonEliminarMaderaNegroFrm() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("BotonEliminarMaderaNegroFrm", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        Friend ReadOnly Property BotonModificar1() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("BotonModificar1", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        Friend ReadOnly Property BotonModificar2() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("BotonModificar2", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -280,41 +238,6 @@ Namespace My.Resources
         Friend ReadOnly Property BotonPagosMaderaNegro() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("BotonPagosMaderaNegro", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        Friend ReadOnly Property can_stock_photo_csp42993829() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("can-stock-photo_csp42993829", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        Friend ReadOnly Property Dark_Blue_620x387_z9Tu6fR() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("Dark-Blue-620x387_z9Tu6fR", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        Friend ReadOnly Property fondo() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("fondo", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        Friend ReadOnly Property FondoMaderaClaro() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("FondoMaderaClaro", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        Friend ReadOnly Property FondoMaderaClaro2() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("FondoMaderaClaro2", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -364,27 +287,6 @@ Namespace My.Resources
         Friend ReadOnly Property IconoHuespedSombra() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("IconoHuespedSombra", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        Friend ReadOnly Property orig_372503() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("orig_372503", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        Friend ReadOnly Property th1_372503() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("th1_372503", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        Friend ReadOnly Property thumb_COLOURBOX24169832() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("thumb_COLOURBOX24169832", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

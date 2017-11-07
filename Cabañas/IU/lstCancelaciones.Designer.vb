@@ -23,6 +23,7 @@ Partial Class lstCancelaciones
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(lstCancelaciones))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
         Me.RectangleShape1 = New Cabañas.BotonCerrar
@@ -69,6 +70,7 @@ Partial Class lstCancelaciones
         '
         'RectangleShape1
         '
+        Me.RectangleShape1.BackgroundImage = CType(resources.GetObject("RectangleShape1.BackgroundImage"), System.Drawing.Image)
         Me.RectangleShape1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.RectangleShape1.BorderColor = System.Drawing.Color.Transparent
         Me.RectangleShape1.CornerRadius = 17
@@ -80,9 +82,12 @@ Partial Class lstCancelaciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(984, 461)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.ShapeContainer1)
+        Me.DoubleBuffered = True
         Me.Name = "lstCancelaciones"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "lstCancelaciones"

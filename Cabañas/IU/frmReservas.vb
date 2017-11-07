@@ -126,6 +126,7 @@
                 If DateDiff(DateInterval.Day, cancelacion.fCancelacion, reserva.fIngreso) > 14 Then
                     lblReembolso.Visible = True
                     lblReembolso.ForeColor = Color.Green
+                    lblReembolso.BackColor = Color.Transparent
                     lblReembolso.Text = "Reembolso de: "
                     txtReembolso.Visible = True
                     txtReembolso.Text = CStr(reserva.Senia / 2)

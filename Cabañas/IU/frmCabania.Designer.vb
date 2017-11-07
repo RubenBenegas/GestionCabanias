@@ -62,6 +62,7 @@ Partial Class frmCabania
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(22, 13)
@@ -73,6 +74,7 @@ Partial Class frmCabania
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(12, 35)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(83, 13)
@@ -97,6 +99,7 @@ Partial Class frmCabania
         Me.lblMonto.AutoSize = True
         Me.lblMonto.BackColor = System.Drawing.Color.Transparent
         Me.lblMonto.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMonto.ForeColor = System.Drawing.Color.White
         Me.lblMonto.Location = New System.Drawing.Point(12, 61)
         Me.lblMonto.Name = "lblMonto"
         Me.lblMonto.Size = New System.Drawing.Size(46, 13)
@@ -116,6 +119,7 @@ Partial Class frmCabania
         Me.lblDescripcion.AutoSize = True
         Me.lblDescripcion.BackColor = System.Drawing.Color.Transparent
         Me.lblDescripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDescripcion.ForeColor = System.Drawing.Color.White
         Me.lblDescripcion.Location = New System.Drawing.Point(12, 88)
         Me.lblDescripcion.Name = "lblDescripcion"
         Me.lblDescripcion.Size = New System.Drawing.Size(78, 13)
@@ -149,35 +153,44 @@ Partial Class frmCabania
         'Servicios
         '
         Me.Servicios.AutoSize = True
+        Me.Servicios.BackColor = System.Drawing.Color.Transparent
+        Me.Servicios.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Servicios.ForeColor = System.Drawing.Color.White
         Me.Servicios.Location = New System.Drawing.Point(21, 192)
         Me.Servicios.Name = "Servicios"
-        Me.Servicios.Size = New System.Drawing.Size(50, 13)
+        Me.Servicios.Size = New System.Drawing.Size(59, 13)
         Me.Servicios.TabIndex = 16
         Me.Servicios.Text = "Servicios"
         '
         'lblCostoTotal
         '
         Me.lblCostoTotal.AutoSize = True
-        Me.lblCostoTotal.Location = New System.Drawing.Point(131, 412)
+        Me.lblCostoTotal.BackColor = System.Drawing.Color.Transparent
+        Me.lblCostoTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCostoTotal.ForeColor = System.Drawing.Color.White
+        Me.lblCostoTotal.Location = New System.Drawing.Point(149, 412)
         Me.lblCostoTotal.Name = "lblCostoTotal"
-        Me.lblCostoTotal.Size = New System.Drawing.Size(64, 13)
+        Me.lblCostoTotal.Size = New System.Drawing.Size(76, 13)
         Me.lblCostoTotal.TabIndex = 41
         Me.lblCostoTotal.Text = "Costo Total:"
         '
         'lblCostoServicios
         '
         Me.lblCostoServicios.AutoSize = True
+        Me.lblCostoServicios.BackColor = System.Drawing.Color.Transparent
+        Me.lblCostoServicios.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCostoServicios.ForeColor = System.Drawing.Color.White
         Me.lblCostoServicios.Location = New System.Drawing.Point(21, 412)
         Me.lblCostoServicios.Name = "lblCostoServicios"
-        Me.lblCostoServicios.Size = New System.Drawing.Size(95, 13)
+        Me.lblCostoServicios.Size = New System.Drawing.Size(117, 13)
         Me.lblCostoServicios.TabIndex = 40
-        Me.lblCostoServicios.Text = "Costo de Servicios"
+        Me.lblCostoServicios.Text = "Costo de Servicios:"
         '
         'txtCostoTotal
         '
         Me.txtCostoTotal.Enabled = False
         Me.txtCostoTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCostoTotal.Location = New System.Drawing.Point(134, 430)
+        Me.txtCostoTotal.Location = New System.Drawing.Point(152, 430)
         Me.txtCostoTotal.Multiline = True
         Me.txtCostoTotal.Name = "txtCostoTotal"
         Me.txtCostoTotal.Size = New System.Drawing.Size(100, 25)

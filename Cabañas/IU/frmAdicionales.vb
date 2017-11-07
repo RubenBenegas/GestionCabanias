@@ -79,4 +79,5 @@
     Private Sub RectangleShape2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape2.Click
         Close()
     End Sub
+
 End Class

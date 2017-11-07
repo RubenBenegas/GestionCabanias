@@ -44,6 +44,7 @@ Partial Class FrmProveedor
         Me.Id.AutoSize = True
         Me.Id.BackColor = System.Drawing.Color.Transparent
         Me.Id.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Id.ForeColor = System.Drawing.Color.White
         Me.Id.Location = New System.Drawing.Point(12, 9)
         Me.Id.Name = "Id"
         Me.Id.Size = New System.Drawing.Size(22, 13)
@@ -55,6 +56,7 @@ Partial Class FrmProveedor
         Me.Tipo.AutoSize = True
         Me.Tipo.BackColor = System.Drawing.Color.Transparent
         Me.Tipo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Tipo.ForeColor = System.Drawing.Color.White
         Me.Tipo.Location = New System.Drawing.Point(12, 35)
         Me.Tipo.Name = "Tipo"
         Me.Tipo.Size = New System.Drawing.Size(36, 13)
@@ -66,6 +68,7 @@ Partial Class FrmProveedor
         Me.Nombre.AutoSize = True
         Me.Nombre.BackColor = System.Drawing.Color.Transparent
         Me.Nombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Nombre.ForeColor = System.Drawing.Color.White
         Me.Nombre.Location = New System.Drawing.Point(12, 61)
         Me.Nombre.Name = "Nombre"
         Me.Nombre.Size = New System.Drawing.Size(54, 13)
@@ -77,6 +80,7 @@ Partial Class FrmProveedor
         Me.Telefono.AutoSize = True
         Me.Telefono.BackColor = System.Drawing.Color.Transparent
         Me.Telefono.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Telefono.ForeColor = System.Drawing.Color.White
         Me.Telefono.Location = New System.Drawing.Point(12, 87)
         Me.Telefono.Name = "Telefono"
         Me.Telefono.Size = New System.Drawing.Size(61, 13)
@@ -88,6 +92,7 @@ Partial Class FrmProveedor
         Me.Direccion.AutoSize = True
         Me.Direccion.BackColor = System.Drawing.Color.Transparent
         Me.Direccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Direccion.ForeColor = System.Drawing.Color.White
         Me.Direccion.Location = New System.Drawing.Point(12, 113)
         Me.Direccion.Name = "Direccion"
         Me.Direccion.Size = New System.Drawing.Size(65, 13)
@@ -162,6 +167,7 @@ Partial Class FrmProveedor
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
+        Me.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
         Me.ClientSize = New System.Drawing.Size(269, 175)
         Me.Controls.Add(Me.Cancelar)
         Me.Controls.Add(Me.txtDireccion)

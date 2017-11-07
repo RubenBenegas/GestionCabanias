@@ -56,27 +56,36 @@ Partial Class frmCancelaciones
         'lblId
         '
         Me.lblId.AutoSize = True
+        Me.lblId.BackColor = System.Drawing.Color.Transparent
+        Me.lblId.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblId.ForeColor = System.Drawing.Color.White
         Me.lblId.Location = New System.Drawing.Point(12, 9)
         Me.lblId.Name = "lblId"
-        Me.lblId.Size = New System.Drawing.Size(19, 13)
+        Me.lblId.Size = New System.Drawing.Size(22, 13)
         Me.lblId.TabIndex = 2
         Me.lblId.Text = "Id:"
         '
         'lblFechaCancelacion
         '
         Me.lblFechaCancelacion.AutoSize = True
+        Me.lblFechaCancelacion.BackColor = System.Drawing.Color.Transparent
+        Me.lblFechaCancelacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFechaCancelacion.ForeColor = System.Drawing.Color.White
         Me.lblFechaCancelacion.Location = New System.Drawing.Point(12, 48)
         Me.lblFechaCancelacion.Name = "lblFechaCancelacion"
-        Me.lblFechaCancelacion.Size = New System.Drawing.Size(102, 13)
+        Me.lblFechaCancelacion.Size = New System.Drawing.Size(120, 13)
         Me.lblFechaCancelacion.TabIndex = 3
         Me.lblFechaCancelacion.Text = "Fecha Cancelacion:"
         '
         'lblDescripcion
         '
         Me.lblDescripcion.AutoSize = True
+        Me.lblDescripcion.BackColor = System.Drawing.Color.Transparent
+        Me.lblDescripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDescripcion.ForeColor = System.Drawing.Color.White
         Me.lblDescripcion.Location = New System.Drawing.Point(12, 75)
         Me.lblDescripcion.Name = "lblDescripcion"
-        Me.lblDescripcion.Size = New System.Drawing.Size(66, 13)
+        Me.lblDescripcion.Size = New System.Drawing.Size(78, 13)
         Me.lblDescripcion.TabIndex = 4
         Me.lblDescripcion.Text = "Descripcion:"
         '
@@ -116,9 +125,12 @@ Partial Class frmCancelaciones
         'lblReembolso
         '
         Me.lblReembolso.AutoSize = True
+        Me.lblReembolso.BackColor = System.Drawing.Color.Transparent
+        Me.lblReembolso.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblReembolso.ForeColor = System.Drawing.Color.White
         Me.lblReembolso.Location = New System.Drawing.Point(12, 185)
         Me.lblReembolso.Name = "lblReembolso"
-        Me.lblReembolso.Size = New System.Drawing.Size(63, 13)
+        Me.lblReembolso.Size = New System.Drawing.Size(73, 13)
         Me.lblReembolso.TabIndex = 9
         Me.lblReembolso.Text = "Reembolso:"
         '
@@ -133,6 +145,7 @@ Partial Class frmCancelaciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
         Me.ClientSize = New System.Drawing.Size(344, 264)
         Me.Controls.Add(Me.txtReembolso)
         Me.Controls.Add(Me.lblReembolso)

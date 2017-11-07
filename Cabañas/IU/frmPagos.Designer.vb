@@ -42,32 +42,38 @@ Partial Class frmPagos
         'lblId
         '
         Me.lblId.AutoSize = True
+        Me.lblId.BackColor = System.Drawing.Color.Transparent
         Me.lblId.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblId.ForeColor = System.Drawing.Color.Transparent
         Me.lblId.Location = New System.Drawing.Point(12, 16)
         Me.lblId.Name = "lblId"
-        Me.lblId.Size = New System.Drawing.Size(18, 13)
+        Me.lblId.Size = New System.Drawing.Size(22, 13)
         Me.lblId.TabIndex = 0
-        Me.lblId.Text = "Id"
+        Me.lblId.Text = "Id:"
         '
         'lblFecha
         '
         Me.lblFecha.AutoSize = True
+        Me.lblFecha.BackColor = System.Drawing.Color.Transparent
         Me.lblFecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFecha.ForeColor = System.Drawing.Color.Transparent
         Me.lblFecha.Location = New System.Drawing.Point(12, 41)
         Me.lblFecha.Name = "lblFecha"
-        Me.lblFecha.Size = New System.Drawing.Size(42, 13)
+        Me.lblFecha.Size = New System.Drawing.Size(46, 13)
         Me.lblFecha.TabIndex = 1
-        Me.lblFecha.Text = "Fecha"
+        Me.lblFecha.Text = "Fecha:"
         '
         'lblMonto
         '
         Me.lblMonto.AutoSize = True
+        Me.lblMonto.BackColor = System.Drawing.Color.Transparent
         Me.lblMonto.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMonto.ForeColor = System.Drawing.Color.Transparent
         Me.lblMonto.Location = New System.Drawing.Point(12, 90)
         Me.lblMonto.Name = "lblMonto"
-        Me.lblMonto.Size = New System.Drawing.Size(42, 13)
+        Me.lblMonto.Size = New System.Drawing.Size(46, 13)
         Me.lblMonto.TabIndex = 2
-        Me.lblMonto.Text = "Monto"
+        Me.lblMonto.Text = "Monto:"
         '
         'txtId
         '
@@ -108,12 +114,14 @@ Partial Class frmPagos
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Transparent
         Me.Label1.Location = New System.Drawing.Point(12, 64)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(74, 13)
+        Me.Label1.Size = New System.Drawing.Size(78, 13)
         Me.Label1.TabIndex = 12
-        Me.Label1.Text = "Descripcion"
+        Me.Label1.Text = "Descripcion:"
         '
         'ShapeContainer1
         '

@@ -46,6 +46,7 @@ Partial Class frmPersonal
         Me.lblId.AutoSize = True
         Me.lblId.BackColor = System.Drawing.Color.Transparent
         Me.lblId.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblId.ForeColor = System.Drawing.Color.Transparent
         Me.lblId.Location = New System.Drawing.Point(12, 9)
         Me.lblId.Name = "lblId"
         Me.lblId.Size = New System.Drawing.Size(22, 13)
@@ -57,6 +58,7 @@ Partial Class frmPersonal
         Me.ldlNombre.AutoSize = True
         Me.ldlNombre.BackColor = System.Drawing.Color.Transparent
         Me.ldlNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ldlNombre.ForeColor = System.Drawing.Color.Transparent
         Me.ldlNombre.Location = New System.Drawing.Point(12, 35)
         Me.ldlNombre.Name = "ldlNombre"
         Me.ldlNombre.Size = New System.Drawing.Size(54, 13)
@@ -68,6 +70,7 @@ Partial Class frmPersonal
         Me.lblTelefono.AutoSize = True
         Me.lblTelefono.BackColor = System.Drawing.Color.Transparent
         Me.lblTelefono.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTelefono.ForeColor = System.Drawing.Color.Transparent
         Me.lblTelefono.Location = New System.Drawing.Point(12, 61)
         Me.lblTelefono.Name = "lblTelefono"
         Me.lblTelefono.Size = New System.Drawing.Size(61, 13)
@@ -79,6 +82,7 @@ Partial Class frmPersonal
         Me.lblDireccion.AutoSize = True
         Me.lblDireccion.BackColor = System.Drawing.Color.Transparent
         Me.lblDireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDireccion.ForeColor = System.Drawing.Color.Transparent
         Me.lblDireccion.Location = New System.Drawing.Point(12, 87)
         Me.lblDireccion.Name = "lblDireccion"
         Me.lblDireccion.Size = New System.Drawing.Size(65, 13)
@@ -148,6 +152,7 @@ Partial Class frmPersonal
         Me.lblDepartamento.AutoSize = True
         Me.lblDepartamento.BackColor = System.Drawing.Color.Transparent
         Me.lblDepartamento.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDepartamento.ForeColor = System.Drawing.Color.Transparent
         Me.lblDepartamento.Location = New System.Drawing.Point(12, 113)
         Me.lblDepartamento.Name = "lblDepartamento"
         Me.lblDepartamento.Size = New System.Drawing.Size(90, 13)
@@ -159,6 +164,7 @@ Partial Class frmPersonal
         Me.lblSueldoPorMes.AutoSize = True
         Me.lblSueldoPorMes.BackColor = System.Drawing.Color.Transparent
         Me.lblSueldoPorMes.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSueldoPorMes.ForeColor = System.Drawing.Color.Transparent
         Me.lblSueldoPorMes.Location = New System.Drawing.Point(12, 140)
         Me.lblSueldoPorMes.Name = "lblSueldoPorMes"
         Me.lblSueldoPorMes.Size = New System.Drawing.Size(98, 13)
@@ -182,6 +188,7 @@ Partial Class frmPersonal
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
+        Me.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
         Me.ClientSize = New System.Drawing.Size(344, 204)
         Me.Controls.Add(Me.cmbDepartamento)
         Me.Controls.Add(Me.lblSueldoPorMes)

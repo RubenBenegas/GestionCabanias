@@ -8,7 +8,7 @@ Public Class BotonCerrar
         Me.BackgroundImage = My.Resources.BotonCerrarMaderaNegro
         Me.BorderColor = Color.Transparent
         Me.Size = New Size(122, 35)
-        Me.BackgroundImageLayout = ImageLayout.Center
+        Me.BackgroundImageLayout = ImageLayout.Stretch
         Me.CornerRadius = 20
     End Sub
 

@@ -109,6 +109,9 @@
     <Compile Include="BotonEliminar.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="BotonEliminarFrm.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="BotonModificar.vb">
       <SubType>Component</SubType>
     </Compile>
@@ -274,6 +277,9 @@
     </Compile>
     <Compile Include="IU\lstServicios.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BotonAgregarFrm.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Utiles\Validaciones.vb" />
     <Compile Include="IU\frmHuesped.Designer.vb">

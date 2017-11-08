@@ -8,7 +8,7 @@ Public Class BotonCancelar
         Me.BackgroundImage = My.Resources.BotonCancelarMaderaNegro
         Me.BorderColor = Color.Transparent
         Me.Size = New Size(80, 26)
-        Me.BackgroundImageLayout = ImageLayout.Center
+        Me.BackgroundImageLayout = ImageLayout.Stretch
         Me.CornerRadius = 20
 
 

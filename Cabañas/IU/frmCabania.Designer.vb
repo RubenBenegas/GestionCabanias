@@ -27,7 +27,6 @@ Partial Class frmCabania
         Me.txtIdCabania = New System.Windows.Forms.TextBox
         Me.Label1 = New System.Windows.Forms.Label
         Me.Label2 = New System.Windows.Forms.Label
-        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.cmbTipoCabania = New System.Windows.Forms.ComboBox
         Me.lblMonto = New System.Windows.Forms.Label
         Me.txtMonto = New System.Windows.Forms.TextBox
@@ -41,12 +40,13 @@ Partial Class frmCabania
         Me.txtCostoServicios = New System.Windows.Forms.TextBox
         Me.btnConsultarCostos = New System.Windows.Forms.Button
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
-        Me.RectangleShape4 = New Cabañas.BotonEliminar
-        Me.RectangleShape3 = New Cabañas.BotonAgregar
+        Me.ErrorProvider2 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.RectangleShape4 = New Cabañas.BotonEliminarFrm
+        Me.RectangleShape3 = New Cabañas.BotonAgregarFrm
         Me.RectangleShape2 = New Cabañas.BotonCancelar
         Me.RectangleShape1 = New Cabañas.BotonAceptar
-        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvCabaniaServicios, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtIdCabania
@@ -80,10 +80,6 @@ Partial Class frmCabania
         Me.Label2.Size = New System.Drawing.Size(83, 13)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Tipo Cabaña:"
-        '
-        'ErrorProvider1
-        '
-        Me.ErrorProvider1.ContainerControl = Me
         '
         'cmbTipoCabania
         '
@@ -223,27 +219,31 @@ Partial Class frmCabania
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape4, Me.RectangleShape3, Me.RectangleShape2, Me.RectangleShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(492, 519)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(476, 519)
         Me.ShapeContainer1.TabIndex = 45
         Me.ShapeContainer1.TabStop = False
+        '
+        'ErrorProvider2
+        '
+        Me.ErrorProvider2.ContainerControl = Me
         '
         'RectangleShape4
         '
         Me.RectangleShape4.BackgroundImage = CType(resources.GetObject("RectangleShape4.BackgroundImage"), System.Drawing.Image)
         Me.RectangleShape4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.RectangleShape4.BorderColor = System.Drawing.Color.Transparent
-        Me.RectangleShape4.CornerRadius = 17
-        Me.RectangleShape4.Location = New System.Drawing.Point(359, 271)
+        Me.RectangleShape4.CornerRadius = 15
+        Me.RectangleShape4.Location = New System.Drawing.Point(367, 259)
         Me.RectangleShape4.Name = "RectangleShape4"
-        Me.RectangleShape4.Size = New System.Drawing.Size(122, 35)
+        Me.RectangleShape4.Size = New System.Drawing.Size(90, 30)
         '
         'RectangleShape3
         '
-        Me.RectangleShape3.BackgroundImage = CType(resources.GetObject("RectangleShape3.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape3.BackgroundImage = Global.Cabañas.My.Resources.Resources.BotonAgregarMaderaNegroFrm
         Me.RectangleShape3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.RectangleShape3.BorderColor = System.Drawing.Color.Transparent
         Me.RectangleShape3.CornerRadius = 15
-        Me.RectangleShape3.Location = New System.Drawing.Point(367, 205)
+        Me.RectangleShape3.Location = New System.Drawing.Point(366, 214)
         Me.RectangleShape3.Name = "RectangleShape3"
         Me.RectangleShape3.Size = New System.Drawing.Size(90, 30)
         '
@@ -274,7 +274,7 @@ Partial Class frmCabania
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(492, 519)
+        Me.ClientSize = New System.Drawing.Size(476, 519)
         Me.Controls.Add(Me.btnConsultarCostos)
         Me.Controls.Add(Me.lblCostoTotal)
         Me.Controls.Add(Me.lblCostoServicios)
@@ -298,8 +298,8 @@ Partial Class frmCabania
         Me.Name = "frmCabania"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CabaniaForm"
-        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvCabaniaServicios, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -323,6 +323,7 @@ Partial Class frmCabania
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents RectangleShape1 As Cabañas.BotonAceptar
     Friend WithEvents RectangleShape2 As Cabañas.BotonCancelar
-    Friend WithEvents RectangleShape3 As Cabañas.BotonAgregar
-    Friend WithEvents RectangleShape4 As Cabañas.BotonEliminar
+    Friend WithEvents RectangleShape3 As Cabañas.BotonAgregarFrm
+    Friend WithEvents RectangleShape4 As Cabañas.BotonEliminarFrm
+    Friend WithEvents ErrorProvider2 As System.Windows.Forms.ErrorProvider
 End Class

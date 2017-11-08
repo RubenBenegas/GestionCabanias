@@ -335,13 +335,13 @@ Public Class Cabanias
             cerrarConexion()
         End Try
     End Function
-    Public Function CabaniaServBorrar(ByVal idAdicional As Integer)
+    Public Function CabaniaServBorrar(ByVal idServicio As Integer)
         Try
             abrirConexion()
 
             Dim objComando As New SqlCommand("CabaniaServBorrar", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
-            objComando.Parameters.AddWithValue("@idCabania", idCabania)
+            objComando.Parameters.AddWithValue("@idCabaniaServ", idServicio)
             If objComando.ExecuteNonQuery() Then
                 Return True
             Else

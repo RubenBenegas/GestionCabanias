@@ -7,7 +7,7 @@ Public Class BotonModificar
         Me.BackgroundImage = My.Resources.BotonModificarMaderaNegro
         Me.BorderColor = Color.Transparent
         Me.Size = New Size(90, 30)
-        Me.BackgroundImageLayout = ImageLayout.Center
+        Me.BackgroundImageLayout = ImageLayout.Stretch
         Me.CornerRadius = 20
     End Sub
     Private Sub me_MouseHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Me.MouseHover

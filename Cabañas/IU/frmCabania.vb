@@ -26,7 +26,7 @@
 
     Private Sub CabaniaForm_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
-        ErrorProvider1.Clear()
+        ErrorProvider2.Clear()
         cabania.CargarComboCabaniaTipo(cmbTipoCabania)
         cabania.CabaniaServCarga(idCabania, dgvCabaniaServicios)
 
@@ -91,7 +91,7 @@
     End Sub
 
     Private Sub RectangleShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.Click
-        If fun.validarCampos(Me, ErrorProvider1) = True Then
+        If fun.validarCampos(Me, ErrorProvider2) = True Then
 
 
             cabania.idTipo = cmbTipoCabania.SelectedValue
@@ -147,6 +147,11 @@
         Dim idCabaniaServ As Integer = dgvCabaniaServicios.Item("id", dgvCabaniaServicios.CurrentRow.Index).Value
         cabania.CabaniaServBorrar(idCabaniaServ)
         cabania.CabaniaServCarga(idCabania, dgvCabaniaServicios)
+    End Sub
+
+    Private Sub RectangleShape2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape2.Click
+        Close()
+
     End Sub
 End Class
 

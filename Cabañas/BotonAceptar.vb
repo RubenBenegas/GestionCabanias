@@ -9,7 +9,7 @@ Public Class BotonAceptar
         Me.BackgroundImage = My.Resources.BotonAceptarMaderaNegro
         Me.BorderColor = Color.Transparent
         Me.Size = New Size(80, 26)
-        Me.BackgroundImageLayout = ImageLayout.Center
+        Me.BackgroundImageLayout = ImageLayout.Stretch
         Me.CornerRadius = 20
 
 

@@ -52,9 +52,9 @@
             txtReembolso.Enabled = False
 
 
-            btnAceptar.Visible = False
-            btnCancelar.Visible = False
-            btnAceptarModificar.Visible = True
+            RectangleShape1.Visible = False
+            RectangleShape3.Visible = False
+            RectangleShape2.Visible = True
         Else
             Me.Text = "Agregar cancelacion"
 
@@ -69,9 +69,9 @@
             txtDescripcion.Enabled = True
             txtReembolso.Enabled = False
 
-            btnAceptar.Visible = True
-            btnCancelar.Visible = True
-            btnAceptarModificar.Visible = False
+            RectangleShape1.Visible = True
+            RectangleShape3.Visible = True
+            RectangleShape2.Visible = False
 
             If DateDiff(DateInterval.Day, dtpFechaCancelacion.Value, frmReservas.dtpFechaIngreso.Value) > 14 Then
                 

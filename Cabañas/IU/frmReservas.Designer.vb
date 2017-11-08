@@ -23,6 +23,7 @@ Partial Class frmReservas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmReservas))
         Me.lblId = New System.Windows.Forms.Label
         Me.lblIdHuesped = New System.Windows.Forms.Label
         Me.lblFechaIngreso = New System.Windows.Forms.Label
@@ -36,8 +37,6 @@ Partial Class frmReservas
         Me.txtNumeroPasajeros = New System.Windows.Forms.TextBox
         Me.txtSenia = New System.Windows.Forms.TextBox
         Me.chkConSenia = New System.Windows.Forms.CheckBox
-        Me.btnAceptar = New System.Windows.Forms.Button
-        Me.btnCancelar = New System.Windows.Forms.Button
         Me.txtIdHuesped = New System.Windows.Forms.TextBox
         Me.btnBuscarHuesped = New System.Windows.Forms.Button
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
@@ -48,10 +47,7 @@ Partial Class frmReservas
         Me.cmbIdCabania = New System.Windows.Forms.ComboBox
         Me.txtNombreHuesped = New System.Windows.Forms.TextBox
         Me.dgvServiciosAdicionales = New System.Windows.Forms.DataGridView
-        Me.btnAgregar = New System.Windows.Forms.Button
-        Me.btnBorrar = New System.Windows.Forms.Button
         Me.lblServiciosAdicionales = New System.Windows.Forms.Label
-        Me.btnSalir = New System.Windows.Forms.Button
         Me.txtCostoEstadia = New System.Windows.Forms.TextBox
         Me.txtCostoAdicionales = New System.Windows.Forms.TextBox
         Me.txtCostoTotal = New System.Windows.Forms.TextBox
@@ -69,9 +65,15 @@ Partial Class frmReservas
         Me.lblFechaSenia = New System.Windows.Forms.Label
         Me.txtFaltaDePagar = New System.Windows.Forms.TextBox
         Me.lblFaltaPAgar = New System.Windows.Forms.Label
-        Me.btnCancelarReserva = New System.Windows.Forms.Button
         Me.btnDetalleCancelacion = New System.Windows.Forms.Button
-        Me.btnPagos = New System.Windows.Forms.Button
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
+        Me.RectangleShape7 = New Cabañas.BotonCancelarRes
+        Me.RectangleShape6 = New Cabañas.BotonCerrar
+        Me.RectangleShape5 = New Cabañas.BotonCancelar
+        Me.RectangleShape4 = New Cabañas.BotonAceptar
+        Me.RectangleShape3 = New Cabañas.BotonPagos
+        Me.RectangleShape2 = New Cabañas.BotonEliminarFrm
+        Me.RectangleShape1 = New Cabañas.BotonAgregarFrm
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvServiciosAdicionales, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -225,24 +227,6 @@ Partial Class frmReservas
         Me.chkConSenia.Text = "Con Seña"
         Me.chkConSenia.UseVisualStyleBackColor = False
         '
-        'btnAceptar
-        '
-        Me.btnAceptar.Location = New System.Drawing.Point(214, 583)
-        Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
-        Me.btnAceptar.TabIndex = 9
-        Me.btnAceptar.Text = "Aceptar"
-        Me.btnAceptar.UseVisualStyleBackColor = True
-        '
-        'btnCancelar
-        '
-        Me.btnCancelar.Location = New System.Drawing.Point(320, 583)
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
-        Me.btnCancelar.TabIndex = 10
-        Me.btnCancelar.Text = "Cancelar"
-        Me.btnCancelar.UseVisualStyleBackColor = True
-        '
         'txtIdHuesped
         '
         Me.txtIdHuesped.Enabled = False
@@ -334,24 +318,6 @@ Partial Class frmReservas
         Me.dgvServiciosAdicionales.Size = New System.Drawing.Size(401, 206)
         Me.dgvServiciosAdicionales.TabIndex = 26
         '
-        'btnAgregar
-        '
-        Me.btnAgregar.Location = New System.Drawing.Point(422, 226)
-        Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
-        Me.btnAgregar.TabIndex = 27
-        Me.btnAgregar.Text = "Agregar"
-        Me.btnAgregar.UseVisualStyleBackColor = True
-        '
-        'btnBorrar
-        '
-        Me.btnBorrar.Location = New System.Drawing.Point(422, 262)
-        Me.btnBorrar.Name = "btnBorrar"
-        Me.btnBorrar.Size = New System.Drawing.Size(75, 23)
-        Me.btnBorrar.TabIndex = 28
-        Me.btnBorrar.Text = "Borrar"
-        Me.btnBorrar.UseVisualStyleBackColor = True
-        '
         'lblServiciosAdicionales
         '
         Me.lblServiciosAdicionales.AutoSize = True
@@ -363,16 +329,6 @@ Partial Class frmReservas
         Me.lblServiciosAdicionales.Size = New System.Drawing.Size(132, 13)
         Me.lblServiciosAdicionales.TabIndex = 29
         Me.lblServiciosAdicionales.Text = "Servicios Adicionales:"
-        '
-        'btnSalir
-        '
-        Me.btnSalir.Location = New System.Drawing.Point(417, 583)
-        Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(75, 23)
-        Me.btnSalir.TabIndex = 30
-        Me.btnSalir.Text = "Salir"
-        Me.btnSalir.UseVisualStyleBackColor = True
-        Me.btnSalir.Visible = False
         '
         'txtCostoEstadia
         '
@@ -561,16 +517,6 @@ Partial Class frmReservas
         Me.lblFaltaPAgar.TabIndex = 38
         Me.lblFaltaPAgar.Text = "Falta de pagar:"
         '
-        'btnCancelarReserva
-        '
-        Me.btnCancelarReserva.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnCancelarReserva.Location = New System.Drawing.Point(372, 167)
-        Me.btnCancelarReserva.Name = "btnCancelarReserva"
-        Me.btnCancelarReserva.Size = New System.Drawing.Size(114, 23)
-        Me.btnCancelarReserva.TabIndex = 49
-        Me.btnCancelarReserva.Text = "Cancelar Reserva"
-        Me.btnCancelarReserva.UseVisualStyleBackColor = True
-        '
         'btnDetalleCancelacion
         '
         Me.btnDetalleCancelacion.Location = New System.Drawing.Point(372, 496)
@@ -580,14 +526,85 @@ Partial Class frmReservas
         Me.btnDetalleCancelacion.Text = "Detalle cancelacion"
         Me.btnDetalleCancelacion.UseVisualStyleBackColor = True
         '
-        'btnPagos
+        'ShapeContainer1
         '
-        Me.btnPagos.Location = New System.Drawing.Point(422, 300)
-        Me.btnPagos.Name = "btnPagos"
-        Me.btnPagos.Size = New System.Drawing.Size(75, 59)
-        Me.btnPagos.TabIndex = 51
-        Me.btnPagos.Text = "Efectuar pagos"
-        Me.btnPagos.UseVisualStyleBackColor = True
+        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer1.Name = "ShapeContainer1"
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape7, Me.RectangleShape6, Me.RectangleShape5, Me.RectangleShape4, Me.RectangleShape3, Me.RectangleShape2, Me.RectangleShape1})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(514, 626)
+        Me.ShapeContainer1.TabIndex = 52
+        Me.ShapeContainer1.TabStop = False
+        '
+        'RectangleShape7
+        '
+        Me.RectangleShape7.BackgroundImage = CType(resources.GetObject("RectangleShape7.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.RectangleShape7.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape7.CornerRadius = 13
+        Me.RectangleShape7.Location = New System.Drawing.Point(398, 173)
+        Me.RectangleShape7.Name = "RectangleShape7"
+        Me.RectangleShape7.Size = New System.Drawing.Size(90, 30)
+        '
+        'RectangleShape6
+        '
+        Me.RectangleShape6.BackgroundImage = CType(resources.GetObject("RectangleShape6.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.RectangleShape6.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape6.CornerRadius = 17
+        Me.RectangleShape6.Location = New System.Drawing.Point(386, 583)
+        Me.RectangleShape6.Name = "RectangleShape6"
+        Me.RectangleShape6.Size = New System.Drawing.Size(122, 35)
+        '
+        'RectangleShape5
+        '
+        Me.RectangleShape5.BackgroundImage = CType(resources.GetObject("RectangleShape5.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.RectangleShape5.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape5.CornerRadius = 13
+        Me.RectangleShape5.Location = New System.Drawing.Point(266, 583)
+        Me.RectangleShape5.Name = "RectangleShape5"
+        Me.RectangleShape5.Size = New System.Drawing.Size(80, 26)
+        '
+        'RectangleShape4
+        '
+        Me.RectangleShape4.BackgroundImage = CType(resources.GetObject("RectangleShape4.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.RectangleShape4.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape4.CornerRadius = 13
+        Me.RectangleShape4.Location = New System.Drawing.Point(172, 583)
+        Me.RectangleShape4.Name = "RectangleShape4"
+        Me.RectangleShape4.Size = New System.Drawing.Size(80, 26)
+        '
+        'RectangleShape3
+        '
+        Me.RectangleShape3.BackgroundImage = CType(resources.GetObject("RectangleShape3.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.RectangleShape3.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape3.CornerRadius = 11
+        Me.RectangleShape3.Location = New System.Drawing.Point(424, 340)
+        Me.RectangleShape3.Name = "RectangleShape3"
+        Me.RectangleShape3.Size = New System.Drawing.Size(75, 23)
+        '
+        'RectangleShape2
+        '
+        Me.RectangleShape2.BackgroundImage = CType(resources.GetObject("RectangleShape2.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.RectangleShape2.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape2.CornerRadius = 15
+        Me.RectangleShape2.Location = New System.Drawing.Point(416, 271)
+        Me.RectangleShape2.Name = "RectangleShape2"
+        Me.RectangleShape2.Size = New System.Drawing.Size(90, 30)
+        '
+        'RectangleShape1
+        '
+        Me.RectangleShape1.BackgroundImage = CType(resources.GetObject("RectangleShape1.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.RectangleShape1.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape1.CornerRadius = 15
+        Me.RectangleShape1.Location = New System.Drawing.Point(416, 223)
+        Me.RectangleShape1.Name = "RectangleShape1"
+        Me.RectangleShape1.Size = New System.Drawing.Size(90, 30)
         '
         'frmReservas
         '
@@ -596,9 +613,7 @@ Partial Class frmReservas
         Me.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(514, 626)
-        Me.Controls.Add(Me.btnPagos)
         Me.Controls.Add(Me.btnDetalleCancelacion)
-        Me.Controls.Add(Me.btnCancelarReserva)
         Me.Controls.Add(Me.dtpFechaPagoSenia)
         Me.Controls.Add(Me.lblFechaSenia)
         Me.Controls.Add(Me.lblImporteSenia)
@@ -616,10 +631,7 @@ Partial Class frmReservas
         Me.Controls.Add(Me.txtCostoTotal)
         Me.Controls.Add(Me.txtCostoAdicionales)
         Me.Controls.Add(Me.txtCostoEstadia)
-        Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.lblServiciosAdicionales)
-        Me.Controls.Add(Me.btnBorrar)
-        Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.dgvServiciosAdicionales)
         Me.Controls.Add(Me.txtNombreHuesped)
         Me.Controls.Add(Me.cmbIdCabania)
@@ -629,8 +641,6 @@ Partial Class frmReservas
         Me.Controls.Add(Me.dtpFechaIngreso)
         Me.Controls.Add(Me.btnBuscarHuesped)
         Me.Controls.Add(Me.txtIdHuesped)
-        Me.Controls.Add(Me.btnCancelar)
-        Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.chkConSenia)
         Me.Controls.Add(Me.txtSenia)
         Me.Controls.Add(Me.txtNumeroPasajeros)
@@ -644,6 +654,7 @@ Partial Class frmReservas
         Me.Controls.Add(Me.lblFechaIngreso)
         Me.Controls.Add(Me.lblIdHuesped)
         Me.Controls.Add(Me.lblId)
+        Me.Controls.Add(Me.ShapeContainer1)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
@@ -670,8 +681,6 @@ Partial Class frmReservas
     Friend WithEvents txtNumeroPasajeros As System.Windows.Forms.TextBox
     Friend WithEvents txtSenia As System.Windows.Forms.TextBox
     Friend WithEvents chkConSenia As System.Windows.Forms.CheckBox
-    Friend WithEvents btnAceptar As System.Windows.Forms.Button
-    Friend WithEvents btnCancelar As System.Windows.Forms.Button
     Friend WithEvents txtIdHuesped As System.Windows.Forms.TextBox
     Friend WithEvents btnBuscarHuesped As System.Windows.Forms.Button
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
@@ -682,10 +691,7 @@ Partial Class frmReservas
     Friend WithEvents cmbIdCabania As System.Windows.Forms.ComboBox
     Friend WithEvents txtNombreHuesped As System.Windows.Forms.TextBox
     Friend WithEvents lblServiciosAdicionales As System.Windows.Forms.Label
-    Friend WithEvents btnBorrar As System.Windows.Forms.Button
-    Friend WithEvents btnAgregar As System.Windows.Forms.Button
     Friend WithEvents dgvServiciosAdicionales As System.Windows.Forms.DataGridView
-    Friend WithEvents btnSalir As System.Windows.Forms.Button
     Friend WithEvents txtCostoTotal As System.Windows.Forms.TextBox
     Friend WithEvents txtCostoAdicionales As System.Windows.Forms.TextBox
     Friend WithEvents txtCostoEstadia As System.Windows.Forms.TextBox
@@ -703,7 +709,13 @@ Partial Class frmReservas
     Friend WithEvents lblFechaSenia As System.Windows.Forms.Label
     Friend WithEvents lblFaltaPAgar As System.Windows.Forms.Label
     Friend WithEvents txtFaltaDePagar As System.Windows.Forms.TextBox
-    Friend WithEvents btnCancelarReserva As System.Windows.Forms.Button
     Friend WithEvents btnDetalleCancelacion As System.Windows.Forms.Button
-    Friend WithEvents btnPagos As System.Windows.Forms.Button
+    Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
+    Friend WithEvents RectangleShape1 As Cabañas.BotonAgregarFrm
+    Friend WithEvents RectangleShape2 As Cabañas.BotonEliminarFrm
+    Friend WithEvents RectangleShape3 As Cabañas.BotonPagos
+    Friend WithEvents RectangleShape4 As Cabañas.BotonAceptar
+    Friend WithEvents RectangleShape5 As Cabañas.BotonCancelar
+    Friend WithEvents RectangleShape6 As Cabañas.BotonCerrar
+    Friend WithEvents RectangleShape7 As Cabañas.BotonCancelarRes
 End Class

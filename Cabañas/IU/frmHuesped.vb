@@ -63,17 +63,17 @@
             frmReservas.dtpFechaSalida.Enabled = False
             frmReservas.dtpCheckin.Enabled = False
             frmReservas.dtpCheckout.Enabled = False
-            frmReservas.btnAceptar.Visible = False
-            frmReservas.btnCancelar.Visible = False
-            frmReservas.btnAgregar.Visible = False
-            frmReservas.btnBorrar.Visible = False
+            frmReservas.RectangleShape4.Visible = False
+            frmReservas.RectangleShape5.Visible = False
+            frmReservas.RectangleShape1.Visible = False
+            frmReservas.RectangleShape2.Visible = False
             frmReservas.cmbIdCabania.Enabled = False
             frmReservas.txtNumeroPasajeros.Enabled = False
             frmReservas.txtSenia.Enabled = False
             frmReservas.chkConSenia.Enabled = False
 
             frmReservas.btnConsultarCostos.Visible = False
-            frmReservas.btnSalir.Visible = True
+            frmReservas.RectangleShape6.Visible = True
 
             frmReservas.ShowDialog()
             'Else          

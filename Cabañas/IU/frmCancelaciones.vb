@@ -246,15 +246,15 @@
         frmReservas.txtFaltaDePagar.Visible = False
 
         frmReservas.lblReservaCancelada.Visible = True
-        frmReservas.btnAgregar.Enabled = False
-        frmReservas.btnBorrar.Enabled = False
+        frmReservas.RectangleShape1.Enabled = False
+        frmReservas.RectangleShape2.Enabled = False
         frmReservas.btnConsultarCostos.Visible = False
         frmReservas.lblFechaSenia.Visible = False
         frmReservas.dtpFechaPagoSenia.Visible = False
         frmReservas.lblImporteSenia.Visible = False
         frmReservas.txtSenia.Visible = False
 
-        frmReservas.btnCancelarReserva.Visible = False
+        frmReservas.RectangleShape7.Visible = False
         frmReservas.btnDetalleCancelacion.Visible = True
 
         Close()

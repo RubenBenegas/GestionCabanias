@@ -103,6 +103,9 @@
     <Compile Include="BotonCancelar.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="BotonCancelarRes.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="BotonCerrar.vb">
       <SubType>Component</SubType>
     </Compile>
@@ -113,6 +116,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="BotonModificar.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BotonPagos.vb">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Entidades\Adicionales.vb" />
@@ -452,6 +458,8 @@
     <None Include="Resources\BotonBuscarMaderaBlanco.png" />
     <None Include="Resources\BotonAgregarMaderaNegroFrm.png" />
     <None Include="Resources\BotonAgregarMaderaBlancoFrm.png" />
+    <None Include="Resources\botoncancreservablanco.png" />
+    <None Include="Resources\botoncancreservanegro.png" />
     <Content Include="Resources\BotonCerrar1.png" />
     <Content Include="Resources\BotonCerrar2.png" />
     <None Include="Resources\BotonEleiminarMaderaBlanco.png" />
@@ -507,6 +515,9 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

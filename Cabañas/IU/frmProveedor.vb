@@ -53,39 +53,8 @@
     End Sub
 
     Dim fun As New Validaciones
-    Private Sub Aceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Aceptar.Click
 
-        If fun.validarCampos(Me, ErrorProvider1) = True Then
-
-            Proveedor.Tipo = txtTipo.Text
-            Proveedor.Nombre = txtNombre.Text
-            Proveedor.Telefono = txtTelefono.Text
-            Proveedor.Direccion = txtDireccion.Text
-            If modificar = True Then
-                If Proveedor.ModificarProveedor(Proveedor) = True Then
-                    MsgBox("El proveedor ha sido correctamente modificado.")
-                    Proveedor.traerProveedor(LstProveedor.dgvProveedores)
-                Else
-                    MsgBox("Error al modificar el proveedor." + Chr(13) + "Intentelo de nuevo.")
-                End If
-            Else
-                If Proveedor.InsertarProveedor(Proveedor) = True Then
-                    MsgBox("El proveedor ha sido correctamente insertado.")
-                    Proveedor.traerProveedor(LstProveedor.dgvProveedores)
-                Else
-                    MsgBox("Error al insertar proveedor." + Chr(13) + "Intentelo de nuevo.")
-                End If
-            End If
-            Close()
-
-        Else
-
-            MsgBox("Completar los campos obligatorios.", MsgBoxStyle.Information, "Importante")
-        End If
-
-    End Sub
-
-    Private Sub Cancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancelar.Click
+    Private Sub Cancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Close()
     End Sub
 
@@ -140,6 +109,36 @@
         Else
             e.Handled = True
 
+        End If
+    End Sub
+
+    Private Sub RectangleShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.Click
+        If fun.validarCampos(Me, ErrorProvider1) = True Then
+
+            Proveedor.Tipo = txtTipo.Text
+            Proveedor.Nombre = txtNombre.Text
+            Proveedor.Telefono = txtTelefono.Text
+            Proveedor.Direccion = txtDireccion.Text
+            If modificar = True Then
+                If Proveedor.ModificarProveedor(Proveedor) = True Then
+                    MsgBox("El proveedor ha sido correctamente modificado.")
+                    Proveedor.traerProveedor(LstProveedor.dgvProveedores)
+                Else
+                    MsgBox("Error al modificar el proveedor." + Chr(13) + "Intentelo de nuevo.")
+                End If
+            Else
+                If Proveedor.InsertarProveedor(Proveedor) = True Then
+                    MsgBox("El proveedor ha sido correctamente insertado.")
+                    Proveedor.traerProveedor(LstProveedor.dgvProveedores)
+                Else
+                    MsgBox("Error al insertar proveedor." + Chr(13) + "Intentelo de nuevo.")
+                End If
+            End If
+            Close()
+
+        Else
+
+            MsgBox("Completar los campos obligatorios.", MsgBoxStyle.Information, "Importante")
         End If
     End Sub
 End Class

@@ -23,15 +23,17 @@ Partial Class frmServicios
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmServicios))
         Me.txtIdServicio = New System.Windows.Forms.TextBox
         Me.txtDescripcion = New System.Windows.Forms.TextBox
         Me.Label1 = New System.Windows.Forms.Label
         Me.Label2 = New System.Windows.Forms.Label
         Me.Label3 = New System.Windows.Forms.Label
-        Me.btnAceptar = New System.Windows.Forms.Button
-        Me.btnCancelar = New System.Windows.Forms.Button
         Me.txtMonto = New System.Windows.Forms.TextBox
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
+        Me.RectangleShape2 = New Cabañas.BotonCancelar
+        Me.RectangleShape1 = New Cabañas.BotonAceptar
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -87,24 +89,6 @@ Partial Class frmServicios
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Monto:"
         '
-        'btnAceptar
-        '
-        Me.btnAceptar.Location = New System.Drawing.Point(116, 105)
-        Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
-        Me.btnAceptar.TabIndex = 3
-        Me.btnAceptar.Text = "Aceptar"
-        Me.btnAceptar.UseVisualStyleBackColor = True
-        '
-        'btnCancelar
-        '
-        Me.btnCancelar.Location = New System.Drawing.Point(197, 105)
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
-        Me.btnCancelar.TabIndex = 4
-        Me.btnCancelar.Text = "Cancelar"
-        Me.btnCancelar.UseVisualStyleBackColor = True
-        '
         'txtMonto
         '
         Me.txtMonto.Location = New System.Drawing.Point(116, 72)
@@ -117,6 +101,36 @@ Partial Class frmServicios
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
+        'ShapeContainer1
+        '
+        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer1.Name = "ShapeContainer1"
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape2, Me.RectangleShape1})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(296, 137)
+        Me.ShapeContainer1.TabIndex = 5
+        Me.ShapeContainer1.TabStop = False
+        '
+        'RectangleShape2
+        '
+        Me.RectangleShape2.BackgroundImage = CType(resources.GetObject("RectangleShape2.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.RectangleShape2.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape2.CornerRadius = 11
+        Me.RectangleShape2.Location = New System.Drawing.Point(196, 105)
+        Me.RectangleShape2.Name = "RectangleShape2"
+        Me.RectangleShape2.Size = New System.Drawing.Size(75, 23)
+        '
+        'RectangleShape1
+        '
+        Me.RectangleShape1.BackgroundImage = CType(resources.GetObject("RectangleShape1.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.RectangleShape1.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape1.CornerRadius = 11
+        Me.RectangleShape1.Location = New System.Drawing.Point(118, 106)
+        Me.RectangleShape1.Name = "RectangleShape1"
+        Me.RectangleShape1.Size = New System.Drawing.Size(75, 23)
+        '
         'frmServicios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -125,13 +139,12 @@ Partial Class frmServicios
         Me.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
         Me.ClientSize = New System.Drawing.Size(296, 137)
         Me.Controls.Add(Me.txtMonto)
-        Me.Controls.Add(Me.btnCancelar)
-        Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtDescripcion)
         Me.Controls.Add(Me.txtIdServicio)
+        Me.Controls.Add(Me.ShapeContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -148,8 +161,9 @@ Partial Class frmServicios
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents btnAceptar As System.Windows.Forms.Button
-    Friend WithEvents btnCancelar As System.Windows.Forms.Button
     Friend WithEvents txtMonto As System.Windows.Forms.TextBox
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
+    Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
+    Friend WithEvents RectangleShape1 As Cabañas.BotonAceptar
+    Friend WithEvents RectangleShape2 As Cabañas.BotonCancelar
 End Class

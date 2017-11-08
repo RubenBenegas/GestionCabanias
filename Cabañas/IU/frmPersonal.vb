@@ -55,49 +55,6 @@
     End Sub
 
     Dim fun As New Validaciones
-    Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
-
-
-        If fun.validarCampos(Me, ErrorProvider1) = True Then
-
-            Personal.Nombre = txtNombre.Text
-            Personal.Direccion = txtDireccion.Text
-            Personal.Telefono = txtTelefono.Text
-            Personal.Departamento = cmbDepartamento.SelectedValue
-            Personal.SueldoPorMes = txtSueldoPorMes.Text
-
-
-            If Modificar = True Then
-                If Personal.PersonalModificar(Personal) = True Then
-                    MsgBox("El personal ha sido correctamente modificado.")
-                    Personal.PersonalTraerTab(z.dgvPersonal)
-                Else
-                    MsgBox("Error al modificar el personsal." + Chr(13) + "Intentelo de nuevo.")
-                End If
-            Else
-                If Personal.PersonalInsertar(Personal) = True Then
-                    MsgBox("El personal ha sido correctamente insertado.")
-                    Personal.PersonalTraerTab(z.dgvPersonal)
-                Else
-                    MsgBox("Error al insertar personal." + Chr(13) + "Intentelo de nuevo.")
-                End If
-            End If
-
-            Close()
-        Else
-
-            MsgBox("Completar los campos obligatorios.", MsgBoxStyle.Information, "Importante")
-        End If
-
-    End Sub
-
-
-    Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnCancelar.Click
-
-        Close()
-
-    End Sub
-
 
     'VALIDACIONES
 
@@ -161,4 +118,41 @@
     End Sub
 
 
+    Private Sub RectangleShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.Click
+        If fun.validarCampos(Me, ErrorProvider1) = True Then
+
+            Personal.Nombre = txtNombre.Text
+            Personal.Direccion = txtDireccion.Text
+            Personal.Telefono = txtTelefono.Text
+            Personal.Departamento = cmbDepartamento.SelectedValue
+            Personal.SueldoPorMes = txtSueldoPorMes.Text
+
+
+            If Modificar = True Then
+                If Personal.PersonalModificar(Personal) = True Then
+                    MsgBox("El personal ha sido correctamente modificado.")
+                    Personal.PersonalTraerTab(z.dgvPersonal)
+                Else
+                    MsgBox("Error al modificar el personsal." + Chr(13) + "Intentelo de nuevo.")
+                End If
+            Else
+                If Personal.PersonalInsertar(Personal) = True Then
+                    MsgBox("El personal ha sido correctamente insertado.")
+                    Personal.PersonalTraerTab(z.dgvPersonal)
+                Else
+                    MsgBox("Error al insertar personal." + Chr(13) + "Intentelo de nuevo.")
+                End If
+            End If
+
+            Close()
+        Else
+
+            MsgBox("Completar los campos obligatorios.", MsgBoxStyle.Information, "Importante")
+        End If
+
+    End Sub
+
+    Private Sub RectangleShape2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape2.Click
+        Close()
+    End Sub
 End Class

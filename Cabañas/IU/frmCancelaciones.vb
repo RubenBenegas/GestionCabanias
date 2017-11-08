@@ -86,7 +86,112 @@
         End If
     End Sub
 
-    Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
+    'Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
+    '    cancelacion.fCancelacion = dtpFechaCancelacion.Value
+    '    cancelacion.Descripcion = txtDescripcion.Text
+    '    cancelacion.Reembolso = txtReembolso.Text
+    '    cancelacion.IdReserva = idReserva
+
+    '    If modificar = True Then
+    '        If cancelacion.ModificarCancelacion(cancelacion) = True Then
+    '            frmReservas.idEstado = 5
+    '            MsgBox("La cancelacion ha sido correctamente modificada.")
+
+    '        Else
+    '            MsgBox("Error al modificar la cancelacion." + Chr(13) + "Intentelo de nuevo.")
+    '        End If
+    '    Else
+    '        If cancelacion.InsertarCancelacion(cancelacion) = True Then
+    '            frmReservas.idEstado = 5
+    '            MsgBox("La cancelacion ha sido correctamente insertada.")
+
+    '        Else
+    '            MsgBox("Error al insertar la cancelacion." + Chr(13) + "Intentelo de nuevo.")
+    '        End If
+    '    End If
+
+    '    If DateDiff(DateInterval.Day, dtpFechaCancelacion.Value, frmReservas.dtpFechaIngreso.Value) > 14 Then
+    '        'MessageBox.Show(DateDiff(DateInterval.Day, Today, reserva.fIngreso))
+    '        frmReservas.lblReservaCancelada.Visible = True
+    '        frmReservas.lblReembolso.Visible = True
+    '        frmReservas.lblReembolso.ForeColor = Color.Green
+    '        frmReservas.lblReembolso.Text = "Reembolso de: "
+    '        frmReservas.txtReembolso.Visible = True
+    '        frmReservas.txtReembolso.Text = txtReembolso.Text
+    '    Else
+    '        'MessageBox.Show(DateDiff(DateInterval.Day, Today, reserva.fIngreso))
+    '        frmReservas.lblReservaCancelada.Visible = True
+    '        frmReservas.lblReembolso.Visible = True
+    '        frmReservas.lblReembolso.ForeColor = Color.Red
+    '        frmReservas.lblReembolso.Text = "Sin reembolso"
+    '        frmReservas.txtReembolso.Text = 0
+    '        frmReservas.txtReembolso.Visible = False
+    '    End If
+
+    '    frmReservas.lblCostoEstadia.Visible = False
+    '    frmReservas.txtCostoEstadia.Visible = False
+
+    '    frmReservas.lblCostoAdicionales.Visible = False
+    '    frmReservas.txtCostoAdicionales.Visible = False
+
+    '    frmReservas.lblCostoTotal.Visible = False
+    '    frmReservas.txtCostoTotal.Visible = False
+
+    '    frmReservas.lblFaltaPAgar.Visible = False
+    '    frmReservas.txtFaltaDePagar.Visible = False
+
+    '    frmReservas.lblReservaCancelada.Visible = True
+    '    frmReservas.btnAgregar.Enabled = False
+    '    frmReservas.btnBorrar.Enabled = False
+    '    frmReservas.btnConsultarCostos.Visible = False
+    '    frmReservas.lblFechaSenia.Visible = False
+    '    frmReservas.dtpFechaPagoSenia.Visible = False
+    '    frmReservas.lblImporteSenia.Visible = False
+    '    frmReservas.txtSenia.Visible = False
+
+    '    frmReservas.btnCancelarReserva.Visible = False
+    '    frmReservas.btnDetalleCancelacion.Visible = True
+
+    '    Close()
+    'End Sub
+
+
+    Private Sub dtpFechaCancelacion_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles dtpFechaCancelacion.LostFocus
+        If DateDiff(DateInterval.Day, dtpFechaCancelacion.Value, frmReservas.dtpFechaIngreso.Value) > 14 Then
+
+            txtReembolso.Text = CInt(frmReservas.txtSenia.Text) / 2
+        Else
+
+            txtReembolso.Text = 0
+
+        End If
+
+        'frmReservas.lblCostoEstadia.Visible = False
+        'frmReservas.txtCostoEstadia.Visible = False
+
+        'frmReservas.lblCostoAdicionales.Visible = False
+        'frmReservas.txtCostoAdicionales.Visible = False
+
+        'frmReservas.lblCostoTotal.Visible = False
+        'frmReservas.txtCostoTotal.Visible = False
+
+        'frmReservas.lblFaltaPAgar.Visible = False
+        'frmReservas.txtFaltaDePagar.Visible = False
+
+        'frmReservas.lblReservaCancelada.Visible = True
+        'frmReservas.btnAgregar.Enabled = False
+        'frmReservas.btnBorrar.Enabled = False
+        'frmReservas.btnConsultarCostos.Visible = False
+        'frmReservas.lblFechaSenia.Visible = False
+        'frmReservas.dtpFechaPagoSenia.Visible = False
+        'frmReservas.lblImporteSenia.Visible = False
+        'frmReservas.txtSenia.Visible = False
+
+        'frmReservas.btnEstadoReserva.Visible = False
+        'frmReservas.btnDetalleCancelacion.Visible = True
+    End Sub
+
+    Private Sub RectangleShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.Click
         cancelacion.fCancelacion = dtpFechaCancelacion.Value
         cancelacion.Descripcion = txtDescripcion.Text
         cancelacion.Reembolso = txtReembolso.Text
@@ -155,43 +260,11 @@
         Close()
     End Sub
 
-    Private Sub btnAceptarModificar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptarModificar.Click
+    Private Sub RectangleShape2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape2.Click
         Close()
-
     End Sub
 
-    Private Sub dtpFechaCancelacion_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles dtpFechaCancelacion.LostFocus
-        If DateDiff(DateInterval.Day, dtpFechaCancelacion.Value, frmReservas.dtpFechaIngreso.Value) > 14 Then
-
-            txtReembolso.Text = CInt(frmReservas.txtSenia.Text) / 2
-        Else
-
-            txtReembolso.Text = 0
-
-        End If
-
-        'frmReservas.lblCostoEstadia.Visible = False
-        'frmReservas.txtCostoEstadia.Visible = False
-
-        'frmReservas.lblCostoAdicionales.Visible = False
-        'frmReservas.txtCostoAdicionales.Visible = False
-
-        'frmReservas.lblCostoTotal.Visible = False
-        'frmReservas.txtCostoTotal.Visible = False
-
-        'frmReservas.lblFaltaPAgar.Visible = False
-        'frmReservas.txtFaltaDePagar.Visible = False
-
-        'frmReservas.lblReservaCancelada.Visible = True
-        'frmReservas.btnAgregar.Enabled = False
-        'frmReservas.btnBorrar.Enabled = False
-        'frmReservas.btnConsultarCostos.Visible = False
-        'frmReservas.lblFechaSenia.Visible = False
-        'frmReservas.dtpFechaPagoSenia.Visible = False
-        'frmReservas.lblImporteSenia.Visible = False
-        'frmReservas.txtSenia.Visible = False
-
-        'frmReservas.btnEstadoReserva.Visible = False
-        'frmReservas.btnDetalleCancelacion.Visible = True
+    Private Sub RectangleShape3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape3.Click
+        Close()
     End Sub
 End Class

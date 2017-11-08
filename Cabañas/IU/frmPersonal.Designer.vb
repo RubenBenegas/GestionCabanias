@@ -23,6 +23,7 @@ Partial Class frmPersonal
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPersonal))
         Me.lblId = New System.Windows.Forms.Label
         Me.ldlNombre = New System.Windows.Forms.Label
         Me.lblTelefono = New System.Windows.Forms.Label
@@ -31,13 +32,14 @@ Partial Class frmPersonal
         Me.txtNombre = New System.Windows.Forms.TextBox
         Me.txtTelefono = New System.Windows.Forms.TextBox
         Me.txtDireccion = New System.Windows.Forms.TextBox
-        Me.btnAceptar = New System.Windows.Forms.Button
-        Me.BtnCancelar = New System.Windows.Forms.Button
         Me.txtSueldoPorMes = New System.Windows.Forms.TextBox
         Me.lblDepartamento = New System.Windows.Forms.Label
         Me.lblSueldoPorMes = New System.Windows.Forms.Label
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.cmbDepartamento = New System.Windows.Forms.ComboBox
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
+        Me.RectangleShape2 = New Cabañas.BotonCancelar
+        Me.RectangleShape1 = New Cabañas.BotonAceptar
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -121,24 +123,6 @@ Partial Class frmPersonal
         Me.txtDireccion.Size = New System.Drawing.Size(125, 20)
         Me.txtDireccion.TabIndex = 3
         '
-        'btnAceptar
-        '
-        Me.btnAceptar.Location = New System.Drawing.Point(144, 169)
-        Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
-        Me.btnAceptar.TabIndex = 6
-        Me.btnAceptar.Text = "Aceptar"
-        Me.btnAceptar.UseVisualStyleBackColor = True
-        '
-        'BtnCancelar
-        '
-        Me.BtnCancelar.Location = New System.Drawing.Point(241, 169)
-        Me.BtnCancelar.Name = "BtnCancelar"
-        Me.BtnCancelar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnCancelar.TabIndex = 7
-        Me.BtnCancelar.Text = "Cancelar"
-        Me.BtnCancelar.UseVisualStyleBackColor = True
-        '
         'txtSueldoPorMes
         '
         Me.txtSueldoPorMes.Location = New System.Drawing.Point(132, 137)
@@ -183,6 +167,36 @@ Partial Class frmPersonal
         Me.cmbDepartamento.Size = New System.Drawing.Size(121, 21)
         Me.cmbDepartamento.TabIndex = 4
         '
+        'ShapeContainer1
+        '
+        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer1.Name = "ShapeContainer1"
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape2, Me.RectangleShape1})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(344, 204)
+        Me.ShapeContainer1.TabIndex = 15
+        Me.ShapeContainer1.TabStop = False
+        '
+        'RectangleShape2
+        '
+        Me.RectangleShape2.BackgroundImage = CType(resources.GetObject("RectangleShape2.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.RectangleShape2.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape2.CornerRadius = 13
+        Me.RectangleShape2.Location = New System.Drawing.Point(199, 170)
+        Me.RectangleShape2.Name = "RectangleShape2"
+        Me.RectangleShape2.Size = New System.Drawing.Size(80, 26)
+        '
+        'RectangleShape1
+        '
+        Me.RectangleShape1.BackgroundImage = CType(resources.GetObject("RectangleShape1.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.RectangleShape1.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape1.CornerRadius = 13
+        Me.RectangleShape1.Location = New System.Drawing.Point(115, 170)
+        Me.RectangleShape1.Name = "RectangleShape1"
+        Me.RectangleShape1.Size = New System.Drawing.Size(80, 26)
+        '
         'frmPersonal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -194,8 +208,6 @@ Partial Class frmPersonal
         Me.Controls.Add(Me.lblSueldoPorMes)
         Me.Controls.Add(Me.lblDepartamento)
         Me.Controls.Add(Me.txtSueldoPorMes)
-        Me.Controls.Add(Me.BtnCancelar)
-        Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.txtDireccion)
         Me.Controls.Add(Me.txtTelefono)
         Me.Controls.Add(Me.txtNombre)
@@ -204,6 +216,7 @@ Partial Class frmPersonal
         Me.Controls.Add(Me.lblTelefono)
         Me.Controls.Add(Me.ldlNombre)
         Me.Controls.Add(Me.lblId)
+        Me.Controls.Add(Me.ShapeContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -223,11 +236,12 @@ Partial Class frmPersonal
     Friend WithEvents txtNombre As System.Windows.Forms.TextBox
     Friend WithEvents txtTelefono As System.Windows.Forms.TextBox
     Friend WithEvents txtDireccion As System.Windows.Forms.TextBox
-    Friend WithEvents btnAceptar As System.Windows.Forms.Button
-    Friend WithEvents BtnCancelar As System.Windows.Forms.Button
     Friend WithEvents txtSueldoPorMes As System.Windows.Forms.TextBox
     Friend WithEvents lblDepartamento As System.Windows.Forms.Label
     Friend WithEvents lblSueldoPorMes As System.Windows.Forms.Label
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
     Friend WithEvents cmbDepartamento As System.Windows.Forms.ComboBox
+    Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
+    Friend WithEvents RectangleShape1 As Cabañas.BotonAceptar
+    Friend WithEvents RectangleShape2 As Cabañas.BotonCancelar
 End Class

@@ -53,8 +53,21 @@
     End Sub
 
     Dim fun As New Validaciones
-    Private Sub btnAceptar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
 
+    Private Sub txtMonto_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+        If Char.IsNumber(e.KeyChar) Or e.KeyChar = "," Or Char.IsControl(e.KeyChar) Then
+
+            e.Handled = False
+
+        Else
+
+            e.Handled = True
+
+        End If
+    End Sub
+
+
+    Private Sub RectangleShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.Click
         If fun.validarCampos(Me, ErrorProvider1) = True Then
 
 
@@ -85,22 +98,7 @@
 
     End Sub
 
-
-
-    Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
+    Private Sub RectangleShape2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape2.Click
         Close()
     End Sub
-
-    Private Sub txtMonto_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
-        If Char.IsNumber(e.KeyChar) Or e.KeyChar = "," Or Char.IsControl(e.KeyChar) Then
-
-            e.Handled = False
-
-        Else
-
-            e.Handled = True
-
-        End If
-    End Sub
-
 End Class

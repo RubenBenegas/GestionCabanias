@@ -22,36 +22,20 @@ Partial Class frmCancelaciones
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.btnAceptar = New System.Windows.Forms.Button
-        Me.btnCancelar = New System.Windows.Forms.Button
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCancelaciones))
         Me.lblId = New System.Windows.Forms.Label
         Me.lblFechaCancelacion = New System.Windows.Forms.Label
         Me.lblDescripcion = New System.Windows.Forms.Label
         Me.txtId = New System.Windows.Forms.TextBox
         Me.txtDescripcion = New System.Windows.Forms.TextBox
         Me.dtpFechaCancelacion = New System.Windows.Forms.DateTimePicker
-        Me.btnAceptarModificar = New System.Windows.Forms.Button
         Me.lblReembolso = New System.Windows.Forms.Label
         Me.txtReembolso = New System.Windows.Forms.TextBox
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
+        Me.RectangleShape3 = New Cabañas.BotonCancelar
+        Me.RectangleShape2 = New Cabañas.BotonAceptar
+        Me.RectangleShape1 = New Cabañas.BotonAceptar
         Me.SuspendLayout()
-        '
-        'btnAceptar
-        '
-        Me.btnAceptar.Location = New System.Drawing.Point(101, 229)
-        Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
-        Me.btnAceptar.TabIndex = 0
-        Me.btnAceptar.Text = "Aceptar"
-        Me.btnAceptar.UseVisualStyleBackColor = True
-        '
-        'btnCancelar
-        '
-        Me.btnCancelar.Location = New System.Drawing.Point(200, 229)
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
-        Me.btnCancelar.TabIndex = 1
-        Me.btnCancelar.Text = "Cancelar"
-        Me.btnCancelar.UseVisualStyleBackColor = True
         '
         'lblId
         '
@@ -113,15 +97,6 @@ Partial Class frmCancelaciones
         Me.dtpFechaCancelacion.Size = New System.Drawing.Size(99, 20)
         Me.dtpFechaCancelacion.TabIndex = 7
         '
-        'btnAceptarModificar
-        '
-        Me.btnAceptarModificar.Location = New System.Drawing.Point(154, 229)
-        Me.btnAceptarModificar.Name = "btnAceptarModificar"
-        Me.btnAceptarModificar.Size = New System.Drawing.Size(75, 23)
-        Me.btnAceptarModificar.TabIndex = 8
-        Me.btnAceptarModificar.Text = "Aceptar"
-        Me.btnAceptarModificar.UseVisualStyleBackColor = True
-        '
         'lblReembolso
         '
         Me.lblReembolso.AutoSize = True
@@ -141,6 +116,46 @@ Partial Class frmCancelaciones
         Me.txtReembolso.Size = New System.Drawing.Size(100, 20)
         Me.txtReembolso.TabIndex = 10
         '
+        'ShapeContainer1
+        '
+        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer1.Name = "ShapeContainer1"
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape3, Me.RectangleShape2, Me.RectangleShape1})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(344, 264)
+        Me.ShapeContainer1.TabIndex = 11
+        Me.ShapeContainer1.TabStop = False
+        '
+        'RectangleShape3
+        '
+        Me.RectangleShape3.BackgroundImage = CType(resources.GetObject("RectangleShape3.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.RectangleShape3.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape3.CornerRadius = 13
+        Me.RectangleShape3.Location = New System.Drawing.Point(206, 231)
+        Me.RectangleShape3.Name = "RectangleShape3"
+        Me.RectangleShape3.Size = New System.Drawing.Size(80, 26)
+        '
+        'RectangleShape2
+        '
+        Me.RectangleShape2.BackgroundImage = CType(resources.GetObject("RectangleShape2.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.RectangleShape2.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape2.CornerRadius = 13
+        Me.RectangleShape2.Location = New System.Drawing.Point(136, 231)
+        Me.RectangleShape2.Name = "RectangleShape2"
+        Me.RectangleShape2.Size = New System.Drawing.Size(80, 26)
+        '
+        'RectangleShape1
+        '
+        Me.RectangleShape1.BackgroundImage = CType(resources.GetObject("RectangleShape1.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.RectangleShape1.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape1.CornerRadius = 13
+        Me.RectangleShape1.Location = New System.Drawing.Point(73, 231)
+        Me.RectangleShape1.Name = "RectangleShape1"
+        Me.RectangleShape1.Size = New System.Drawing.Size(80, 26)
+        '
         'frmCancelaciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -149,15 +164,13 @@ Partial Class frmCancelaciones
         Me.ClientSize = New System.Drawing.Size(344, 264)
         Me.Controls.Add(Me.txtReembolso)
         Me.Controls.Add(Me.lblReembolso)
-        Me.Controls.Add(Me.btnAceptarModificar)
         Me.Controls.Add(Me.dtpFechaCancelacion)
         Me.Controls.Add(Me.txtDescripcion)
         Me.Controls.Add(Me.txtId)
         Me.Controls.Add(Me.lblDescripcion)
         Me.Controls.Add(Me.lblFechaCancelacion)
         Me.Controls.Add(Me.lblId)
-        Me.Controls.Add(Me.btnCancelar)
-        Me.Controls.Add(Me.btnAceptar)
+        Me.Controls.Add(Me.ShapeContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -168,15 +181,16 @@ Partial Class frmCancelaciones
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents btnAceptar As System.Windows.Forms.Button
-    Friend WithEvents btnCancelar As System.Windows.Forms.Button
     Friend WithEvents lblId As System.Windows.Forms.Label
     Friend WithEvents lblFechaCancelacion As System.Windows.Forms.Label
     Friend WithEvents lblDescripcion As System.Windows.Forms.Label
     Friend WithEvents txtId As System.Windows.Forms.TextBox
     Friend WithEvents txtDescripcion As System.Windows.Forms.TextBox
     Friend WithEvents dtpFechaCancelacion As System.Windows.Forms.DateTimePicker
-    Friend WithEvents btnAceptarModificar As System.Windows.Forms.Button
     Friend WithEvents lblReembolso As System.Windows.Forms.Label
     Friend WithEvents txtReembolso As System.Windows.Forms.TextBox
+    Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
+    Friend WithEvents RectangleShape1 As Cabañas.BotonAceptar
+    Friend WithEvents RectangleShape2 As Cabañas.BotonAceptar
+    Friend WithEvents RectangleShape3 As Cabañas.BotonCancelar
 End Class

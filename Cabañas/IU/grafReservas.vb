@@ -138,6 +138,7 @@
             res2 = res.RecuperarReserva(btnReserva.id)
             btnReserva.fIngreso = res2.fIngreso
             btnReserva.fSalida = res2.fSalida
+            btnReserva.idCabania = res2.IdCabania
             btnReserva.idEstado = res2.IdEstado
 
             If btnReserva.idEstado = 1 Then

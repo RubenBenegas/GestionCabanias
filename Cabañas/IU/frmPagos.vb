@@ -60,7 +60,7 @@
             montoTotal = reserva.ReservasTraerMontoTotal(frmReservas.txtId.Text) + frmReservas.montoDiferenciaEnTotal
             montoPagos = pagos.PagosTraerTotalPagosPorReserva(frmReservas.txtId.Text)
 
-            If montoTotal - montoPagos = 0 Then
+            If montoTotal - montoPagos <= 0 Then
                 MessageBox.Show("Esta reserva no presenta deudas")
                 Me.Close()
             End If

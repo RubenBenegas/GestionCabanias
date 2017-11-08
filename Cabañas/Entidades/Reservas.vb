@@ -356,28 +356,28 @@ Public Class Reservas
         End Try
     End Function
 
-    'Public Function CargarComboCabania(ByVal ComboActual As ComboBox)
-    '    Try
-    '        abrirConexion()
-    '        Dim objComando As New SqlCommand("ReservasCargarComboCabania", objConexion)
-    '        objComando.CommandType = CommandType.StoredProcedure
-    '        Dim objDataAdapter As New SqlDataAdapter(objComando)
-    '        Dim objDataTable As New Data.DataTable
-    '        objDataAdapter.Fill(objDataTable)
-    '        With ComboActual
-    '            .DataSource = objDataTable
-    '            .DisplayMember = "TipoCabania"
-    '            .ValueMember = "id"
-    '        End With
-    '    Catch ex As Exception
-    '        MsgBox(ex.Message)
-    '    Finally
-    '        cerrarConexion()
-    '    End Try
+    Public Function CargarComboCabania(ByVal ComboActual As ComboBox)
+        Try
+            abrirConexion()
+            Dim objComando As New SqlCommand("ReservasCargarComboCabania", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            Dim objDataAdapter As New SqlDataAdapter(objComando)
+            Dim objDataTable As New Data.DataTable
+            objDataAdapter.Fill(objDataTable)
+            With ComboActual
+                .DataSource = objDataTable
+                .DisplayMember = "TipoCabania"
+                .ValueMember = "id"
+            End With
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            cerrarConexion()
+        End Try
 
-    'End Function
+    End Function
 
-    Public Function ReservasCabaniasFiltrarDisponibles(ByVal fecheDesde As Date, ByVal fecheHasta As Date, ByVal ComboActual As ComboBox)
+    Public Function ReservasCabaniasFiltrarDisponibles(ByVal idCabania As Integer, ByVal tipoCabania As String, ByVal fecheDesde As Date, ByVal fecheHasta As Date, ByVal ComboActual As ComboBox)
         Try
             abrirConexion()
             Dim objComando As New SqlCommand("ReservasCabaniasFiltrarDisponibles", objConexion)
@@ -387,6 +387,14 @@ Public Class Reservas
             Dim objDataAdapter As New SqlDataAdapter(objComando)
             Dim objDataTable As New Data.DataTable
             objDataAdapter.Fill(objDataTable)
+
+            Dim NewRow As DataRow
+            NewRow = objDataTable.NewRow
+            NewRow("id") = idCabania
+            NewRow("TipoCabania") = "  " + CStr(idCabania) + " - " + tipoCabania
+            objDataTable.Rows.Add(NewRow)
+
+
             With ComboActual
                 .DataSource = objDataTable
                 .DisplayMember = "TipoCabania"
@@ -703,5 +711,27 @@ Public Class Reservas
             cerrarConexion()
         End Try
 
+    End Function 
+
+    Public Function ReservasTraerDescripcionDeCabanias(ByVal idCabania As Integer) As String
+        Try
+            abrirConexion()
+            Dim Descripcion
+            Dim objComando As New SqlCommand("ReservasTraerDescripcionDeCabanias", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            objComando.Parameters.AddWithValue("@IdCabania", idCabania)
+            Dim objDataTable As New Data.DataTable
+            Dim objDataAdapter As New SqlDataAdapter(objComando)
+            objDataAdapter.Fill(objDataTable)
+
+            Descripcion = objDataTable.Rows(0).Item("TipoCabania")
+            Return Descripcion
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            cerrarConexion()
+        End Try
     End Function
+
 End Class

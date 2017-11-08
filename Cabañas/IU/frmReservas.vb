@@ -31,6 +31,19 @@
     End Property
 
 
+    Private idCabania_ As Integer
+    Public Property idCabania() As Integer
+        Get
+            Return idCabania_
+        End Get
+        Set(ByVal value As Integer)
+            idCabania_ = value
+        End Set
+    End Property
+
+
+
+
     Private montoDiferencia2_ As Decimal
     Public Property montoDiferenciaEnTotal() As Decimal
         Get
@@ -56,8 +69,13 @@
 
         reserva.ReservasCargarAdicionales(idReserva, dgvServiciosAdicionales)
 
-        reserva.ReservasCabaniasFiltrarDisponibles(dtpFechaIngreso.Value, dtpFechaSalida.Value, cmbIdCabania)
+        Dim desc As String
+        desc = reserva.ReservasTraerDescripcionDeCabanias(idCabania)
 
+        reserva.ReservasCabaniasFiltrarDisponibles(idCabania, desc, dtpFechaIngreso.Value, dtpFechaSalida.Value, cmbIdCabania)
+
+
+        'reserva.CargarComboCabania(cmbIdCabania)
 
         If modificar = True Then
 
@@ -138,6 +156,8 @@
                     txtReembolso.Visible = False
                 End If
             Else
+
+
                 lblCostoEstadia.Visible = True
                 txtCostoEstadia.Visible = True
                 lblCostoAdicionales.Visible = True
@@ -172,6 +192,9 @@
             Me.Text = "Modificar reserva"
 
         Else
+
+            'reserva.ReservasCabaniasFiltrarDisponibles(dtpFechaIngreso.Value, dtpFechaSalida.Value, cmbIdCabania)
+
             txtId.Text = Nothing
             dtpFechaReserva.Value = Today
             txtIdHuesped.Text = Nothing
@@ -518,7 +541,10 @@
 
 
     Private Sub cmbIdCabania_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmbIdCabania.GotFocus
-        reserva.ReservasCabaniasFiltrarDisponibles(dtpFechaIngreso.Value, dtpFechaSalida.Value, cmbIdCabania)
+        Dim desc As String
+        desc = reserva.ReservasTraerDescripcionDeCabanias(idCabania)
+
+        reserva.ReservasCabaniasFiltrarDisponibles(idCabania, desc, dtpFechaIngreso.Value, dtpFechaSalida.Value, cmbIdCabania)
     End Sub
 #End Region
 

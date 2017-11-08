@@ -33,6 +33,16 @@
     End Property
 
 
+    Private idCabania_ As Integer
+    Public Property idCabania() As Integer
+        Get
+            Return idCabania_
+        End Get
+        Set(ByVal value As Integer)
+            idCabania_ = value
+        End Set
+    End Property
+
 
     Private idEstado_ As Integer
     Public Property idEstado() As Integer
@@ -58,6 +68,7 @@
 
         frmReservas.modificar = True
         frmReservas.idReserva = id
+        frmReservas.idCabania = idCabania
         frmReservas.ShowDialog()
 
     End Sub

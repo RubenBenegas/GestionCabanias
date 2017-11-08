@@ -238,14 +238,22 @@ Public Class Huespedes
         objDataAdapter.Fill(objDataTable)
         tabla.DataSource = objDataTable
 
+        For Each row As DataGridViewRow In tabla.Rows
+            If row.Cells("IdEstado").Value = 5 Then
+                row.DefaultCellStyle.BackColor = Color.Red
+            End If
+        Next
+
+        'If objDataTable.Rows(0).Item("IdEstado") = 5 Then
+        '    tabla.DefaultCellStyle.BackColor = Color.Red
+
+        'End If
+
         tabla.Columns("Id").Width = 50
         tabla.Columns("IdEstado").Visible = False
         tabla.Columns("idCabania").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
-        If objDataTable.Rows(0).Item("IdEstado") = 5 Then
-            tabla.DefaultCellStyle.BackColor = Color.Red
 
-        End If
 
         cerrarConexion()
 

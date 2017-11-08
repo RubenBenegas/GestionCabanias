@@ -50,6 +50,8 @@
 
         huesped.HuespedTraerHistorial(idHuesped, dgvHistorial)
 
+       
+
     End Sub
 
     Dim fun As New Validaciones

@@ -662,15 +662,19 @@
                     idEstado = 2
                 End If
 
-                Dim montoTotal As Decimal
-                Dim montoPagos As Decimal
-                montoTotal = reserva.ReservasTraerMontoTotal(txtId.Text)
-                montoPagos = pagos.PagosTraerTotalPagosPorReserva(txtId.Text)
-                If montoPagos >= CDec(txtSenia.Text) And montoPagos < montoTotal + montoDiferencia Then
-                    idEstado = 3
-                End If
-                If (montoDiferencia + montoTotal) - montoPagos <= 0 Then
-                    idEstado = 4
+                If txtId.Text <> "" Then
+
+
+                    Dim montoTotal As Decimal
+                    Dim montoPagos As Decimal
+                    montoTotal = reserva.ReservasTraerMontoTotal(txtId.Text)
+                    montoPagos = pagos.PagosTraerTotalPagosPorReserva(txtId.Text)
+                    If montoPagos >= CDec(txtSenia.Text) And montoPagos < montoTotal + montoDiferencia Then
+                        idEstado = 3
+                    End If
+                    If (montoDiferencia + montoTotal) - montoPagos <= 0 Then
+                        idEstado = 4
+                    End If
                 End If
 
             End If

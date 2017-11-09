@@ -87,6 +87,7 @@ Public Class frmPrincipal
 
     Private Sub OvalShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OvalShape1.Click
         OvalShape1.Size = New Size(75, 75)
+        OvalShape1.BackgroundImage = My.Resources.IconoCabania
         OvalShape1.BorderStyle = Drawing2D.DashStyle.Custom
         OvalShape1.BorderWidth = 0
         lstcabania.ShowDialog()
@@ -94,6 +95,7 @@ Public Class frmPrincipal
 
     Private Sub OvalShape1_MouseHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OvalShape1.MouseHover
         OvalShape1.Size = New Size(82, 82)
+        OvalShape1.BackgroundImage = My.Resources.IconoCabaniaSombra
         OvalShape1.BorderStyle = Drawing2D.DashStyle.Custom
         OvalShape1.BorderWidth = 0
 
@@ -101,6 +103,7 @@ Public Class frmPrincipal
 
     Private Sub OvalShape1_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OvalShape1.MouseLeave
         OvalShape1.Size = New Size(75, 75)
+        OvalShape1.BackgroundImage = My.Resources.IconoCabania
         OvalShape1.BorderStyle = Drawing2D.DashStyle.Custom
         OvalShape1.BorderWidth = 0
     End Sub
@@ -129,6 +132,7 @@ Public Class frmPrincipal
 
     Private Sub OvalShape3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OvalShape3.Click
         OvalShape3.Size = New Size(75, 75)
+        OvalShape3.BackgroundImage = My.Resources.IconoCalendario2
         OvalShape3.BorderStyle = Drawing2D.DashStyle.Custom
         OvalShape3.BorderWidth = 0
         grafReservas.ShowDialog()
@@ -137,12 +141,14 @@ Public Class frmPrincipal
 
     Private Sub OvalShape3_MouseHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OvalShape3.MouseHover
         OvalShape3.Size = New Size(82, 82)
+        OvalShape3.BackgroundImage = My.Resources.IconoCalendarioSombra
         OvalShape3.BorderStyle = Drawing2D.DashStyle.Custom
         OvalShape3.BorderWidth = 0
     End Sub
 
     Private Sub OvalShape3_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OvalShape3.MouseLeave
         OvalShape3.Size = New Size(75, 75)
+        OvalShape3.BackgroundImage = My.Resources.IconoCalendario2
         OvalShape3.BorderStyle = Drawing2D.DashStyle.Custom
         OvalShape3.BorderWidth = 0
     End Sub

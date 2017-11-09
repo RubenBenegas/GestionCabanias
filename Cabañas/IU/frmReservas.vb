@@ -69,10 +69,7 @@
 
         reserva.ReservasCargarAdicionales(idReserva, dgvServiciosAdicionales)
 
-        Dim desc As String
-        desc = reserva.ReservasTraerDescripcionDeCabanias(idCabania)
-
-        reserva.ReservasCabaniasFiltrarDisponibles(idCabania, desc, dtpFechaIngreso.Value, dtpFechaSalida.Value, cmbIdCabania)
+        
 
 
         'reserva.CargarComboCabania(cmbIdCabania)
@@ -80,6 +77,10 @@
         If modificar = True Then
 
             reserva = reserva.RecuperarReserva(idReserva)
+
+            Dim desc As String
+            desc = reserva.ReservasTraerDescripcionDeCabanias(idCabania)
+            reserva.ReservasCabaniasFiltrarDisponibles(idCabania, desc, dtpFechaIngreso.Value, dtpFechaSalida.Value, cmbIdCabania)
 
             txtId.Text = reserva.Id
             dtpFechaReserva.Value = reserva.fReserva
@@ -193,7 +194,7 @@
 
         Else
 
-            'reserva.ReservasCabaniasFiltrarDisponibles(dtpFechaIngreso.Value, dtpFechaSalida.Value, cmbIdCabania)
+            reserva.ReservasCabaniasFiltrarDisponibles(dtpFechaIngreso.Value, dtpFechaSalida.Value, cmbIdCabania)
 
             txtId.Text = Nothing
             dtpFechaReserva.Value = Today
@@ -541,10 +542,15 @@
 
 
     Private Sub cmbIdCabania_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmbIdCabania.GotFocus
-        Dim desc As String
-        desc = reserva.ReservasTraerDescripcionDeCabanias(idCabania)
 
-        reserva.ReservasCabaniasFiltrarDisponibles(idCabania, desc, dtpFechaIngreso.Value, dtpFechaSalida.Value, cmbIdCabania)
+        If modificar = True Then
+            Dim desc As String
+            desc = reserva.ReservasTraerDescripcionDeCabanias(idCabania)
+            reserva.ReservasCabaniasFiltrarDisponibles(idCabania, desc, dtpFechaIngreso.Value, dtpFechaSalida.Value, cmbIdCabania)
+        Else
+            reserva.ReservasCabaniasFiltrarDisponibles(dtpFechaIngreso.Value, dtpFechaSalida.Value, cmbIdCabania)
+        End If
+        
     End Sub
 #End Region
 

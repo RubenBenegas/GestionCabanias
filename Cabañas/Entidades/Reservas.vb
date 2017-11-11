@@ -201,6 +201,7 @@ Public Class Reservas
 
         tabla.Columns("Id").Width = 50
         tabla.Columns("Huesped").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        tabla.Columns("IdCabania").Visible = False
 
         cerrarConexion()
 

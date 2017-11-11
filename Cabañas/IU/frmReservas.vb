@@ -700,6 +700,7 @@
                     Else
 
                         MsgBox("La reserva ha sido correctamente insertada.")
+
                     End If
                     'Else
                     '    MsgBox("Error al insertar la reserva." + Chr(13) + "Intentelo de nuevo.")

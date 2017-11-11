@@ -229,4 +229,7 @@
   <data name="IconoCalendarioSombra" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconoCalendarioSombra.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="IconoHuespedSombra2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconoHuespedSombra2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

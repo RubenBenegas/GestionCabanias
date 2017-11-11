@@ -48,6 +48,10 @@
         frmReservas.RectangleShape7.Visible = False
         frmReservas.btnDetalleCancelacion.Visible = True
 
+        'frmReservas.RectangleShape4.Visible = False
+        'frmReservas.RectangleShape5.Visible = False
+
+        'frmReservas.RectangleShape7.Visible = False
 
 
 
@@ -59,6 +63,7 @@
 
         If dgvEstadoReservas.Rows.Count <> 0 Then
             frmReservas.idReserva = dgvEstadoReservas.Item("id", dgvEstadoReservas.CurrentRow.Index).Value
+            frmReservas.idCabania = dgvEstadoReservas.Item("IdCabania", dgvEstadoReservas.CurrentRow.Index).Value
             frmReservas.ShowDialog()
         Else
             MsgBox("No hay elementos para modificar.", MsgBoxStyle.Information, "Mensaje")

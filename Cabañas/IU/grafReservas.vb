@@ -19,6 +19,7 @@
 
     Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
         frmReservas.modificar = False
+        frmReservas.RectangleShape6.Visible = False
         frmReservas.idReserva = 0
         frmReservas.ShowDialog()
     End Sub

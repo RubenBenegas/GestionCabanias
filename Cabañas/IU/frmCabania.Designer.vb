@@ -109,6 +109,7 @@ Partial Class frmCabania
         Me.txtMonto.Name = "txtMonto"
         Me.txtMonto.Size = New System.Drawing.Size(100, 20)
         Me.txtMonto.TabIndex = 2
+        Me.txtMonto.Tag = "*"
         '
         'lblDescripcion
         '
@@ -129,6 +130,7 @@ Partial Class frmCabania
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(167, 91)
         Me.txtDescripcion.TabIndex = 3
+        Me.txtDescripcion.Tag = "*"
         '
         'dgvCabaniaServicios
         '
@@ -145,6 +147,7 @@ Partial Class frmCabania
         Me.dgvCabaniaServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvCabaniaServicios.Size = New System.Drawing.Size(340, 180)
         Me.dgvCabaniaServicios.TabIndex = 13
+        Me.dgvCabaniaServicios.Tag = ""
         '
         'Servicios
         '
@@ -191,6 +194,7 @@ Partial Class frmCabania
         Me.txtCostoTotal.Name = "txtCostoTotal"
         Me.txtCostoTotal.Size = New System.Drawing.Size(100, 25)
         Me.txtCostoTotal.TabIndex = 39
+        Me.txtCostoTotal.Tag = "*"
         Me.txtCostoTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtCostoServicios
@@ -202,6 +206,7 @@ Partial Class frmCabania
         Me.txtCostoServicios.Name = "txtCostoServicios"
         Me.txtCostoServicios.Size = New System.Drawing.Size(100, 25)
         Me.txtCostoServicios.TabIndex = 38
+        Me.txtCostoServicios.Tag = "*"
         Me.txtCostoServicios.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btnConsultarCostos

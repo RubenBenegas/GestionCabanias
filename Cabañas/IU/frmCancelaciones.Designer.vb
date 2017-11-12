@@ -22,6 +22,7 @@ Partial Class frmCancelaciones
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCancelaciones))
         Me.lblId = New System.Windows.Forms.Label
         Me.lblFechaCancelacion = New System.Windows.Forms.Label
@@ -35,6 +36,8 @@ Partial Class frmCancelaciones
         Me.RectangleShape3 = New Cabañas.BotonCancelar
         Me.RectangleShape2 = New Cabañas.BotonAceptar
         Me.RectangleShape1 = New Cabañas.BotonAceptar
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblId
@@ -88,6 +91,7 @@ Partial Class frmCancelaciones
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(188, 97)
         Me.txtDescripcion.TabIndex = 6
+        Me.txtDescripcion.Tag = "*"
         '
         'dtpFechaCancelacion
         '
@@ -115,6 +119,7 @@ Partial Class frmCancelaciones
         Me.txtReembolso.Name = "txtReembolso"
         Me.txtReembolso.Size = New System.Drawing.Size(100, 20)
         Me.txtReembolso.TabIndex = 10
+        Me.txtReembolso.Tag = "*"
         '
         'ShapeContainer1
         '
@@ -156,6 +161,10 @@ Partial Class frmCancelaciones
         Me.RectangleShape1.Name = "RectangleShape1"
         Me.RectangleShape1.Size = New System.Drawing.Size(80, 26)
         '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
+        '
         'frmCancelaciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -177,6 +186,7 @@ Partial Class frmCancelaciones
         Me.Name = "frmCancelaciones"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmCancelaciones"
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -193,4 +203,5 @@ Partial Class frmCancelaciones
     Friend WithEvents RectangleShape1 As Cabañas.BotonAceptar
     Friend WithEvents RectangleShape2 As Cabañas.BotonAceptar
     Friend WithEvents RectangleShape3 As Cabañas.BotonCancelar
+    Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
 End Class

@@ -34,6 +34,8 @@
 
     Dim cancelacion As New Cancelaciones
     Private Sub frmCancelaciones_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+        ErrorProvider1.Clear()
         If modificar = True Then
             Me.Text = "Modificar cancelacion"
 
@@ -74,10 +76,10 @@
             RectangleShape2.Visible = False
 
             If DateDiff(DateInterval.Day, dtpFechaCancelacion.Value, frmReservas.dtpFechaIngreso.Value) > 14 Then
-                
+
                 txtReembolso.Text = CInt(frmReservas.txtSenia.Text) / 2
             Else
-                
+
                 txtReembolso.Text = 0
 
             End If
@@ -192,6 +194,7 @@
     End Sub
 
     Private Sub RectangleShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.Click
+
         cancelacion.fCancelacion = dtpFechaCancelacion.Value
         cancelacion.Descripcion = txtDescripcion.Text
         cancelacion.Reembolso = txtReembolso.Text

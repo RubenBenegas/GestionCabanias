@@ -44,13 +44,13 @@
 
 
 
-    Private montoDiferencia2_ As Decimal
+    Private montoDiferenciaEnTotal_ As Decimal
     Public Property montoDiferenciaEnTotal() As Decimal
         Get
-            Return montoDiferencia2_
+            Return montoDiferenciaEnTotal_
         End Get
         Set(ByVal value As Decimal)
-            montoDiferencia2_ = value
+            montoDiferenciaEnTotal_ = value
         End Set
     End Property
 

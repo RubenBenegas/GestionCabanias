@@ -57,7 +57,7 @@
 
             Dim montoTotal As Decimal
             Dim montoPagos As Decimal
-            montoTotal = reserva.ReservasTraerMontoTotal(frmReservas.txtId.Text) + frmReservas.montoDiferenciaEnTotal
+            montoTotal = reserva.ReservasTraerMontoTotal(frmReservas.txtId.Text) - frmReservas.montoDiferenciaEnTotal
             montoPagos = pagos.PagosTraerTotalPagosPorReserva(frmReservas.txtId.Text)
 
             If montoTotal - montoPagos <= 0 Then
@@ -134,5 +134,9 @@
         End If
 
 
+    End Sub
+
+    Private Sub RectangleShape2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape2.Click
+        Close()
     End Sub
 End Class

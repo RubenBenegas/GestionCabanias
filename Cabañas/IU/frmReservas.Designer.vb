@@ -57,7 +57,6 @@ Partial Class frmReservas
         Me.lblReembolso = New System.Windows.Forms.Label
         Me.txtReembolso = New System.Windows.Forms.TextBox
         Me.lblReservaCancelada = New System.Windows.Forms.Label
-        Me.btnConsultarCostos = New System.Windows.Forms.Button
         Me.dtpFechaReserva = New System.Windows.Forms.DateTimePicker
         Me.lblFechaReserva = New System.Windows.Forms.Label
         Me.lblImporteSenia = New System.Windows.Forms.Label
@@ -67,6 +66,7 @@ Partial Class frmReservas
         Me.lblFaltaPAgar = New System.Windows.Forms.Label
         Me.btnDetalleCancelacion = New System.Windows.Forms.Button
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
+        Me.RectangleShape8 = New Cabañas.BotonConsulCostos
         Me.RectangleShape7 = New Cabañas.BotonCancelarRes
         Me.RectangleShape6 = New Cabañas.BotonCerrar
         Me.RectangleShape5 = New Cabañas.BotonCancelar
@@ -74,6 +74,7 @@ Partial Class frmReservas
         Me.RectangleShape3 = New Cabañas.BotonPagos
         Me.RectangleShape2 = New Cabañas.BotonEliminarFrm
         Me.RectangleShape1 = New Cabañas.BotonAgregarFrm
+        Me.RectangleShape9 = New Cabañas.BotonDetalleCancReserva
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvServiciosAdicionales, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -434,16 +435,6 @@ Partial Class frmReservas
         Me.lblReservaCancelada.Text = "Reserva Cancelada!"
         Me.lblReservaCancelada.Visible = False
         '
-        'btnConsultarCostos
-        '
-        Me.btnConsultarCostos.BackgroundImage = Global.Cabañas.My.Resources.Resources.BotonConsultarCostosMaderaBlanco
-        Me.btnConsultarCostos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnConsultarCostos.Location = New System.Drawing.Point(372, 459)
-        Me.btnConsultarCostos.Name = "btnConsultarCostos"
-        Me.btnConsultarCostos.Size = New System.Drawing.Size(99, 31)
-        Me.btnConsultarCostos.TabIndex = 43
-        Me.btnConsultarCostos.UseVisualStyleBackColor = True
-        '
         'dtpFechaReserva
         '
         Me.dtpFechaReserva.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
@@ -531,10 +522,20 @@ Partial Class frmReservas
         Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
-        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape7, Me.RectangleShape6, Me.RectangleShape5, Me.RectangleShape4, Me.RectangleShape3, Me.RectangleShape2, Me.RectangleShape1})
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape9, Me.RectangleShape8, Me.RectangleShape7, Me.RectangleShape6, Me.RectangleShape5, Me.RectangleShape4, Me.RectangleShape3, Me.RectangleShape2, Me.RectangleShape1})
         Me.ShapeContainer1.Size = New System.Drawing.Size(514, 626)
         Me.ShapeContainer1.TabIndex = 52
         Me.ShapeContainer1.TabStop = False
+        '
+        'RectangleShape8
+        '
+        Me.RectangleShape8.BackgroundImage = CType(resources.GetObject("RectangleShape8.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.RectangleShape8.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape8.CornerRadius = 13
+        Me.RectangleShape8.Location = New System.Drawing.Point(387, 458)
+        Me.RectangleShape8.Name = "RectangleShape8"
+        Me.RectangleShape8.Size = New System.Drawing.Size(80, 26)
         '
         'RectangleShape7
         '
@@ -606,6 +607,12 @@ Partial Class frmReservas
         Me.RectangleShape1.Name = "RectangleShape1"
         Me.RectangleShape1.Size = New System.Drawing.Size(90, 30)
         '
+        'RectangleShape9
+        '
+        Me.RectangleShape9.Location = New System.Drawing.Point(380, 546)
+        Me.RectangleShape9.Name = "RectangleShape9"
+
+        '
         'frmReservas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -619,7 +626,6 @@ Partial Class frmReservas
         Me.Controls.Add(Me.lblImporteSenia)
         Me.Controls.Add(Me.dtpFechaReserva)
         Me.Controls.Add(Me.lblFechaReserva)
-        Me.Controls.Add(Me.btnConsultarCostos)
         Me.Controls.Add(Me.lblReservaCancelada)
         Me.Controls.Add(Me.txtReembolso)
         Me.Controls.Add(Me.lblReembolso)
@@ -701,7 +707,6 @@ Partial Class frmReservas
     Friend WithEvents lblReembolso As System.Windows.Forms.Label
     Friend WithEvents txtReembolso As System.Windows.Forms.TextBox
     Friend WithEvents lblReservaCancelada As System.Windows.Forms.Label
-    Friend WithEvents btnConsultarCostos As System.Windows.Forms.Button
     Friend WithEvents dtpFechaReserva As System.Windows.Forms.DateTimePicker
     Friend WithEvents lblFechaReserva As System.Windows.Forms.Label
     Friend WithEvents lblImporteSenia As System.Windows.Forms.Label
@@ -718,4 +723,6 @@ Partial Class frmReservas
     Friend WithEvents RectangleShape5 As Cabañas.BotonCancelar
     Friend WithEvents RectangleShape6 As Cabañas.BotonCerrar
     Friend WithEvents RectangleShape7 As Cabañas.BotonCancelarRes
+    Friend WithEvents RectangleShape9 As Microsoft.VisualBasic.PowerPacks.RectangleShape
+    Friend WithEvents RectangleShape8 As Cabañas.BotonConsulCostos
 End Class

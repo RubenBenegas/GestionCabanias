@@ -251,7 +251,7 @@
         frmReservas.lblReservaCancelada.Visible = True
         frmReservas.RectangleShape1.Enabled = False
         frmReservas.RectangleShape2.Enabled = False
-        frmReservas.btnConsultarCostos.Visible = False
+        frmReservas.RectangleShape8.Visible = False
         frmReservas.lblFechaSenia.Visible = False
         frmReservas.dtpFechaPagoSenia.Visible = False
         frmReservas.lblImporteSenia.Visible = False

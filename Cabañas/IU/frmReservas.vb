@@ -106,7 +106,7 @@
             RectangleShape1.Enabled = True
             RectangleShape2.Enabled = True
 
-            btnConsultarCostos.Visible = True
+            RectangleShape8.Visible = True
 
             lblFechaSenia.Visible = True
             dtpFechaPagoSenia.Visible = True
@@ -130,7 +130,7 @@
                 lblReservaCancelada.Visible = True
                 RectangleShape1.Enabled = False
                 RectangleShape2.Enabled = False
-                btnConsultarCostos.Visible = False
+                RectangleShape8.Visible = False
                 lblFechaSenia.Visible = False
                 dtpFechaPagoSenia.Visible = False
                 lblImporteSenia.Visible = False
@@ -139,6 +139,7 @@
                 txtReembolso.Text = cancelacion.Reembolso
                 lblReembolso.Visible = True
                 RectangleShape7.Visible = False
+                RectangleShape9.Visible = True
                 btnDetalleCancelacion.Visible = True
 
                 'ACA CALCULAMOS EL REEMBOLSO Y HAY QUE LLEVARLO PARA EL LADO DE CANCELACIONES
@@ -171,11 +172,12 @@
                 lblReembolso.Visible = False
                 txtReembolso.Text = 0
                 txtReembolso.Visible = False
-                btnConsultarCostos.Visible = True
+                RectangleShape8.Visible = True
                 lblFechaSenia.Visible = True
                 dtpFechaPagoSenia.Visible = True
                 lblImporteSenia.Visible = True
                 txtSenia.Visible = True
+                RectangleShape9.Visible = False
                 btnDetalleCancelacion.Visible = False
 
 
@@ -243,7 +245,9 @@
             RectangleShape1.Enabled = True
             RectangleShape2.Enabled = True
 
-            btnConsultarCostos.Visible = True
+            RectangleShape8.Visible = True
+
+            RectangleShape9.Visible = False
             lblFechaSenia.Visible = True
             dtpFechaPagoSenia.Visible = True
 
@@ -438,29 +442,29 @@
 #End Region
 
 #Region "Consultar costo"
-    Private Sub btnConsultarCostos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnConsultarCostos.Click
-        Dim montoCabania As Decimal
-        montoCabania = reserva.ReservaTraerMontoDeCabania(cmbIdCabania.SelectedValue)
-        Dim dias As Integer
-        dias = DateDiff(DateInterval.Day, dtpFechaIngreso.Value, dtpFechaSalida.Value)
-        txtCostoEstadia.Text = dias * montoCabania
+    'Private Sub btnConsultarCostos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnConsultarCostos.Click
+    '    Dim montoCabania As Decimal
+    '    montoCabania = reserva.ReservaTraerMontoDeCabania(cmbIdCabania.SelectedValue)
+    '    Dim dias As Integer
+    '    dias = DateDiff(DateInterval.Day, dtpFechaIngreso.Value, dtpFechaSalida.Value)
+    '    txtCostoEstadia.Text = dias * montoCabania
 
-        If dgvServiciosAdicionales.Rows.Count = 0 Then
-            txtCostoAdicionales.Text = 0
-        Else
-            txtCostoAdicionales.Text = reserva.ReservaCostoAdicionales(idReserva)
-        End If
+    '    If dgvServiciosAdicionales.Rows.Count = 0 Then
+    '        txtCostoAdicionales.Text = 0
+    '    Else
+    '        txtCostoAdicionales.Text = reserva.ReservaCostoAdicionales(idReserva)
+    '    End If
 
-        If chkConSenia.Checked = True Then
-            txtSenia.Text = CInt(txtCostoEstadia.Text) / 2
-        Else
-            txtSenia.Text = 0
-        End If
+    '    If chkConSenia.Checked = True Then
+    '        txtSenia.Text = CInt(txtCostoEstadia.Text) / 2
+    '    Else
+    '        txtSenia.Text = 0
+    '    End If
 
-        txtCostoTotal.Text = CDec(txtCostoEstadia.Text) + CDec(txtCostoAdicionales.Text)
-        dtpFechaPagoSenia.Value = dtpFechaReserva.Value.Date.AddDays(3)
+    '    txtCostoTotal.Text = CDec(txtCostoEstadia.Text) + CDec(txtCostoAdicionales.Text)
+    '    dtpFechaPagoSenia.Value = dtpFechaReserva.Value.Date.AddDays(3)
 
-    End Sub
+    'End Sub
 #End Region
 
 #Region "Boton cancelacion"
@@ -471,11 +475,11 @@
 #End Region
 
 #Region "Boton detalle de cancelacion"
-    Private Sub btnDetalleCancelacion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDetalleCancelacion.Click
-        frmCancelaciones.idReserva = txtId.Text
-        frmCancelaciones.modificar = True
-        frmCancelaciones.ShowDialog()
-    End Sub
+    'Private Sub btnDetalleCancelacion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDetalleCancelacion.Click
+    '    frmCancelaciones.idReserva = txtId.Text
+    '    frmCancelaciones.modificar = True
+    '    frmCancelaciones.ShowDialog()
+    'End Sub
 #End Region
 
 #Region "Boton pagos"
@@ -732,12 +736,42 @@
         txtSenia.Enabled = True
         chkConSenia.Enabled = True
 
-        btnConsultarCostos.Visible = True
+        RectangleShape8.Visible = True
         RectangleShape6.Visible = False
     End Sub
 
     Private Sub RectangleShape7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape7.Click
         frmCancelaciones.idReserva = txtId.Text
+        frmCancelaciones.ShowDialog()
+    End Sub
+
+    Private Sub RectangleShape8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape8.Click
+        Dim montoCabania As Decimal
+        montoCabania = reserva.ReservaTraerMontoDeCabania(cmbIdCabania.SelectedValue)
+        Dim dias As Integer
+        dias = DateDiff(DateInterval.Day, dtpFechaIngreso.Value, dtpFechaSalida.Value)
+        txtCostoEstadia.Text = dias * montoCabania
+
+        If dgvServiciosAdicionales.Rows.Count = 0 Then
+            txtCostoAdicionales.Text = 0
+        Else
+            txtCostoAdicionales.Text = reserva.ReservaCostoAdicionales(idReserva)
+        End If
+
+        If chkConSenia.Checked = True Then
+            txtSenia.Text = CInt(txtCostoEstadia.Text) / 2
+        Else
+            txtSenia.Text = 0
+        End If
+
+        txtCostoTotal.Text = CDec(txtCostoEstadia.Text) + CDec(txtCostoAdicionales.Text)
+        dtpFechaPagoSenia.Value = dtpFechaReserva.Value.Date.AddDays(3)
+
+    End Sub
+
+    Private Sub RectangleShape9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape9.Click
+        frmCancelaciones.idReserva = txtId.Text
+        frmCancelaciones.modificar = True
         frmCancelaciones.ShowDialog()
     End Sub
 End Class

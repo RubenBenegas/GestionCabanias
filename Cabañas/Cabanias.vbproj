@@ -121,6 +121,12 @@
     <Compile Include="BotonCerrar.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="BotonConsulCostos.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BotonDetalleCancReserva.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="BotonEliminar.vb">
       <SubType>Component</SubType>
     </Compile>

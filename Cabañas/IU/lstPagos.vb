@@ -21,7 +21,6 @@
     End Sub
 
     Private Sub RectangleShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.Click
-        MessageBox.Show(dgvPagos.Rows.Count)
         If dgvPagos.Rows.Count = 0 Then
             frmReservas.montoDiferenciaEnTotal = 0
         End If

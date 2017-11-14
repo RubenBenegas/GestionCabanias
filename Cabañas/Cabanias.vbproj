@@ -478,8 +478,12 @@
     <None Include="Resources\BotonAgregarMaderaBlancoFrm.png" />
     <None Include="Resources\botoncancreservablanco.png" />
     <None Include="Resources\botoncancreservanegro.png" />
+    <None Include="Resources\BotonActualizarMaderaNegro.png" />
+    <None Include="Resources\BotonActualizarMaderaBlanco.png" />
     <Content Include="Resources\BotonCerrar1.png" />
     <Content Include="Resources\BotonCerrar2.png" />
+    <None Include="Resources\BotonNuevaReservaMaderaBlanco.png" />
+    <None Include="Resources\BotonNuevaReservaMaderaNegro.png" />
     <None Include="Resources\IconoHuespedSombra2.png" />
     <None Include="Resources\IconoCalendarioSombra.png" />
     <None Include="Resources\IconoCabaniaSombra.png" />

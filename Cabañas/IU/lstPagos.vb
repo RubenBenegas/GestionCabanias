@@ -1,4 +1,6 @@
-﻿Public Class lstPagos
+﻿Imports CrystalDecisions.Shared
+
+Public Class lstPagos
     Dim Pago As New Pagos
 
     Private Sub lstPagos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -52,6 +54,19 @@
 
     Private Sub RectangleShape4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape4.Click
         Close()
+    End Sub
+
+    Private Sub btnListado_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnListado.Click
+        Dim idPago As Integer = dgvPagos.Item("Id", dgvPagos.CurrentRow.Index).Value
+        Dim params As New ParameterValues
+        Dim par As New ParameterDiscreteValue
+        params.Clear()
+        par.Value = idPago
+        params.Add(par)
+        frmListadoPagos.rptListadoPagos3.DataSourceConnections.Item(0).SetConnection("localhost\SQLEXPRESS", "Cabania", True)
+        frmListadoPagos.rptListadoPagos3.DataDefinition.ParameterFields("idPago").ApplyCurrentValues(params)
+        frmListadoPagos.ShowDialog()
+        frmListadoPagos.Dispose()
     End Sub
 End Class
 

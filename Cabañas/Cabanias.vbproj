@@ -311,6 +311,18 @@
     <Compile Include="BotonAgregarFrm.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reportes\frmListadoPagos.Designer.vb">
+      <DependentUpon>frmListadoPagos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmListadoPagos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptListadoPagos.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptListadoPagos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Utiles\Validaciones.vb" />
     <Compile Include="IU\frmHuesped.Designer.vb">
       <DependentUpon>frmHuesped.vb</DependentUpon>
@@ -455,6 +467,13 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmListadoPagos.resx">
+      <DependentUpon>frmListadoPagos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptListadoPagos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptListadoPagos.vb</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
@@ -549,6 +568,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

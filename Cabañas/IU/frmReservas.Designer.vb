@@ -66,6 +66,7 @@ Partial Class frmReservas
         Me.lblFaltaPAgar = New System.Windows.Forms.Label
         Me.btnDetalleCancelacion = New System.Windows.Forms.Button
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
+        Me.RectangleShape9 = New Cabañas.BotonDetalleCancReserva
         Me.RectangleShape8 = New Cabañas.BotonConsulCostos
         Me.RectangleShape7 = New Cabañas.BotonCancelarRes
         Me.RectangleShape6 = New Cabañas.BotonCerrar
@@ -74,7 +75,6 @@ Partial Class frmReservas
         Me.RectangleShape3 = New Cabañas.BotonPagos
         Me.RectangleShape2 = New Cabañas.BotonEliminarFrm
         Me.RectangleShape1 = New Cabañas.BotonAgregarFrm
-        Me.RectangleShape9 = New Cabañas.BotonDetalleCancReserva
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvServiciosAdicionales, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -340,6 +340,7 @@ Partial Class frmReservas
         Me.txtCostoEstadia.Name = "txtCostoEstadia"
         Me.txtCostoEstadia.Size = New System.Drawing.Size(100, 25)
         Me.txtCostoEstadia.TabIndex = 31
+        Me.txtCostoEstadia.Tag = "*"
         Me.txtCostoEstadia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtCostoAdicionales
@@ -351,6 +352,7 @@ Partial Class frmReservas
         Me.txtCostoAdicionales.Name = "txtCostoAdicionales"
         Me.txtCostoAdicionales.Size = New System.Drawing.Size(100, 25)
         Me.txtCostoAdicionales.TabIndex = 32
+        Me.txtCostoAdicionales.Tag = "*"
         Me.txtCostoAdicionales.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtCostoTotal
@@ -362,6 +364,7 @@ Partial Class frmReservas
         Me.txtCostoTotal.Name = "txtCostoTotal"
         Me.txtCostoTotal.Size = New System.Drawing.Size(100, 25)
         Me.txtCostoTotal.TabIndex = 33
+        Me.txtCostoTotal.Tag = "*"
         Me.txtCostoTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblCostoEstadia
@@ -527,6 +530,16 @@ Partial Class frmReservas
         Me.ShapeContainer1.TabIndex = 52
         Me.ShapeContainer1.TabStop = False
         '
+        'RectangleShape9
+        '
+        Me.RectangleShape9.BackgroundImage = CType(resources.GetObject("RectangleShape9.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.RectangleShape9.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape9.CornerRadius = 13
+        Me.RectangleShape9.Location = New System.Drawing.Point(380, 546)
+        Me.RectangleShape9.Name = "RectangleShape9"
+        Me.RectangleShape9.Size = New System.Drawing.Size(80, 26)
+        '
         'RectangleShape8
         '
         Me.RectangleShape8.BackgroundImage = CType(resources.GetObject("RectangleShape8.BackgroundImage"), System.Drawing.Image)
@@ -606,12 +619,6 @@ Partial Class frmReservas
         Me.RectangleShape1.Location = New System.Drawing.Point(416, 223)
         Me.RectangleShape1.Name = "RectangleShape1"
         Me.RectangleShape1.Size = New System.Drawing.Size(90, 30)
-        '
-        'RectangleShape9
-        '
-        Me.RectangleShape9.Location = New System.Drawing.Point(380, 546)
-        Me.RectangleShape9.Name = "RectangleShape9"
-
         '
         'frmReservas
         '
@@ -723,6 +730,6 @@ Partial Class frmReservas
     Friend WithEvents RectangleShape5 As Cabañas.BotonCancelar
     Friend WithEvents RectangleShape6 As Cabañas.BotonCerrar
     Friend WithEvents RectangleShape7 As Cabañas.BotonCancelarRes
-    Friend WithEvents RectangleShape9 As Microsoft.VisualBasic.PowerPacks.RectangleShape
     Friend WithEvents RectangleShape8 As Cabañas.BotonConsulCostos
+    Friend WithEvents RectangleShape9 As Cabañas.BotonDetalleCancReserva
 End Class

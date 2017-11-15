@@ -17,12 +17,12 @@
         ActualizarGrafico()
     End Sub
 
-    Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
-        frmReservas.modificar = False
-        frmReservas.RectangleShape6.Visible = False
-        frmReservas.idReserva = 0
-        frmReservas.ShowDialog()
-    End Sub
+    'Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
+    '    frmReservas.modificar = False
+    '    frmReservas.RectangleShape6.Visible = False
+    '    frmReservas.idReserva = 0
+    '    frmReservas.ShowDialog()
+    'End Sub
 
     Public Sub ActualizarGrafico()
 
@@ -187,10 +187,22 @@
         Next
     End Sub
 
-    Private Sub btnActualizar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnActualizar.Click
+    'Private Sub btnActualizar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnActualizar.Click
+    '    flpCabanias.Controls.Clear()
+    '    flpContenedor.Controls.Clear()
+    '    ActualizarGrafico()
+    'End Sub
+
+    Private Sub RectangleShape1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape1.Click
+        frmReservas.modificar = False
+        frmReservas.RectangleShape6.Visible = False
+        frmReservas.idReserva = 0
+        frmReservas.ShowDialog()
+    End Sub
+
+    Private Sub RectangleShape2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape2.Click
         flpCabanias.Controls.Clear()
         flpContenedor.Controls.Clear()
         ActualizarGrafico()
     End Sub
-
 End Class

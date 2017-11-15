@@ -106,6 +106,9 @@
     <Compile Include="BotonAceptar.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="BotonActualizar.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="BotonAgregar.vb">
       <SubType>Component</SubType>
     </Compile>
@@ -134,6 +137,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="BotonModificar.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BotonNuevaReserva.vb">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="BotonPagos.vb">

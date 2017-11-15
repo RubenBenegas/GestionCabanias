@@ -24,11 +24,12 @@ Partial Class grafReservas
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(grafReservas))
         Me.flpContenedor = New System.Windows.Forms.FlowLayoutPanel
-        Me.btnAgregar = New System.Windows.Forms.Button
         Me.dtpfechaDesde = New System.Windows.Forms.DateTimePicker
         Me.dtpFechaHasta = New System.Windows.Forms.DateTimePicker
-        Me.btnActualizar = New System.Windows.Forms.Button
         Me.flpCabanias = New System.Windows.Forms.FlowLayoutPanel
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
+        Me.RectangleShape2 = New Cabañas.BotonActualizar
+        Me.RectangleShape1 = New Cabañas.BotonNuevaReserva
         Me.SuspendLayout()
         '
         'flpContenedor
@@ -42,16 +43,6 @@ Partial Class grafReservas
         Me.flpContenedor.Name = "flpContenedor"
         Me.flpContenedor.Size = New System.Drawing.Size(533, 432)
         Me.flpContenedor.TabIndex = 1
-        '
-        'btnAgregar
-        '
-        Me.btnAgregar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnAgregar.Location = New System.Drawing.Point(15, 485)
-        Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(149, 34)
-        Me.btnAgregar.TabIndex = 2
-        Me.btnAgregar.Text = "Agregar nueva reserva"
-        Me.btnAgregar.UseVisualStyleBackColor = True
         '
         'dtpfechaDesde
         '
@@ -69,16 +60,6 @@ Partial Class grafReservas
         Me.dtpFechaHasta.Size = New System.Drawing.Size(108, 20)
         Me.dtpFechaHasta.TabIndex = 4
         '
-        'btnActualizar
-        '
-        Me.btnActualizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnActualizar.Location = New System.Drawing.Point(440, 9)
-        Me.btnActualizar.Name = "btnActualizar"
-        Me.btnActualizar.Size = New System.Drawing.Size(167, 23)
-        Me.btnActualizar.TabIndex = 5
-        Me.btnActualizar.Text = "Actualizar"
-        Me.btnActualizar.UseVisualStyleBackColor = True
-        '
         'flpCabanias
         '
         Me.flpCabanias.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
@@ -86,6 +67,36 @@ Partial Class grafReservas
         Me.flpCabanias.Name = "flpCabanias"
         Me.flpCabanias.Size = New System.Drawing.Size(53, 432)
         Me.flpCabanias.TabIndex = 6
+        '
+        'ShapeContainer1
+        '
+        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer1.Name = "ShapeContainer1"
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape2, Me.RectangleShape1})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(619, 531)
+        Me.ShapeContainer1.TabIndex = 7
+        Me.ShapeContainer1.TabStop = False
+        '
+        'RectangleShape2
+        '
+        Me.RectangleShape2.BackgroundImage = CType(resources.GetObject("RectangleShape2.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.RectangleShape2.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape2.CornerRadius = 12
+        Me.RectangleShape2.Location = New System.Drawing.Point(473, 8)
+        Me.RectangleShape2.Name = "RectangleShape2"
+        Me.RectangleShape2.Size = New System.Drawing.Size(110, 25)
+        '
+        'RectangleShape1
+        '
+        Me.RectangleShape1.BackgroundImage = CType(resources.GetObject("RectangleShape1.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.RectangleShape1.BorderColor = System.Drawing.Color.Transparent
+        Me.RectangleShape1.CornerRadius = 15
+        Me.RectangleShape1.Location = New System.Drawing.Point(34, 488)
+        Me.RectangleShape1.Name = "RectangleShape1"
+        Me.RectangleShape1.Size = New System.Drawing.Size(120, 30)
         '
         'grafReservas
         '
@@ -95,11 +106,10 @@ Partial Class grafReservas
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(619, 531)
         Me.Controls.Add(Me.flpCabanias)
-        Me.Controls.Add(Me.btnActualizar)
         Me.Controls.Add(Me.dtpFechaHasta)
         Me.Controls.Add(Me.dtpfechaDesde)
-        Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.flpContenedor)
+        Me.Controls.Add(Me.ShapeContainer1)
         Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "grafReservas"
@@ -109,9 +119,10 @@ Partial Class grafReservas
 
     End Sub
     Friend WithEvents flpContenedor As System.Windows.Forms.FlowLayoutPanel
-    Friend WithEvents btnAgregar As System.Windows.Forms.Button
     Friend WithEvents dtpfechaDesde As System.Windows.Forms.DateTimePicker
     Friend WithEvents dtpFechaHasta As System.Windows.Forms.DateTimePicker
-    Friend WithEvents btnActualizar As System.Windows.Forms.Button
     Friend WithEvents flpCabanias As System.Windows.Forms.FlowLayoutPanel
+    Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
+    Friend WithEvents RectangleShape1 As Cabañas.BotonNuevaReserva
+    Friend WithEvents RectangleShape2 As Cabañas.BotonActualizar
 End Class

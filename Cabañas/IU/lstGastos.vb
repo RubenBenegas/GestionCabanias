@@ -81,4 +81,8 @@
         txtTotal.Text = Gastos.GastosCalcularPorCategoria(cmbCategoria.SelectedValue)
 
     End Sub
+
+    Private Sub btnListado_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnListado.Click
+        frmListadoGastos.ShowDialog()
+    End Sub
 End Class

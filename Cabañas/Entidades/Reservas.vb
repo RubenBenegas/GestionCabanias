@@ -389,11 +389,12 @@ Public Class Reservas
             Dim objDataTable As New Data.DataTable
             objDataAdapter.Fill(objDataTable)
 
+            Dim index As Integer = 0
             Dim NewRow As DataRow
             NewRow = objDataTable.NewRow
             NewRow("id") = idCabania
             NewRow("TipoCabania") = "  " + CStr(idCabania) + " - " + tipoCabania
-            objDataTable.Rows.Add(NewRow)
+
 
             With ComboActual
                 .DataSource = objDataTable
@@ -563,10 +564,6 @@ Public Class Reservas
         End Try
     End Function
 
-
-
-
-
     Public Function ReservaCostoEstadia(ByVal idReserva) As Decimal
         Try
             abrirConexion()
@@ -610,7 +607,6 @@ Public Class Reservas
         End Try
     End Function
 
-
     Public Function ReservaTraerMontoDeCabania(ByVal idCabania) As Decimal
 
         Try
@@ -632,7 +628,6 @@ Public Class Reservas
             cerrarConexion()
         End Try
     End Function
-
 
     Public Sub ReservasFiltrarPorEstado(ByVal idEstado As Integer, ByVal tabla As DataGridView)
         abrirConexion()
@@ -669,8 +664,6 @@ Public Class Reservas
         cerrarConexion()
     End Sub
 
-
-
     Public Function ReservasActualizarEstado(ByVal idEstado As Integer, ByVal idReserva As Integer) As Boolean
 
         Try
@@ -691,9 +684,6 @@ Public Class Reservas
             cerrarConexion()
         End Try
     End Function
-
-
-
 
     Public Function ReservasTraerMontoTotal(ByVal idReserva As Integer) As Decimal
         Try

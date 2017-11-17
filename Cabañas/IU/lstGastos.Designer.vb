@@ -35,6 +35,7 @@ Partial Class lstGastos
         Me.RectangleShape2 = New Cabañas.BotonModificar
         Me.RectangleShape1 = New Cabañas.BotonAgregar
         Me.cmbCategoria = New System.Windows.Forms.ComboBox
+        Me.btnListado = New System.Windows.Forms.Button
         CType(Me.dgvGastos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -84,7 +85,7 @@ Partial Class lstGastos
         '
         Me.txtTotal.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.txtTotal.Enabled = False
-        Me.txtTotal.Location = New System.Drawing.Point(547, 434)
+        Me.txtTotal.Location = New System.Drawing.Point(470, 426)
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.Size = New System.Drawing.Size(137, 20)
         Me.txtTotal.TabIndex = 9
@@ -94,7 +95,7 @@ Partial Class lstGastos
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(494, 437)
+        Me.Label1.Location = New System.Drawing.Point(417, 429)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(37, 13)
         Me.Label1.TabIndex = 14
@@ -170,6 +171,15 @@ Partial Class lstGastos
         Me.cmbCategoria.Size = New System.Drawing.Size(121, 23)
         Me.cmbCategoria.TabIndex = 16
         '
+        'btnListado
+        '
+        Me.btnListado.Location = New System.Drawing.Point(668, 422)
+        Me.btnListado.Name = "btnListado"
+        Me.btnListado.Size = New System.Drawing.Size(75, 23)
+        Me.btnListado.TabIndex = 17
+        Me.btnListado.Text = "Listado"
+        Me.btnListado.UseVisualStyleBackColor = True
+        '
         'lstGastos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -178,6 +188,7 @@ Partial Class lstGastos
         Me.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(984, 461)
+        Me.Controls.Add(Me.btnListado)
         Me.Controls.Add(Me.cmbCategoria)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtTotal)
@@ -206,4 +217,5 @@ Partial Class lstGastos
     Friend WithEvents RectangleShape4 As Cabañas.BotonCerrar
     Friend WithEvents cmbCategoria As System.Windows.Forms.ComboBox
     Friend WithEvents RectangleShape5 As Cabañas.BotonBuscar
+    Friend WithEvents btnListado As System.Windows.Forms.Button
 End Class

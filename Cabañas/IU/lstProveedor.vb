@@ -1,4 +1,6 @@
-﻿Public Class LstProveedor
+﻿Imports CrystalDecisions.Shared
+
+Public Class LstProveedor
     Dim Proveedor As New Proveedor
     Private Sub LstProveedor_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
@@ -53,5 +55,25 @@
 
     Private Sub RectangleShape4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape4.Click
         Close()
+    End Sub
+
+    Private Sub btnListado_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnListado.Click
+
+        frmListadoProveedores.rptListadoProveedores1.DataSourceConnections.Item(0).SetConnection("localhost\SQLEXPRESS", "Cabania", True)
+        frmListadoProveedores.ShowDialog()
+
+    End Sub
+
+    Private Sub btnDetalle_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDetalle.Click
+        Dim idProveeedor As Integer = dgvProveedores.Item("Id", dgvProveedores.CurrentRow.Index).Value
+        Dim params As New ParameterValues
+        Dim par As New ParameterDiscreteValue
+        params.Clear()
+        par.Value = idProveeedor
+        params.Add(par)
+        frmDetalleProveedores.rptDetalleProveedores1.DataSourceConnections.Item(0).SetConnection("localhost\SQLEXPRESS", "Cabania", True)
+        frmDetalleProveedores.rptDetalleProveedores1.DataDefinition.ParameterFields("idProveedor").ApplyCurrentValues(params)
+        frmDetalleProveedores.ShowDialog()
+        frmDetalleProveedores.Dispose()
     End Sub
 End Class

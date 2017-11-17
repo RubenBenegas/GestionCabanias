@@ -1,4 +1,6 @@
-﻿Public Class lstcabania
+﻿Imports CrystalDecisions.Shared
+
+Public Class lstcabania
 
     Dim cabania As New Cabanias
     Private Sub lstcabania_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -55,5 +57,23 @@
 
     Private Sub RectangleShape4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape4.Click
         Close()
+    End Sub
+
+    Private Sub btnListado_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnListado.Click
+        frmListadoCabanias.rptListadoCabanias1.DataSourceConnections.Item(0).SetConnection("localhost\SQLEXPRESS", "Cabania", True)
+        frmListadoCabanias.ShowDialog()
+    End Sub
+
+    Private Sub btnDetalle_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDetalle.Click
+        Dim idCabanias As Integer = dgvCabanias.Item("Id", dgvCabanias.CurrentRow.Index).Value
+        Dim params As New ParameterValues
+        Dim par As New ParameterDiscreteValue
+        params.Clear()
+        par.Value = idCabanias
+        params.Add(par)
+        frmDetallaCabanias.rptDetallaCabanias1.DataSourceConnections.Item(0).SetConnection("localhost\SQLEXPRESS", "Cabania", True)
+        frmDetallaCabanias.rptDetallaCabanias1.DataDefinition.ParameterFields("idCabanias").ApplyCurrentValues(params)
+        frmDetallaCabanias.ShowDialog()
+        frmDetallaCabanias.Dispose()
     End Sub
 End Class

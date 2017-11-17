@@ -1,4 +1,6 @@
-﻿Public Class z
+﻿Imports CrystalDecisions.Shared
+
+Public Class z
     Dim Personal As New Personal
 
     Private Sub lstPersonal_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -51,5 +53,18 @@
 
     Private Sub RectangleShape4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape4.Click
         Close()
+    End Sub
+
+    Private Sub btnDetalle_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDetalle.Click
+        Dim idPersonal As Integer = dgvPersonal.Item("Id", dgvPersonal.CurrentRow.Index).Value
+        Dim params As New ParameterValues
+        Dim par As New ParameterDiscreteValue
+        params.Clear()
+        par.Value = idPersonal
+        params.Add(par)
+        frmDetallePersonal.rptDetallePersonal1.DataSourceConnections.Item(0).SetConnection("localhost\SQLEXPRESS", "Cabania", True)
+        frmDetallePersonal.rptDetallePersonal1.DataDefinition.ParameterFields("idPersonal").ApplyCurrentValues(params)
+        frmDetallePersonal.ShowDialog()
+        frmDetallePersonal.Dispose()
     End Sub
 End Class

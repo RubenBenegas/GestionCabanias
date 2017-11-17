@@ -31,6 +31,8 @@ Partial Class LstProveedor
         Me.RectangleShape3 = New Cabañas.BotonEliminar
         Me.RectangleShape2 = New Cabañas.BotonModificar
         Me.RectangleShape1 = New Cabañas.BotonAgregar
+        Me.btnListado = New System.Windows.Forms.Button
+        Me.btnDetalle = New System.Windows.Forms.Button
         CType(Me.dgvProveedores, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -77,6 +79,7 @@ Partial Class LstProveedor
         '
         'RectangleShape4
         '
+        Me.RectangleShape4.BackgroundImage = CType(resources.GetObject("RectangleShape4.BackgroundImage"), System.Drawing.Image)
         Me.RectangleShape4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.RectangleShape4.BorderColor = System.Drawing.Color.Transparent
         Me.RectangleShape4.CornerRadius = 17
@@ -114,6 +117,24 @@ Partial Class LstProveedor
         Me.RectangleShape1.Name = "RectangleShape1"
         Me.RectangleShape1.Size = New System.Drawing.Size(122, 35)
         '
+        'btnListado
+        '
+        Me.btnListado.Location = New System.Drawing.Point(495, 428)
+        Me.btnListado.Name = "btnListado"
+        Me.btnListado.Size = New System.Drawing.Size(75, 23)
+        Me.btnListado.TabIndex = 6
+        Me.btnListado.Text = "Listado"
+        Me.btnListado.UseVisualStyleBackColor = True
+        '
+        'btnDetalle
+        '
+        Me.btnDetalle.Location = New System.Drawing.Point(582, 429)
+        Me.btnDetalle.Name = "btnDetalle"
+        Me.btnDetalle.Size = New System.Drawing.Size(75, 23)
+        Me.btnDetalle.TabIndex = 7
+        Me.btnDetalle.Text = "Detalle"
+        Me.btnDetalle.UseVisualStyleBackColor = True
+        '
         'LstProveedor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -122,6 +143,8 @@ Partial Class LstProveedor
         Me.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(984, 461)
+        Me.Controls.Add(Me.btnDetalle)
+        Me.Controls.Add(Me.btnListado)
         Me.Controls.Add(Me.dgvProveedores)
         Me.Controls.Add(Me.ShapeContainer1)
         Me.DoubleBuffered = True
@@ -140,4 +163,6 @@ Partial Class LstProveedor
     Friend WithEvents RectangleShape2 As Cabañas.BotonModificar
     Friend WithEvents RectangleShape3 As Cabañas.BotonEliminar
     Friend WithEvents RectangleShape4 As Cabañas.BotonCerrar
+    Friend WithEvents btnListado As System.Windows.Forms.Button
+    Friend WithEvents btnDetalle As System.Windows.Forms.Button
 End Class

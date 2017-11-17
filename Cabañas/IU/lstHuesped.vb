@@ -1,4 +1,6 @@
-﻿Public Class lstHuesped
+﻿Imports CrystalDecisions.Shared
+
+Public Class lstHuesped
 
     Dim huesped As New Huespedes
     Private Sub lstHuesped_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -54,5 +56,24 @@
 
     Private Sub RectangleShape4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RectangleShape4.Click
         Close()
+    End Sub
+
+    Private Sub btnListado_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnListado.Click
+        frmListadoHuespedes.rptListadoHuespedes1.DataSourceConnections.Item(0).SetConnection("localhost\SQLEXPRESS", "Cabania", True)
+        frmListadoHuespedes.ShowDialog()
+
+    End Sub
+
+    Private Sub btnDetalle_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDetalle.Click
+        Dim idHuesped As Integer = dgvHuesped.Item("Id", dgvHuesped.CurrentRow.Index).Value
+        Dim params As New ParameterValues
+        Dim par As New ParameterDiscreteValue
+        params.Clear()
+        par.Value = idHuesped
+        params.Add(par)
+        frmDetallaHuesped.rptDetalleHuesped1.DataSourceConnections.Item(0).SetConnection("localhost\SQLEXPRESS", "Cabania", True)
+        frmDetallaHuesped.rptDetalleHuesped1.DataDefinition.ParameterFields("idHuesped").ApplyCurrentValues(params)
+        frmDetallaHuesped.ShowDialog()
+        frmDetallaHuesped.Dispose()
     End Sub
 End Class

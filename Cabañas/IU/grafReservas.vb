@@ -205,4 +205,10 @@
         flpContenedor.Controls.Clear()
         ActualizarGrafico()
     End Sub
+
+    Private Sub btnListado_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnListado.Click
+        frmListadoReservas.rptListadoReservas1.DataSourceConnections.Item(0).SetConnection("localhost\SQLEXPRESS", "Cabania", True)
+        frmListadoReservas.ShowDialog()
+
+    End Sub
 End Class

@@ -30,6 +30,7 @@ Partial Class grafReservas
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
         Me.RectangleShape2 = New Cabañas.BotonActualizar
         Me.RectangleShape1 = New Cabañas.BotonNuevaReserva
+        Me.btnListado = New System.Windows.Forms.Button
         Me.SuspendLayout()
         '
         'flpContenedor
@@ -98,6 +99,15 @@ Partial Class grafReservas
         Me.RectangleShape1.Name = "RectangleShape1"
         Me.RectangleShape1.Size = New System.Drawing.Size(120, 30)
         '
+        'btnListado
+        '
+        Me.btnListado.Location = New System.Drawing.Point(335, 488)
+        Me.btnListado.Name = "btnListado"
+        Me.btnListado.Size = New System.Drawing.Size(75, 23)
+        Me.btnListado.TabIndex = 8
+        Me.btnListado.Text = "Listado"
+        Me.btnListado.UseVisualStyleBackColor = True
+        '
         'grafReservas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -105,6 +115,7 @@ Partial Class grafReservas
         Me.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(619, 531)
+        Me.Controls.Add(Me.btnListado)
         Me.Controls.Add(Me.flpCabanias)
         Me.Controls.Add(Me.dtpFechaHasta)
         Me.Controls.Add(Me.dtpfechaDesde)
@@ -125,4 +136,5 @@ Partial Class grafReservas
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents RectangleShape1 As Cabañas.BotonNuevaReserva
     Friend WithEvents RectangleShape2 As Cabañas.BotonActualizar
+    Friend WithEvents btnListado As System.Windows.Forms.Button
 End Class

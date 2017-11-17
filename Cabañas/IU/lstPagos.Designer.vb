@@ -31,7 +31,6 @@ Partial Class lstPagos
         Me.RectangleShape3 = New Cabañas.BotonEliminar
         Me.RectangleShape2 = New Cabañas.BotonModificar
         Me.RectangleShape1 = New Cabañas.BotonAgregar
-        Me.btnListado = New System.Windows.Forms.Button
         CType(Me.dgvPagos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -68,7 +67,7 @@ Partial Class lstPagos
         Me.dgvPagos.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvPagos.RowHeadersVisible = False
         Me.dgvPagos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvPagos.Size = New System.Drawing.Size(723, 405)
+        Me.dgvPagos.Size = New System.Drawing.Size(544, 412)
         Me.dgvPagos.TabIndex = 0
         '
         'ShapeContainer1
@@ -77,17 +76,16 @@ Partial Class lstPagos
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape4, Me.RectangleShape3, Me.RectangleShape2, Me.RectangleShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(747, 463)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(568, 463)
         Me.ShapeContainer1.TabIndex = 5
         Me.ShapeContainer1.TabStop = False
         '
         'RectangleShape4
         '
-        Me.RectangleShape4.BackgroundImage = CType(resources.GetObject("RectangleShape4.BackgroundImage"), System.Drawing.Image)
         Me.RectangleShape4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.RectangleShape4.BorderColor = System.Drawing.Color.Transparent
         Me.RectangleShape4.CornerRadius = 17
-        Me.RectangleShape4.Location = New System.Drawing.Point(613, 425)
+        Me.RectangleShape4.Location = New System.Drawing.Point(429, 424)
         Me.RectangleShape4.Name = "RectangleShape4"
         Me.RectangleShape4.Size = New System.Drawing.Size(122, 35)
         '
@@ -121,15 +119,6 @@ Partial Class lstPagos
         Me.RectangleShape1.Name = "RectangleShape1"
         Me.RectangleShape1.Size = New System.Drawing.Size(118, 35)
         '
-        'btnListado
-        '
-        Me.btnListado.Location = New System.Drawing.Point(438, 426)
-        Me.btnListado.Name = "btnListado"
-        Me.btnListado.Size = New System.Drawing.Size(75, 23)
-        Me.btnListado.TabIndex = 6
-        Me.btnListado.Text = "Listado"
-        Me.btnListado.UseVisualStyleBackColor = True
-        '
         'lstPagos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -138,11 +127,9 @@ Partial Class lstPagos
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImage = Global.Cabañas.My.Resources.Resources.FondoMaderaPanel
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(747, 463)
-        Me.Controls.Add(Me.btnListado)
+        Me.ClientSize = New System.Drawing.Size(568, 463)
         Me.Controls.Add(Me.dgvPagos)
         Me.Controls.Add(Me.ShapeContainer1)
-        Me.DoubleBuffered = True
         Me.Name = "lstPagos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Lista Pagos"
@@ -156,5 +143,4 @@ Partial Class lstPagos
     Friend WithEvents RectangleShape2 As Cabañas.BotonModificar
     Friend WithEvents RectangleShape3 As Cabañas.BotonEliminar
     Friend WithEvents RectangleShape4 As Cabañas.BotonCerrar
-    Friend WithEvents btnListado As System.Windows.Forms.Button
 End Class
